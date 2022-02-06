@@ -12,8 +12,8 @@ class Endianness:
   BIG = 'big'
 
 
-class Processor(CleanYAMLObject):
-  yaml_tag = "!Processor"
+class Device(CleanYAMLObject):
+  yaml_tag = "!Device"
 
   def __init__(self,
                manufacturer,
@@ -41,9 +41,17 @@ class Processor(CleanYAMLObject):
 class Module(CleanYAMLObject):
   yaml_tag = "!Module"
 
-  def __init__(self, name=None, base_addr=None, registers=None, extras=None):
+  def __init__(self,
+               name=None,
+               base_addr=None,
+               size=None,
+               description=None,
+               registers=None,
+               extras=None):
     self.name = name
+    self.description = description
     self.base_addr = HexInt(base_addr)
+    self.size = HexInt(size) if size else None
     if extras:
       for k in extras.keys():
         setattr(self, k, extras[k])
@@ -60,24 +68,26 @@ class Register(CleanYAMLObject):
   def __init__(self,
                name,
                addr,
+               size_bits,
                description=None,
                read_allowed=None,
                write_allowed=None,
-               default_value=None,
+               reset_value=None,
                extras=None):
     self.name = name
     self.addr = HexInt(addr)
+    self.size_bits = size_bits
     self.description = description
     self.read_allowed = read_allowed
     self.write_allowed = write_allowed
-    self.default_value = HexInt(default_value) if default_value else None
+    self.reset_value = HexInt(reset_value) if reset_value else None
     if extras:
       for k in extras.keys():
         setattr(self, k, extras[k])
 
 
 if __name__ == "__main__":
-  p = Processor("NXP", "MPC5668x", endianness=Endianness.LITTLE, extras={'flash_size': 1024})
+  p = Device("NXP", "MPC5668x", endianness=Endianness.LITTLE, extras={'flash_size': 1024})
 
   fr = Module("FlexRay", 0x1000)
   fr.registers.extend([

@@ -1,0 +1,3 @@
+[submodule "parsers/svd/cmsis-svd"]
+	path = parsers/svd/cmsis-svd
+	url = https://github.com/posborne/cmsis-svd.git
