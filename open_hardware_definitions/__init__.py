@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import yaml
-from helpers import CleanYAMLObject, HexInt
+from open_hardware_definitions.helpers import CleanYAMLObject, HexInt
 
 # Make sure we represent HexInt values as hex
 yaml.add_representer(HexInt, lambda dumper, data: dumper.represent_int(hex(data)))
