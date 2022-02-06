@@ -18,12 +18,14 @@ class Processor(CleanYAMLObject):
   def __init__(self,
                manufacturer,
                part_number,
+               architecture=None,
                bit_width=None,
                endianness=None,
                modules=None,
                extras=None):
     self.manufacturer = manufacturer
     self.part_number = part_number
+    self.architecture = architecture
     self.bit_width = bit_width
     self.endianness = endianness
     if extras:
@@ -47,6 +49,9 @@ class Module(CleanYAMLObject):
         setattr(self, k, extras[k])
 
     self.registers = registers if registers else []
+
+  def __str__(self):
+    return f"Module '{self.name}': Base address: {hex(self.base_addr)}"
 
 
 class Register(CleanYAMLObject):
