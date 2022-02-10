@@ -16,6 +16,8 @@ For example, from most preferable to less preferable:
 2. Automatic parsing of a datasheet with a script / notebook (e.g. `parsers/nxp/MPC5668xRM.ipynb`)
 3. Manual parsing of a datasheet
 
+If you create a converter script / notebook, please also share this for future reference in the `parsers/` directory!
+
 ### Does it matter if the info is not complete?
 No! Any (valid) info is always better than no info! If you have a partial definition file, feel free to open a PR!
 Also, PRs for extending / fixing existing definition files are certainly welcome!
