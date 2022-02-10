@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import yaml
+from typing import Any, List, Mapping, Optional
 from open_hardware_definitions.helpers import CleanYAMLObject, HexInt
 
 # Make sure we represent HexInt values as hex
@@ -12,54 +13,28 @@ class Endianness:
   BIG = 'big'
 
 
-class Device(CleanYAMLObject):
-  yaml_tag = "!Device"
+class Field(CleanYAMLObject):
+  yaml_tag = "!Field"
 
   def __init__(self,
-               manufacturer,
-               part_number,
-               architecture=None,
-               bit_width=None,
-               endianness=None,
-               modules=None,
-               extras=None):
-    self.manufacturer = manufacturer
-    self.part_number = part_number
-    self.architecture = architecture
-    self.bit_width = bit_width
-    self.endianness = endianness
-    if extras:
-      for k in extras.keys():
-        setattr(self, k, extras[k])
-
-    self.modules = modules if modules else []
-
-  def dump(self):
-    return yaml.dump(self, sort_keys=False)
-
-
-class Module(CleanYAMLObject):
-  yaml_tag = "!Module"
-
-  def __init__(self,
-               name=None,
-               base_addr=None,
-               size=None,
+               name,
+               bit_offset,
+               bit_width,
                description=None,
-               registers=None,
+               read_allowed=None,
+               write_allowed=None,
+               enum_values=None,
                extras=None):
     self.name = name
+    self.bit_offset = bit_offset
+    self.bit_width = bit_width
     self.description = description
-    self.base_addr = HexInt(base_addr)
-    self.size = HexInt(size) if size else None
+    self.read_allowed = read_allowed
+    self.write_allowed = write_allowed
+    self.enum_values = enum_values
     if extras:
       for k in extras.keys():
         setattr(self, k, extras[k])
-
-    self.registers = registers if registers else []
-
-  def __str__(self):
-    return f"Module '{self.name}': Base address: {hex(self.base_addr)}"
 
 
 class Register(CleanYAMLObject):
@@ -89,28 +64,53 @@ class Register(CleanYAMLObject):
     self.fields = fields if fields else []
 
 
-class Field(CleanYAMLObject):
-  yaml_tag = "!Field"
+class Module(CleanYAMLObject):
+  yaml_tag = "!Module"
 
   def __init__(self,
-               name,
-               bit_offset,
-               bit_width,
+               name=None,
+               base_addr=None,
+               size=None,
                description=None,
-               read_allowed=None,
-               write_allowed=None,
-               enum_values=None,
+               registers=None,
                extras=None):
     self.name = name
-    self.bit_offset = bit_offset
-    self.bit_width = bit_width
     self.description = description
-    self.read_allowed = read_allowed
-    self.write_allowed = write_allowed
-    self.enum_values = enum_values
+    self.base_addr = HexInt(base_addr)
+    self.size = HexInt(size) if size else None
     if extras:
       for k in extras.keys():
         setattr(self, k, extras[k])
+
+    self.registers = registers if registers else []
+
+  def __str__(self):
+    return f"Module '{self.name}': Base address: {hex(self.base_addr)}"
+
+class Device(CleanYAMLObject):
+  yaml_tag = "!Device"
+
+  def __init__(self,
+               manufacturer: str,
+               part_number: str,
+               architecture: Optional[str] = None,
+               bit_width: Optional[int] = None,
+               endianness: Optional[Endianness] = None,
+               modules: Optional[List[Module]] = None,
+               extras: Optional[Mapping[str, Any]]=None) -> None:
+    self.manufacturer = manufacturer
+    self.part_number = part_number
+    self.architecture = architecture
+    self.bit_width = bit_width
+    self.endianness = endianness
+    if extras:
+      for k in extras.keys():
+        setattr(self, k, extras[k])
+
+    self.modules = modules if modules else []
+
+  def dump(self):
+    return yaml.dump(self, sort_keys=False)
 
 
 if __name__ == "__main__":
