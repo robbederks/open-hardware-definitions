@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
 import yaml
 from enum import Enum
 from typing import Any, List, Mapping, Optional
+
 from open_hardware_definitions.helpers import CleanYAMLObject, HexInt
 
 # Make sure we represent HexInt values as hex
@@ -109,6 +112,18 @@ class Device(CleanYAMLObject):
         setattr(self, k, extras[k])
 
     self.modules = modules if modules else []
+
+  @classmethod
+  def load(self, stream) -> Device:
+    dev = yaml.load(stream, Loader=yaml.FullLoader)
+    assert isinstance(dev, Device), "Did not load the expected class!"
+    return dev
+
+  @classmethod
+  def load_file(self, path: str) -> Device:
+    with open(path, 'r') as f:
+      dev = self.load(f)
+      return dev
 
   def dump(self) -> str:
     return yaml.dump(self, sort_keys=False)
