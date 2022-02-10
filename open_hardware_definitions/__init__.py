@@ -73,6 +73,7 @@ class Register(CleanYAMLObject):
                read_allowed=None,
                write_allowed=None,
                reset_value=None,
+               fields=None,
                extras=None):
     self.name = name
     self.addr = HexInt(addr)
@@ -85,6 +86,32 @@ class Register(CleanYAMLObject):
       for k in extras.keys():
         setattr(self, k, extras[k])
 
+    self.fields = fields if fields else []
+
+
+class Field(CleanYAMLObject):
+  yaml_tag = "!Field"
+
+  def __init__(self,
+               name,
+               bit_offset,
+               bit_width,
+               description=None,
+               read_allowed=None,
+               write_allowed=None,
+               enum_values=None,
+               extras=None):
+    self.name = name
+    self.bit_offset = bit_offset
+    self.bit_width = bit_width
+    self.description = description
+    self.read_allowed = read_allowed
+    self.write_allowed = write_allowed
+    self.enum_values = enum_values
+    if extras:
+      for k in extras.keys():
+        setattr(self, k, extras[k])
+
 
 if __name__ == "__main__":
   p = Device("NXP", "MPC5668x", endianness=Endianness.LITTLE, extras={'flash_size': 1024})
@@ -92,7 +119,10 @@ if __name__ == "__main__":
   fr = Module("FlexRay", 0x1000)
   fr.registers.extend([
     Register('REG_A', 0x1000, "This is register A"),
-    Register('REG_B', 0x1004, "This is register B")
+    Register('REG_B', 0x1004, "This is register B", fields=[
+      Field('FIELD_B1', 0, 2),
+      Field('FIELD_B2', 2, 2, enum_values={0: "enum0", 2: "enum2"}),
+    ])
   ])
 
   p.modules.append(fr)
