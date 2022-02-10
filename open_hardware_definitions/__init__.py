@@ -3,21 +3,35 @@
 from __future__ import annotations
 
 import yaml
+try:
+  # Speed up with the C-libs if possible
+  from yaml import CFullLoader as Loader, CDumper as Dumper
+except ImportError:
+  from yaml import FullLoader as Loader, Dumper # type: ignore
+
 from enum import Enum
-from typing import Any, List, Mapping, Optional
+from typing import Any, List, Mapping, Optional, Union
 
 from open_hardware_definitions.helpers import CleanYAMLObject, HexInt
 
 # Make sure we represent HexInt values as hex
-yaml.add_representer(HexInt, lambda dumper, data: dumper.represent_scalar('tag:yaml.org,2002:int', hex(data)))
-
+yaml.add_representer(
+  HexInt,
+  lambda dumper, data: dumper.represent_scalar('tag:yaml.org,2002:int', hex(data)),
+  Dumper)
 
 class Endianness(Enum):
   LITTLE = 'little'
   BIG = 'big'
 
+yaml.add_representer(
+  Endianness,
+  lambda dumper, data: dumper.represent_str(data.value),
+  Dumper)
 
 class Field(CleanYAMLObject):
+  yaml_loader = Loader
+  yaml_dumper = Dumper
   yaml_tag = "!Field"
 
   def __init__(self,
@@ -42,6 +56,8 @@ class Field(CleanYAMLObject):
 
 
 class Register(CleanYAMLObject):
+  yaml_loader = Loader
+  yaml_dumper = Dumper
   yaml_tag = "!Register"
 
   def __init__(self,
@@ -69,6 +85,8 @@ class Register(CleanYAMLObject):
 
 
 class Module(CleanYAMLObject):
+  yaml_loader = Loader
+  yaml_dumper = Dumper
   yaml_tag = "!Module"
 
   def __init__(self,
@@ -92,6 +110,8 @@ class Module(CleanYAMLObject):
     return f"Module '{self.name}': Base address: {hex(self.base_addr)}"
 
 class Device(CleanYAMLObject):
+  yaml_loader = Loader
+  yaml_dumper = Dumper
   yaml_tag = "!Device"
 
   def __init__(self,
@@ -99,7 +119,7 @@ class Device(CleanYAMLObject):
                part_number: str,
                architecture: Optional[str] = None,
                bit_width: Optional[int] = None,
-               endianness: Optional[Endianness] = None,
+               endianness: Optional[Union[Endianness, str]] = None,
                modules: Optional[List[Module]] = None,
                extras: Optional[Mapping[str, Any]] = None) -> None:
     self.manufacturer = manufacturer
@@ -115,7 +135,7 @@ class Device(CleanYAMLObject):
 
   @classmethod
   def load(self, stream) -> Device:
-    dev = yaml.load(stream, Loader=yaml.FullLoader)
+    dev = yaml.load(stream, Loader=Loader)
     assert isinstance(dev, Device), "Did not load the expected class!"
     return dev
 
@@ -126,7 +146,7 @@ class Device(CleanYAMLObject):
       return dev
 
   def dump(self) -> str:
-    return yaml.dump(self, sort_keys=False)
+    return yaml.dump(self, sort_keys=False, Dumper=Dumper)
 
 
 if __name__ == "__main__":
@@ -143,4 +163,6 @@ if __name__ == "__main__":
 
   p.modules.append(fr)
 
-  print(p.dump())
+  d = p.dump()
+  print(d)
+  Device.load(d)

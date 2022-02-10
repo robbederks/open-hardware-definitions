@@ -26,6 +26,7 @@ jobs:
           python-version: '3.8.10'
       - name: Install dependencies
         run: |
+          sudo apt install libyaml-dev
           pip install pytest
           pip install -e .
       - name: Run unit tests
