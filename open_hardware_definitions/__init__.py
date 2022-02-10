@@ -18,14 +18,14 @@ class Field(CleanYAMLObject):
   yaml_tag = "!Field"
 
   def __init__(self,
-               name,
-               bit_offset,
-               bit_width,
-               description=None,
-               read_allowed=None,
-               write_allowed=None,
-               enum_values=None,
-               extras=None):
+               name: str,
+               bit_offset: int,
+               bit_width: int,
+               description: Optional[str] = None,
+               read_allowed: Optional[bool] = None,
+               write_allowed: Optional[bool] = None,
+               enum_values: Optional[Mapping[int, str]] = None,
+               extras: Optional[Mapping[str, Any]] = None):
     self.name = name
     self.bit_offset = bit_offset
     self.bit_width = bit_width
@@ -42,15 +42,15 @@ class Register(CleanYAMLObject):
   yaml_tag = "!Register"
 
   def __init__(self,
-               name,
-               addr,
-               size_bits,
-               description=None,
-               read_allowed=None,
-               write_allowed=None,
-               reset_value=None,
-               fields=None,
-               extras=None):
+               name: str,
+               addr: int,
+               size_bits: Optional[int] = None,
+               description: Optional[str] = None,
+               read_allowed: Optional[bool] = None,
+               write_allowed: Optional[bool] = None,
+               reset_value: Optional[int] = None,
+               fields: Optional[List[Field]] = None,
+               extras: Optional[Mapping[str, Any]] = None) -> None:
     self.name = name
     self.addr = HexInt(addr)
     self.size_bits = size_bits
@@ -69,15 +69,15 @@ class Module(CleanYAMLObject):
   yaml_tag = "!Module"
 
   def __init__(self,
-               name=None,
-               base_addr=None,
-               size=None,
-               description=None,
-               registers=None,
-               extras=None):
+               name: Optional[str] = None,
+               base_addr: Optional[int] = None,
+               size: Optional[int] = None,
+               description: Optional[str] = None,
+               registers: Optional[List[Register]] = None,
+               extras: Optional[Mapping[str, Any]] = None) -> None:
     self.name = name
     self.description = description
-    self.base_addr = HexInt(base_addr)
+    self.base_addr = HexInt(base_addr) if base_addr else None
     self.size = HexInt(size) if size else None
     if extras:
       for k in extras.keys():
@@ -98,7 +98,7 @@ class Device(CleanYAMLObject):
                bit_width: Optional[int] = None,
                endianness: Optional[Endianness] = None,
                modules: Optional[List[Module]] = None,
-               extras: Optional[Mapping[str, Any]]=None) -> None:
+               extras: Optional[Mapping[str, Any]] = None) -> None:
     self.manufacturer = manufacturer
     self.part_number = part_number
     self.architecture = architecture
@@ -110,7 +110,7 @@ class Device(CleanYAMLObject):
 
     self.modules = modules if modules else []
 
-  def dump(self):
+  def dump(self) -> str:
     return yaml.dump(self, sort_keys=False)
 
 
@@ -119,8 +119,8 @@ if __name__ == "__main__":
 
   fr = Module("FlexRay", 0x1000)
   fr.registers.extend([
-    Register('REG_A', 0x1000, "This is register A"),
-    Register('REG_B', 0x1004, "This is register B", fields=[
+    Register('REG_A', 0x1000, description="This is register A"),
+    Register('REG_B', 0x1004, 32, description="This is register B", fields=[
       Field('FIELD_B1', 0, 2),
       Field('FIELD_B2', 2, 2, enum_values={0: "enum0", 2: "enum2"}),
     ])
