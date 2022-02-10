@@ -23,4 +23,6 @@ jobs:
         with:
           python-version: '3.8.10'
       - name: Run unit tests
-        run: py.test
+        run: |
+          pip install pytest
+          py.test
