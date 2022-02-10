@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 jobs:
   lint:
+    name: Linter
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +16,8 @@ jobs:
           pip install pre-commit==2.15.0
           pre-commit run --all
 
-  tests:
+  unit-tests:
+    name: Unit tests
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
