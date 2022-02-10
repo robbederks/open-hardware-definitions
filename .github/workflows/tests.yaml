@@ -22,7 +22,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8.10'
-      - name: Run unit tests
+      - name: Install dependencies
         run: |
           pip install pytest
-          py.test
+          python setup.py install
+      - name: Run unit tests
+        run: py.test
