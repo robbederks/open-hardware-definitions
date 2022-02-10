@@ -27,6 +27,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pytest
-          python setup.py install
+          pip install -e .
       - name: Run unit tests
         run: py.test
