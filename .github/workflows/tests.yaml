@@ -14,3 +14,13 @@ jobs:
         run: |
           pip install pre-commit==2.15.0
           pre-commit run --all
+
+  tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.10'
+      - name: Run unit tests
+        run: py.test
