@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
 import yaml
+from enum import Enum
 from typing import Any, List, Mapping, Optional
 from open_hardware_definitions.helpers import CleanYAMLObject, HexInt
 
 # Make sure we represent HexInt values as hex
-yaml.add_representer(HexInt, lambda dumper, data: dumper.represent_int(hex(data)))
+yaml.add_representer(HexInt, lambda dumper, data: dumper.represent_scalar('tag:yaml.org,2002:int', hex(data)))
 
 
-class Endianness:
+class Endianness(Enum):
   LITTLE = 'little'
   BIG = 'big'
 
