@@ -136,7 +136,7 @@ if __name__ == "__main__":
   fr.registers.extend([
     Register('REG_A', 0x1000, description="This is register A"),
     Register('REG_B', 0x1004, 32, description="This is register B", fields=[
-      Field('FIELD_B1', 0, 2),
+      Field('FIELD_B1', 0, 2, read_allowed=True, write_allowed=False),
       Field('FIELD_B2', 2, 2, enum_values={0: "enum0", 2: "enum2"}),
     ])
   ])

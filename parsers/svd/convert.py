@@ -16,6 +16,7 @@ def convert(svd_dev_path):
     part_number=svd_dev.name,
     bit_width=svd_dev.width,
     endianness=svd_dev.cpu.endian,
+    architecture="ARM Cortex-M",
   )
 
   for per in svd_dev.peripherals:
