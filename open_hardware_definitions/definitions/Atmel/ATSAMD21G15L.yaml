@@ -9,11 +9,11 @@ modules:
   name: AC
   description: 'Analog Comparators '
   base_addr: 0x42004400
-  size: 0x40
+  size: 0x22
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42004400
     size_bits: 8
     description: Control A
     read_allowed: true
@@ -43,7 +43,7 @@ modules:
       description: Low-Power Mux
   - !Register
     name: CTRLB
-    addr: 0x1
+    addr: 0x42004401
     size_bits: 8
     description: Control B
     read_allowed: false
@@ -61,7 +61,7 @@ modules:
       description: Comparator 1 Start Comparison
   - !Register
     name: EVCTRL
-    addr: 0x2
+    addr: 0x42004402
     size_bits: 16
     description: Event Control
     read_allowed: true
@@ -94,7 +94,7 @@ modules:
       description: Comparator 1 Event Input
   - !Register
     name: INTENCLR
-    addr: 0x4
+    addr: 0x42004404
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -117,7 +117,7 @@ modules:
       description: Window 0 Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x5
+    addr: 0x42004405
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -140,7 +140,7 @@ modules:
       description: Window 0 Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x6
+    addr: 0x42004406
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -163,7 +163,7 @@ modules:
       description: Window 0
   - !Register
     name: STATUSA
-    addr: 0x8
+    addr: 0x42004408
     size_bits: 8
     description: Status A
     read_allowed: true
@@ -190,7 +190,7 @@ modules:
         2: BELOW
   - !Register
     name: STATUSB
-    addr: 0x9
+    addr: 0x42004409
     size_bits: 8
     description: Status B
     read_allowed: true
@@ -217,7 +217,7 @@ modules:
       description: Synchronization Busy
   - !Register
     name: STATUSC
-    addr: 0xa
+    addr: 0x4200440a
     size_bits: 8
     description: Status C
     read_allowed: true
@@ -244,7 +244,7 @@ modules:
         2: BELOW
   - !Register
     name: WINCTRL
-    addr: 0xc
+    addr: 0x4200440c
     size_bits: 8
     description: Window Control
     read_allowed: true
@@ -267,7 +267,7 @@ modules:
         3: OUTSIDE
   - !Register
     name: COMPCTRL0
-    addr: 0x10
+    addr: 0x42004410
     size_bits: 32
     description: Comparator Control n
     fields:
@@ -353,7 +353,7 @@ modules:
         2: MAJ5
   - !Register
     name: COMPCTRL1
-    addr: 0x14
+    addr: 0x42004414
     size_bits: 32
     description: Comparator Control n
     fields:
@@ -439,7 +439,7 @@ modules:
         2: MAJ5
   - !Register
     name: SCALER0
-    addr: 0x20
+    addr: 0x42004420
     size_bits: 8
     description: Scaler n
     fields:
@@ -450,7 +450,7 @@ modules:
       description: Scaler Value
   - !Register
     name: SCALER1
-    addr: 0x21
+    addr: 0x42004421
     size_bits: 8
     description: Scaler n
     fields:
@@ -463,11 +463,11 @@ modules:
   name: AC1
   description: Analog Comparators 1
   base_addr: 0x42005400
-  size: 0x40
+  size: 0x22
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42005400
     size_bits: 8
     description: Control A
     read_allowed: true
@@ -497,7 +497,7 @@ modules:
       description: Low-Power Mux
   - !Register
     name: CTRLB
-    addr: 0x1
+    addr: 0x42005401
     size_bits: 8
     description: Control B
     read_allowed: false
@@ -515,7 +515,7 @@ modules:
       description: Comparator 1 Start Comparison
   - !Register
     name: EVCTRL
-    addr: 0x2
+    addr: 0x42005402
     size_bits: 16
     description: Event Control
     read_allowed: true
@@ -548,7 +548,7 @@ modules:
       description: Comparator 1 Event Input
   - !Register
     name: INTENCLR
-    addr: 0x4
+    addr: 0x42005404
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -571,7 +571,7 @@ modules:
       description: Window 0 Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x5
+    addr: 0x42005405
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -594,7 +594,7 @@ modules:
       description: Window 0 Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x6
+    addr: 0x42005406
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -617,7 +617,7 @@ modules:
       description: Window 0
   - !Register
     name: STATUSA
-    addr: 0x8
+    addr: 0x42005408
     size_bits: 8
     description: Status A
     read_allowed: true
@@ -644,7 +644,7 @@ modules:
         2: BELOW
   - !Register
     name: STATUSB
-    addr: 0x9
+    addr: 0x42005409
     size_bits: 8
     description: Status B
     read_allowed: true
@@ -671,7 +671,7 @@ modules:
       description: Synchronization Busy
   - !Register
     name: STATUSC
-    addr: 0xa
+    addr: 0x4200540a
     size_bits: 8
     description: Status C
     read_allowed: true
@@ -698,7 +698,7 @@ modules:
         2: BELOW
   - !Register
     name: WINCTRL
-    addr: 0xc
+    addr: 0x4200540c
     size_bits: 8
     description: Window Control
     read_allowed: true
@@ -721,7 +721,7 @@ modules:
         3: OUTSIDE
   - !Register
     name: COMPCTRL0
-    addr: 0x10
+    addr: 0x42005410
     size_bits: 32
     description: Comparator Control n
     fields:
@@ -807,7 +807,7 @@ modules:
         2: MAJ5
   - !Register
     name: COMPCTRL1
-    addr: 0x14
+    addr: 0x42005414
     size_bits: 32
     description: Comparator Control n
     fields:
@@ -893,7 +893,7 @@ modules:
         2: MAJ5
   - !Register
     name: SCALER0
-    addr: 0x20
+    addr: 0x42005420
     size_bits: 8
     description: Scaler n
     fields:
@@ -904,7 +904,7 @@ modules:
       description: Scaler Value
   - !Register
     name: SCALER1
-    addr: 0x21
+    addr: 0x42005421
     size_bits: 8
     description: Scaler n
     fields:
@@ -917,11 +917,11 @@ modules:
   name: ADC
   description: Analog Digital Converter
   base_addr: 0x42004000
-  size: 0x80
+  size: 0x2b
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42004000
     size_bits: 8
     description: Control A
     read_allowed: true
@@ -944,7 +944,7 @@ modules:
       description: Run in Standby
   - !Register
     name: REFCTRL
-    addr: 0x1
+    addr: 0x42004001
     size_bits: 8
     description: Reference Control
     read_allowed: true
@@ -968,7 +968,7 @@ modules:
       description: Reference Buffer Offset Compensation Enable
   - !Register
     name: AVGCTRL
-    addr: 0x2
+    addr: 0x42004002
     size_bits: 8
     description: Average Control
     read_allowed: true
@@ -998,7 +998,7 @@ modules:
       description: Adjusting Result / Division Coefficient
   - !Register
     name: SAMPCTRL
-    addr: 0x3
+    addr: 0x42004003
     size_bits: 8
     description: Sampling Time Control
     read_allowed: true
@@ -1011,7 +1011,7 @@ modules:
       description: Sampling Time Length
   - !Register
     name: CTRLB
-    addr: 0x4
+    addr: 0x42004004
     size_bits: 16
     description: Control B
     read_allowed: true
@@ -1063,7 +1063,7 @@ modules:
         7: DIV512
   - !Register
     name: WINCTRL
-    addr: 0x8
+    addr: 0x42004008
     size_bits: 8
     description: Window Monitor Control
     read_allowed: true
@@ -1082,7 +1082,7 @@ modules:
         4: MODE4
   - !Register
     name: SWTRIG
-    addr: 0xc
+    addr: 0x4200400c
     size_bits: 8
     description: Software Trigger
     read_allowed: true
@@ -1100,7 +1100,7 @@ modules:
       description: ADC Start Conversion
   - !Register
     name: INPUTCTRL
-    addr: 0x10
+    addr: 0x42004010
     size_bits: 32
     description: Input Control
     read_allowed: true
@@ -1177,7 +1177,7 @@ modules:
         15: DIV2
   - !Register
     name: EVCTRL
-    addr: 0x14
+    addr: 0x42004014
     size_bits: 8
     description: Event Control
     read_allowed: true
@@ -1205,7 +1205,7 @@ modules:
       description: Window Monitor Event Out
   - !Register
     name: INTENCLR
-    addr: 0x16
+    addr: 0x42004016
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -1233,7 +1233,7 @@ modules:
       description: Synchronization Ready Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x17
+    addr: 0x42004017
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -1261,7 +1261,7 @@ modules:
       description: Synchronization Ready Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x18
+    addr: 0x42004018
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -1289,7 +1289,7 @@ modules:
       description: Synchronization Ready
   - !Register
     name: STATUS
-    addr: 0x19
+    addr: 0x42004019
     size_bits: 8
     description: Status
     read_allowed: true
@@ -1304,7 +1304,7 @@ modules:
       write_allowed: false
   - !Register
     name: RESULT
-    addr: 0x1a
+    addr: 0x4200401a
     size_bits: 16
     description: Result
     read_allowed: true
@@ -1319,7 +1319,7 @@ modules:
       write_allowed: false
   - !Register
     name: WINLT
-    addr: 0x1c
+    addr: 0x4200401c
     size_bits: 16
     description: Window Monitor Lower Threshold
     read_allowed: true
@@ -1332,7 +1332,7 @@ modules:
       description: Window Lower Threshold
   - !Register
     name: WINUT
-    addr: 0x20
+    addr: 0x42004020
     size_bits: 16
     description: Window Monitor Upper Threshold
     read_allowed: true
@@ -1345,7 +1345,7 @@ modules:
       description: Window Upper Threshold
   - !Register
     name: GAINCORR
-    addr: 0x24
+    addr: 0x42004024
     size_bits: 16
     description: Gain Correction
     read_allowed: true
@@ -1358,7 +1358,7 @@ modules:
       description: Gain Correction Value
   - !Register
     name: OFFSETCORR
-    addr: 0x26
+    addr: 0x42004026
     size_bits: 16
     description: Offset Correction
     read_allowed: true
@@ -1371,7 +1371,7 @@ modules:
       description: Offset Correction Value
   - !Register
     name: CALIB
-    addr: 0x28
+    addr: 0x42004028
     size_bits: 16
     description: Calibration
     read_allowed: true
@@ -1389,7 +1389,7 @@ modules:
       description: Bias Calibration Value
   - !Register
     name: DBGCTRL
-    addr: 0x2a
+    addr: 0x4200402a
     size_bits: 8
     description: Debug Control
     read_allowed: true
@@ -1404,11 +1404,11 @@ modules:
   name: DAC
   description: Digital Analog Converter
   base_addr: 0x42004800
-  size: 0x10
+  size: 0xe
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42004800
     size_bits: 8
     description: Control A
     read_allowed: true
@@ -1431,7 +1431,7 @@ modules:
       description: Run in Standby
   - !Register
     name: CTRLB
-    addr: 0x1
+    addr: 0x42004801
     size_bits: 8
     description: Control B
     read_allowed: true
@@ -1473,7 +1473,7 @@ modules:
         2: VREFP
   - !Register
     name: EVCTRL
-    addr: 0x2
+    addr: 0x42004802
     size_bits: 8
     description: Event Control
     read_allowed: true
@@ -1491,7 +1491,7 @@ modules:
       description: Data Buffer Empty Event Output
   - !Register
     name: INTENCLR
-    addr: 0x4
+    addr: 0x42004804
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -1514,7 +1514,7 @@ modules:
       description: Synchronization Ready Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x5
+    addr: 0x42004805
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -1537,7 +1537,7 @@ modules:
       description: Synchronization Ready Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x6
+    addr: 0x42004806
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -1560,7 +1560,7 @@ modules:
       description: Synchronization Ready
   - !Register
     name: STATUS
-    addr: 0x7
+    addr: 0x42004807
     size_bits: 8
     description: Status
     read_allowed: true
@@ -1575,7 +1575,7 @@ modules:
       write_allowed: false
   - !Register
     name: DATA
-    addr: 0x8
+    addr: 0x42004808
     size_bits: 16
     description: Data
     read_allowed: true
@@ -1588,7 +1588,7 @@ modules:
       description: Data value to be converted
   - !Register
     name: DATABUF
-    addr: 0xc
+    addr: 0x4200480c
     size_bits: 16
     description: Data Buffer
     read_allowed: true
@@ -1603,11 +1603,11 @@ modules:
   name: DMAC
   description: Direct Memory Access Controller
   base_addr: 0x41004800
-  size: 0x80
+  size: 0x50
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x41004800
     size_bits: 16
     description: Control
     read_allowed: true
@@ -1650,7 +1650,7 @@ modules:
       description: Priority Level 3 Enable
   - !Register
     name: CRCCTRL
-    addr: 0x2
+    addr: 0x41004802
     size_bits: 16
     description: CRC Control
     read_allowed: true
@@ -1683,7 +1683,7 @@ modules:
         1: IO
   - !Register
     name: CRCDATAIN
-    addr: 0x4
+    addr: 0x41004804
     size_bits: 32
     description: CRC Data Input
     read_allowed: true
@@ -1696,7 +1696,7 @@ modules:
       description: CRC Data Input
   - !Register
     name: CRCCHKSUM
-    addr: 0x8
+    addr: 0x41004808
     size_bits: 32
     description: CRC Checksum
     read_allowed: true
@@ -1709,7 +1709,7 @@ modules:
       description: CRC Checksum
   - !Register
     name: CRCSTATUS
-    addr: 0xc
+    addr: 0x4100480c
     size_bits: 8
     description: CRC Status
     read_allowed: true
@@ -1729,7 +1729,7 @@ modules:
       write_allowed: false
   - !Register
     name: DBGCTRL
-    addr: 0xd
+    addr: 0x4100480d
     size_bits: 8
     description: Debug Control
     read_allowed: true
@@ -1742,7 +1742,7 @@ modules:
       description: Debug Run
   - !Register
     name: QOSCTRL
-    addr: 0xe
+    addr: 0x4100480e
     size_bits: 8
     description: QOS Control
     read_allowed: true
@@ -1781,7 +1781,7 @@ modules:
         3: HIGH
   - !Register
     name: SWTRIGCTRL
-    addr: 0x10
+    addr: 0x41004810
     size_bits: 32
     description: Software Trigger Control
     read_allowed: true
@@ -1849,7 +1849,7 @@ modules:
       description: Channel 11 Software Trigger
   - !Register
     name: PRICTRL0
-    addr: 0x14
+    addr: 0x41004814
     size_bits: 32
     description: Priority Control 0
     read_allowed: true
@@ -1897,7 +1897,7 @@ modules:
       description: Level 3 Round-Robin Scheduling Enable
   - !Register
     name: INTPEND
-    addr: 0x20
+    addr: 0x41004820
     size_bits: 16
     description: Interrupt Pending
     read_allowed: true
@@ -1946,7 +1946,7 @@ modules:
       write_allowed: false
   - !Register
     name: INTSTATUS
-    addr: 0x24
+    addr: 0x41004824
     size_bits: 32
     description: Interrupt Status
     read_allowed: true
@@ -2038,7 +2038,7 @@ modules:
       write_allowed: false
   - !Register
     name: BUSYCH
-    addr: 0x28
+    addr: 0x41004828
     size_bits: 32
     description: Busy Channels
     read_allowed: true
@@ -2130,7 +2130,7 @@ modules:
       write_allowed: false
   - !Register
     name: PENDCH
-    addr: 0x2c
+    addr: 0x4100482c
     size_bits: 32
     description: Pending Channels
     read_allowed: true
@@ -2222,7 +2222,7 @@ modules:
       write_allowed: false
   - !Register
     name: ACTIVE
-    addr: 0x30
+    addr: 0x41004830
     size_bits: 32
     description: Active Channel and Levels
     read_allowed: true
@@ -2279,7 +2279,7 @@ modules:
       write_allowed: false
   - !Register
     name: BASEADDR
-    addr: 0x34
+    addr: 0x41004834
     size_bits: 32
     description: Descriptor Memory Section Base Address
     read_allowed: true
@@ -2292,7 +2292,7 @@ modules:
       description: Descriptor Memory Base Address
   - !Register
     name: WRBADDR
-    addr: 0x38
+    addr: 0x41004838
     size_bits: 32
     description: Write-Back Memory Section Base Address
     read_allowed: true
@@ -2305,7 +2305,7 @@ modules:
       description: Write-Back Memory Base Address
   - !Register
     name: CHID
-    addr: 0x3f
+    addr: 0x4100483f
     size_bits: 8
     description: Channel ID
     read_allowed: true
@@ -2318,7 +2318,7 @@ modules:
       description: Channel ID
   - !Register
     name: CHCTRLA
-    addr: 0x40
+    addr: 0x41004840
     size_bits: 8
     description: Channel Control A
     read_allowed: true
@@ -2336,7 +2336,7 @@ modules:
       description: Channel Enable
   - !Register
     name: CHCTRLB
-    addr: 0x44
+    addr: 0x41004844
     size_bits: 32
     description: Channel Control B
     read_allowed: true
@@ -2402,7 +2402,7 @@ modules:
         2: RESUME
   - !Register
     name: CHINTENCLR
-    addr: 0x4c
+    addr: 0x4100484c
     size_bits: 8
     description: Channel Interrupt Enable Clear
     read_allowed: true
@@ -2425,7 +2425,7 @@ modules:
       description: Channel Suspend Interrupt Enable
   - !Register
     name: CHINTENSET
-    addr: 0x4d
+    addr: 0x4100484d
     size_bits: 8
     description: Channel Interrupt Enable Set
     read_allowed: true
@@ -2448,7 +2448,7 @@ modules:
       description: Channel Suspend Interrupt Enable
   - !Register
     name: CHINTFLAG
-    addr: 0x4e
+    addr: 0x4100484e
     size_bits: 8
     description: Channel Interrupt Flag Status and Clear
     read_allowed: true
@@ -2471,7 +2471,7 @@ modules:
       description: Channel Suspend
   - !Register
     name: CHSTATUS
-    addr: 0x4f
+    addr: 0x4100484f
     size_bits: 8
     description: Channel Status
     read_allowed: true
@@ -2506,7 +2506,7 @@ modules:
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x41002000
     size_bits: 8
     description: Control
     read_allowed: false
@@ -2542,7 +2542,7 @@ modules:
       write_allowed: true
   - !Register
     name: STATUSA
-    addr: 0x1
+    addr: 0x41002001
     size_bits: 8
     description: Status A
     read_allowed: true
@@ -2575,7 +2575,7 @@ modules:
       description: Protection Error
   - !Register
     name: STATUSB
-    addr: 0x2
+    addr: 0x41002002
     size_bits: 8
     description: Status B
     read_allowed: true
@@ -2609,7 +2609,7 @@ modules:
       description: Hot-Plugging Enable
   - !Register
     name: ADDR
-    addr: 0x4
+    addr: 0x41002004
     size_bits: 32
     description: Address
     read_allowed: true
@@ -2622,7 +2622,7 @@ modules:
       description: Address
   - !Register
     name: LENGTH
-    addr: 0x8
+    addr: 0x41002008
     size_bits: 32
     description: Length
     read_allowed: true
@@ -2635,7 +2635,7 @@ modules:
       description: Length
   - !Register
     name: DATA
-    addr: 0xc
+    addr: 0x4100200c
     size_bits: 32
     description: Data
     read_allowed: true
@@ -2648,7 +2648,7 @@ modules:
       description: Data
   - !Register
     name: DID
-    addr: 0x18
+    addr: 0x41002018
     size_bits: 32
     description: Device Identification
     read_allowed: true
@@ -2699,7 +2699,7 @@ modules:
       write_allowed: false
   - !Register
     name: ENTRY0
-    addr: 0x1000
+    addr: 0x41003000
     size_bits: 32
     description: CoreSight ROM Table Entry 0
     read_allowed: true
@@ -2727,16 +2727,15 @@ modules:
       write_allowed: false
   - !Register
     name: ENTRY1
-    addr: 0x1004
+    addr: 0x41003004
     size_bits: 32
     description: CoreSight ROM Table Entry 1
     read_allowed: true
     write_allowed: false
     reset_value: 0x3002
-    fields: []
   - !Register
     name: END
-    addr: 0x1008
+    addr: 0x41003008
     size_bits: 32
     description: CoreSight ROM Table End
     read_allowed: true
@@ -2749,7 +2748,7 @@ modules:
       description: End Marker
   - !Register
     name: MEMTYPE
-    addr: 0x1fcc
+    addr: 0x41003fcc
     size_bits: 32
     description: CoreSight ROM Table Memory Type
     read_allowed: true
@@ -2762,7 +2761,7 @@ modules:
       description: System Memory Present
   - !Register
     name: PID4
-    addr: 0x1fd0
+    addr: 0x41003fd0
     size_bits: 32
     description: Peripheral Identification 4
     read_allowed: true
@@ -2782,7 +2781,7 @@ modules:
       write_allowed: false
   - !Register
     name: PID0
-    addr: 0x1fe0
+    addr: 0x41003fe0
     size_bits: 32
     description: Peripheral Identification 0
     read_allowed: true
@@ -2796,7 +2795,7 @@ modules:
       description: Part Number Low
   - !Register
     name: PID1
-    addr: 0x1fe4
+    addr: 0x41003fe4
     size_bits: 32
     description: Peripheral Identification 1
     read_allowed: true
@@ -2817,7 +2816,7 @@ modules:
       write_allowed: false
   - !Register
     name: PID2
-    addr: 0x1fe8
+    addr: 0x41003fe8
     size_bits: 32
     description: Peripheral Identification 2
     read_allowed: true
@@ -2845,7 +2844,7 @@ modules:
       write_allowed: false
   - !Register
     name: PID3
-    addr: 0x1fec
+    addr: 0x41003fec
     size_bits: 32
     description: Peripheral Identification 3
     read_allowed: true
@@ -2865,7 +2864,7 @@ modules:
       write_allowed: false
   - !Register
     name: CID0
-    addr: 0x1ff0
+    addr: 0x41003ff0
     size_bits: 32
     description: Component Identification 0
     read_allowed: true
@@ -2881,7 +2880,7 @@ modules:
       write_allowed: false
   - !Register
     name: CID1
-    addr: 0x1ff4
+    addr: 0x41003ff4
     size_bits: 32
     description: Component Identification 1
     read_allowed: true
@@ -2904,7 +2903,7 @@ modules:
       write_allowed: false
   - !Register
     name: CID2
-    addr: 0x1ff8
+    addr: 0x41003ff8
     size_bits: 32
     description: Component Identification 2
     read_allowed: true
@@ -2920,7 +2919,7 @@ modules:
       write_allowed: false
   - !Register
     name: CID3
-    addr: 0x1ffc
+    addr: 0x41003ffc
     size_bits: 32
     description: Component Identification 3
     read_allowed: true
@@ -2934,7 +2933,7 @@ modules:
       description: Preamble Byte 3
   - !Register
     name: DCC0
-    addr: 0x10
+    addr: 0x41002010
     size_bits: 32
     description: Debug Communication Channel n
     fields:
@@ -2945,7 +2944,7 @@ modules:
       description: Data
   - !Register
     name: DCC1
-    addr: 0x14
+    addr: 0x41002014
     size_bits: 32
     description: Debug Communication Channel n
     fields:
@@ -2958,11 +2957,11 @@ modules:
   name: EIC
   description: External Interrupt Controller
   base_addr: 0x40001800
-  size: 0x40
+  size: 0x20
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x40001800
     size_bits: 8
     description: Control
     read_allowed: true
@@ -2980,7 +2979,7 @@ modules:
       description: Enable
   - !Register
     name: STATUS
-    addr: 0x1
+    addr: 0x40001801
     size_bits: 8
     description: Status
     read_allowed: true
@@ -2995,7 +2994,7 @@ modules:
       write_allowed: false
   - !Register
     name: NMICTRL
-    addr: 0x2
+    addr: 0x40001802
     size_bits: 8
     description: Non-Maskable Interrupt Control
     read_allowed: true
@@ -3020,7 +3019,7 @@ modules:
       description: Non-Maskable Interrupt Filter Enable
   - !Register
     name: NMIFLAG
-    addr: 0x3
+    addr: 0x40001803
     size_bits: 8
     description: Non-Maskable Interrupt Flag Status and Clear
     read_allowed: true
@@ -3033,7 +3032,7 @@ modules:
       description: Non-Maskable Interrupt
   - !Register
     name: EVCTRL
-    addr: 0x4
+    addr: 0x40001804
     size_bits: 32
     description: Event Control
     read_allowed: true
@@ -3121,7 +3120,7 @@ modules:
       description: External Interrupt 15 Event Output Enable
   - !Register
     name: INTENCLR
-    addr: 0x8
+    addr: 0x40001808
     size_bits: 32
     description: Interrupt Enable Clear
     read_allowed: true
@@ -3209,7 +3208,7 @@ modules:
       description: External Interrupt 15 Enable
   - !Register
     name: INTENSET
-    addr: 0xc
+    addr: 0x4000180c
     size_bits: 32
     description: Interrupt Enable Set
     read_allowed: true
@@ -3297,7 +3296,7 @@ modules:
       description: External Interrupt 15 Enable
   - !Register
     name: INTFLAG
-    addr: 0x10
+    addr: 0x40001810
     size_bits: 32
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -3385,7 +3384,7 @@ modules:
       description: External Interrupt 15
   - !Register
     name: WAKEUP
-    addr: 0x14
+    addr: 0x40001814
     size_bits: 32
     description: Wake-Up Enable
     read_allowed: true
@@ -3473,7 +3472,7 @@ modules:
       description: External Interrupt 15 Wake-up Enable
   - !Register
     name: CONFIG0
-    addr: 0x18
+    addr: 0x40001818
     size_bits: 32
     description: Configuration n
     fields:
@@ -3615,7 +3614,7 @@ modules:
       description: Filter 7 Enable
   - !Register
     name: CONFIG1
-    addr: 0x1c
+    addr: 0x4000181c
     size_bits: 32
     description: Configuration n
     fields:
@@ -3759,11 +3758,11 @@ modules:
   name: EVSYS
   description: Event System Interface
   base_addr: 0x42000400
-  size: 0x80
+  size: 0x1c
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x42000400
     size_bits: 8
     description: Control
     read_allowed: false
@@ -3783,7 +3782,7 @@ modules:
       description: Generic Clock Requests
   - !Register
     name: CHANNEL
-    addr: 0x4
+    addr: 0x42000404
     size_bits: 32
     description: Channel
     read_allowed: true
@@ -3825,7 +3824,7 @@ modules:
         3: BOTH_EDGES
   - !Register
     name: USER
-    addr: 0x8
+    addr: 0x42000408
     size_bits: 16
     description: User Multiplexer
     read_allowed: true
@@ -3845,7 +3844,7 @@ modules:
         0: '0'
   - !Register
     name: CHSTATUS
-    addr: 0xc
+    addr: 0x4200040c
     size_bits: 32
     description: Channel Status
     read_allowed: true
@@ -4022,7 +4021,7 @@ modules:
       write_allowed: false
   - !Register
     name: INTENCLR
-    addr: 0x10
+    addr: 0x42000410
     size_bits: 32
     description: Interrupt Enable Clear
     read_allowed: true
@@ -4150,7 +4149,7 @@ modules:
       description: Channel 11 Event Detection Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x14
+    addr: 0x42000414
     size_bits: 32
     description: Interrupt Enable Set
     read_allowed: true
@@ -4278,7 +4277,7 @@ modules:
       description: Channel 11 Event Detection Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x18
+    addr: 0x42000418
     size_bits: 32
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -4408,11 +4407,11 @@ modules:
   name: GCLK
   description: Generic Clock Generator
   base_addr: 0x40000c00
-  size: 0x10
+  size: 0xc
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x40000c00
     size_bits: 8
     description: Control
     read_allowed: true
@@ -4425,7 +4424,7 @@ modules:
       description: Software Reset
   - !Register
     name: STATUS
-    addr: 0x1
+    addr: 0x40000c01
     size_bits: 8
     description: Status
     read_allowed: true
@@ -4440,7 +4439,7 @@ modules:
       write_allowed: false
   - !Register
     name: CLKCTRL
-    addr: 0x2
+    addr: 0x40000c02
     size_bits: 16
     description: Generic Clock Control
     read_allowed: true
@@ -4514,7 +4513,7 @@ modules:
       description: Write Lock
   - !Register
     name: GENCTRL
-    addr: 0x4
+    addr: 0x40000c04
     size_bits: 32
     description: Generic Clock Generator Control
     read_allowed: true
@@ -4572,7 +4571,7 @@ modules:
       description: Run in Standby
   - !Register
     name: GENDIV
-    addr: 0x8
+    addr: 0x40000c08
     size_bits: 32
     description: Generic Clock Generator Division
     read_allowed: true
@@ -4592,203 +4591,171 @@ modules:
   name: HMATRIX
   description: HSB Matrix
   base_addr: 0x41007000
-  size: 0x400
+  size: 0x150
   registers:
   - !Register
     name: PRAS0
-    addr: 0x80
+    addr: 0x41007080
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS1
-    addr: 0x88
+    addr: 0x41007088
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS2
-    addr: 0x90
+    addr: 0x41007090
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS3
-    addr: 0x98
+    addr: 0x41007098
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS4
-    addr: 0xa0
+    addr: 0x410070a0
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS5
-    addr: 0xa8
+    addr: 0x410070a8
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS6
-    addr: 0xb0
+    addr: 0x410070b0
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS7
-    addr: 0xb8
+    addr: 0x410070b8
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS8
-    addr: 0xc0
+    addr: 0x410070c0
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS9
-    addr: 0xc8
+    addr: 0x410070c8
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS10
-    addr: 0xd0
+    addr: 0x410070d0
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS11
-    addr: 0xd8
+    addr: 0x410070d8
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS12
-    addr: 0xe0
+    addr: 0x410070e0
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS13
-    addr: 0xe8
+    addr: 0x410070e8
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS14
-    addr: 0xf0
+    addr: 0x410070f0
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRAS15
-    addr: 0xf8
+    addr: 0x410070f8
     size_bits: 32
     description: Priority A for Slave
-    fields: []
   - !Register
     name: PRBS0
-    addr: 0x84
+    addr: 0x41007084
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS1
-    addr: 0x8c
+    addr: 0x4100708c
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS2
-    addr: 0x94
+    addr: 0x41007094
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS3
-    addr: 0x9c
+    addr: 0x4100709c
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS4
-    addr: 0xa4
+    addr: 0x410070a4
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS5
-    addr: 0xac
+    addr: 0x410070ac
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS6
-    addr: 0xb4
+    addr: 0x410070b4
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS7
-    addr: 0xbc
+    addr: 0x410070bc
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS8
-    addr: 0xc4
+    addr: 0x410070c4
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS9
-    addr: 0xcc
+    addr: 0x410070cc
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS10
-    addr: 0xd4
+    addr: 0x410070d4
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS11
-    addr: 0xdc
+    addr: 0x410070dc
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS12
-    addr: 0xe4
+    addr: 0x410070e4
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS13
-    addr: 0xec
+    addr: 0x410070ec
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS14
-    addr: 0xf4
+    addr: 0x410070f4
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: PRBS15
-    addr: 0xfc
+    addr: 0x410070fc
     size_bits: 32
     description: Priority B for Slave
-    fields: []
   - !Register
     name: SFR0
-    addr: 0x110
+    addr: 0x41007110
     size_bits: 32
     description: Special Function
     fields:
@@ -4799,7 +4766,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR1
-    addr: 0x114
+    addr: 0x41007114
     size_bits: 32
     description: Special Function
     fields:
@@ -4810,7 +4777,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR2
-    addr: 0x118
+    addr: 0x41007118
     size_bits: 32
     description: Special Function
     fields:
@@ -4821,7 +4788,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR3
-    addr: 0x11c
+    addr: 0x4100711c
     size_bits: 32
     description: Special Function
     fields:
@@ -4832,7 +4799,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR4
-    addr: 0x120
+    addr: 0x41007120
     size_bits: 32
     description: Special Function
     fields:
@@ -4843,7 +4810,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR5
-    addr: 0x124
+    addr: 0x41007124
     size_bits: 32
     description: Special Function
     fields:
@@ -4854,7 +4821,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR6
-    addr: 0x128
+    addr: 0x41007128
     size_bits: 32
     description: Special Function
     fields:
@@ -4865,7 +4832,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR7
-    addr: 0x12c
+    addr: 0x4100712c
     size_bits: 32
     description: Special Function
     fields:
@@ -4876,7 +4843,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR8
-    addr: 0x130
+    addr: 0x41007130
     size_bits: 32
     description: Special Function
     fields:
@@ -4887,7 +4854,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR9
-    addr: 0x134
+    addr: 0x41007134
     size_bits: 32
     description: Special Function
     fields:
@@ -4898,7 +4865,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR10
-    addr: 0x138
+    addr: 0x41007138
     size_bits: 32
     description: Special Function
     fields:
@@ -4909,7 +4876,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR11
-    addr: 0x13c
+    addr: 0x4100713c
     size_bits: 32
     description: Special Function
     fields:
@@ -4920,7 +4887,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR12
-    addr: 0x140
+    addr: 0x41007140
     size_bits: 32
     description: Special Function
     fields:
@@ -4931,7 +4898,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR13
-    addr: 0x144
+    addr: 0x41007144
     size_bits: 32
     description: Special Function
     fields:
@@ -4942,7 +4909,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR14
-    addr: 0x148
+    addr: 0x41007148
     size_bits: 32
     description: Special Function
     fields:
@@ -4953,7 +4920,7 @@ modules:
       description: Special Function Register
   - !Register
     name: SFR15
-    addr: 0x14c
+    addr: 0x4100714c
     size_bits: 32
     description: Special Function
     fields:
@@ -4970,7 +4937,7 @@ modules:
   registers:
   - !Register
     name: POSITION
-    addr: 0x0
+    addr: 0x41006000
     size_bits: 32
     description: MTB Position
     read_allowed: true
@@ -4988,7 +4955,7 @@ modules:
       description: Trace Packet Location Pointer
   - !Register
     name: MASTER
-    addr: 0x4
+    addr: 0x41006004
     size_bits: 32
     description: MTB Master
     read_allowed: true
@@ -5031,7 +4998,7 @@ modules:
       description: Main Trace Enable
   - !Register
     name: FLOW
-    addr: 0x8
+    addr: 0x41006008
     size_bits: 32
     description: MTB Flow
     read_allowed: true
@@ -5054,189 +5021,167 @@ modules:
       description: Watermark value
   - !Register
     name: BASE
-    addr: 0xc
+    addr: 0x4100600c
     size_bits: 32
     description: MTB Base
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: ITCTRL
-    addr: 0xf00
+    addr: 0x41006f00
     size_bits: 32
     description: MTB Integration Mode Control
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: CLAIMSET
-    addr: 0xfa0
+    addr: 0x41006fa0
     size_bits: 32
     description: MTB Claim Set
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: CLAIMCLR
-    addr: 0xfa4
+    addr: 0x41006fa4
     size_bits: 32
     description: MTB Claim Clear
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LOCKACCESS
-    addr: 0xfb0
+    addr: 0x41006fb0
     size_bits: 32
     description: MTB Lock Access
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LOCKSTATUS
-    addr: 0xfb4
+    addr: 0x41006fb4
     size_bits: 32
     description: MTB Lock Status
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: AUTHSTATUS
-    addr: 0xfb8
+    addr: 0x41006fb8
     size_bits: 32
     description: MTB Authentication Status
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: DEVARCH
-    addr: 0xfbc
+    addr: 0x41006fbc
     size_bits: 32
     description: MTB Device Architecture
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: DEVID
-    addr: 0xfc8
+    addr: 0x41006fc8
     size_bits: 32
     description: MTB Device Configuration
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: DEVTYPE
-    addr: 0xfcc
+    addr: 0x41006fcc
     size_bits: 32
     description: MTB Device Type
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID4
-    addr: 0xfd0
+    addr: 0x41006fd0
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID5
-    addr: 0xfd4
+    addr: 0x41006fd4
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID6
-    addr: 0xfd8
+    addr: 0x41006fd8
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID7
-    addr: 0xfdc
+    addr: 0x41006fdc
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID0
-    addr: 0xfe0
+    addr: 0x41006fe0
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID1
-    addr: 0xfe4
+    addr: 0x41006fe4
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID2
-    addr: 0xfe8
+    addr: 0x41006fe8
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: PID3
-    addr: 0xfec
+    addr: 0x41006fec
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: CID0
-    addr: 0xff0
+    addr: 0x41006ff0
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: CID1
-    addr: 0xff4
+    addr: 0x41006ff4
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: CID2
-    addr: 0xff8
+    addr: 0x41006ff8
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
   - !Register
     name: CID3
-    addr: 0xffc
+    addr: 0x41006ffc
     size_bits: 32
     description: CoreSight
     read_allowed: true
     write_allowed: false
-    fields: []
 - !Module
   name: NVMCTRL
   description: Non-Volatile Memory Controller
   base_addr: 0x41004000
-  size: 0x80
+  size: 0x22
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x41004000
     size_bits: 16
     description: Control A
     read_allowed: true
@@ -5272,7 +5217,7 @@ modules:
         165: KEY
   - !Register
     name: CTRLB
-    addr: 0x4
+    addr: 0x41004004
     size_bits: 32
     description: Control B
     read_allowed: true
@@ -5317,7 +5262,7 @@ modules:
       description: Cache Disable
   - !Register
     name: PARAM
-    addr: 0x8
+    addr: 0x41004008
     size_bits: 32
     description: NVM Parameter
     read_allowed: true
@@ -5355,7 +5300,7 @@ modules:
       write_allowed: false
   - !Register
     name: INTENCLR
-    addr: 0xc
+    addr: 0x4100400c
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -5373,7 +5318,7 @@ modules:
       description: Error Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x10
+    addr: 0x41004010
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -5391,7 +5336,7 @@ modules:
       description: Error Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x14
+    addr: 0x41004014
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -5409,7 +5354,7 @@ modules:
       description: Error
   - !Register
     name: STATUS
-    addr: 0x18
+    addr: 0x41004018
     size_bits: 16
     description: Status
     read_allowed: true
@@ -5451,7 +5396,7 @@ modules:
       write_allowed: false
   - !Register
     name: ADDR
-    addr: 0x1c
+    addr: 0x4100401c
     size_bits: 32
     description: Address
     read_allowed: true
@@ -5464,7 +5409,7 @@ modules:
       description: NVM Address
   - !Register
     name: LOCK
-    addr: 0x20
+    addr: 0x41004020
     size_bits: 16
     description: Lock Section
     read_allowed: true
@@ -5485,7 +5430,7 @@ modules:
   registers:
   - !Register
     name: WPCLR
-    addr: 0x0
+    addr: 0x40000000
     size_bits: 32
     description: Write Protection Clear
     read_allowed: true
@@ -5498,7 +5443,7 @@ modules:
       description: Write Protection Clear
   - !Register
     name: WPSET
-    addr: 0x4
+    addr: 0x40000004
     size_bits: 32
     description: Write Protection Set
     read_allowed: true
@@ -5517,7 +5462,7 @@ modules:
   registers:
   - !Register
     name: WPCLR
-    addr: 0x0
+    addr: 0x41000000
     size_bits: 32
     description: Write Protection Clear
     read_allowed: true
@@ -5530,7 +5475,7 @@ modules:
       description: Write Protection Clear
   - !Register
     name: WPSET
-    addr: 0x4
+    addr: 0x41000004
     size_bits: 32
     description: Write Protection Set
     read_allowed: true
@@ -5549,7 +5494,7 @@ modules:
   registers:
   - !Register
     name: WPCLR
-    addr: 0x0
+    addr: 0x42000000
     size_bits: 32
     description: Write Protection Clear
     read_allowed: true
@@ -5562,7 +5507,7 @@ modules:
       description: Write Protection Clear
   - !Register
     name: WPSET
-    addr: 0x4
+    addr: 0x42000004
     size_bits: 32
     description: Write Protection Set
     read_allowed: true
@@ -5577,19 +5522,18 @@ modules:
   name: PM
   description: Power Manager
   base_addr: 0x40000400
-  size: 0x80
+  size: 0x39
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x40000400
     size_bits: 8
     description: Control
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: SLEEP
-    addr: 0x1
+    addr: 0x40000401
     size_bits: 8
     description: Sleep Mode
     read_allowed: true
@@ -5606,7 +5550,7 @@ modules:
         2: APB
   - !Register
     name: EXTCTRL
-    addr: 0x2
+    addr: 0x40000402
     size_bits: 8
     description: External Reset Controller
     read_allowed: true
@@ -5619,7 +5563,7 @@ modules:
       description: External Reset Disable
   - !Register
     name: CPUSEL
-    addr: 0x8
+    addr: 0x40000408
     size_bits: 8
     description: CPU Clock Select
     read_allowed: true
@@ -5641,7 +5585,7 @@ modules:
         7: DIV128
   - !Register
     name: APBASEL
-    addr: 0x9
+    addr: 0x40000409
     size_bits: 8
     description: APBA Clock Select
     read_allowed: true
@@ -5663,7 +5607,7 @@ modules:
         7: DIV128
   - !Register
     name: APBBSEL
-    addr: 0xa
+    addr: 0x4000040a
     size_bits: 8
     description: APBB Clock Select
     read_allowed: true
@@ -5685,7 +5629,7 @@ modules:
         7: DIV128
   - !Register
     name: APBCSEL
-    addr: 0xb
+    addr: 0x4000040b
     size_bits: 8
     description: APBC Clock Select
     read_allowed: true
@@ -5707,7 +5651,7 @@ modules:
         7: DIV128
   - !Register
     name: AHBMASK
-    addr: 0x14
+    addr: 0x40000414
     size_bits: 32
     description: AHB Mask
     read_allowed: true
@@ -5746,7 +5690,7 @@ modules:
       description: DMAC AHB Clock Mask
   - !Register
     name: APBAMASK
-    addr: 0x18
+    addr: 0x40000418
     size_bits: 32
     description: APBA Mask
     read_allowed: true
@@ -5790,7 +5734,7 @@ modules:
       description: EIC APB Clock Enable
   - !Register
     name: APBBMASK
-    addr: 0x1c
+    addr: 0x4000041c
     size_bits: 32
     description: APBB Mask
     read_allowed: true
@@ -5829,7 +5773,7 @@ modules:
       description: HMATRIX APB Clock Enable
   - !Register
     name: APBCMASK
-    addr: 0x20
+    addr: 0x40000420
     size_bits: 32
     description: APBC Mask
     read_allowed: true
@@ -5943,7 +5887,7 @@ modules:
       description: AC1 APB Clock Enable
   - !Register
     name: INTENCLR
-    addr: 0x34
+    addr: 0x40000434
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -5956,7 +5900,7 @@ modules:
       description: Clock Ready Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x35
+    addr: 0x40000435
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -5969,7 +5913,7 @@ modules:
       description: Clock Ready Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x36
+    addr: 0x40000436
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -5982,7 +5926,7 @@ modules:
       description: Clock Ready
   - !Register
     name: RCAUSE
-    addr: 0x38
+    addr: 0x40000438
     size_bits: 8
     description: Reset Cause
     read_allowed: true
@@ -6023,11 +5967,11 @@ modules:
   name: PORT
   description: Port Module
   base_addr: 0x41004400
-  size: 0x200
+  size: 0xe3
   registers:
   - !Register
     name: DIR0
-    addr: 0x0
+    addr: 0x41004400
     size_bits: 32
     description: Data Direction
     fields:
@@ -6038,7 +5982,7 @@ modules:
       description: Port Data Direction
   - !Register
     name: DIR1
-    addr: 0x80
+    addr: 0x41004480
     size_bits: 32
     description: Data Direction
     fields:
@@ -6049,7 +5993,7 @@ modules:
       description: Port Data Direction
   - !Register
     name: DIRCLR0
-    addr: 0x4
+    addr: 0x41004404
     size_bits: 32
     description: Data Direction Clear
     fields:
@@ -6060,7 +6004,7 @@ modules:
       description: Port Data Direction Clear
   - !Register
     name: DIRCLR1
-    addr: 0x84
+    addr: 0x41004484
     size_bits: 32
     description: Data Direction Clear
     fields:
@@ -6071,7 +6015,7 @@ modules:
       description: Port Data Direction Clear
   - !Register
     name: DIRSET0
-    addr: 0x8
+    addr: 0x41004408
     size_bits: 32
     description: Data Direction Set
     fields:
@@ -6082,7 +6026,7 @@ modules:
       description: Port Data Direction Set
   - !Register
     name: DIRSET1
-    addr: 0x88
+    addr: 0x41004488
     size_bits: 32
     description: Data Direction Set
     fields:
@@ -6093,7 +6037,7 @@ modules:
       description: Port Data Direction Set
   - !Register
     name: DIRTGL0
-    addr: 0xc
+    addr: 0x4100440c
     size_bits: 32
     description: Data Direction Toggle
     fields:
@@ -6104,7 +6048,7 @@ modules:
       description: Port Data Direction Toggle
   - !Register
     name: DIRTGL1
-    addr: 0x8c
+    addr: 0x4100448c
     size_bits: 32
     description: Data Direction Toggle
     fields:
@@ -6115,7 +6059,7 @@ modules:
       description: Port Data Direction Toggle
   - !Register
     name: OUT0
-    addr: 0x10
+    addr: 0x41004410
     size_bits: 32
     description: Data Output Value
     fields:
@@ -6126,7 +6070,7 @@ modules:
       description: Port Data Output Value
   - !Register
     name: OUT1
-    addr: 0x90
+    addr: 0x41004490
     size_bits: 32
     description: Data Output Value
     fields:
@@ -6137,7 +6081,7 @@ modules:
       description: Port Data Output Value
   - !Register
     name: OUTCLR0
-    addr: 0x14
+    addr: 0x41004414
     size_bits: 32
     description: Data Output Value Clear
     fields:
@@ -6148,7 +6092,7 @@ modules:
       description: Port Data Output Value Clear
   - !Register
     name: OUTCLR1
-    addr: 0x94
+    addr: 0x41004494
     size_bits: 32
     description: Data Output Value Clear
     fields:
@@ -6159,7 +6103,7 @@ modules:
       description: Port Data Output Value Clear
   - !Register
     name: OUTSET0
-    addr: 0x18
+    addr: 0x41004418
     size_bits: 32
     description: Data Output Value Set
     fields:
@@ -6170,7 +6114,7 @@ modules:
       description: Port Data Output Value Set
   - !Register
     name: OUTSET1
-    addr: 0x98
+    addr: 0x41004498
     size_bits: 32
     description: Data Output Value Set
     fields:
@@ -6181,7 +6125,7 @@ modules:
       description: Port Data Output Value Set
   - !Register
     name: OUTTGL0
-    addr: 0x1c
+    addr: 0x4100441c
     size_bits: 32
     description: Data Output Value Toggle
     fields:
@@ -6192,7 +6136,7 @@ modules:
       description: Port Data Output Value Toggle
   - !Register
     name: OUTTGL1
-    addr: 0x9c
+    addr: 0x4100449c
     size_bits: 32
     description: Data Output Value Toggle
     fields:
@@ -6203,7 +6147,7 @@ modules:
       description: Port Data Output Value Toggle
   - !Register
     name: IN0
-    addr: 0x20
+    addr: 0x41004420
     size_bits: 32
     description: Data Input Value
     read_allowed: true
@@ -6216,7 +6160,7 @@ modules:
       description: Port Data Input Value
   - !Register
     name: IN1
-    addr: 0xa0
+    addr: 0x410044a0
     size_bits: 32
     description: Data Input Value
     read_allowed: true
@@ -6229,7 +6173,7 @@ modules:
       description: Port Data Input Value
   - !Register
     name: CTRL0
-    addr: 0x24
+    addr: 0x41004424
     size_bits: 32
     description: Control
     fields:
@@ -6242,7 +6186,7 @@ modules:
       write_allowed: true
   - !Register
     name: CTRL1
-    addr: 0xa4
+    addr: 0x410044a4
     size_bits: 32
     description: Control
     fields:
@@ -6255,7 +6199,7 @@ modules:
       write_allowed: true
   - !Register
     name: WRCONFIG0
-    addr: 0x28
+    addr: 0x41004428
     size_bits: 32
     description: Write Configuration
     read_allowed: false
@@ -6308,7 +6252,7 @@ modules:
       description: Half-Word Select
   - !Register
     name: WRCONFIG1
-    addr: 0xa8
+    addr: 0x410044a8
     size_bits: 32
     description: Write Configuration
     read_allowed: false
@@ -6361,7 +6305,7 @@ modules:
       description: Half-Word Select
   - !Register
     name: PMUX0_0
-    addr: 0x30
+    addr: 0x41004430
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6395,7 +6339,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_1
-    addr: 0x31
+    addr: 0x41004431
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6429,7 +6373,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_2
-    addr: 0x32
+    addr: 0x41004432
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6463,7 +6407,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_3
-    addr: 0x33
+    addr: 0x41004433
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6497,7 +6441,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_4
-    addr: 0x34
+    addr: 0x41004434
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6531,7 +6475,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_5
-    addr: 0x35
+    addr: 0x41004435
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6565,7 +6509,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_6
-    addr: 0x36
+    addr: 0x41004436
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6599,7 +6543,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_7
-    addr: 0x37
+    addr: 0x41004437
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6633,7 +6577,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_8
-    addr: 0x38
+    addr: 0x41004438
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6667,7 +6611,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_9
-    addr: 0x39
+    addr: 0x41004439
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6701,7 +6645,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_10
-    addr: 0x3a
+    addr: 0x4100443a
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6735,7 +6679,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_11
-    addr: 0x3b
+    addr: 0x4100443b
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6769,7 +6713,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_12
-    addr: 0x3c
+    addr: 0x4100443c
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6803,7 +6747,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_13
-    addr: 0x3d
+    addr: 0x4100443d
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6837,7 +6781,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_14
-    addr: 0x3e
+    addr: 0x4100443e
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6871,7 +6815,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_15
-    addr: 0x3f
+    addr: 0x4100443f
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -6905,87 +6849,71 @@ modules:
         7: H
   - !Register
     name: PMUX1_0
-    addr: 0xb0
+    addr: 0x410044b0
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_1
-    addr: 0xb1
+    addr: 0x410044b1
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_2
-    addr: 0xb2
+    addr: 0x410044b2
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_3
-    addr: 0xb3
+    addr: 0x410044b3
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_4
-    addr: 0xb4
+    addr: 0x410044b4
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_5
-    addr: 0xb5
+    addr: 0x410044b5
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_6
-    addr: 0xb6
+    addr: 0x410044b6
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_7
-    addr: 0xb7
+    addr: 0x410044b7
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_8
-    addr: 0xb8
+    addr: 0x410044b8
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_9
-    addr: 0xb9
+    addr: 0x410044b9
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_10
-    addr: 0xba
+    addr: 0x410044ba
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_11
-    addr: 0xbb
+    addr: 0x410044bb
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_12
-    addr: 0xbc
+    addr: 0x410044bc
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_13
-    addr: 0xbd
+    addr: 0x410044bd
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_14
-    addr: 0xbe
+    addr: 0x410044be
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_15
-    addr: 0xbf
+    addr: 0x410044bf
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PINCFG0_0
-    addr: 0x40
+    addr: 0x41004440
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7013,7 +6941,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_1
-    addr: 0x41
+    addr: 0x41004441
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7041,7 +6969,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_2
-    addr: 0x42
+    addr: 0x41004442
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7069,7 +6997,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_3
-    addr: 0x43
+    addr: 0x41004443
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7097,7 +7025,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_4
-    addr: 0x44
+    addr: 0x41004444
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7125,7 +7053,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_5
-    addr: 0x45
+    addr: 0x41004445
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7153,7 +7081,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_6
-    addr: 0x46
+    addr: 0x41004446
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7181,7 +7109,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_7
-    addr: 0x47
+    addr: 0x41004447
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7209,7 +7137,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_8
-    addr: 0x48
+    addr: 0x41004448
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7237,7 +7165,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_9
-    addr: 0x49
+    addr: 0x41004449
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7265,7 +7193,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_10
-    addr: 0x4a
+    addr: 0x4100444a
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7293,7 +7221,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_11
-    addr: 0x4b
+    addr: 0x4100444b
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7321,7 +7249,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_12
-    addr: 0x4c
+    addr: 0x4100444c
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7349,7 +7277,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_13
-    addr: 0x4d
+    addr: 0x4100444d
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7377,7 +7305,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_14
-    addr: 0x4e
+    addr: 0x4100444e
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7405,7 +7333,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_15
-    addr: 0x4f
+    addr: 0x4100444f
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7433,7 +7361,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_16
-    addr: 0x50
+    addr: 0x41004450
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7461,7 +7389,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_17
-    addr: 0x51
+    addr: 0x41004451
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7489,7 +7417,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_18
-    addr: 0x52
+    addr: 0x41004452
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7517,7 +7445,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_19
-    addr: 0x53
+    addr: 0x41004453
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7545,7 +7473,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_20
-    addr: 0x54
+    addr: 0x41004454
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7573,7 +7501,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_21
-    addr: 0x55
+    addr: 0x41004455
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7601,7 +7529,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_22
-    addr: 0x56
+    addr: 0x41004456
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7629,7 +7557,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_23
-    addr: 0x57
+    addr: 0x41004457
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7657,7 +7585,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_24
-    addr: 0x58
+    addr: 0x41004458
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7685,7 +7613,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_25
-    addr: 0x59
+    addr: 0x41004459
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7713,7 +7641,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_26
-    addr: 0x5a
+    addr: 0x4100445a
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7741,7 +7669,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_27
-    addr: 0x5b
+    addr: 0x4100445b
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7769,7 +7697,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_28
-    addr: 0x5c
+    addr: 0x4100445c
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7797,7 +7725,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_29
-    addr: 0x5d
+    addr: 0x4100445d
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7825,7 +7753,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_30
-    addr: 0x5e
+    addr: 0x4100445e
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7853,7 +7781,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_31
-    addr: 0x5f
+    addr: 0x4100445f
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -7881,173 +7809,141 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG1_0
-    addr: 0xc0
+    addr: 0x410044c0
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_1
-    addr: 0xc1
+    addr: 0x410044c1
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_2
-    addr: 0xc2
+    addr: 0x410044c2
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_3
-    addr: 0xc3
+    addr: 0x410044c3
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_4
-    addr: 0xc4
+    addr: 0x410044c4
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_5
-    addr: 0xc5
+    addr: 0x410044c5
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_6
-    addr: 0xc6
+    addr: 0x410044c6
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_7
-    addr: 0xc7
+    addr: 0x410044c7
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_8
-    addr: 0xc8
+    addr: 0x410044c8
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_9
-    addr: 0xc9
+    addr: 0x410044c9
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_10
-    addr: 0xca
+    addr: 0x410044ca
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_11
-    addr: 0xcb
+    addr: 0x410044cb
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_12
-    addr: 0xcc
+    addr: 0x410044cc
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_13
-    addr: 0xcd
+    addr: 0x410044cd
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_14
-    addr: 0xce
+    addr: 0x410044ce
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_15
-    addr: 0xcf
+    addr: 0x410044cf
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_16
-    addr: 0xd0
+    addr: 0x410044d0
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_17
-    addr: 0xd1
+    addr: 0x410044d1
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_18
-    addr: 0xd2
+    addr: 0x410044d2
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_19
-    addr: 0xd3
+    addr: 0x410044d3
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_20
-    addr: 0xd4
+    addr: 0x410044d4
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_21
-    addr: 0xd5
+    addr: 0x410044d5
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_22
-    addr: 0xd6
+    addr: 0x410044d6
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_23
-    addr: 0xd7
+    addr: 0x410044d7
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_24
-    addr: 0xd8
+    addr: 0x410044d8
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_25
-    addr: 0xd9
+    addr: 0x410044d9
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_26
-    addr: 0xda
+    addr: 0x410044da
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_27
-    addr: 0xdb
+    addr: 0x410044db
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_28
-    addr: 0xdc
+    addr: 0x410044dc
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_29
-    addr: 0xdd
+    addr: 0x410044dd
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_30
-    addr: 0xde
+    addr: 0x410044de
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_31
-    addr: 0xdf
+    addr: 0x410044df
     description: Pin Configuration n - Group 1
-    fields: []
 - !Module
   name: PORT_IOBUS
   description: Port Module (IOBUS)
   base_addr: 0x60000000
-  size: 0x200
+  size: 0xe3
   registers:
   - !Register
     name: DIR0
-    addr: 0x0
+    addr: 0x60000000
     size_bits: 32
     description: Data Direction
     fields:
@@ -8058,7 +7954,7 @@ modules:
       description: Port Data Direction
   - !Register
     name: DIR1
-    addr: 0x80
+    addr: 0x60000080
     size_bits: 32
     description: Data Direction
     fields:
@@ -8069,7 +7965,7 @@ modules:
       description: Port Data Direction
   - !Register
     name: DIRCLR0
-    addr: 0x4
+    addr: 0x60000004
     size_bits: 32
     description: Data Direction Clear
     fields:
@@ -8080,7 +7976,7 @@ modules:
       description: Port Data Direction Clear
   - !Register
     name: DIRCLR1
-    addr: 0x84
+    addr: 0x60000084
     size_bits: 32
     description: Data Direction Clear
     fields:
@@ -8091,7 +7987,7 @@ modules:
       description: Port Data Direction Clear
   - !Register
     name: DIRSET0
-    addr: 0x8
+    addr: 0x60000008
     size_bits: 32
     description: Data Direction Set
     fields:
@@ -8102,7 +7998,7 @@ modules:
       description: Port Data Direction Set
   - !Register
     name: DIRSET1
-    addr: 0x88
+    addr: 0x60000088
     size_bits: 32
     description: Data Direction Set
     fields:
@@ -8113,7 +8009,7 @@ modules:
       description: Port Data Direction Set
   - !Register
     name: DIRTGL0
-    addr: 0xc
+    addr: 0x6000000c
     size_bits: 32
     description: Data Direction Toggle
     fields:
@@ -8124,7 +8020,7 @@ modules:
       description: Port Data Direction Toggle
   - !Register
     name: DIRTGL1
-    addr: 0x8c
+    addr: 0x6000008c
     size_bits: 32
     description: Data Direction Toggle
     fields:
@@ -8135,7 +8031,7 @@ modules:
       description: Port Data Direction Toggle
   - !Register
     name: OUT0
-    addr: 0x10
+    addr: 0x60000010
     size_bits: 32
     description: Data Output Value
     fields:
@@ -8146,7 +8042,7 @@ modules:
       description: Port Data Output Value
   - !Register
     name: OUT1
-    addr: 0x90
+    addr: 0x60000090
     size_bits: 32
     description: Data Output Value
     fields:
@@ -8157,7 +8053,7 @@ modules:
       description: Port Data Output Value
   - !Register
     name: OUTCLR0
-    addr: 0x14
+    addr: 0x60000014
     size_bits: 32
     description: Data Output Value Clear
     fields:
@@ -8168,7 +8064,7 @@ modules:
       description: Port Data Output Value Clear
   - !Register
     name: OUTCLR1
-    addr: 0x94
+    addr: 0x60000094
     size_bits: 32
     description: Data Output Value Clear
     fields:
@@ -8179,7 +8075,7 @@ modules:
       description: Port Data Output Value Clear
   - !Register
     name: OUTSET0
-    addr: 0x18
+    addr: 0x60000018
     size_bits: 32
     description: Data Output Value Set
     fields:
@@ -8190,7 +8086,7 @@ modules:
       description: Port Data Output Value Set
   - !Register
     name: OUTSET1
-    addr: 0x98
+    addr: 0x60000098
     size_bits: 32
     description: Data Output Value Set
     fields:
@@ -8201,7 +8097,7 @@ modules:
       description: Port Data Output Value Set
   - !Register
     name: OUTTGL0
-    addr: 0x1c
+    addr: 0x6000001c
     size_bits: 32
     description: Data Output Value Toggle
     fields:
@@ -8212,7 +8108,7 @@ modules:
       description: Port Data Output Value Toggle
   - !Register
     name: OUTTGL1
-    addr: 0x9c
+    addr: 0x6000009c
     size_bits: 32
     description: Data Output Value Toggle
     fields:
@@ -8223,7 +8119,7 @@ modules:
       description: Port Data Output Value Toggle
   - !Register
     name: IN0
-    addr: 0x20
+    addr: 0x60000020
     size_bits: 32
     description: Data Input Value
     read_allowed: true
@@ -8236,7 +8132,7 @@ modules:
       description: Port Data Input Value
   - !Register
     name: IN1
-    addr: 0xa0
+    addr: 0x600000a0
     size_bits: 32
     description: Data Input Value
     read_allowed: true
@@ -8249,7 +8145,7 @@ modules:
       description: Port Data Input Value
   - !Register
     name: CTRL0
-    addr: 0x24
+    addr: 0x60000024
     size_bits: 32
     description: Control
     fields:
@@ -8262,7 +8158,7 @@ modules:
       write_allowed: true
   - !Register
     name: CTRL1
-    addr: 0xa4
+    addr: 0x600000a4
     size_bits: 32
     description: Control
     fields:
@@ -8275,7 +8171,7 @@ modules:
       write_allowed: true
   - !Register
     name: WRCONFIG0
-    addr: 0x28
+    addr: 0x60000028
     size_bits: 32
     description: Write Configuration
     read_allowed: false
@@ -8328,7 +8224,7 @@ modules:
       description: Half-Word Select
   - !Register
     name: WRCONFIG1
-    addr: 0xa8
+    addr: 0x600000a8
     size_bits: 32
     description: Write Configuration
     read_allowed: false
@@ -8381,7 +8277,7 @@ modules:
       description: Half-Word Select
   - !Register
     name: PMUX0_0
-    addr: 0x30
+    addr: 0x60000030
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8415,7 +8311,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_1
-    addr: 0x31
+    addr: 0x60000031
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8449,7 +8345,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_2
-    addr: 0x32
+    addr: 0x60000032
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8483,7 +8379,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_3
-    addr: 0x33
+    addr: 0x60000033
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8517,7 +8413,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_4
-    addr: 0x34
+    addr: 0x60000034
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8551,7 +8447,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_5
-    addr: 0x35
+    addr: 0x60000035
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8585,7 +8481,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_6
-    addr: 0x36
+    addr: 0x60000036
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8619,7 +8515,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_7
-    addr: 0x37
+    addr: 0x60000037
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8653,7 +8549,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_8
-    addr: 0x38
+    addr: 0x60000038
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8687,7 +8583,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_9
-    addr: 0x39
+    addr: 0x60000039
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8721,7 +8617,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_10
-    addr: 0x3a
+    addr: 0x6000003a
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8755,7 +8651,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_11
-    addr: 0x3b
+    addr: 0x6000003b
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8789,7 +8685,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_12
-    addr: 0x3c
+    addr: 0x6000003c
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8823,7 +8719,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_13
-    addr: 0x3d
+    addr: 0x6000003d
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8857,7 +8753,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_14
-    addr: 0x3e
+    addr: 0x6000003e
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8891,7 +8787,7 @@ modules:
         7: H
   - !Register
     name: PMUX0_15
-    addr: 0x3f
+    addr: 0x6000003f
     size_bits: 8
     description: Peripheral Multiplexing n - Group 0
     fields:
@@ -8925,87 +8821,71 @@ modules:
         7: H
   - !Register
     name: PMUX1_0
-    addr: 0xb0
+    addr: 0x600000b0
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_1
-    addr: 0xb1
+    addr: 0x600000b1
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_2
-    addr: 0xb2
+    addr: 0x600000b2
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_3
-    addr: 0xb3
+    addr: 0x600000b3
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_4
-    addr: 0xb4
+    addr: 0x600000b4
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_5
-    addr: 0xb5
+    addr: 0x600000b5
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_6
-    addr: 0xb6
+    addr: 0x600000b6
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_7
-    addr: 0xb7
+    addr: 0x600000b7
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_8
-    addr: 0xb8
+    addr: 0x600000b8
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_9
-    addr: 0xb9
+    addr: 0x600000b9
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_10
-    addr: 0xba
+    addr: 0x600000ba
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_11
-    addr: 0xbb
+    addr: 0x600000bb
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_12
-    addr: 0xbc
+    addr: 0x600000bc
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_13
-    addr: 0xbd
+    addr: 0x600000bd
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_14
-    addr: 0xbe
+    addr: 0x600000be
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PMUX1_15
-    addr: 0xbf
+    addr: 0x600000bf
     description: Peripheral Multiplexing n - Group 1
-    fields: []
   - !Register
     name: PINCFG0_0
-    addr: 0x40
+    addr: 0x60000040
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9033,7 +8913,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_1
-    addr: 0x41
+    addr: 0x60000041
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9061,7 +8941,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_2
-    addr: 0x42
+    addr: 0x60000042
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9089,7 +8969,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_3
-    addr: 0x43
+    addr: 0x60000043
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9117,7 +8997,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_4
-    addr: 0x44
+    addr: 0x60000044
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9145,7 +9025,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_5
-    addr: 0x45
+    addr: 0x60000045
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9173,7 +9053,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_6
-    addr: 0x46
+    addr: 0x60000046
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9201,7 +9081,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_7
-    addr: 0x47
+    addr: 0x60000047
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9229,7 +9109,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_8
-    addr: 0x48
+    addr: 0x60000048
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9257,7 +9137,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_9
-    addr: 0x49
+    addr: 0x60000049
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9285,7 +9165,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_10
-    addr: 0x4a
+    addr: 0x6000004a
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9313,7 +9193,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_11
-    addr: 0x4b
+    addr: 0x6000004b
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9341,7 +9221,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_12
-    addr: 0x4c
+    addr: 0x6000004c
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9369,7 +9249,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_13
-    addr: 0x4d
+    addr: 0x6000004d
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9397,7 +9277,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_14
-    addr: 0x4e
+    addr: 0x6000004e
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9425,7 +9305,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_15
-    addr: 0x4f
+    addr: 0x6000004f
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9453,7 +9333,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_16
-    addr: 0x50
+    addr: 0x60000050
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9481,7 +9361,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_17
-    addr: 0x51
+    addr: 0x60000051
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9509,7 +9389,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_18
-    addr: 0x52
+    addr: 0x60000052
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9537,7 +9417,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_19
-    addr: 0x53
+    addr: 0x60000053
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9565,7 +9445,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_20
-    addr: 0x54
+    addr: 0x60000054
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9593,7 +9473,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_21
-    addr: 0x55
+    addr: 0x60000055
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9621,7 +9501,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_22
-    addr: 0x56
+    addr: 0x60000056
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9649,7 +9529,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_23
-    addr: 0x57
+    addr: 0x60000057
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9677,7 +9557,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_24
-    addr: 0x58
+    addr: 0x60000058
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9705,7 +9585,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_25
-    addr: 0x59
+    addr: 0x60000059
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9733,7 +9613,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_26
-    addr: 0x5a
+    addr: 0x6000005a
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9761,7 +9641,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_27
-    addr: 0x5b
+    addr: 0x6000005b
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9789,7 +9669,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_28
-    addr: 0x5c
+    addr: 0x6000005c
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9817,7 +9697,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_29
-    addr: 0x5d
+    addr: 0x6000005d
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9845,7 +9725,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_30
-    addr: 0x5e
+    addr: 0x6000005e
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9873,7 +9753,7 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG0_31
-    addr: 0x5f
+    addr: 0x6000005f
     size_bits: 8
     description: Pin Configuration n - Group 0
     fields:
@@ -9901,173 +9781,141 @@ modules:
       write_allowed: true
   - !Register
     name: PINCFG1_0
-    addr: 0xc0
+    addr: 0x600000c0
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_1
-    addr: 0xc1
+    addr: 0x600000c1
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_2
-    addr: 0xc2
+    addr: 0x600000c2
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_3
-    addr: 0xc3
+    addr: 0x600000c3
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_4
-    addr: 0xc4
+    addr: 0x600000c4
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_5
-    addr: 0xc5
+    addr: 0x600000c5
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_6
-    addr: 0xc6
+    addr: 0x600000c6
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_7
-    addr: 0xc7
+    addr: 0x600000c7
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_8
-    addr: 0xc8
+    addr: 0x600000c8
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_9
-    addr: 0xc9
+    addr: 0x600000c9
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_10
-    addr: 0xca
+    addr: 0x600000ca
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_11
-    addr: 0xcb
+    addr: 0x600000cb
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_12
-    addr: 0xcc
+    addr: 0x600000cc
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_13
-    addr: 0xcd
+    addr: 0x600000cd
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_14
-    addr: 0xce
+    addr: 0x600000ce
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_15
-    addr: 0xcf
+    addr: 0x600000cf
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_16
-    addr: 0xd0
+    addr: 0x600000d0
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_17
-    addr: 0xd1
+    addr: 0x600000d1
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_18
-    addr: 0xd2
+    addr: 0x600000d2
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_19
-    addr: 0xd3
+    addr: 0x600000d3
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_20
-    addr: 0xd4
+    addr: 0x600000d4
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_21
-    addr: 0xd5
+    addr: 0x600000d5
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_22
-    addr: 0xd6
+    addr: 0x600000d6
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_23
-    addr: 0xd7
+    addr: 0x600000d7
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_24
-    addr: 0xd8
+    addr: 0x600000d8
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_25
-    addr: 0xd9
+    addr: 0x600000d9
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_26
-    addr: 0xda
+    addr: 0x600000da
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_27
-    addr: 0xdb
+    addr: 0x600000db
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_28
-    addr: 0xdc
+    addr: 0x600000dc
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_29
-    addr: 0xdd
+    addr: 0x600000dd
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_30
-    addr: 0xde
+    addr: 0x600000de
     description: Pin Configuration n - Group 1
-    fields: []
   - !Register
     name: PINCFG1_31
-    addr: 0xdf
+    addr: 0x600000df
     description: Pin Configuration n - Group 1
-    fields: []
 - !Module
   name: RTC
   description: Real-Time Counter
   base_addr: 0x40001400
-  size: 0x40
+  size: 0x1d
   registers:
   - !Register
     name: MODE0_CTRL
-    addr: 0x0
+    addr: 0x40001400
     size_bits: 16
     description: MODE0 Control
     fields:
@@ -10116,7 +9964,7 @@ modules:
         10: DIV1024
   - !Register
     name: MODE0_READREQ
-    addr: 0x2
+    addr: 0x40001402
     size_bits: 16
     description: Read Request
     reset_value: 0x10
@@ -10142,7 +9990,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE0_EVCTRL
-    addr: 0x4
+    addr: 0x40001404
     size_bits: 16
     description: MODE0 Event Control
     fields:
@@ -10198,7 +10046,7 @@ modules:
       description: Overflow Event Output Enable
   - !Register
     name: MODE0_INTENCLR
-    addr: 0x6
+    addr: 0x40001406
     size_bits: 8
     description: MODE0 Interrupt Enable Clear
     fields:
@@ -10219,7 +10067,7 @@ modules:
       description: Overflow Interrupt Enable
   - !Register
     name: MODE0_INTENSET
-    addr: 0x7
+    addr: 0x40001407
     size_bits: 8
     description: MODE0 Interrupt Enable Set
     fields:
@@ -10240,7 +10088,7 @@ modules:
       description: Overflow Interrupt Enable
   - !Register
     name: MODE0_INTFLAG
-    addr: 0x8
+    addr: 0x40001408
     size_bits: 8
     description: MODE0 Interrupt Flag Status and Clear
     fields:
@@ -10261,7 +10109,7 @@ modules:
       description: Overflow
   - !Register
     name: MODE0_STATUS
-    addr: 0xa
+    addr: 0x4000140a
     size_bits: 8
     description: Status
     fields:
@@ -10274,7 +10122,7 @@ modules:
       write_allowed: false
   - !Register
     name: MODE0_DBGCTRL
-    addr: 0xb
+    addr: 0x4000140b
     size_bits: 8
     description: Debug Control
     fields:
@@ -10285,7 +10133,7 @@ modules:
       description: Run During Debug
   - !Register
     name: MODE0_FREQCORR
-    addr: 0xc
+    addr: 0x4000140c
     size_bits: 8
     description: Frequency Correction
     fields:
@@ -10301,7 +10149,7 @@ modules:
       description: Correction Sign
   - !Register
     name: MODE0_COUNT
-    addr: 0x10
+    addr: 0x40001410
     size_bits: 32
     description: MODE0 Counter Value
     fields:
@@ -10312,7 +10160,7 @@ modules:
       description: Counter Value
   - !Register
     name: MODE0_COMP%s
-    addr: 0x18
+    addr: 0x40001418
     size_bits: 32
     description: MODE0 Compare n Value
     fields:
@@ -10323,7 +10171,7 @@ modules:
       description: Compare Value
   - !Register
     name: MODE1_CTRL
-    addr: 0x0
+    addr: 0x40001400
     size_bits: 16
     description: MODE1 Control
     fields:
@@ -10367,7 +10215,7 @@ modules:
         10: DIV1024
   - !Register
     name: MODE1_READREQ
-    addr: 0x2
+    addr: 0x40001402
     size_bits: 16
     description: Read Request
     reset_value: 0x10
@@ -10393,7 +10241,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE1_EVCTRL
-    addr: 0x4
+    addr: 0x40001404
     size_bits: 16
     description: MODE1 Event Control
     fields:
@@ -10454,7 +10302,7 @@ modules:
       description: Overflow Event Output Enable
   - !Register
     name: MODE1_INTENCLR
-    addr: 0x6
+    addr: 0x40001406
     size_bits: 8
     description: MODE1 Interrupt Enable Clear
     fields:
@@ -10480,7 +10328,7 @@ modules:
       description: Overflow Interrupt Enable
   - !Register
     name: MODE1_INTENSET
-    addr: 0x7
+    addr: 0x40001407
     size_bits: 8
     description: MODE1 Interrupt Enable Set
     fields:
@@ -10506,7 +10354,7 @@ modules:
       description: Overflow Interrupt Enable
   - !Register
     name: MODE1_INTFLAG
-    addr: 0x8
+    addr: 0x40001408
     size_bits: 8
     description: MODE1 Interrupt Flag Status and Clear
     fields:
@@ -10532,7 +10380,7 @@ modules:
       description: Overflow
   - !Register
     name: MODE1_STATUS
-    addr: 0xa
+    addr: 0x4000140a
     size_bits: 8
     description: Status
     fields:
@@ -10545,7 +10393,7 @@ modules:
       write_allowed: false
   - !Register
     name: MODE1_DBGCTRL
-    addr: 0xb
+    addr: 0x4000140b
     size_bits: 8
     description: Debug Control
     fields:
@@ -10556,7 +10404,7 @@ modules:
       description: Run During Debug
   - !Register
     name: MODE1_FREQCORR
-    addr: 0xc
+    addr: 0x4000140c
     size_bits: 8
     description: Frequency Correction
     fields:
@@ -10572,7 +10420,7 @@ modules:
       description: Correction Sign
   - !Register
     name: MODE1_COUNT
-    addr: 0x10
+    addr: 0x40001410
     size_bits: 16
     description: MODE1 Counter Value
     fields:
@@ -10583,7 +10431,7 @@ modules:
       description: Counter Value
   - !Register
     name: MODE1_PER
-    addr: 0x14
+    addr: 0x40001414
     size_bits: 16
     description: MODE1 Counter Period
     fields:
@@ -10594,7 +10442,7 @@ modules:
       description: Counter Period
   - !Register
     name: MODE1_COMP%s
-    addr: 0x18
+    addr: 0x40001418
     size_bits: 16
     description: MODE1 Compare n Value
     fields:
@@ -10605,7 +10453,7 @@ modules:
       description: Compare Value
   - !Register
     name: MODE2_CTRL
-    addr: 0x0
+    addr: 0x40001400
     size_bits: 16
     description: MODE2 Control
     fields:
@@ -10659,7 +10507,7 @@ modules:
         10: DIV1024
   - !Register
     name: MODE2_READREQ
-    addr: 0x2
+    addr: 0x40001402
     size_bits: 16
     description: Read Request
     reset_value: 0x10
@@ -10685,7 +10533,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE2_EVCTRL
-    addr: 0x4
+    addr: 0x40001404
     size_bits: 16
     description: MODE2 Event Control
     fields:
@@ -10741,7 +10589,7 @@ modules:
       description: Overflow Event Output Enable
   - !Register
     name: MODE2_INTENCLR
-    addr: 0x6
+    addr: 0x40001406
     size_bits: 8
     description: MODE2 Interrupt Enable Clear
     fields:
@@ -10762,7 +10610,7 @@ modules:
       description: Overflow Interrupt Enable
   - !Register
     name: MODE2_INTENSET
-    addr: 0x7
+    addr: 0x40001407
     size_bits: 8
     description: MODE2 Interrupt Enable Set
     fields:
@@ -10783,7 +10631,7 @@ modules:
       description: Overflow Interrupt Enable
   - !Register
     name: MODE2_INTFLAG
-    addr: 0x8
+    addr: 0x40001408
     size_bits: 8
     description: MODE2 Interrupt Flag Status and Clear
     fields:
@@ -10804,7 +10652,7 @@ modules:
       description: Overflow
   - !Register
     name: MODE2_STATUS
-    addr: 0xa
+    addr: 0x4000140a
     size_bits: 8
     description: Status
     fields:
@@ -10817,7 +10665,7 @@ modules:
       write_allowed: false
   - !Register
     name: MODE2_DBGCTRL
-    addr: 0xb
+    addr: 0x4000140b
     size_bits: 8
     description: Debug Control
     fields:
@@ -10828,7 +10676,7 @@ modules:
       description: Run During Debug
   - !Register
     name: MODE2_FREQCORR
-    addr: 0xc
+    addr: 0x4000140c
     size_bits: 8
     description: Frequency Correction
     fields:
@@ -10844,7 +10692,7 @@ modules:
       description: Correction Sign
   - !Register
     name: MODE2_CLOCK
-    addr: 0x10
+    addr: 0x40001410
     size_bits: 32
     description: MODE2 Clock Value
     fields:
@@ -10883,7 +10731,7 @@ modules:
       description: Year
   - !Register
     name: MODE2_ALARM%s
-    addr: 0x18
+    addr: 0x40001418
     size_bits: 32
     description: MODE2 Alarm n Value
     fields:
@@ -10922,7 +10770,7 @@ modules:
       description: Year
   - !Register
     name: MODE2_MASK%s
-    addr: 0x1c
+    addr: 0x4000141c
     size_bits: 8
     description: MODE2 Alarm n Mask
     fields:
@@ -10943,11 +10791,11 @@ modules:
   name: SERCOM0
   description: Serial Communication Interface 0
   base_addr: 0x42000800
-  size: 0x40
+  size: 0x31
   registers:
   - !Register
     name: I2CM_CTRLA
-    addr: 0x0
+    addr: 0x42000800
     size_bits: 32
     description: I2CM Control A
     fields:
@@ -11020,7 +10868,7 @@ modules:
       description: SCL Low Timeout Enable
   - !Register
     name: I2CM_CTRLB
-    addr: 0x4
+    addr: 0x42000804
     size_bits: 32
     description: I2CM Control B
     fields:
@@ -11048,7 +10896,7 @@ modules:
       description: Acknowledge Action
   - !Register
     name: I2CM_BAUD
-    addr: 0xc
+    addr: 0x4200080c
     size_bits: 32
     description: I2CM Baud Rate
     fields:
@@ -11074,7 +10922,7 @@ modules:
       description: High Speed Baud Rate Value Low
   - !Register
     name: I2CM_INTENCLR
-    addr: 0x14
+    addr: 0x42000814
     size_bits: 8
     description: I2CM Interrupt Enable Clear
     fields:
@@ -11095,7 +10943,7 @@ modules:
       description: Combined Error Interrupt Disable
   - !Register
     name: I2CM_INTENSET
-    addr: 0x16
+    addr: 0x42000816
     size_bits: 8
     description: I2CM Interrupt Enable Set
     fields:
@@ -11116,7 +10964,7 @@ modules:
       description: Combined Error Interrupt Enable
   - !Register
     name: I2CM_INTFLAG
-    addr: 0x18
+    addr: 0x42000818
     size_bits: 8
     description: I2CM Interrupt Flag Status and Clear
     fields:
@@ -11137,7 +10985,7 @@ modules:
       description: Combined Error Interrupt
   - !Register
     name: I2CM_STATUS
-    addr: 0x1a
+    addr: 0x4200081a
     size_bits: 16
     description: I2CM Status
     fields:
@@ -11192,7 +11040,7 @@ modules:
       description: Length Error
   - !Register
     name: I2CM_SYNCBUSY
-    addr: 0x1c
+    addr: 0x4200081c
     size_bits: 32
     description: I2CM Synchronization Busy
     read_allowed: true
@@ -11221,7 +11069,7 @@ modules:
       write_allowed: false
   - !Register
     name: I2CM_ADDR
-    addr: 0x24
+    addr: 0x42000824
     size_bits: 32
     description: I2CM Address
     fields:
@@ -11252,7 +11100,7 @@ modules:
       description: Length
   - !Register
     name: I2CM_DATA
-    addr: 0x28
+    addr: 0x42000828
     size_bits: 8
     description: I2CM Data
     fields:
@@ -11263,7 +11111,7 @@ modules:
       description: Data Value
   - !Register
     name: I2CM_DBGCTRL
-    addr: 0x30
+    addr: 0x42000830
     size_bits: 8
     description: I2CM Debug Control
     fields:
@@ -11274,7 +11122,7 @@ modules:
       description: Debug Mode
   - !Register
     name: I2CS_CTRLA
-    addr: 0x0
+    addr: 0x42000800
     size_bits: 32
     description: I2CS Control A
     fields:
@@ -11337,7 +11185,7 @@ modules:
       description: SCL Low Timeout Enable
   - !Register
     name: I2CS_CTRLB
-    addr: 0x4
+    addr: 0x42000804
     size_bits: 32
     description: I2CS Control B
     fields:
@@ -11375,7 +11223,7 @@ modules:
       description: Acknowledge Action
   - !Register
     name: I2CS_INTENCLR
-    addr: 0x14
+    addr: 0x42000814
     size_bits: 8
     description: I2CS Interrupt Enable Clear
     fields:
@@ -11401,7 +11249,7 @@ modules:
       description: Combined Error Interrupt Disable
   - !Register
     name: I2CS_INTENSET
-    addr: 0x16
+    addr: 0x42000816
     size_bits: 8
     description: I2CS Interrupt Enable Set
     fields:
@@ -11427,7 +11275,7 @@ modules:
       description: Combined Error Interrupt Enable
   - !Register
     name: I2CS_INTFLAG
-    addr: 0x18
+    addr: 0x42000818
     size_bits: 8
     description: I2CS Interrupt Flag Status and Clear
     fields:
@@ -11453,7 +11301,7 @@ modules:
       description: Combined Error Interrupt
   - !Register
     name: I2CS_STATUS
-    addr: 0x1a
+    addr: 0x4200081a
     size_bits: 16
     description: I2CS Status
     fields:
@@ -11512,7 +11360,7 @@ modules:
       description: High Speed
   - !Register
     name: I2CS_SYNCBUSY
-    addr: 0x1c
+    addr: 0x4200081c
     size_bits: 32
     description: I2CS Synchronization Busy
     read_allowed: true
@@ -11534,7 +11382,7 @@ modules:
       write_allowed: false
   - !Register
     name: I2CS_ADDR
-    addr: 0x24
+    addr: 0x42000824
     size_bits: 32
     description: I2CS Address
     fields:
@@ -11560,7 +11408,7 @@ modules:
       description: Address Mask
   - !Register
     name: I2CS_DATA
-    addr: 0x28
+    addr: 0x42000828
     size_bits: 8
     description: I2CS Data
     fields:
@@ -11571,7 +11419,7 @@ modules:
       description: Data Value
   - !Register
     name: SPI_CTRLA
-    addr: 0x0
+    addr: 0x42000800
     size_bits: 32
     description: SPI Control A
     fields:
@@ -11639,7 +11487,7 @@ modules:
       description: Data Order
   - !Register
     name: SPI_CTRLB
-    addr: 0x4
+    addr: 0x42000804
     size_bits: 32
     description: SPI Control B
     fields:
@@ -11675,7 +11523,7 @@ modules:
       description: Receiver Enable
   - !Register
     name: SPI_BAUD
-    addr: 0xc
+    addr: 0x4200080c
     size_bits: 8
     description: SPI Baud Rate
     fields:
@@ -11686,7 +11534,7 @@ modules:
       description: Baud Rate Value
   - !Register
     name: SPI_INTENCLR
-    addr: 0x14
+    addr: 0x42000814
     size_bits: 8
     description: SPI Interrupt Enable Clear
     fields:
@@ -11717,7 +11565,7 @@ modules:
       description: Combined Error Interrupt Disable
   - !Register
     name: SPI_INTENSET
-    addr: 0x16
+    addr: 0x42000816
     size_bits: 8
     description: SPI Interrupt Enable Set
     fields:
@@ -11748,7 +11596,7 @@ modules:
       description: Combined Error Interrupt Enable
   - !Register
     name: SPI_INTFLAG
-    addr: 0x18
+    addr: 0x42000818
     size_bits: 8
     description: SPI Interrupt Flag Status and Clear
     fields:
@@ -11783,7 +11631,7 @@ modules:
       description: Combined Error Interrupt
   - !Register
     name: SPI_STATUS
-    addr: 0x1a
+    addr: 0x4200081a
     size_bits: 16
     description: SPI Status
     fields:
@@ -11794,7 +11642,7 @@ modules:
       description: Buffer Overflow
   - !Register
     name: SPI_SYNCBUSY
-    addr: 0x1c
+    addr: 0x4200081c
     size_bits: 32
     description: SPI Synchronization Busy
     read_allowed: true
@@ -11823,7 +11671,7 @@ modules:
       write_allowed: false
   - !Register
     name: SPI_ADDR
-    addr: 0x24
+    addr: 0x42000824
     size_bits: 32
     description: SPI Address
     fields:
@@ -11839,7 +11687,7 @@ modules:
       description: Address Mask
   - !Register
     name: SPI_DATA
-    addr: 0x28
+    addr: 0x42000828
     size_bits: 32
     description: SPI Data
     fields:
@@ -11850,7 +11698,7 @@ modules:
       description: Data Value
   - !Register
     name: SPI_DBGCTRL
-    addr: 0x30
+    addr: 0x42000830
     size_bits: 8
     description: SPI Debug Control
     fields:
@@ -11861,7 +11709,7 @@ modules:
       description: Debug Mode
   - !Register
     name: USART_CTRLA
-    addr: 0x0
+    addr: 0x42000800
     size_bits: 32
     description: USART Control A
     fields:
@@ -11939,7 +11787,7 @@ modules:
       description: Data Order
   - !Register
     name: USART_CTRLB
-    addr: 0x4
+    addr: 0x42000804
     size_bits: 32
     description: USART Control B
     fields:
@@ -11985,7 +11833,7 @@ modules:
       description: Receiver Enable
   - !Register
     name: USART_BAUD
-    addr: 0xc
+    addr: 0x4200080c
     size_bits: 16
     description: USART Baud Rate
     fields:
@@ -11996,7 +11844,7 @@ modules:
       description: Baud Rate Value
   - !Register
     name: USART_BAUD_FRAC_MODE
-    addr: 0xc
+    addr: 0x4200080c
     size_bits: 16
     description: USART Baud Rate
     fields:
@@ -12012,7 +11860,7 @@ modules:
       description: Fractional Part
   - !Register
     name: USART_BAUD_FRACFP_MODE
-    addr: 0xc
+    addr: 0x4200080c
     size_bits: 16
     description: USART Baud Rate
     fields:
@@ -12028,7 +11876,7 @@ modules:
       description: Fractional Part
   - !Register
     name: USART_BAUD_USARTFP_MODE
-    addr: 0xc
+    addr: 0x4200080c
     size_bits: 16
     description: USART Baud Rate
     fields:
@@ -12039,7 +11887,7 @@ modules:
       description: Baud Rate Value
   - !Register
     name: USART_RXPL
-    addr: 0xe
+    addr: 0x4200080e
     size_bits: 8
     description: USART Receive Pulse Length
     fields:
@@ -12050,7 +11898,7 @@ modules:
       description: Receive Pulse Length
   - !Register
     name: USART_INTENCLR
-    addr: 0x14
+    addr: 0x42000814
     size_bits: 8
     description: USART Interrupt Enable Clear
     fields:
@@ -12091,7 +11939,7 @@ modules:
       description: Combined Error Interrupt Disable
   - !Register
     name: USART_INTENSET
-    addr: 0x16
+    addr: 0x42000816
     size_bits: 8
     description: USART Interrupt Enable Set
     fields:
@@ -12132,7 +11980,7 @@ modules:
       description: Combined Error Interrupt Enable
   - !Register
     name: USART_INTFLAG
-    addr: 0x18
+    addr: 0x42000818
     size_bits: 8
     description: USART Interrupt Flag Status and Clear
     fields:
@@ -12179,7 +12027,7 @@ modules:
       description: Combined Error Interrupt
   - !Register
     name: USART_STATUS
-    addr: 0x1a
+    addr: 0x4200081a
     size_bits: 16
     description: USART Status
     fields:
@@ -12217,7 +12065,7 @@ modules:
       description: Collision Detected
   - !Register
     name: USART_SYNCBUSY
-    addr: 0x1c
+    addr: 0x4200081c
     size_bits: 32
     description: USART Synchronization Busy
     read_allowed: true
@@ -12246,7 +12094,7 @@ modules:
       write_allowed: false
   - !Register
     name: USART_DATA
-    addr: 0x28
+    addr: 0x42000828
     size_bits: 16
     description: USART Data
     fields:
@@ -12257,7 +12105,7 @@ modules:
       description: Data Value
   - !Register
     name: USART_DBGCTRL
-    addr: 0x30
+    addr: 0x42000830
     size_bits: 8
     description: USART Debug Control
     fields:
@@ -12270,41 +12118,36 @@ modules:
   name: SERCOM1
   description: Serial Communication Interface 1
   base_addr: 0x42000c00
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: SERCOM2
   description: Serial Communication Interface 2
   base_addr: 0x42001000
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: SERCOM3
   description: Serial Communication Interface 3
   base_addr: 0x42001400
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: SERCOM4
   description: Serial Communication Interface 4
   base_addr: 0x42001800
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: SERCOM5
   description: Serial Communication Interface 5
   base_addr: 0x42001c00
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: SYSCTRL
   description: System Control
   base_addr: 0x40000800
-  size: 0x80
+  size: 0x51
   registers:
   - !Register
     name: INTENCLR
-    addr: 0x0
+    addr: 0x40000800
     size_bits: 32
     description: Interrupt Enable Clear
     read_allowed: true
@@ -12387,7 +12230,7 @@ modules:
       description: DPLL Lock Timeout Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x4
+    addr: 0x40000804
     size_bits: 32
     description: Interrupt Enable Set
     read_allowed: true
@@ -12470,7 +12313,7 @@ modules:
       description: DPLL Lock Timeout Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x8
+    addr: 0x40000808
     size_bits: 32
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -12553,7 +12396,7 @@ modules:
       description: DPLL Lock Timeout
   - !Register
     name: PCLKSR
-    addr: 0xc
+    addr: 0x4000080c
     size_bits: 32
     description: Power and Clocks Status
     read_allowed: true
@@ -12666,7 +12509,7 @@ modules:
       write_allowed: false
   - !Register
     name: XOSC
-    addr: 0x10
+    addr: 0x40000810
     size_bits: 16
     description: External Multipurpose Crystal Oscillator (XOSC) Control
     read_allowed: true
@@ -12716,7 +12559,7 @@ modules:
       description: Start-Up Time
   - !Register
     name: XOSC32K
-    addr: 0x14
+    addr: 0x40000814
     size_bits: 16
     description: 32kHz External Crystal Oscillator (XOSC32K) Control
     read_allowed: true
@@ -12770,7 +12613,7 @@ modules:
       description: Write Lock
   - !Register
     name: OSC32K
-    addr: 0x18
+    addr: 0x40000818
     size_bits: 32
     description: 32kHz Internal Oscillator (OSC32K) Control
     read_allowed: true
@@ -12819,7 +12662,7 @@ modules:
       description: Oscillator Calibration
   - !Register
     name: OSCULP32K
-    addr: 0x1c
+    addr: 0x4000081c
     size_bits: 8
     description: 32kHz Ultra Low Power Internal Oscillator (OSCULP32K) Control
     read_allowed: true
@@ -12838,7 +12681,7 @@ modules:
       description: Write Lock
   - !Register
     name: OSC8M
-    addr: 0x20
+    addr: 0x40000820
     size_bits: 32
     description: 8MHz Internal Oscillator (OSC8M) Control
     read_allowed: true
@@ -12887,7 +12730,7 @@ modules:
         3: '3'
   - !Register
     name: DFLLCTRL
-    addr: 0x24
+    addr: 0x40000824
     size_bits: 16
     description: DFLL48M Control
     read_allowed: true
@@ -12951,7 +12794,7 @@ modules:
       description: Wait Lock
   - !Register
     name: DFLLVAL
-    addr: 0x28
+    addr: 0x40000828
     size_bits: 32
     description: DFLL48M Value
     read_allowed: true
@@ -12976,7 +12819,7 @@ modules:
       write_allowed: false
   - !Register
     name: DFLLMUL
-    addr: 0x2c
+    addr: 0x4000082c
     size_bits: 32
     description: DFLL48M Multiplier
     read_allowed: true
@@ -12999,7 +12842,7 @@ modules:
       description: Coarse Maximum Step
   - !Register
     name: DFLLSYNC
-    addr: 0x30
+    addr: 0x40000830
     size_bits: 8
     description: DFLL48M Synchronization
     read_allowed: true
@@ -13014,7 +12857,7 @@ modules:
       write_allowed: true
   - !Register
     name: BOD33
-    addr: 0x34
+    addr: 0x40000834
     size_bits: 32
     description: 3.3V Brown-Out Detector (BOD33) Control
     read_allowed: true
@@ -13083,7 +12926,7 @@ modules:
       description: BOD33 Threshold Level
   - !Register
     name: VREG
-    addr: 0x3c
+    addr: 0x4000083c
     size_bits: 16
     description: Voltage Regulator System (VREG) Control
     read_allowed: true
@@ -13101,7 +12944,7 @@ modules:
       description: Force LDO Voltage Regulator
   - !Register
     name: VREF
-    addr: 0x40
+    addr: 0x40000840
     size_bits: 32
     description: Voltage References System (VREF) Control
     read_allowed: true
@@ -13124,7 +12967,7 @@ modules:
       description: Bandgap Voltage Generator Calibration
   - !Register
     name: DPLLCTRLA
-    addr: 0x44
+    addr: 0x40000844
     size_bits: 8
     description: DPLL Control A
     read_allowed: true
@@ -13148,7 +12991,7 @@ modules:
       description: On Demand Clock Activation
   - !Register
     name: DPLLRATIO
-    addr: 0x48
+    addr: 0x40000848
     size_bits: 32
     description: DPLL Ratio Control
     read_allowed: true
@@ -13166,7 +13009,7 @@ modules:
       description: Loop Divider Ratio Fractional Part
   - !Register
     name: DPLLCTRLB
-    addr: 0x4c
+    addr: 0x4000084c
     size_bits: 32
     description: DPLL Control B
     read_allowed: true
@@ -13224,7 +13067,7 @@ modules:
       description: Clock Divider
   - !Register
     name: DPLLSTATUS
-    addr: 0x50
+    addr: 0x40000850
     size_bits: 8
     description: DPLL Status
     read_allowed: true
@@ -13262,11 +13105,11 @@ modules:
   name: TC3
   description: Basic Timer Counter 3
   base_addr: 0x42002c00
-  size: 0x40
+  size: 0x1c
   registers:
   - !Register
     name: COUNT8_CTRLA
-    addr: 0x0
+    addr: 0x42002c00
     size_bits: 16
     description: Control A
     fields:
@@ -13331,7 +13174,7 @@ modules:
         2: RESYNC
   - !Register
     name: COUNT8_READREQ
-    addr: 0x2
+    addr: 0x42002c02
     size_bits: 16
     description: Read Request
     fields:
@@ -13352,7 +13195,7 @@ modules:
       description: Read Request
   - !Register
     name: COUNT8_CTRLBCLR
-    addr: 0x4
+    addr: 0x42002c04
     size_bits: 8
     description: Control B Clear
     reset_value: 0x2
@@ -13378,7 +13221,7 @@ modules:
         2: STOP
   - !Register
     name: COUNT8_CTRLBSET
-    addr: 0x5
+    addr: 0x42002c05
     size_bits: 8
     description: Control B Set
     fields:
@@ -13403,7 +13246,7 @@ modules:
         2: STOP
   - !Register
     name: COUNT8_CTRLC
-    addr: 0x6
+    addr: 0x42002c06
     size_bits: 8
     description: Control C
     fields:
@@ -13429,7 +13272,7 @@ modules:
       description: Capture Channel 1 Enable
   - !Register
     name: COUNT8_DBGCTRL
-    addr: 0x8
+    addr: 0x42002c08
     size_bits: 8
     description: Debug Control
     fields:
@@ -13440,7 +13283,7 @@ modules:
       description: Debug Run Mode
   - !Register
     name: COUNT8_EVCTRL
-    addr: 0xa
+    addr: 0x42002c0a
     size_bits: 16
     description: Event Control
     fields:
@@ -13483,7 +13326,7 @@ modules:
       description: Match or Capture Channel 1 Event Output Enable
   - !Register
     name: COUNT8_INTENCLR
-    addr: 0xc
+    addr: 0x42002c0c
     size_bits: 8
     description: Interrupt Enable Clear
     fields:
@@ -13514,7 +13357,7 @@ modules:
       description: Match or Capture Channel 1 Interrupt Enable
   - !Register
     name: COUNT8_INTENSET
-    addr: 0xd
+    addr: 0x42002c0d
     size_bits: 8
     description: Interrupt Enable Set
     fields:
@@ -13545,7 +13388,7 @@ modules:
       description: Match or Capture Channel 1 Interrupt Enable
   - !Register
     name: COUNT8_INTFLAG
-    addr: 0xe
+    addr: 0x42002c0e
     size_bits: 8
     description: Interrupt Flag Status and Clear
     fields:
@@ -13576,7 +13419,7 @@ modules:
       description: Match or Capture Channel 1
   - !Register
     name: COUNT8_STATUS
-    addr: 0xf
+    addr: 0x42002c0f
     size_bits: 8
     description: Status
     read_allowed: true
@@ -13606,7 +13449,7 @@ modules:
       write_allowed: false
   - !Register
     name: COUNT8_COUNT
-    addr: 0x10
+    addr: 0x42002c10
     size_bits: 8
     description: COUNT8 Counter Value
     fields:
@@ -13617,7 +13460,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT8_PER
-    addr: 0x14
+    addr: 0x42002c14
     size_bits: 8
     description: COUNT8 Period Value
     reset_value: 0xff
@@ -13629,7 +13472,7 @@ modules:
       description: Period Value
   - !Register
     name: COUNT8_CC%s
-    addr: 0x18
+    addr: 0x42002c18
     size_bits: 8
     description: COUNT8 Compare/Capture
     fields:
@@ -13640,7 +13483,7 @@ modules:
       description: Compare/Capture Value
   - !Register
     name: COUNT16_CTRLA
-    addr: 0x0
+    addr: 0x42002c00
     size_bits: 16
     description: Control A
     fields:
@@ -13705,7 +13548,7 @@ modules:
         2: RESYNC
   - !Register
     name: COUNT16_READREQ
-    addr: 0x2
+    addr: 0x42002c02
     size_bits: 16
     description: Read Request
     fields:
@@ -13726,7 +13569,7 @@ modules:
       description: Read Request
   - !Register
     name: COUNT16_CTRLBCLR
-    addr: 0x4
+    addr: 0x42002c04
     size_bits: 8
     description: Control B Clear
     reset_value: 0x2
@@ -13752,7 +13595,7 @@ modules:
         2: STOP
   - !Register
     name: COUNT16_CTRLBSET
-    addr: 0x5
+    addr: 0x42002c05
     size_bits: 8
     description: Control B Set
     fields:
@@ -13777,7 +13620,7 @@ modules:
         2: STOP
   - !Register
     name: COUNT16_CTRLC
-    addr: 0x6
+    addr: 0x42002c06
     size_bits: 8
     description: Control C
     fields:
@@ -13803,7 +13646,7 @@ modules:
       description: Capture Channel 1 Enable
   - !Register
     name: COUNT16_DBGCTRL
-    addr: 0x8
+    addr: 0x42002c08
     size_bits: 8
     description: Debug Control
     fields:
@@ -13814,7 +13657,7 @@ modules:
       description: Debug Run Mode
   - !Register
     name: COUNT16_EVCTRL
-    addr: 0xa
+    addr: 0x42002c0a
     size_bits: 16
     description: Event Control
     fields:
@@ -13857,7 +13700,7 @@ modules:
       description: Match or Capture Channel 1 Event Output Enable
   - !Register
     name: COUNT16_INTENCLR
-    addr: 0xc
+    addr: 0x42002c0c
     size_bits: 8
     description: Interrupt Enable Clear
     fields:
@@ -13888,7 +13731,7 @@ modules:
       description: Match or Capture Channel 1 Interrupt Enable
   - !Register
     name: COUNT16_INTENSET
-    addr: 0xd
+    addr: 0x42002c0d
     size_bits: 8
     description: Interrupt Enable Set
     fields:
@@ -13919,7 +13762,7 @@ modules:
       description: Match or Capture Channel 1 Interrupt Enable
   - !Register
     name: COUNT16_INTFLAG
-    addr: 0xe
+    addr: 0x42002c0e
     size_bits: 8
     description: Interrupt Flag Status and Clear
     fields:
@@ -13950,7 +13793,7 @@ modules:
       description: Match or Capture Channel 1
   - !Register
     name: COUNT16_STATUS
-    addr: 0xf
+    addr: 0x42002c0f
     size_bits: 8
     description: Status
     read_allowed: true
@@ -13980,7 +13823,7 @@ modules:
       write_allowed: false
   - !Register
     name: COUNT16_COUNT
-    addr: 0x10
+    addr: 0x42002c10
     size_bits: 16
     description: COUNT16 Counter Value
     fields:
@@ -13991,7 +13834,7 @@ modules:
       description: Count Value
   - !Register
     name: COUNT16_CC%s
-    addr: 0x18
+    addr: 0x42002c18
     size_bits: 16
     description: COUNT16 Compare/Capture
     fields:
@@ -14002,7 +13845,7 @@ modules:
       description: Compare/Capture Value
   - !Register
     name: COUNT32_CTRLA
-    addr: 0x0
+    addr: 0x42002c00
     size_bits: 16
     description: Control A
     fields:
@@ -14067,7 +13910,7 @@ modules:
         2: RESYNC
   - !Register
     name: COUNT32_READREQ
-    addr: 0x2
+    addr: 0x42002c02
     size_bits: 16
     description: Read Request
     fields:
@@ -14088,7 +13931,7 @@ modules:
       description: Read Request
   - !Register
     name: COUNT32_CTRLBCLR
-    addr: 0x4
+    addr: 0x42002c04
     size_bits: 8
     description: Control B Clear
     reset_value: 0x2
@@ -14114,7 +13957,7 @@ modules:
         2: STOP
   - !Register
     name: COUNT32_CTRLBSET
-    addr: 0x5
+    addr: 0x42002c05
     size_bits: 8
     description: Control B Set
     fields:
@@ -14139,7 +13982,7 @@ modules:
         2: STOP
   - !Register
     name: COUNT32_CTRLC
-    addr: 0x6
+    addr: 0x42002c06
     size_bits: 8
     description: Control C
     fields:
@@ -14165,7 +14008,7 @@ modules:
       description: Capture Channel 1 Enable
   - !Register
     name: COUNT32_DBGCTRL
-    addr: 0x8
+    addr: 0x42002c08
     size_bits: 8
     description: Debug Control
     fields:
@@ -14176,7 +14019,7 @@ modules:
       description: Debug Run Mode
   - !Register
     name: COUNT32_EVCTRL
-    addr: 0xa
+    addr: 0x42002c0a
     size_bits: 16
     description: Event Control
     fields:
@@ -14219,7 +14062,7 @@ modules:
       description: Match or Capture Channel 1 Event Output Enable
   - !Register
     name: COUNT32_INTENCLR
-    addr: 0xc
+    addr: 0x42002c0c
     size_bits: 8
     description: Interrupt Enable Clear
     fields:
@@ -14250,7 +14093,7 @@ modules:
       description: Match or Capture Channel 1 Interrupt Enable
   - !Register
     name: COUNT32_INTENSET
-    addr: 0xd
+    addr: 0x42002c0d
     size_bits: 8
     description: Interrupt Enable Set
     fields:
@@ -14281,7 +14124,7 @@ modules:
       description: Match or Capture Channel 1 Interrupt Enable
   - !Register
     name: COUNT32_INTFLAG
-    addr: 0xe
+    addr: 0x42002c0e
     size_bits: 8
     description: Interrupt Flag Status and Clear
     fields:
@@ -14312,7 +14155,7 @@ modules:
       description: Match or Capture Channel 1
   - !Register
     name: COUNT32_STATUS
-    addr: 0xf
+    addr: 0x42002c0f
     size_bits: 8
     description: Status
     read_allowed: true
@@ -14342,7 +14185,7 @@ modules:
       write_allowed: false
   - !Register
     name: COUNT32_COUNT
-    addr: 0x10
+    addr: 0x42002c10
     size_bits: 32
     description: COUNT32 Counter Value
     fields:
@@ -14353,7 +14196,7 @@ modules:
       description: Count Value
   - !Register
     name: COUNT32_CC%s
-    addr: 0x18
+    addr: 0x42002c18
     size_bits: 32
     description: COUNT32 Compare/Capture
     fields:
@@ -14366,35 +14209,31 @@ modules:
   name: TC4
   description: Basic Timer Counter 4
   base_addr: 0x42003000
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: TC5
   description: Basic Timer Counter 5
   base_addr: 0x42003400
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: TC6
   description: Basic Timer Counter 6
   base_addr: 0x42003800
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: TC7
   description: Basic Timer Counter 7
   base_addr: 0x42003c00
-  size: 0x40
-  registers: []
+  size: 0x0
 - !Module
   name: TCC0
   description: Timer Counter Control 0
   base_addr: 0x42002000
-  size: 0x90
+  size: 0x80
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42002000
     size_bits: 32
     description: Control A
     read_allowed: true
@@ -14475,7 +14314,7 @@ modules:
       description: Capture Channel 3 Enable
   - !Register
     name: CTRLBCLR
-    addr: 0x4
+    addr: 0x42002004
     size_bits: 8
     description: Control B Clear
     read_allowed: true
@@ -14519,7 +14358,7 @@ modules:
         4: READSYNC
   - !Register
     name: CTRLBSET
-    addr: 0x5
+    addr: 0x42002005
     size_bits: 8
     description: Control B Set
     read_allowed: true
@@ -14563,7 +14402,7 @@ modules:
         4: READSYNC
   - !Register
     name: SYNCBUSY
-    addr: 0x8
+    addr: 0x42002008
     size_bits: 32
     description: Synchronization Busy
     read_allowed: true
@@ -14666,7 +14505,7 @@ modules:
       description: Compare Channel Buffer 3 Busy
   - !Register
     name: FCTRLA
-    addr: 0xc
+    addr: 0x4200200c
     size_bits: 32
     description: Recoverable Fault A Configuration
     read_allowed: true
@@ -14758,7 +14597,7 @@ modules:
       description: Fault A Filter Value
   - !Register
     name: FCTRLB
-    addr: 0x10
+    addr: 0x42002010
     size_bits: 32
     description: Recoverable Fault B Configuration
     read_allowed: true
@@ -14850,7 +14689,7 @@ modules:
       description: Fault B Filter Value
   - !Register
     name: WEXCTRL
-    addr: 0x14
+    addr: 0x42002014
     size_bits: 32
     description: Waveform Extension Configuration
     read_allowed: true
@@ -14893,7 +14732,7 @@ modules:
       description: Dead-time High Side Outputs Value
   - !Register
     name: DRVCTRL
-    addr: 0x18
+    addr: 0x42002018
     size_bits: 32
     description: Driver Control
     read_allowed: true
@@ -15031,7 +14870,7 @@ modules:
       description: Non-Recoverable Fault Input 1 Filter Value
   - !Register
     name: DBGCTRL
-    addr: 0x1e
+    addr: 0x4200201e
     size_bits: 8
     description: Debug Control
     read_allowed: true
@@ -15049,7 +14888,7 @@ modules:
       description: Fault Detection on Debug Break Detection
   - !Register
     name: EVCTRL
-    addr: 0x20
+    addr: 0x42002020
     size_bits: 32
     description: Event Control
     read_allowed: true
@@ -15170,7 +15009,7 @@ modules:
       description: Match or Capture Channel 3 Event Output Enable
   - !Register
     name: INTENCLR
-    addr: 0x24
+    addr: 0x42002024
     size_bits: 32
     description: Interrupt Enable Clear
     read_allowed: true
@@ -15248,7 +15087,7 @@ modules:
       description: Match or Capture Channel 3 Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x28
+    addr: 0x42002028
     size_bits: 32
     description: Interrupt Enable Set
     read_allowed: true
@@ -15326,7 +15165,7 @@ modules:
       description: Match or Capture Channel 3 Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x2c
+    addr: 0x4200202c
     size_bits: 32
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -15404,7 +15243,7 @@ modules:
       description: Match or Capture 3
   - !Register
     name: STATUS
-    addr: 0x30
+    addr: 0x42002030
     size_bits: 32
     description: Status
     read_allowed: true
@@ -15555,7 +15394,7 @@ modules:
       write_allowed: false
   - !Register
     name: COUNT
-    addr: 0x34
+    addr: 0x42002034
     size_bits: 32
     description: Count
     read_allowed: true
@@ -15568,7 +15407,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH4
-    addr: 0x34
+    addr: 0x42002034
     size_bits: 32
     description: Count
     read_allowed: true
@@ -15581,7 +15420,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH5
-    addr: 0x34
+    addr: 0x42002034
     size_bits: 32
     description: Count
     read_allowed: true
@@ -15594,7 +15433,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH6
-    addr: 0x34
+    addr: 0x42002034
     size_bits: 32
     description: Count
     read_allowed: true
@@ -15607,7 +15446,7 @@ modules:
       description: Counter Value
   - !Register
     name: PATT
-    addr: 0x38
+    addr: 0x42002038
     size_bits: 16
     description: Pattern
     read_allowed: true
@@ -15695,7 +15534,7 @@ modules:
       description: Pattern Generator 7 Output Value
   - !Register
     name: WAVE
-    addr: 0x3c
+    addr: 0x4200203c
     size_bits: 32
     description: Waveform Control
     read_allowed: true
@@ -15791,7 +15630,7 @@ modules:
       description: Swap DTI Output Pair 3
   - !Register
     name: PER
-    addr: 0x40
+    addr: 0x42002040
     size_bits: 32
     description: Period
     read_allowed: true
@@ -15805,7 +15644,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH4
-    addr: 0x40
+    addr: 0x42002040
     size_bits: 32
     description: Period
     read_allowed: true
@@ -15824,7 +15663,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH5
-    addr: 0x40
+    addr: 0x42002040
     size_bits: 32
     description: Period
     read_allowed: true
@@ -15843,7 +15682,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH6
-    addr: 0x40
+    addr: 0x42002040
     size_bits: 32
     description: Period
     read_allowed: true
@@ -15862,7 +15701,7 @@ modules:
       description: Period Value
   - !Register
     name: PATTB
-    addr: 0x64
+    addr: 0x42002064
     size_bits: 16
     description: Pattern Buffer
     read_allowed: true
@@ -15950,7 +15789,7 @@ modules:
       description: Pattern Generator 7 Output Enable
   - !Register
     name: WAVEB
-    addr: 0x68
+    addr: 0x42002068
     size_bits: 32
     description: Waveform Control Buffer
     read_allowed: true
@@ -16046,7 +15885,7 @@ modules:
       description: Swap DTI Output Pair 3 Buffer
   - !Register
     name: PERB
-    addr: 0x6c
+    addr: 0x4200206c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -16060,7 +15899,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH4
-    addr: 0x6c
+    addr: 0x4200206c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -16079,7 +15918,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH5
-    addr: 0x6c
+    addr: 0x4200206c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -16098,7 +15937,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH6
-    addr: 0x6c
+    addr: 0x4200206c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -16117,7 +15956,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: CC0
-    addr: 0x44
+    addr: 0x42002044
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16128,7 +15967,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1
-    addr: 0x48
+    addr: 0x42002048
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16139,7 +15978,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2
-    addr: 0x4c
+    addr: 0x4200204c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16150,7 +15989,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3
-    addr: 0x50
+    addr: 0x42002050
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16161,7 +16000,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH4
-    addr: 0x44
+    addr: 0x42002044
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16177,7 +16016,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH4
-    addr: 0x48
+    addr: 0x42002048
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16193,7 +16032,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH4
-    addr: 0x4c
+    addr: 0x4200204c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16209,7 +16048,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH4
-    addr: 0x50
+    addr: 0x42002050
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16225,7 +16064,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH5
-    addr: 0x44
+    addr: 0x42002044
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16241,7 +16080,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH5
-    addr: 0x48
+    addr: 0x42002048
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16257,7 +16096,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH5
-    addr: 0x4c
+    addr: 0x4200204c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16273,7 +16112,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH5
-    addr: 0x50
+    addr: 0x42002050
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16289,7 +16128,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH6
-    addr: 0x44
+    addr: 0x42002044
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16305,7 +16144,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH6
-    addr: 0x48
+    addr: 0x42002048
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16321,7 +16160,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH6
-    addr: 0x4c
+    addr: 0x4200204c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16337,7 +16176,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH6
-    addr: 0x50
+    addr: 0x42002050
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -16353,7 +16192,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CCB0
-    addr: 0x70
+    addr: 0x42002070
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16364,7 +16203,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1
-    addr: 0x74
+    addr: 0x42002074
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16375,7 +16214,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2
-    addr: 0x78
+    addr: 0x42002078
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16386,7 +16225,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3
-    addr: 0x7c
+    addr: 0x4200207c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16397,7 +16236,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH4
-    addr: 0x70
+    addr: 0x42002070
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16413,7 +16252,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH4
-    addr: 0x74
+    addr: 0x42002074
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16429,7 +16268,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH4
-    addr: 0x78
+    addr: 0x42002078
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16445,7 +16284,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH4
-    addr: 0x7c
+    addr: 0x4200207c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16461,7 +16300,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH5
-    addr: 0x70
+    addr: 0x42002070
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16477,7 +16316,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH5
-    addr: 0x74
+    addr: 0x42002074
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16493,7 +16332,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH5
-    addr: 0x78
+    addr: 0x42002078
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16509,7 +16348,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH5
-    addr: 0x7c
+    addr: 0x4200207c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16525,7 +16364,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH6
-    addr: 0x70
+    addr: 0x42002070
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16541,7 +16380,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH6
-    addr: 0x74
+    addr: 0x42002074
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16557,7 +16396,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH6
-    addr: 0x78
+    addr: 0x42002078
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16573,7 +16412,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH6
-    addr: 0x7c
+    addr: 0x4200207c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -16591,11 +16430,11 @@ modules:
   name: TCC1
   description: Timer Counter Control 1
   base_addr: 0x42002400
-  size: 0x90
+  size: 0x80
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42002400
     size_bits: 32
     description: Control A
     read_allowed: true
@@ -16676,7 +16515,7 @@ modules:
       description: Capture Channel 3 Enable
   - !Register
     name: CTRLBCLR
-    addr: 0x4
+    addr: 0x42002404
     size_bits: 8
     description: Control B Clear
     read_allowed: true
@@ -16720,7 +16559,7 @@ modules:
         4: READSYNC
   - !Register
     name: CTRLBSET
-    addr: 0x5
+    addr: 0x42002405
     size_bits: 8
     description: Control B Set
     read_allowed: true
@@ -16764,7 +16603,7 @@ modules:
         4: READSYNC
   - !Register
     name: SYNCBUSY
-    addr: 0x8
+    addr: 0x42002408
     size_bits: 32
     description: Synchronization Busy
     read_allowed: true
@@ -16867,7 +16706,7 @@ modules:
       description: Compare Channel Buffer 3 Busy
   - !Register
     name: FCTRLA
-    addr: 0xc
+    addr: 0x4200240c
     size_bits: 32
     description: Recoverable Fault A Configuration
     read_allowed: true
@@ -16959,7 +16798,7 @@ modules:
       description: Fault A Filter Value
   - !Register
     name: FCTRLB
-    addr: 0x10
+    addr: 0x42002410
     size_bits: 32
     description: Recoverable Fault B Configuration
     read_allowed: true
@@ -17051,7 +16890,7 @@ modules:
       description: Fault B Filter Value
   - !Register
     name: WEXCTRL
-    addr: 0x14
+    addr: 0x42002414
     size_bits: 32
     description: Waveform Extension Configuration
     read_allowed: true
@@ -17094,7 +16933,7 @@ modules:
       description: Dead-time High Side Outputs Value
   - !Register
     name: DRVCTRL
-    addr: 0x18
+    addr: 0x42002418
     size_bits: 32
     description: Driver Control
     read_allowed: true
@@ -17232,7 +17071,7 @@ modules:
       description: Non-Recoverable Fault Input 1 Filter Value
   - !Register
     name: DBGCTRL
-    addr: 0x1e
+    addr: 0x4200241e
     size_bits: 8
     description: Debug Control
     read_allowed: true
@@ -17250,7 +17089,7 @@ modules:
       description: Fault Detection on Debug Break Detection
   - !Register
     name: EVCTRL
-    addr: 0x20
+    addr: 0x42002420
     size_bits: 32
     description: Event Control
     read_allowed: true
@@ -17371,7 +17210,7 @@ modules:
       description: Match or Capture Channel 3 Event Output Enable
   - !Register
     name: INTENCLR
-    addr: 0x24
+    addr: 0x42002424
     size_bits: 32
     description: Interrupt Enable Clear
     read_allowed: true
@@ -17449,7 +17288,7 @@ modules:
       description: Match or Capture Channel 3 Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x28
+    addr: 0x42002428
     size_bits: 32
     description: Interrupt Enable Set
     read_allowed: true
@@ -17527,7 +17366,7 @@ modules:
       description: Match or Capture Channel 3 Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x2c
+    addr: 0x4200242c
     size_bits: 32
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -17605,7 +17444,7 @@ modules:
       description: Match or Capture 3
   - !Register
     name: STATUS
-    addr: 0x30
+    addr: 0x42002430
     size_bits: 32
     description: Status
     read_allowed: true
@@ -17756,7 +17595,7 @@ modules:
       write_allowed: false
   - !Register
     name: COUNT
-    addr: 0x34
+    addr: 0x42002434
     size_bits: 32
     description: Count
     read_allowed: true
@@ -17769,7 +17608,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH4
-    addr: 0x34
+    addr: 0x42002434
     size_bits: 32
     description: Count
     read_allowed: true
@@ -17782,7 +17621,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH5
-    addr: 0x34
+    addr: 0x42002434
     size_bits: 32
     description: Count
     read_allowed: true
@@ -17795,7 +17634,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH6
-    addr: 0x34
+    addr: 0x42002434
     size_bits: 32
     description: Count
     read_allowed: true
@@ -17808,7 +17647,7 @@ modules:
       description: Counter Value
   - !Register
     name: PATT
-    addr: 0x38
+    addr: 0x42002438
     size_bits: 16
     description: Pattern
     read_allowed: true
@@ -17896,7 +17735,7 @@ modules:
       description: Pattern Generator 7 Output Value
   - !Register
     name: WAVE
-    addr: 0x3c
+    addr: 0x4200243c
     size_bits: 32
     description: Waveform Control
     read_allowed: true
@@ -17992,7 +17831,7 @@ modules:
       description: Swap DTI Output Pair 3
   - !Register
     name: PER
-    addr: 0x40
+    addr: 0x42002440
     size_bits: 32
     description: Period
     read_allowed: true
@@ -18006,7 +17845,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH4
-    addr: 0x40
+    addr: 0x42002440
     size_bits: 32
     description: Period
     read_allowed: true
@@ -18025,7 +17864,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH5
-    addr: 0x40
+    addr: 0x42002440
     size_bits: 32
     description: Period
     read_allowed: true
@@ -18044,7 +17883,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH6
-    addr: 0x40
+    addr: 0x42002440
     size_bits: 32
     description: Period
     read_allowed: true
@@ -18063,7 +17902,7 @@ modules:
       description: Period Value
   - !Register
     name: PATTB
-    addr: 0x64
+    addr: 0x42002464
     size_bits: 16
     description: Pattern Buffer
     read_allowed: true
@@ -18151,7 +17990,7 @@ modules:
       description: Pattern Generator 7 Output Enable
   - !Register
     name: WAVEB
-    addr: 0x68
+    addr: 0x42002468
     size_bits: 32
     description: Waveform Control Buffer
     read_allowed: true
@@ -18247,7 +18086,7 @@ modules:
       description: Swap DTI Output Pair 3 Buffer
   - !Register
     name: PERB
-    addr: 0x6c
+    addr: 0x4200246c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -18261,7 +18100,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH4
-    addr: 0x6c
+    addr: 0x4200246c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -18280,7 +18119,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH5
-    addr: 0x6c
+    addr: 0x4200246c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -18299,7 +18138,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH6
-    addr: 0x6c
+    addr: 0x4200246c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -18318,7 +18157,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: CC0
-    addr: 0x44
+    addr: 0x42002444
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18329,7 +18168,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1
-    addr: 0x48
+    addr: 0x42002448
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18340,7 +18179,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2
-    addr: 0x4c
+    addr: 0x4200244c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18351,7 +18190,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3
-    addr: 0x50
+    addr: 0x42002450
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18362,7 +18201,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH4
-    addr: 0x44
+    addr: 0x42002444
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18378,7 +18217,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH4
-    addr: 0x48
+    addr: 0x42002448
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18394,7 +18233,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH4
-    addr: 0x4c
+    addr: 0x4200244c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18410,7 +18249,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH4
-    addr: 0x50
+    addr: 0x42002450
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18426,7 +18265,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH5
-    addr: 0x44
+    addr: 0x42002444
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18442,7 +18281,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH5
-    addr: 0x48
+    addr: 0x42002448
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18458,7 +18297,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH5
-    addr: 0x4c
+    addr: 0x4200244c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18474,7 +18313,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH5
-    addr: 0x50
+    addr: 0x42002450
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18490,7 +18329,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH6
-    addr: 0x44
+    addr: 0x42002444
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18506,7 +18345,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH6
-    addr: 0x48
+    addr: 0x42002448
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18522,7 +18361,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH6
-    addr: 0x4c
+    addr: 0x4200244c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18538,7 +18377,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH6
-    addr: 0x50
+    addr: 0x42002450
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -18554,7 +18393,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CCB0
-    addr: 0x70
+    addr: 0x42002470
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18565,7 +18404,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1
-    addr: 0x74
+    addr: 0x42002474
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18576,7 +18415,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2
-    addr: 0x78
+    addr: 0x42002478
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18587,7 +18426,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3
-    addr: 0x7c
+    addr: 0x4200247c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18598,7 +18437,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH4
-    addr: 0x70
+    addr: 0x42002470
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18614,7 +18453,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH4
-    addr: 0x74
+    addr: 0x42002474
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18630,7 +18469,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH4
-    addr: 0x78
+    addr: 0x42002478
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18646,7 +18485,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH4
-    addr: 0x7c
+    addr: 0x4200247c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18662,7 +18501,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH5
-    addr: 0x70
+    addr: 0x42002470
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18678,7 +18517,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH5
-    addr: 0x74
+    addr: 0x42002474
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18694,7 +18533,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH5
-    addr: 0x78
+    addr: 0x42002478
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18710,7 +18549,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH5
-    addr: 0x7c
+    addr: 0x4200247c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18726,7 +18565,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH6
-    addr: 0x70
+    addr: 0x42002470
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18742,7 +18581,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH6
-    addr: 0x74
+    addr: 0x42002474
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18758,7 +18597,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH6
-    addr: 0x78
+    addr: 0x42002478
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18774,7 +18613,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH6
-    addr: 0x7c
+    addr: 0x4200247c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -18792,11 +18631,11 @@ modules:
   name: TCC2
   description: Timer Counter Control 2
   base_addr: 0x42002800
-  size: 0x90
+  size: 0x80
   registers:
   - !Register
     name: CTRLA
-    addr: 0x0
+    addr: 0x42002800
     size_bits: 32
     description: Control A
     read_allowed: true
@@ -18877,7 +18716,7 @@ modules:
       description: Capture Channel 3 Enable
   - !Register
     name: CTRLBCLR
-    addr: 0x4
+    addr: 0x42002804
     size_bits: 8
     description: Control B Clear
     read_allowed: true
@@ -18921,7 +18760,7 @@ modules:
         4: READSYNC
   - !Register
     name: CTRLBSET
-    addr: 0x5
+    addr: 0x42002805
     size_bits: 8
     description: Control B Set
     read_allowed: true
@@ -18965,7 +18804,7 @@ modules:
         4: READSYNC
   - !Register
     name: SYNCBUSY
-    addr: 0x8
+    addr: 0x42002808
     size_bits: 32
     description: Synchronization Busy
     read_allowed: true
@@ -19068,7 +18907,7 @@ modules:
       description: Compare Channel Buffer 3 Busy
   - !Register
     name: FCTRLA
-    addr: 0xc
+    addr: 0x4200280c
     size_bits: 32
     description: Recoverable Fault A Configuration
     read_allowed: true
@@ -19160,7 +18999,7 @@ modules:
       description: Fault A Filter Value
   - !Register
     name: FCTRLB
-    addr: 0x10
+    addr: 0x42002810
     size_bits: 32
     description: Recoverable Fault B Configuration
     read_allowed: true
@@ -19252,7 +19091,7 @@ modules:
       description: Fault B Filter Value
   - !Register
     name: WEXCTRL
-    addr: 0x14
+    addr: 0x42002814
     size_bits: 32
     description: Waveform Extension Configuration
     read_allowed: true
@@ -19295,7 +19134,7 @@ modules:
       description: Dead-time High Side Outputs Value
   - !Register
     name: DRVCTRL
-    addr: 0x18
+    addr: 0x42002818
     size_bits: 32
     description: Driver Control
     read_allowed: true
@@ -19433,7 +19272,7 @@ modules:
       description: Non-Recoverable Fault Input 1 Filter Value
   - !Register
     name: DBGCTRL
-    addr: 0x1e
+    addr: 0x4200281e
     size_bits: 8
     description: Debug Control
     read_allowed: true
@@ -19451,7 +19290,7 @@ modules:
       description: Fault Detection on Debug Break Detection
   - !Register
     name: EVCTRL
-    addr: 0x20
+    addr: 0x42002820
     size_bits: 32
     description: Event Control
     read_allowed: true
@@ -19572,7 +19411,7 @@ modules:
       description: Match or Capture Channel 3 Event Output Enable
   - !Register
     name: INTENCLR
-    addr: 0x24
+    addr: 0x42002824
     size_bits: 32
     description: Interrupt Enable Clear
     read_allowed: true
@@ -19650,7 +19489,7 @@ modules:
       description: Match or Capture Channel 3 Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x28
+    addr: 0x42002828
     size_bits: 32
     description: Interrupt Enable Set
     read_allowed: true
@@ -19728,7 +19567,7 @@ modules:
       description: Match or Capture Channel 3 Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x2c
+    addr: 0x4200282c
     size_bits: 32
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -19806,7 +19645,7 @@ modules:
       description: Match or Capture 3
   - !Register
     name: STATUS
-    addr: 0x30
+    addr: 0x42002830
     size_bits: 32
     description: Status
     read_allowed: true
@@ -19957,7 +19796,7 @@ modules:
       write_allowed: false
   - !Register
     name: COUNT
-    addr: 0x34
+    addr: 0x42002834
     size_bits: 32
     description: Count
     read_allowed: true
@@ -19970,7 +19809,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH4
-    addr: 0x34
+    addr: 0x42002834
     size_bits: 32
     description: Count
     read_allowed: true
@@ -19983,7 +19822,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH5
-    addr: 0x34
+    addr: 0x42002834
     size_bits: 32
     description: Count
     read_allowed: true
@@ -19996,7 +19835,7 @@ modules:
       description: Counter Value
   - !Register
     name: COUNT_DITH6
-    addr: 0x34
+    addr: 0x42002834
     size_bits: 32
     description: Count
     read_allowed: true
@@ -20009,7 +19848,7 @@ modules:
       description: Counter Value
   - !Register
     name: PATT
-    addr: 0x38
+    addr: 0x42002838
     size_bits: 16
     description: Pattern
     read_allowed: true
@@ -20097,7 +19936,7 @@ modules:
       description: Pattern Generator 7 Output Value
   - !Register
     name: WAVE
-    addr: 0x3c
+    addr: 0x4200283c
     size_bits: 32
     description: Waveform Control
     read_allowed: true
@@ -20193,7 +20032,7 @@ modules:
       description: Swap DTI Output Pair 3
   - !Register
     name: PER
-    addr: 0x40
+    addr: 0x42002840
     size_bits: 32
     description: Period
     read_allowed: true
@@ -20207,7 +20046,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH4
-    addr: 0x40
+    addr: 0x42002840
     size_bits: 32
     description: Period
     read_allowed: true
@@ -20226,7 +20065,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH5
-    addr: 0x40
+    addr: 0x42002840
     size_bits: 32
     description: Period
     read_allowed: true
@@ -20245,7 +20084,7 @@ modules:
       description: Period Value
   - !Register
     name: PER_DITH6
-    addr: 0x40
+    addr: 0x42002840
     size_bits: 32
     description: Period
     read_allowed: true
@@ -20264,7 +20103,7 @@ modules:
       description: Period Value
   - !Register
     name: PATTB
-    addr: 0x64
+    addr: 0x42002864
     size_bits: 16
     description: Pattern Buffer
     read_allowed: true
@@ -20352,7 +20191,7 @@ modules:
       description: Pattern Generator 7 Output Enable
   - !Register
     name: WAVEB
-    addr: 0x68
+    addr: 0x42002868
     size_bits: 32
     description: Waveform Control Buffer
     read_allowed: true
@@ -20448,7 +20287,7 @@ modules:
       description: Swap DTI Output Pair 3 Buffer
   - !Register
     name: PERB
-    addr: 0x6c
+    addr: 0x4200286c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -20462,7 +20301,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH4
-    addr: 0x6c
+    addr: 0x4200286c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -20481,7 +20320,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH5
-    addr: 0x6c
+    addr: 0x4200286c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -20500,7 +20339,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: PERB_DITH6
-    addr: 0x6c
+    addr: 0x4200286c
     size_bits: 32
     description: Period Buffer
     read_allowed: true
@@ -20519,7 +20358,7 @@ modules:
       description: Period Buffer Value
   - !Register
     name: CC0
-    addr: 0x44
+    addr: 0x42002844
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20530,7 +20369,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1
-    addr: 0x48
+    addr: 0x42002848
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20541,7 +20380,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2
-    addr: 0x4c
+    addr: 0x4200284c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20552,7 +20391,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3
-    addr: 0x50
+    addr: 0x42002850
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20563,7 +20402,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH4
-    addr: 0x44
+    addr: 0x42002844
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20579,7 +20418,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH4
-    addr: 0x48
+    addr: 0x42002848
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20595,7 +20434,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH4
-    addr: 0x4c
+    addr: 0x4200284c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20611,7 +20450,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH4
-    addr: 0x50
+    addr: 0x42002850
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20627,7 +20466,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH5
-    addr: 0x44
+    addr: 0x42002844
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20643,7 +20482,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH5
-    addr: 0x48
+    addr: 0x42002848
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20659,7 +20498,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH5
-    addr: 0x4c
+    addr: 0x4200284c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20675,7 +20514,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH5
-    addr: 0x50
+    addr: 0x42002850
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20691,7 +20530,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC0_DITH6
-    addr: 0x44
+    addr: 0x42002844
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20707,7 +20546,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC1_DITH6
-    addr: 0x48
+    addr: 0x42002848
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20723,7 +20562,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC2_DITH6
-    addr: 0x4c
+    addr: 0x4200284c
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20739,7 +20578,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CC3_DITH6
-    addr: 0x50
+    addr: 0x42002850
     size_bits: 32
     description: Compare and Capture
     fields:
@@ -20755,7 +20594,7 @@ modules:
       description: Channel Compare/Capture Value
   - !Register
     name: CCB0
-    addr: 0x70
+    addr: 0x42002870
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20766,7 +20605,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1
-    addr: 0x74
+    addr: 0x42002874
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20777,7 +20616,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2
-    addr: 0x78
+    addr: 0x42002878
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20788,7 +20627,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3
-    addr: 0x7c
+    addr: 0x4200287c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20799,7 +20638,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH4
-    addr: 0x70
+    addr: 0x42002870
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20815,7 +20654,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH4
-    addr: 0x74
+    addr: 0x42002874
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20831,7 +20670,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH4
-    addr: 0x78
+    addr: 0x42002878
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20847,7 +20686,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH4
-    addr: 0x7c
+    addr: 0x4200287c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20863,7 +20702,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH5
-    addr: 0x70
+    addr: 0x42002870
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20879,7 +20718,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH5
-    addr: 0x74
+    addr: 0x42002874
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20895,7 +20734,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH5
-    addr: 0x78
+    addr: 0x42002878
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20911,7 +20750,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH5
-    addr: 0x7c
+    addr: 0x4200287c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20927,7 +20766,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB0_DITH6
-    addr: 0x70
+    addr: 0x42002870
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20943,7 +20782,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB1_DITH6
-    addr: 0x74
+    addr: 0x42002874
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20959,7 +20798,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB2_DITH6
-    addr: 0x78
+    addr: 0x42002878
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20975,7 +20814,7 @@ modules:
       description: Channel Compare/Capture Buffer Value
   - !Register
     name: CCB3_DITH6
-    addr: 0x7c
+    addr: 0x4200287c
     size_bits: 32
     description: Compare and Capture Buffer
     fields:
@@ -20993,11 +20832,11 @@ modules:
   name: WDT
   description: Watchdog Timer
   base_addr: 0x40001000
-  size: 0x10
+  size: 0x9
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x40001000
     size_bits: 8
     description: Control
     read_allowed: true
@@ -21020,7 +20859,7 @@ modules:
       description: Always-On
   - !Register
     name: CONFIG
-    addr: 0x1
+    addr: 0x40001001
     size_bits: 8
     description: Configuration
     read_allowed: true
@@ -21065,7 +20904,7 @@ modules:
         11: 16K
   - !Register
     name: EWCTRL
-    addr: 0x2
+    addr: 0x40001002
     size_bits: 8
     description: Early Warning Interrupt Control
     read_allowed: true
@@ -21092,7 +20931,7 @@ modules:
         11: 16K
   - !Register
     name: INTENCLR
-    addr: 0x4
+    addr: 0x40001004
     size_bits: 8
     description: Interrupt Enable Clear
     read_allowed: true
@@ -21105,7 +20944,7 @@ modules:
       description: Early Warning Interrupt Enable
   - !Register
     name: INTENSET
-    addr: 0x5
+    addr: 0x40001005
     size_bits: 8
     description: Interrupt Enable Set
     read_allowed: true
@@ -21118,7 +20957,7 @@ modules:
       description: Early Warning Interrupt Enable
   - !Register
     name: INTFLAG
-    addr: 0x6
+    addr: 0x40001006
     size_bits: 8
     description: Interrupt Flag Status and Clear
     read_allowed: true
@@ -21131,7 +20970,7 @@ modules:
       description: Early Warning
   - !Register
     name: STATUS
-    addr: 0x7
+    addr: 0x40001007
     size_bits: 8
     description: Status
     read_allowed: true
@@ -21146,7 +20985,7 @@ modules:
       write_allowed: false
   - !Register
     name: CLEAR
-    addr: 0x8
+    addr: 0x40001008
     size_bits: 8
     description: Clear
     read_allowed: false

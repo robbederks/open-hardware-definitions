@@ -7,11 +7,11 @@ modules:
   name: SARADC_0
   description: None
   base_addr: 0x4001a000
-  size: 0xffc
+  size: 0xa4
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x4001a000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -152,7 +152,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x4001a010
     size_bits: 32
     description: Measurement Control
     read_allowed: true
@@ -298,7 +298,7 @@ modules:
         3: EXTERNAL_VREF
   - !Register
     name: SQ7654
-    addr: 0x20
+    addr: 0x4001a020
     size_bits: 32
     description: Channel Sequencer Time Slots 4-7 Setup
     read_allowed: true
@@ -498,7 +498,7 @@ modules:
         31: END
   - !Register
     name: SQ3210
-    addr: 0x30
+    addr: 0x4001a030
     size_bits: 32
     description: Channel Sequencer Time Slots 0-3 Setup
     read_allowed: true
@@ -698,7 +698,7 @@ modules:
         31: END
   - !Register
     name: CHAR32
-    addr: 0x40
+    addr: 0x4001a040
     size_bits: 32
     description: Conversion Characteristic 2 and 3 Setup
     read_allowed: true
@@ -788,7 +788,7 @@ modules:
         1: ENABLED
   - !Register
     name: CHAR10
-    addr: 0x50
+    addr: 0x4001a050
     size_bits: 32
     description: Conversion Characteristic 0 and 1 Setup
     read_allowed: true
@@ -878,7 +878,7 @@ modules:
         1: ENABLED
   - !Register
     name: DATA
-    addr: 0x60
+    addr: 0x4001a060
     size_bits: 32
     description: Output Data Word
     read_allowed: true
@@ -893,7 +893,7 @@ modules:
       write_allowed: false
   - !Register
     name: WCLIMITS
-    addr: 0x70
+    addr: 0x4001a070
     size_bits: 32
     description: Window Comparator Limits
     read_allowed: true
@@ -911,7 +911,7 @@ modules:
       description: 'Greater-Than Window Comparator Limit. '
   - !Register
     name: ACC
-    addr: 0x80
+    addr: 0x4001a080
     size_bits: 32
     description: Accumulator Initial Value
     read_allowed: true
@@ -926,7 +926,7 @@ modules:
       write_allowed: true
   - !Register
     name: STATUS
-    addr: 0x90
+    addr: 0x4001a090
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -974,7 +974,7 @@ modules:
         1: SET
   - !Register
     name: FIFOSTATUS
-    addr: 0xa0
+    addr: 0x4001a0a0
     size_bits: 32
     description: FIFO Status
     read_allowed: true
@@ -1012,11 +1012,11 @@ modules:
   name: SARADC_1
   description: None
   base_addr: 0x4001b000
-  size: 0xffc
+  size: 0xa4
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x4001b000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -1157,7 +1157,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x4001b010
     size_bits: 32
     description: Measurement Control
     read_allowed: true
@@ -1303,7 +1303,7 @@ modules:
         3: EXTERNAL_VREF
   - !Register
     name: SQ7654
-    addr: 0x20
+    addr: 0x4001b020
     size_bits: 32
     description: Channel Sequencer Time Slots 4-7 Setup
     read_allowed: true
@@ -1503,7 +1503,7 @@ modules:
         31: END
   - !Register
     name: SQ3210
-    addr: 0x30
+    addr: 0x4001b030
     size_bits: 32
     description: Channel Sequencer Time Slots 0-3 Setup
     read_allowed: true
@@ -1703,7 +1703,7 @@ modules:
         31: END
   - !Register
     name: CHAR32
-    addr: 0x40
+    addr: 0x4001b040
     size_bits: 32
     description: Conversion Characteristic 2 and 3 Setup
     read_allowed: true
@@ -1793,7 +1793,7 @@ modules:
         1: ENABLED
   - !Register
     name: CHAR10
-    addr: 0x50
+    addr: 0x4001b050
     size_bits: 32
     description: Conversion Characteristic 0 and 1 Setup
     read_allowed: true
@@ -1883,7 +1883,7 @@ modules:
         1: ENABLED
   - !Register
     name: DATA
-    addr: 0x60
+    addr: 0x4001b060
     size_bits: 32
     description: Output Data Word
     read_allowed: true
@@ -1898,7 +1898,7 @@ modules:
       write_allowed: false
   - !Register
     name: WCLIMITS
-    addr: 0x70
+    addr: 0x4001b070
     size_bits: 32
     description: Window Comparator Limits
     read_allowed: true
@@ -1916,7 +1916,7 @@ modules:
       description: 'Greater-Than Window Comparator Limit. '
   - !Register
     name: ACC
-    addr: 0x80
+    addr: 0x4001b080
     size_bits: 32
     description: Accumulator Initial Value
     read_allowed: true
@@ -1931,7 +1931,7 @@ modules:
       write_allowed: true
   - !Register
     name: STATUS
-    addr: 0x90
+    addr: 0x4001b090
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -1979,7 +1979,7 @@ modules:
         1: SET
   - !Register
     name: FIFOSTATUS
-    addr: 0xa0
+    addr: 0x4001b0a0
     size_bits: 32
     description: FIFO Status
     read_allowed: true
@@ -2017,11 +2017,11 @@ modules:
   name: AES_0
   description: None
   base_addr: 0x40027000
-  size: 0xffc
+  size: 0x104
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40027000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -2135,7 +2135,7 @@ modules:
         1: ACTIVE
   - !Register
     name: XFRSIZE
-    addr: 0x10
+    addr: 0x40027010
     size_bits: 32
     description: Number of Blocks
     read_allowed: true
@@ -2148,7 +2148,7 @@ modules:
       description: 'Transfer Size. '
   - !Register
     name: DATAFIFO
-    addr: 0x20
+    addr: 0x40027020
     size_bits: 32
     description: Input/Output Data FIFO Access
     read_allowed: true
@@ -2161,7 +2161,7 @@ modules:
       description: 'Input/Output Data FIFO Access. '
   - !Register
     name: XORFIFO
-    addr: 0x30
+    addr: 0x40027030
     size_bits: 32
     description: XOR Data FIFO Access
     read_allowed: true
@@ -2174,7 +2174,7 @@ modules:
       description: 'XOR Data FIFO Access. '
   - !Register
     name: HWKEY0
-    addr: 0x40
+    addr: 0x40027040
     size_bits: 32
     description: Hardware Key Word 0
     read_allowed: true
@@ -2187,7 +2187,7 @@ modules:
       description: 'Hardware Key Word 0. '
   - !Register
     name: HWKEY1
-    addr: 0x50
+    addr: 0x40027050
     size_bits: 32
     description: Hardware Key Word 1
     read_allowed: true
@@ -2200,7 +2200,7 @@ modules:
       description: 'Hardware Key Word 1. '
   - !Register
     name: HWKEY2
-    addr: 0x60
+    addr: 0x40027060
     size_bits: 32
     description: Hardware Key Word 2
     read_allowed: true
@@ -2213,7 +2213,7 @@ modules:
       description: 'Hardware Key Word 2. '
   - !Register
     name: HWKEY3
-    addr: 0x70
+    addr: 0x40027070
     size_bits: 32
     description: Hardware Key Word 3
     read_allowed: true
@@ -2226,7 +2226,7 @@ modules:
       description: 'Hardware Key Word 3. '
   - !Register
     name: HWKEY4
-    addr: 0x80
+    addr: 0x40027080
     size_bits: 32
     description: Hardware Key Word 4
     read_allowed: true
@@ -2239,7 +2239,7 @@ modules:
       description: 'Hardware Key Word 4. '
   - !Register
     name: HWKEY5
-    addr: 0x90
+    addr: 0x40027090
     size_bits: 32
     description: Hardware Key Word 5
     read_allowed: true
@@ -2252,7 +2252,7 @@ modules:
       description: 'Hardware Key Word 5. '
   - !Register
     name: HWKEY6
-    addr: 0xa0
+    addr: 0x400270a0
     size_bits: 32
     description: Hardware Key Word 6
     read_allowed: true
@@ -2265,7 +2265,7 @@ modules:
       description: 'Hardware Key Word 6. '
   - !Register
     name: HWKEY7
-    addr: 0xb0
+    addr: 0x400270b0
     size_bits: 32
     description: Hardware Key Word 7
     read_allowed: true
@@ -2278,7 +2278,7 @@ modules:
       description: 'Hardware Key Word 7. '
   - !Register
     name: HWCTR0
-    addr: 0xc0
+    addr: 0x400270c0
     size_bits: 32
     description: Hardware Counter Word 0
     read_allowed: true
@@ -2291,7 +2291,7 @@ modules:
       description: 'Hardware Counter Word 0. '
   - !Register
     name: HWCTR1
-    addr: 0xd0
+    addr: 0x400270d0
     size_bits: 32
     description: Hardware Counter Word 1
     read_allowed: true
@@ -2304,7 +2304,7 @@ modules:
       description: 'Hardware Counter Word 1. '
   - !Register
     name: HWCTR2
-    addr: 0xe0
+    addr: 0x400270e0
     size_bits: 32
     description: Hardware Counter Word 2
     read_allowed: true
@@ -2317,7 +2317,7 @@ modules:
       description: 'Hardware Counter Word 2. '
   - !Register
     name: HWCTR3
-    addr: 0xf0
+    addr: 0x400270f0
     size_bits: 32
     description: Hardware Counter Word 3
     read_allowed: true
@@ -2330,7 +2330,7 @@ modules:
       description: 'Hardware Counter Word 3. '
   - !Register
     name: STATUS
-    addr: 0x100
+    addr: 0x40027100
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -2422,11 +2422,11 @@ modules:
   name: CRC_0
   description: None
   base_addr: 0x40028000
-  size: 0xffc
+  size: 0x24
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40028000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -2497,7 +2497,7 @@ modules:
         2: BIG_ENDIAN_32
   - !Register
     name: DATA
-    addr: 0x10
+    addr: 0x40028010
     size_bits: 32
     description: Input/Result Data
     read_allowed: true
@@ -2511,7 +2511,7 @@ modules:
       description: 'Input/Result Data. '
   - !Register
     name: RDATA
-    addr: 0x20
+    addr: 0x40028020
     size_bits: 32
     description: Bit-Reversed Output Data
     read_allowed: true
@@ -2529,11 +2529,11 @@ modules:
   name: CAPSENSE_0
   description: None
   base_addr: 0x40023000
-  size: 0xffc
+  size: 0x54
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40023000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -2706,7 +2706,7 @@ modules:
         1: SET
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x40023010
     size_bits: 32
     description: Measurement Mode
     read_allowed: true
@@ -2745,7 +2745,7 @@ modules:
       description: 'Low Pass Filter Select. '
   - !Register
     name: DATA
-    addr: 0x20
+    addr: 0x40023020
     size_bits: 32
     description: Measurement Data
     read_allowed: true
@@ -2758,7 +2758,7 @@ modules:
       description: 'Capacitive Sensing Data. '
   - !Register
     name: SCAN
-    addr: 0x30
+    addr: 0x40023030
     size_bits: 32
     description: Channel Scan Enable
     read_allowed: true
@@ -2771,7 +2771,7 @@ modules:
       description: 'Channel Scan Enable. '
   - !Register
     name: CSTH
-    addr: 0x40
+    addr: 0x40023040
     size_bits: 32
     description: Compare Threshold
     read_allowed: true
@@ -2784,7 +2784,7 @@ modules:
       description: 'Compare Threshold. '
   - !Register
     name: MUX
-    addr: 0x50
+    addr: 0x40023050
     size_bits: 32
     description: Mux Channel Select
     read_allowed: true
@@ -2825,11 +2825,11 @@ modules:
   name: CLKCTRL_0
   description: None
   base_addr: 0x4002d000
-  size: 0xffc
+  size: 0x44
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x4002d000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -2891,7 +2891,7 @@ modules:
         1: SET
   - !Register
     name: AHBCLKG
-    addr: 0x10
+    addr: 0x4002d010
     size_bits: 32
     description: AHB Clock Gate
     read_allowed: true
@@ -2940,7 +2940,7 @@ modules:
         1: ENABLED
   - !Register
     name: APBCLKG0
-    addr: 0x20
+    addr: 0x4002d020
     size_bits: 32
     description: APB Clock Gate 0
     read_allowed: true
@@ -3196,7 +3196,7 @@ modules:
         1: ENABLED
   - !Register
     name: APBCLKG1
-    addr: 0x30
+    addr: 0x4002d030
     size_bits: 32
     description: APB Clock Gate 1
     read_allowed: true
@@ -3229,7 +3229,7 @@ modules:
         1: ENABLED
   - !Register
     name: PM3CN
-    addr: 0x40
+    addr: 0x4002d040
     size_bits: 32
     description: Power Mode 3 Clock Control
     read_allowed: true
@@ -3260,11 +3260,11 @@ modules:
   name: CMP_0
   description: None
   base_addr: 0x4001f000
-  size: 0xffc
+  size: 0x14
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x4001f000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -3306,7 +3306,7 @@ modules:
         1: ENABLED
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x4001f010
     size_bits: 32
     description: Input and Module Mode
     read_allowed: true
@@ -3446,11 +3446,11 @@ modules:
   name: CMP_1
   description: None
   base_addr: 0x40020000
-  size: 0xffc
+  size: 0x14
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40020000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -3492,7 +3492,7 @@ modules:
         1: ENABLED
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x40020010
     size_bits: 32
     description: Input and Module Mode
     read_allowed: true
@@ -3632,11 +3632,11 @@ modules:
   name: DMACTRL_0
   description: None
   base_addr: 0x40036000
-  size: 0xffc
+  size: 0x50
   registers:
   - !Register
     name: STATUS
-    addr: 0x0
+    addr: 0x40036000
     size_bits: 32
     description: Controller Status
     read_allowed: true
@@ -3681,7 +3681,7 @@ modules:
       write_allowed: false
   - !Register
     name: CONFIG
-    addr: 0x4
+    addr: 0x40036004
     size_bits: 32
     description: Controller Configuration
     read_allowed: true
@@ -3699,7 +3699,7 @@ modules:
         1: ENABLED
   - !Register
     name: BASEPTR
-    addr: 0x8
+    addr: 0x40036008
     size_bits: 32
     description: Base Pointer
     read_allowed: true
@@ -3712,7 +3712,7 @@ modules:
       description: 'Control Base Pointer. '
   - !Register
     name: ABASEPTR
-    addr: 0xc
+    addr: 0x4003600c
     size_bits: 32
     description: Alternate Base Pointer
     read_allowed: true
@@ -3728,7 +3728,7 @@ modules:
       write_allowed: false
   - !Register
     name: CHSTATUS
-    addr: 0x10
+    addr: 0x40036010
     size_bits: 32
     description: Channel Status
     read_allowed: true
@@ -3897,7 +3897,7 @@ modules:
         1: WAITING
   - !Register
     name: CHSWRCN
-    addr: 0x14
+    addr: 0x40036014
     size_bits: 32
     description: Channel Software Request Control
     read_allowed: true
@@ -4065,7 +4065,7 @@ modules:
         1: GENERATE_SW_REQ
   - !Register
     name: CHREQMSET
-    addr: 0x20
+    addr: 0x40036020
     size_bits: 32
     description: Channel Request Mask Set
     read_allowed: true
@@ -4185,7 +4185,7 @@ modules:
         1: ENABLED
   - !Register
     name: CHREQMCLR
-    addr: 0x24
+    addr: 0x40036024
     size_bits: 32
     description: Channel Request Mask Clear
     read_allowed: true
@@ -4353,7 +4353,7 @@ modules:
         1: DISABLED
   - !Register
     name: CHENSET
-    addr: 0x28
+    addr: 0x40036028
     size_bits: 32
     description: Channel Enable Set
     read_allowed: true
@@ -4473,7 +4473,7 @@ modules:
         1: ENABLED
   - !Register
     name: CHENCLR
-    addr: 0x2c
+    addr: 0x4003602c
     size_bits: 32
     description: Channel Enable Clear
     read_allowed: true
@@ -4641,7 +4641,7 @@ modules:
         1: DISABLED
   - !Register
     name: CHALTSET
-    addr: 0x30
+    addr: 0x40036030
     size_bits: 32
     description: Channel Alternate Select Set
     read_allowed: true
@@ -4761,7 +4761,7 @@ modules:
         1: ENABLED
   - !Register
     name: CHALTCLR
-    addr: 0x34
+    addr: 0x40036034
     size_bits: 32
     description: Channel Alternate Select Clear
     read_allowed: true
@@ -4929,7 +4929,7 @@ modules:
         1: DISABLED
   - !Register
     name: CHHPSET
-    addr: 0x38
+    addr: 0x40036038
     size_bits: 32
     description: Channel High Priority Set
     read_allowed: true
@@ -5049,7 +5049,7 @@ modules:
         1: ENABLED
   - !Register
     name: CHHPCLR
-    addr: 0x3c
+    addr: 0x4003603c
     size_bits: 32
     description: Channel High Priority Clear
     read_allowed: true
@@ -5217,7 +5217,7 @@ modules:
         1: DISABLED
   - !Register
     name: BERRCLR
-    addr: 0x4c
+    addr: 0x4003604c
     size_bits: 32
     description: Bus Error Clear
     read_allowed: true
@@ -5234,11 +5234,11 @@ modules:
   name: DMAXBAR_0
   description: None
   base_addr: 0x40037000
-  size: 0xffc
+  size: 0x14
   registers:
   - !Register
     name: DMAXBAR0
-    addr: 0x0
+    addr: 0x40037000
     size_bits: 32
     description: Channel 0-7 Trigger Select
     read_allowed: true
@@ -5381,7 +5381,7 @@ modules:
         10: TIMER1H
   - !Register
     name: DMAXBAR1
-    addr: 0x10
+    addr: 0x40037010
     size_bits: 32
     description: Channel 8-15 Trigger Select
     read_allowed: true
@@ -5521,11 +5521,11 @@ modules:
   name: DEVICEID_0
   description: None
   base_addr: 0x400490c0
-  size: 0xffc
+  size: 0x34
   registers:
   - !Register
     name: DEVICEID0
-    addr: 0x0
+    addr: 0x400490c0
     size_bits: 32
     description: Device ID Word 0
     read_allowed: true
@@ -5545,7 +5545,7 @@ modules:
       description: 'Device ID 0. '
   - !Register
     name: DEVICEID1
-    addr: 0x10
+    addr: 0x400490d0
     size_bits: 32
     description: Device ID Word 1
     read_allowed: true
@@ -5558,7 +5558,7 @@ modules:
       description: 'Device ID 1. '
   - !Register
     name: DEVICEID2
-    addr: 0x20
+    addr: 0x400490e0
     size_bits: 32
     description: Device ID Word 2
     read_allowed: true
@@ -5571,7 +5571,7 @@ modules:
       description: 'Device ID 2. '
   - !Register
     name: DEVICEID3
-    addr: 0x30
+    addr: 0x400490f0
     size_bits: 32
     description: Device ID Word 3
     read_allowed: true
@@ -5586,11 +5586,11 @@ modules:
   name: EPCA_0
   description: None
   base_addr: 0x4000e000
-  size: 0xffc
+  size: 0x204
   registers:
   - !Register
     name: MODE
-    addr: 0x180
+    addr: 0x4000e180
     size_bits: 32
     description: Module Operating Mode
     read_allowed: true
@@ -5685,7 +5685,7 @@ modules:
         3: THREE_DIFF
   - !Register
     name: CONTROL
-    addr: 0x190
+    addr: 0x4000e190
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -5796,7 +5796,7 @@ modules:
       description: 'Current Clock Divider Count. '
   - !Register
     name: STATUS
-    addr: 0x1a0
+    addr: 0x4000e1a0
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -5932,7 +5932,7 @@ modules:
         1: SET
   - !Register
     name: COUNTER
-    addr: 0x1b0
+    addr: 0x4000e1b0
     size_bits: 32
     description: Module Counter/Timer
     read_allowed: true
@@ -5945,7 +5945,7 @@ modules:
       description: 'Counter/Timer. '
   - !Register
     name: LIMIT
-    addr: 0x1c0
+    addr: 0x4000e1c0
     size_bits: 32
     description: Module Upper Limit
     read_allowed: true
@@ -5959,7 +5959,7 @@ modules:
       description: 'Upper Limit. '
   - !Register
     name: LIMITUPD
-    addr: 0x1d0
+    addr: 0x4000e1d0
     size_bits: 32
     description: Module Upper Limit Update Value
     read_allowed: true
@@ -5972,7 +5972,7 @@ modules:
       description: 'Module Upper Limit Update Value. '
   - !Register
     name: DTIME
-    addr: 0x1e0
+    addr: 0x4000e1e0
     size_bits: 32
     description: Phase Delay Time
     read_allowed: true
@@ -5990,7 +5990,7 @@ modules:
       description: 'Y Phase Delay Time. '
   - !Register
     name: DTARGET
-    addr: 0x200
+    addr: 0x4000e200
     size_bits: 32
     description: DMA Transfer Target
     read_allowed: true
@@ -6005,7 +6005,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE_0
-    addr: 0x0
+    addr: 0x4000e000
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -6047,7 +6047,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_0
-    addr: 0x10
+    addr: 0x4000e010
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -6159,7 +6159,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_0
-    addr: 0x20
+    addr: 0x4000e020
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -6172,7 +6172,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_0
-    addr: 0x30
+    addr: 0x4000e030
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -6185,7 +6185,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_1
-    addr: 0x40
+    addr: 0x4000e040
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -6227,7 +6227,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_1
-    addr: 0x50
+    addr: 0x4000e050
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -6339,7 +6339,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_1
-    addr: 0x60
+    addr: 0x4000e060
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -6352,7 +6352,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_1
-    addr: 0x70
+    addr: 0x4000e070
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -6365,7 +6365,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_2
-    addr: 0x80
+    addr: 0x4000e080
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -6407,7 +6407,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_2
-    addr: 0x90
+    addr: 0x4000e090
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -6519,7 +6519,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_2
-    addr: 0xa0
+    addr: 0x4000e0a0
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -6532,7 +6532,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_2
-    addr: 0xb0
+    addr: 0x4000e0b0
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -6545,7 +6545,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_3
-    addr: 0xc0
+    addr: 0x4000e0c0
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -6587,7 +6587,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_3
-    addr: 0xd0
+    addr: 0x4000e0d0
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -6699,7 +6699,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_3
-    addr: 0xe0
+    addr: 0x4000e0e0
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -6712,7 +6712,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_3
-    addr: 0xf0
+    addr: 0x4000e0f0
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -6725,7 +6725,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_4
-    addr: 0x100
+    addr: 0x4000e100
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -6767,7 +6767,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_4
-    addr: 0x110
+    addr: 0x4000e110
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -6879,7 +6879,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_4
-    addr: 0x120
+    addr: 0x4000e120
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -6892,7 +6892,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_4
-    addr: 0x130
+    addr: 0x4000e130
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -6905,7 +6905,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_5
-    addr: 0x140
+    addr: 0x4000e140
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -6947,7 +6947,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_5
-    addr: 0x150
+    addr: 0x4000e150
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -7059,7 +7059,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_5
-    addr: 0x160
+    addr: 0x4000e160
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -7072,7 +7072,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_5
-    addr: 0x170
+    addr: 0x4000e170
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -7087,11 +7087,11 @@ modules:
   name: FLASHCTRL_0
   description: None
   base_addr: 0x4002e000
-  size: 0xffc
+  size: 0xd4
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x4002e000
     size_bits: 32
     description: Controller Configuration
     read_allowed: true
@@ -7170,7 +7170,7 @@ modules:
         1: SET
   - !Register
     name: WRADDR
-    addr: 0xa0
+    addr: 0x4002e0a0
     size_bits: 32
     description: Flash Write Address
     read_allowed: true
@@ -7183,7 +7183,7 @@ modules:
       description: 'Flash Write Address. '
   - !Register
     name: WRDATA
-    addr: 0xb0
+    addr: 0x4002e0b0
     size_bits: 32
     description: Flash Write Data
     read_allowed: true
@@ -7198,7 +7198,7 @@ modules:
       write_allowed: true
   - !Register
     name: KEY
-    addr: 0xc0
+    addr: 0x4002e0c0
     size_bits: 32
     description: Flash Modification Key
     read_allowed: true
@@ -7216,7 +7216,7 @@ modules:
         242: MULTI_UNLOCK
   - !Register
     name: TCONTROL
-    addr: 0xd0
+    addr: 0x4002e0d0
     size_bits: 32
     description: Flash Timing Control
     read_allowed: true
@@ -7235,11 +7235,11 @@ modules:
   name: I2C_0
   description: None
   base_addr: 0x40009000
-  size: 0xffc
+  size: 0x84
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40009000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -7508,7 +7508,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONFIG
-    addr: 0x10
+    addr: 0x40009010
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -7663,7 +7663,7 @@ modules:
         1: ENABLED
   - !Register
     name: SADDRESS
-    addr: 0x20
+    addr: 0x40009020
     size_bits: 32
     description: Slave Address
     read_allowed: true
@@ -7676,7 +7676,7 @@ modules:
       description: 'Slave Address. '
   - !Register
     name: SMASK
-    addr: 0x30
+    addr: 0x40009030
     size_bits: 32
     description: Slave Address Mask
     read_allowed: true
@@ -7689,7 +7689,7 @@ modules:
       description: 'Slave Address Mask. '
   - !Register
     name: DATA
-    addr: 0x40
+    addr: 0x40009040
     size_bits: 32
     description: Data Buffer Access
     read_allowed: true
@@ -7702,7 +7702,7 @@ modules:
       description: 'Data. '
   - !Register
     name: TIMER
-    addr: 0x50
+    addr: 0x40009050
     size_bits: 32
     description: Timer Data
     read_allowed: true
@@ -7730,7 +7730,7 @@ modules:
       description: 'Timer Byte 3. '
   - !Register
     name: TIMERRL
-    addr: 0x60
+    addr: 0x40009060
     size_bits: 32
     description: Timer Reload Values
     read_allowed: true
@@ -7758,7 +7758,7 @@ modules:
       description: 'Timer Byte 3 Reload Value. '
   - !Register
     name: SCONFIG
-    addr: 0x70
+    addr: 0x40009070
     size_bits: 32
     description: SCL Signal Configuration
     read_allowed: true
@@ -7788,7 +7788,7 @@ modules:
       write_allowed: false
   - !Register
     name: I2CDMA
-    addr: 0x80
+    addr: 0x40009080
     size_bits: 32
     description: DMA Configuration
     read_allowed: true
@@ -7811,11 +7811,11 @@ modules:
   name: I2C_1
   description: None
   base_addr: 0x4000a000
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x4000a000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -8084,7 +8084,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONFIG
-    addr: 0x10
+    addr: 0x4000a010
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -8239,7 +8239,7 @@ modules:
         1: ENABLED
   - !Register
     name: SADDRESS
-    addr: 0x20
+    addr: 0x4000a020
     size_bits: 32
     description: Slave Address
     read_allowed: true
@@ -8252,7 +8252,7 @@ modules:
       description: 'Slave Address. '
   - !Register
     name: SMASK
-    addr: 0x30
+    addr: 0x4000a030
     size_bits: 32
     description: Slave Address Mask
     read_allowed: true
@@ -8265,7 +8265,7 @@ modules:
       description: 'Slave Address Mask. '
   - !Register
     name: DATA
-    addr: 0x40
+    addr: 0x4000a040
     size_bits: 32
     description: Data Buffer Access
     read_allowed: true
@@ -8278,7 +8278,7 @@ modules:
       description: 'Data. '
   - !Register
     name: TIMER
-    addr: 0x50
+    addr: 0x4000a050
     size_bits: 32
     description: Timer Data
     read_allowed: true
@@ -8306,7 +8306,7 @@ modules:
       description: 'Timer Byte 3. '
   - !Register
     name: TIMERRL
-    addr: 0x60
+    addr: 0x4000a060
     size_bits: 32
     description: Timer Reload Values
     read_allowed: true
@@ -8334,7 +8334,7 @@ modules:
       description: 'Timer Byte 3 Reload Value. '
   - !Register
     name: SCONFIG
-    addr: 0x70
+    addr: 0x4000a070
     size_bits: 32
     description: SCL Signal Configuration
     read_allowed: true
@@ -8366,11 +8366,11 @@ modules:
   name: I2S_0
   description: None
   base_addr: 0x4003a000
-  size: 0xffc
+  size: 0xd4
   registers:
   - !Register
     name: TXCONTROL
-    addr: 0x0
+    addr: 0x4003a000
     size_bits: 32
     description: Transmit Control
     read_allowed: true
@@ -8477,7 +8477,7 @@ modules:
         1: ENABLED
   - !Register
     name: TXMODE
-    addr: 0x10
+    addr: 0x4003a010
     size_bits: 32
     description: Transmit Mode
     read_allowed: true
@@ -8524,7 +8524,7 @@ modules:
         1: ENABLED
   - !Register
     name: FSDUTY
-    addr: 0x20
+    addr: 0x4003a020
     size_bits: 32
     description: Frame Sync Duty Cycle
     read_allowed: true
@@ -8542,7 +8542,7 @@ modules:
       description: 'Frame Sync High Time. '
   - !Register
     name: RXCONTROL
-    addr: 0x30
+    addr: 0x4003a030
     size_bits: 32
     description: Receive Control
     read_allowed: true
@@ -8623,7 +8623,7 @@ modules:
         1: ENABLED
   - !Register
     name: RXMODE
-    addr: 0x40
+    addr: 0x4003a040
     size_bits: 32
     description: Receive Mode
     read_allowed: true
@@ -8654,7 +8654,7 @@ modules:
         1: ENABLED
   - !Register
     name: CLKCONTROL
-    addr: 0x50
+    addr: 0x4003a050
     size_bits: 32
     description: Clock Control
     read_allowed: true
@@ -8754,7 +8754,7 @@ modules:
         1: SCK_INPUT
   - !Register
     name: TXFIFO
-    addr: 0x60
+    addr: 0x4003a060
     size_bits: 32
     description: Transmit Data FIFO
     read_allowed: true
@@ -8769,7 +8769,7 @@ modules:
       write_allowed: true
   - !Register
     name: RXFIFO
-    addr: 0x70
+    addr: 0x4003a070
     size_bits: 32
     description: Receive Data FIFO
     read_allowed: true
@@ -8784,7 +8784,7 @@ modules:
       write_allowed: false
   - !Register
     name: FIFOSTATUS
-    addr: 0x80
+    addr: 0x4003a080
     size_bits: 32
     description: FIFO Status
     read_allowed: true
@@ -8806,7 +8806,7 @@ modules:
       write_allowed: false
   - !Register
     name: FIFOCONTROL
-    addr: 0x90
+    addr: 0x4003a090
     size_bits: 32
     description: FIFO Control
     read_allowed: true
@@ -8842,7 +8842,7 @@ modules:
         1: SET
   - !Register
     name: INTCONTROL
-    addr: 0xa0
+    addr: 0x4003a0a0
     size_bits: 32
     description: Interrupt Control
     read_allowed: true
@@ -8882,7 +8882,7 @@ modules:
         1: ENABLED
   - !Register
     name: STATUS
-    addr: 0xb0
+    addr: 0x4003a0b0
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -8987,7 +8987,7 @@ modules:
         1: SET
   - !Register
     name: DMACONTROL
-    addr: 0xc0
+    addr: 0x4003a0c0
     size_bits: 32
     description: DMA Control
     read_allowed: true
@@ -9027,7 +9027,7 @@ modules:
         1: FOUR_WORDS
   - !Register
     name: DBGCONTROL
-    addr: 0xd0
+    addr: 0x4003a0d0
     size_bits: 32
     description: Debug Control
     read_allowed: true
@@ -9069,11 +9069,11 @@ modules:
   name: IDAC_0
   description: None
   base_addr: 0x40031000
-  size: 0xffc
+  size: 0x54
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40031000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -9217,7 +9217,7 @@ modules:
         1: ENABLED
   - !Register
     name: DATA
-    addr: 0x10
+    addr: 0x40031010
     size_bits: 32
     description: Output Data
     read_allowed: true
@@ -9230,7 +9230,7 @@ modules:
       description: 'Output Data. '
   - !Register
     name: BUFSTATUS
-    addr: 0x20
+    addr: 0x40031020
     size_bits: 32
     description: FIFO Buffer Status
     read_allowed: true
@@ -9275,7 +9275,7 @@ modules:
         1: SET
   - !Register
     name: BUFFER10
-    addr: 0x30
+    addr: 0x40031030
     size_bits: 32
     description: FIFO Buffer Entries 0 and 1
     read_allowed: true
@@ -9297,7 +9297,7 @@ modules:
       write_allowed: false
   - !Register
     name: BUFFER32
-    addr: 0x40
+    addr: 0x40031040
     size_bits: 32
     description: FIFO Buffer Entries 2 and 3
     read_allowed: true
@@ -9319,7 +9319,7 @@ modules:
       write_allowed: false
   - !Register
     name: GAINADJ
-    addr: 0x50
+    addr: 0x40031050
     size_bits: 32
     description: Output Current Gain Adjust
     read_allowed: true
@@ -9335,11 +9335,11 @@ modules:
   name: IDAC_1
   description: None
   base_addr: 0x40032000
-  size: 0xffc
+  size: 0x54
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40032000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -9483,7 +9483,7 @@ modules:
         1: ENABLED
   - !Register
     name: DATA
-    addr: 0x10
+    addr: 0x40032010
     size_bits: 32
     description: Output Data
     read_allowed: true
@@ -9496,7 +9496,7 @@ modules:
       description: 'Output Data. '
   - !Register
     name: BUFSTATUS
-    addr: 0x20
+    addr: 0x40032020
     size_bits: 32
     description: FIFO Buffer Status
     read_allowed: true
@@ -9541,7 +9541,7 @@ modules:
         1: SET
   - !Register
     name: BUFFER10
-    addr: 0x30
+    addr: 0x40032030
     size_bits: 32
     description: FIFO Buffer Entries 0 and 1
     read_allowed: true
@@ -9563,7 +9563,7 @@ modules:
       write_allowed: false
   - !Register
     name: BUFFER32
-    addr: 0x40
+    addr: 0x40032040
     size_bits: 32
     description: FIFO Buffer Entries 2 and 3
     read_allowed: true
@@ -9585,7 +9585,7 @@ modules:
       write_allowed: false
   - !Register
     name: GAINADJ
-    addr: 0x50
+    addr: 0x40032050
     size_bits: 32
     description: Output Current Gain Adjust
     read_allowed: true
@@ -9601,11 +9601,11 @@ modules:
   name: IVC_0
   description: None
   base_addr: 0x40044000
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40044000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -9655,11 +9655,11 @@ modules:
   name: LOCK_0
   description: None
   base_addr: 0x40049000
-  size: 0xffc
+  size: 0x44
   registers:
   - !Register
     name: KEY
-    addr: 0x0
+    addr: 0x40049000
     size_bits: 32
     description: Security Key
     read_allowed: true
@@ -9676,7 +9676,7 @@ modules:
         2: UNLOCKED
   - !Register
     name: PERIPHLOCK0
-    addr: 0x20
+    addr: 0x40049020
     size_bits: 32
     description: Peripheral Lock Control 0
     read_allowed: true
@@ -9908,7 +9908,7 @@ modules:
         1: LOCKED
   - !Register
     name: PERIPHLOCK1
-    addr: 0x40
+    addr: 0x40049040
     size_bits: 32
     description: Peripheral Lock Control 1
     read_allowed: true
@@ -9926,11 +9926,11 @@ modules:
   name: LPTIMER_0
   description: None
   base_addr: 0x40038000
-  size: 0xffc
+  size: 0x24
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40038000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -10054,7 +10054,7 @@ modules:
         1: START
   - !Register
     name: DATA
-    addr: 0x10
+    addr: 0x40038010
     size_bits: 32
     description: Timer and Comparator Data
     read_allowed: true
@@ -10067,7 +10067,7 @@ modules:
       description: 'Timer and Comparator Data. '
   - !Register
     name: STATUS
-    addr: 0x20
+    addr: 0x40038020
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -10093,11 +10093,11 @@ modules:
   name: PLL_0
   description: None
   base_addr: 0x4003b000
-  size: 0xffc
+  size: 0x34
   registers:
   - !Register
     name: DIVIDER
-    addr: 0x0
+    addr: 0x4003b000
     size_bits: 32
     description: Reference Divider Setting
     read_allowed: true
@@ -10115,7 +10115,7 @@ modules:
       description: 'N Divider Value. '
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x4003b010
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -10227,7 +10227,7 @@ modules:
         3: PLL
   - !Register
     name: SSPR
-    addr: 0x20
+    addr: 0x4003b020
     size_bits: 32
     description: Spectrum Spreading Control
     read_allowed: true
@@ -10252,7 +10252,7 @@ modules:
       description: 'Spectrum Spreading Update Interval. '
   - !Register
     name: CALCONFIG
-    addr: 0x30
+    addr: 0x4003b030
     size_bits: 32
     description: Calibration Configuration
     read_allowed: true
@@ -10283,11 +10283,11 @@ modules:
   name: EXTOSC_0
   description: None
   base_addr: 0x4003c000
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x4003c000
     size_bits: 32
     description: Oscillator Control
     read_allowed: true
@@ -10334,11 +10334,11 @@ modules:
   name: LPOSC_0
   description: None
   base_addr: 0x40041000
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: OSCVAL
-    addr: 0x0
+    addr: 0x40041000
     size_bits: 32
     description: Low Power Oscillator Output Value
     read_allowed: true
@@ -10356,11 +10356,11 @@ modules:
   name: PCA_0
   description: None
   base_addr: 0x4000f000
-  size: 0xffc
+  size: 0x1c4
   registers:
   - !Register
     name: MODE
-    addr: 0x180
+    addr: 0x4000f180
     size_bits: 32
     description: Module Operating Mode
     read_allowed: true
@@ -10384,7 +10384,7 @@ modules:
         4: ECI
   - !Register
     name: CONTROL
-    addr: 0x190
+    addr: 0x4000f190
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -10421,7 +10421,7 @@ modules:
       description: 'Current Clock Divider Count. '
   - !Register
     name: STATUS
-    addr: 0x1a0
+    addr: 0x4000f1a0
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -10477,7 +10477,7 @@ modules:
         1: SET
   - !Register
     name: COUNTER
-    addr: 0x1b0
+    addr: 0x4000f1b0
     size_bits: 32
     description: Module Counter/Timer
     read_allowed: true
@@ -10490,7 +10490,7 @@ modules:
       description: 'Counter/Timer. '
   - !Register
     name: LIMIT
-    addr: 0x1c0
+    addr: 0x4000f1c0
     size_bits: 32
     description: Module Counter/Timer Upper Limit
     read_allowed: true
@@ -10504,7 +10504,7 @@ modules:
       description: 'Upper Limit. '
   - !Register
     name: MODE_0
-    addr: 0x0
+    addr: 0x4000f000
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -10538,7 +10538,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_0
-    addr: 0x10
+    addr: 0x4000f010
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -10594,7 +10594,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_0
-    addr: 0x20
+    addr: 0x4000f020
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -10607,7 +10607,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_0
-    addr: 0x30
+    addr: 0x4000f030
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -10620,7 +10620,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_1
-    addr: 0x40
+    addr: 0x4000f040
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -10654,7 +10654,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_1
-    addr: 0x50
+    addr: 0x4000f050
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -10710,7 +10710,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_1
-    addr: 0x60
+    addr: 0x4000f060
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -10723,7 +10723,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_1
-    addr: 0x70
+    addr: 0x4000f070
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -10738,11 +10738,11 @@ modules:
   name: PCA_1
   description: None
   base_addr: 0x40010000
-  size: 0xffc
+  size: 0x1c4
   registers:
   - !Register
     name: MODE
-    addr: 0x180
+    addr: 0x40010180
     size_bits: 32
     description: Module Operating Mode
     read_allowed: true
@@ -10766,7 +10766,7 @@ modules:
         4: ECI
   - !Register
     name: CONTROL
-    addr: 0x190
+    addr: 0x40010190
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -10803,7 +10803,7 @@ modules:
       description: 'Current Clock Divider Count. '
   - !Register
     name: STATUS
-    addr: 0x1a0
+    addr: 0x400101a0
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -10859,7 +10859,7 @@ modules:
         1: SET
   - !Register
     name: COUNTER
-    addr: 0x1b0
+    addr: 0x400101b0
     size_bits: 32
     description: Module Counter/Timer
     read_allowed: true
@@ -10872,7 +10872,7 @@ modules:
       description: 'Counter/Timer. '
   - !Register
     name: LIMIT
-    addr: 0x1c0
+    addr: 0x400101c0
     size_bits: 32
     description: Module Counter/Timer Upper Limit
     read_allowed: true
@@ -10886,7 +10886,7 @@ modules:
       description: 'Upper Limit. '
   - !Register
     name: MODE_0
-    addr: 0x0
+    addr: 0x40010000
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -10920,7 +10920,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_0
-    addr: 0x10
+    addr: 0x40010010
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -10976,7 +10976,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_0
-    addr: 0x20
+    addr: 0x40010020
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -10989,7 +10989,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_0
-    addr: 0x30
+    addr: 0x40010030
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -11002,7 +11002,7 @@ modules:
       description: 'Channel Compare Update Value. '
   - !Register
     name: MODE_1
-    addr: 0x40
+    addr: 0x40010040
     size_bits: 32
     description: Channel Capture/Compare Mode
     read_allowed: true
@@ -11036,7 +11036,7 @@ modules:
         4: N_BIT_PWM
   - !Register
     name: CONTROL_1
-    addr: 0x50
+    addr: 0x40010050
     size_bits: 32
     description: Channel Capture/Compare Control
     read_allowed: true
@@ -11092,7 +11092,7 @@ modules:
         1: ENABLED
   - !Register
     name: CCAPV_1
-    addr: 0x60
+    addr: 0x40010060
     size_bits: 32
     description: Channel Compare Value
     read_allowed: true
@@ -11105,7 +11105,7 @@ modules:
       description: 'Channel Compare Value. '
   - !Register
     name: CCAPVUPD_1
-    addr: 0x70
+    addr: 0x40010070
     size_bits: 32
     description: Channel Compare Update Value
     read_allowed: true
@@ -11120,11 +11120,11 @@ modules:
   name: PMU_0
   description: None
   base_addr: 0x40048000
-  size: 0xffc
+  size: 0x64
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40048000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -11173,7 +11173,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONFIG
-    addr: 0x10
+    addr: 0x40048010
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -11222,7 +11222,7 @@ modules:
         1: ENABLED
   - !Register
     name: STATUS
-    addr: 0x20
+    addr: 0x40048020
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -11257,7 +11257,7 @@ modules:
         1: SET
   - !Register
     name: WAKEEN
-    addr: 0x30
+    addr: 0x40048030
     size_bits: 32
     description: Wake Source Enable
     read_allowed: true
@@ -11314,7 +11314,7 @@ modules:
         1: ENABLED
   - !Register
     name: WAKESTATUS
-    addr: 0x40
+    addr: 0x40048040
     size_bits: 32
     description: Wake Source Status
     read_allowed: true
@@ -11382,7 +11382,7 @@ modules:
         1: SET
   - !Register
     name: PWEN
-    addr: 0x50
+    addr: 0x40048050
     size_bits: 32
     description: Pin Wake Pin Enable
     read_allowed: true
@@ -11518,7 +11518,7 @@ modules:
         1: ENABLED
   - !Register
     name: PWPOL
-    addr: 0x60
+    addr: 0x40048060
     size_bits: 32
     description: Pin Wake Pin Polarity Select
     read_allowed: true
@@ -11656,11 +11656,11 @@ modules:
   name: PBCFG_0
   description: None
   base_addr: 0x4002a000
-  size: 0xffc
+  size: 0x54
   registers:
   - !Register
     name: CONTROL0
-    addr: 0x0
+    addr: 0x4002a000
     size_bits: 32
     description: Global Port Control 0
     read_allowed: true
@@ -11776,7 +11776,7 @@ modules:
         1: SET
   - !Register
     name: CONTROL1
-    addr: 0x10
+    addr: 0x4002a010
     size_bits: 32
     description: Global Port Control 1
     read_allowed: true
@@ -11874,7 +11874,7 @@ modules:
         1: LOCKED
   - !Register
     name: XBAR0L
-    addr: 0x20
+    addr: 0x4002a020
     size_bits: 32
     description: Crossbar 0 Control (Low)
     read_allowed: true
@@ -12081,7 +12081,7 @@ modules:
         1: ENABLED
   - !Register
     name: XBAR0H
-    addr: 0x30
+    addr: 0x4002a030
     size_bits: 32
     description: Crossbar 0 Control (High)
     read_allowed: true
@@ -12161,7 +12161,7 @@ modules:
         1: ENABLED
   - !Register
     name: XBAR1
-    addr: 0x40
+    addr: 0x4002a040
     size_bits: 32
     description: Crossbar 1 Control
     read_allowed: true
@@ -12339,7 +12339,7 @@ modules:
         1: ENABLED
   - !Register
     name: PBKEY
-    addr: 0x50
+    addr: 0x4002a050
     size_bits: 32
     description: Global Port Key
     read_allowed: true
@@ -12358,11 +12358,11 @@ modules:
   name: PBHD_4
   description: None
   base_addr: 0x4002a3c0
-  size: 0xffc
+  size: 0x94
   registers:
   - !Register
     name: PB
-    addr: 0x0
+    addr: 0x4002a3c0
     size_bits: 32
     description: Output Latch
     read_allowed: true
@@ -12376,7 +12376,7 @@ modules:
       description: 'Output Latch. '
   - !Register
     name: PBPIN
-    addr: 0x10
+    addr: 0x4002a3d0
     size_bits: 32
     description: Pin Value
     read_allowed: true
@@ -12391,7 +12391,7 @@ modules:
       write_allowed: false
   - !Register
     name: PBMDSEL
-    addr: 0x20
+    addr: 0x4002a3e0
     size_bits: 32
     description: Mode Select
     read_allowed: true
@@ -12405,7 +12405,7 @@ modules:
       description: 'Mode Select. '
   - !Register
     name: PBDEN
-    addr: 0x30
+    addr: 0x4002a3f0
     size_bits: 32
     description: Driver Enable
     read_allowed: true
@@ -12423,7 +12423,7 @@ modules:
       description: 'Port Bank P-Channel Driver Enable. '
   - !Register
     name: PBDRV
-    addr: 0x40
+    addr: 0x4002a400
     size_bits: 32
     description: Drive Strength
     read_allowed: true
@@ -12486,7 +12486,7 @@ modules:
         1: ENABLED
   - !Register
     name: PBILIMIT
-    addr: 0x50
+    addr: 0x4002a410
     size_bits: 32
     description: Current Limit
     read_allowed: true
@@ -12543,7 +12543,7 @@ modules:
         15: MODE15
   - !Register
     name: PBFSEL
-    addr: 0x70
+    addr: 0x4002a430
     size_bits: 32
     description: Function Select
     read_allowed: true
@@ -12612,7 +12612,7 @@ modules:
         4: LPTIMER0
   - !Register
     name: PBSS
-    addr: 0x80
+    addr: 0x4002a440
     size_bits: 32
     description: Safe State Control
     read_allowed: true
@@ -12696,7 +12696,7 @@ modules:
         1: IMMEDIATE
   - !Register
     name: PBLOCK
-    addr: 0x90
+    addr: 0x4002a450
     size_bits: 32
     description: Lock Control
     read_allowed: true
@@ -12712,11 +12712,11 @@ modules:
   name: PBSTD_0
   description: None
   base_addr: 0x4002a0a0
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: PB
-    addr: 0x0
+    addr: 0x4002a0a0
     size_bits: 32
     description: Output Latch
     read_allowed: true
@@ -12730,7 +12730,7 @@ modules:
       description: 'Output Latch. '
   - !Register
     name: PBPIN
-    addr: 0x10
+    addr: 0x4002a0b0
     size_bits: 32
     description: Pin Value
     read_allowed: true
@@ -12745,7 +12745,7 @@ modules:
       write_allowed: false
   - !Register
     name: PBMDSEL
-    addr: 0x20
+    addr: 0x4002a0c0
     size_bits: 32
     description: Mode Select
     read_allowed: true
@@ -12759,7 +12759,7 @@ modules:
       description: 'Mode Select. '
   - !Register
     name: PBSKIPEN
-    addr: 0x30
+    addr: 0x4002a0d0
     size_bits: 32
     description: Crossbar Pin Skip Enable
     read_allowed: true
@@ -12772,7 +12772,7 @@ modules:
       description: 'Crossbar Pin Skip Enable. '
   - !Register
     name: PBOUTMD
-    addr: 0x40
+    addr: 0x4002a0e0
     size_bits: 32
     description: Output Mode
     read_allowed: true
@@ -12785,7 +12785,7 @@ modules:
       description: 'Output Mode. '
   - !Register
     name: PBDRV
-    addr: 0x50
+    addr: 0x4002a0f0
     size_bits: 32
     description: Drive Strength
     read_allowed: true
@@ -12807,7 +12807,7 @@ modules:
         1: ENABLED
   - !Register
     name: PM
-    addr: 0x60
+    addr: 0x4002a100
     size_bits: 32
     description: Port Match Value
     read_allowed: true
@@ -12820,7 +12820,7 @@ modules:
       description: 'Port Match Value. '
   - !Register
     name: PMEN
-    addr: 0x70
+    addr: 0x4002a110
     size_bits: 32
     description: Port Match Enable
     read_allowed: true
@@ -12835,11 +12835,11 @@ modules:
   name: PBSTD_1
   description: None
   base_addr: 0x4002a140
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: PB
-    addr: 0x0
+    addr: 0x4002a140
     size_bits: 32
     description: Output Latch
     read_allowed: true
@@ -12853,7 +12853,7 @@ modules:
       description: 'Output Latch. '
   - !Register
     name: PBPIN
-    addr: 0x10
+    addr: 0x4002a150
     size_bits: 32
     description: Pin Value
     read_allowed: true
@@ -12868,7 +12868,7 @@ modules:
       write_allowed: false
   - !Register
     name: PBMDSEL
-    addr: 0x20
+    addr: 0x4002a160
     size_bits: 32
     description: Mode Select
     read_allowed: true
@@ -12882,7 +12882,7 @@ modules:
       description: 'Mode Select. '
   - !Register
     name: PBSKIPEN
-    addr: 0x30
+    addr: 0x4002a170
     size_bits: 32
     description: Crossbar Pin Skip Enable
     read_allowed: true
@@ -12895,7 +12895,7 @@ modules:
       description: 'Crossbar Pin Skip Enable. '
   - !Register
     name: PBOUTMD
-    addr: 0x40
+    addr: 0x4002a180
     size_bits: 32
     description: Output Mode
     read_allowed: true
@@ -12908,7 +12908,7 @@ modules:
       description: 'Output Mode. '
   - !Register
     name: PBDRV
-    addr: 0x50
+    addr: 0x4002a190
     size_bits: 32
     description: Drive Strength
     read_allowed: true
@@ -12930,7 +12930,7 @@ modules:
         1: ENABLED
   - !Register
     name: PM
-    addr: 0x60
+    addr: 0x4002a1a0
     size_bits: 32
     description: Port Match Value
     read_allowed: true
@@ -12943,7 +12943,7 @@ modules:
       description: 'Port Match Value. '
   - !Register
     name: PMEN
-    addr: 0x70
+    addr: 0x4002a1b0
     size_bits: 32
     description: Port Match Enable
     read_allowed: true
@@ -12958,11 +12958,11 @@ modules:
   name: PBSTD_2
   description: None
   base_addr: 0x4002a1e0
-  size: 0xffc
+  size: 0xa4
   registers:
   - !Register
     name: PB
-    addr: 0x0
+    addr: 0x4002a1e0
     size_bits: 32
     description: Output Latch
     read_allowed: true
@@ -12976,7 +12976,7 @@ modules:
       description: 'Output Latch. '
   - !Register
     name: PBPIN
-    addr: 0x10
+    addr: 0x4002a1f0
     size_bits: 32
     description: Pin Value
     read_allowed: true
@@ -12991,7 +12991,7 @@ modules:
       write_allowed: false
   - !Register
     name: PBMDSEL
-    addr: 0x20
+    addr: 0x4002a200
     size_bits: 32
     description: Mode Select
     read_allowed: true
@@ -13005,7 +13005,7 @@ modules:
       description: 'Mode Select. '
   - !Register
     name: PBSKIPEN
-    addr: 0x30
+    addr: 0x4002a210
     size_bits: 32
     description: Crossbar Pin Skip Enable
     read_allowed: true
@@ -13018,7 +13018,7 @@ modules:
       description: 'Crossbar Pin Skip Enable. '
   - !Register
     name: PBOUTMD
-    addr: 0x40
+    addr: 0x4002a220
     size_bits: 32
     description: Output Mode
     read_allowed: true
@@ -13031,7 +13031,7 @@ modules:
       description: 'Output Mode. '
   - !Register
     name: PBDRV
-    addr: 0x50
+    addr: 0x4002a230
     size_bits: 32
     description: Drive Strength
     read_allowed: true
@@ -13053,7 +13053,7 @@ modules:
         1: ENABLED
   - !Register
     name: PM
-    addr: 0x60
+    addr: 0x4002a240
     size_bits: 32
     description: Port Match Value
     read_allowed: true
@@ -13066,7 +13066,7 @@ modules:
       description: 'Port Match Value. '
   - !Register
     name: PMEN
-    addr: 0x70
+    addr: 0x4002a250
     size_bits: 32
     description: Port Match Enable
     read_allowed: true
@@ -13079,7 +13079,7 @@ modules:
       description: 'Port Match Enable. '
   - !Register
     name: PBLOCK
-    addr: 0x80
+    addr: 0x4002a260
     size_bits: 32
     description: Lock Control
     read_allowed: true
@@ -13092,7 +13092,7 @@ modules:
       description: 'Port Bank Lock. '
   - !Register
     name: PBPGEN
-    addr: 0x90
+    addr: 0x4002a270
     size_bits: 32
     description: Pulse Generator Pin Enable
     read_allowed: true
@@ -13105,7 +13105,7 @@ modules:
       description: 'Pulse Generator Pin Enable. '
   - !Register
     name: PBPGPHASE
-    addr: 0xa0
+    addr: 0x4002a280
     size_bits: 32
     description: Pulse Generator Phase
     read_allowed: true
@@ -13126,11 +13126,11 @@ modules:
   name: PBSTD_3
   description: None
   base_addr: 0x4002a320
-  size: 0xffc
+  size: 0x84
   registers:
   - !Register
     name: PB
-    addr: 0x0
+    addr: 0x4002a320
     size_bits: 32
     description: Output Latch
     read_allowed: true
@@ -13144,7 +13144,7 @@ modules:
       description: 'Output Latch. '
   - !Register
     name: PBPIN
-    addr: 0x10
+    addr: 0x4002a330
     size_bits: 32
     description: Pin Value
     read_allowed: true
@@ -13159,7 +13159,7 @@ modules:
       write_allowed: false
   - !Register
     name: PBMDSEL
-    addr: 0x20
+    addr: 0x4002a340
     size_bits: 32
     description: Mode Select
     read_allowed: true
@@ -13173,7 +13173,7 @@ modules:
       description: 'Mode Select. '
   - !Register
     name: PBSKIPEN
-    addr: 0x30
+    addr: 0x4002a350
     size_bits: 32
     description: Crossbar Pin Skip Enable
     read_allowed: true
@@ -13186,7 +13186,7 @@ modules:
       description: 'Crossbar Pin Skip Enable. '
   - !Register
     name: PBOUTMD
-    addr: 0x40
+    addr: 0x4002a360
     size_bits: 32
     description: Output Mode
     read_allowed: true
@@ -13199,7 +13199,7 @@ modules:
       description: 'Output Mode. '
   - !Register
     name: PBDRV
-    addr: 0x50
+    addr: 0x4002a370
     size_bits: 32
     description: Drive Strength
     read_allowed: true
@@ -13221,7 +13221,7 @@ modules:
         1: ENABLED
   - !Register
     name: PM
-    addr: 0x60
+    addr: 0x4002a380
     size_bits: 32
     description: Port Match Value
     read_allowed: true
@@ -13234,7 +13234,7 @@ modules:
       description: 'Port Match Value. '
   - !Register
     name: PMEN
-    addr: 0x70
+    addr: 0x4002a390
     size_bits: 32
     description: Port Match Enable
     read_allowed: true
@@ -13247,7 +13247,7 @@ modules:
       description: 'Port Match Enable. '
   - !Register
     name: PBLOCK
-    addr: 0x80
+    addr: 0x4002a3a0
     size_bits: 32
     description: Lock Control
     read_allowed: true
@@ -13262,11 +13262,11 @@ modules:
   name: RTC_0
   description: None
   base_addr: 0x40029000
-  size: 0xffc
+  size: 0x84
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40029000
     size_bits: 32
     description: RTC Configuration
     read_allowed: true
@@ -13383,7 +13383,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x40029010
     size_bits: 32
     description: RTC Control
     read_allowed: true
@@ -13467,7 +13467,7 @@ modules:
         1: SET
   - !Register
     name: ALARM0
-    addr: 0x20
+    addr: 0x40029020
     size_bits: 32
     description: RTC Alarm 0
     read_allowed: true
@@ -13480,7 +13480,7 @@ modules:
       description: 'RTC Alarm 0. '
   - !Register
     name: ALARM1
-    addr: 0x30
+    addr: 0x40029030
     size_bits: 32
     description: RTC Alarm 1
     read_allowed: true
@@ -13493,7 +13493,7 @@ modules:
       description: 'RTC Alarm 1. '
   - !Register
     name: ALARM2
-    addr: 0x40
+    addr: 0x40029040
     size_bits: 32
     description: RTC Alarm 2
     read_allowed: true
@@ -13506,7 +13506,7 @@ modules:
       description: 'RTC Alarm 2. '
   - !Register
     name: SETCAP
-    addr: 0x50
+    addr: 0x40029050
     size_bits: 32
     description: RTC Timer Set/Capture Value
     read_allowed: true
@@ -13519,7 +13519,7 @@ modules:
       description: 'RTC Timer Set/Capture Value. '
   - !Register
     name: LFOCONTROL
-    addr: 0x60
+    addr: 0x40029060
     size_bits: 32
     description: LFOSC Control
     read_allowed: true
@@ -13536,7 +13536,7 @@ modules:
         1: ENABLED
   - !Register
     name: LFOSCADJ
-    addr: 0x80
+    addr: 0x40029080
     size_bits: 32
     description: LFOSC Output Frequency Adjust
     read_allowed: true
@@ -13551,11 +13551,11 @@ modules:
   name: RSTSRC_0
   description: None
   base_addr: 0x4002d060
-  size: 0xffc
+  size: 0x24
   registers:
   - !Register
     name: RESETEN
-    addr: 0x0
+    addr: 0x4002d060
     size_bits: 32
     description: System Reset Source Enable
     read_allowed: true
@@ -13635,7 +13635,7 @@ modules:
         1: ENABLED
   - !Register
     name: RESETFLAG
-    addr: 0x10
+    addr: 0x4002d070
     size_bits: 32
     description: System Reset Flags
     read_allowed: true
@@ -13764,7 +13764,7 @@ modules:
         1: SET
   - !Register
     name: CONFIG
-    addr: 0x20
+    addr: 0x4002d080
     size_bits: 32
     description: Configuration Options
     read_allowed: true
@@ -13782,11 +13782,11 @@ modules:
   name: SPI_0
   description: None
   base_addr: 0x40004000
-  size: 0xffc
+  size: 0x44
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x40004000
     size_bits: 32
     description: Input/Output Data
     read_allowed: true
@@ -13799,7 +13799,7 @@ modules:
       description: 'Input/Output Data. '
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x40004010
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -13938,7 +13938,7 @@ modules:
         1: HALT
   - !Register
     name: CONFIG
-    addr: 0x20
+    addr: 0x40004020
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -14123,7 +14123,7 @@ modules:
         1: ACTIVE
   - !Register
     name: CLKRATE
-    addr: 0x30
+    addr: 0x40004030
     size_bits: 32
     description: Module Clock Rate Control
     read_allowed: true
@@ -14136,7 +14136,7 @@ modules:
       description: 'Clock Divider. '
   - !Register
     name: FSTATUS
-    addr: 0x40
+    addr: 0x40004040
     size_bits: 32
     description: FIFO Status
     read_allowed: true
@@ -14174,11 +14174,11 @@ modules:
   name: SPI_1
   description: None
   base_addr: 0x40005000
-  size: 0xffc
+  size: 0x44
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x40005000
     size_bits: 32
     description: Input/Output Data
     read_allowed: true
@@ -14191,7 +14191,7 @@ modules:
       description: 'Input/Output Data. '
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x40005010
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -14330,7 +14330,7 @@ modules:
         1: HALT
   - !Register
     name: CONFIG
-    addr: 0x20
+    addr: 0x40005020
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -14515,7 +14515,7 @@ modules:
         1: ACTIVE
   - !Register
     name: CLKRATE
-    addr: 0x30
+    addr: 0x40005030
     size_bits: 32
     description: Module Clock Rate Control
     read_allowed: true
@@ -14528,7 +14528,7 @@ modules:
       description: 'Clock Divider. '
   - !Register
     name: FSTATUS
-    addr: 0x40
+    addr: 0x40005040
     size_bits: 32
     description: FIFO Status
     read_allowed: true
@@ -14566,11 +14566,11 @@ modules:
   name: SPI_2
   description: None
   base_addr: 0x40006000
-  size: 0xffc
+  size: 0x44
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x40006000
     size_bits: 32
     description: Input/Output Data
     read_allowed: true
@@ -14583,7 +14583,7 @@ modules:
       description: 'Input/Output Data. '
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x40006010
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -14722,7 +14722,7 @@ modules:
         1: HALT
   - !Register
     name: CONFIG
-    addr: 0x20
+    addr: 0x40006020
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -14907,7 +14907,7 @@ modules:
         1: ACTIVE
   - !Register
     name: CLKRATE
-    addr: 0x30
+    addr: 0x40006030
     size_bits: 32
     description: Module Clock Rate Control
     read_allowed: true
@@ -14920,7 +14920,7 @@ modules:
       description: 'Clock Divider. '
   - !Register
     name: FSTATUS
-    addr: 0x40
+    addr: 0x40006040
     size_bits: 32
     description: FIFO Status
     read_allowed: true
@@ -14958,11 +14958,11 @@ modules:
   name: SSG_0
   description: None
   base_addr: 0x4001e000
-  size: 0xffc
+  size: 0x14
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x4001e000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -14999,7 +14999,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONTROL
-    addr: 0x10
+    addr: 0x4001e010
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -15083,11 +15083,11 @@ modules:
   name: TIMER_0
   description: None
   base_addr: 0x40014000
-  size: 0xffc
+  size: 0x34
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40014000
     size_bits: 32
     description: High and Low Timer Configuration
     read_allowed: true
@@ -15281,7 +15281,7 @@ modules:
         1: SET
   - !Register
     name: CLKDIV
-    addr: 0x10
+    addr: 0x40014010
     size_bits: 32
     description: Module Clock Divider Control
     read_allowed: true
@@ -15299,7 +15299,7 @@ modules:
       description: 'Clock Divider Counter. '
   - !Register
     name: COUNT
-    addr: 0x20
+    addr: 0x40014020
     size_bits: 32
     description: Timer Value
     read_allowed: true
@@ -15317,7 +15317,7 @@ modules:
       description: 'High Timer Count. '
   - !Register
     name: CAPTURE
-    addr: 0x30
+    addr: 0x40014030
     size_bits: 32
     description: Timer Capture/Reload Value
     read_allowed: true
@@ -15337,11 +15337,11 @@ modules:
   name: TIMER_1
   description: None
   base_addr: 0x40015000
-  size: 0xffc
+  size: 0x34
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40015000
     size_bits: 32
     description: High and Low Timer Configuration
     read_allowed: true
@@ -15535,7 +15535,7 @@ modules:
         1: SET
   - !Register
     name: CLKDIV
-    addr: 0x10
+    addr: 0x40015010
     size_bits: 32
     description: Module Clock Divider Control
     read_allowed: true
@@ -15553,7 +15553,7 @@ modules:
       description: 'Clock Divider Counter. '
   - !Register
     name: COUNT
-    addr: 0x20
+    addr: 0x40015020
     size_bits: 32
     description: Timer Value
     read_allowed: true
@@ -15571,7 +15571,7 @@ modules:
       description: 'High Timer Count. '
   - !Register
     name: CAPTURE
-    addr: 0x30
+    addr: 0x40015030
     size_bits: 32
     description: Timer Capture/Reload Value
     read_allowed: true
@@ -15591,11 +15591,11 @@ modules:
   name: UART_0
   description: None
   base_addr: 0x40002000
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40002000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -15764,7 +15764,7 @@ modules:
         1: ENABLED
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x40002010
     size_bits: 32
     description: Module Mode Select
     read_allowed: true
@@ -15807,7 +15807,7 @@ modules:
         1: ENABLED
   - !Register
     name: FLOWCN
-    addr: 0x20
+    addr: 0x40002020
     size_bits: 32
     description: Flow Control
     read_allowed: true
@@ -15902,7 +15902,7 @@ modules:
         3: 1_4TH
   - !Register
     name: CONTROL
-    addr: 0x30
+    addr: 0x40002030
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -16112,7 +16112,7 @@ modules:
         1: ENABLED
   - !Register
     name: IPDELAY
-    addr: 0x40
+    addr: 0x40002040
     size_bits: 32
     description: Inter-Packet Delay
     read_allowed: true
@@ -16125,7 +16125,7 @@ modules:
       description: 'Inter-Packet Delay. '
   - !Register
     name: BAUDRATE
-    addr: 0x50
+    addr: 0x40002050
     size_bits: 32
     description: Transmit and Receive Baud Rate
     read_allowed: true
@@ -16143,7 +16143,7 @@ modules:
       description: 'Transmitter Baud Rate Control. '
   - !Register
     name: FIFOCN
-    addr: 0x60
+    addr: 0x40002060
     size_bits: 32
     description: FIFO Control
     read_allowed: true
@@ -16233,7 +16233,7 @@ modules:
         1: SET
   - !Register
     name: DATA
-    addr: 0x70
+    addr: 0x40002070
     size_bits: 32
     description: FIFO Input/Output Data
     read_allowed: true
@@ -16248,11 +16248,11 @@ modules:
   name: UART_1
   description: None
   base_addr: 0x40003000
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40003000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -16421,7 +16421,7 @@ modules:
         1: ENABLED
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x40003010
     size_bits: 32
     description: Module Mode Select
     read_allowed: true
@@ -16464,7 +16464,7 @@ modules:
         1: ENABLED
   - !Register
     name: FLOWCN
-    addr: 0x20
+    addr: 0x40003020
     size_bits: 32
     description: Flow Control
     read_allowed: true
@@ -16559,7 +16559,7 @@ modules:
         3: 1_4TH
   - !Register
     name: CONTROL
-    addr: 0x30
+    addr: 0x40003030
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -16769,7 +16769,7 @@ modules:
         1: ENABLED
   - !Register
     name: IPDELAY
-    addr: 0x40
+    addr: 0x40003040
     size_bits: 32
     description: Inter-Packet Delay
     read_allowed: true
@@ -16782,7 +16782,7 @@ modules:
       description: 'Inter-Packet Delay. '
   - !Register
     name: BAUDRATE
-    addr: 0x50
+    addr: 0x40003050
     size_bits: 32
     description: Transmit and Receive Baud Rate
     read_allowed: true
@@ -16800,7 +16800,7 @@ modules:
       description: 'Transmitter Baud Rate Control. '
   - !Register
     name: FIFOCN
-    addr: 0x60
+    addr: 0x40003060
     size_bits: 32
     description: FIFO Control
     read_allowed: true
@@ -16890,7 +16890,7 @@ modules:
         1: SET
   - !Register
     name: DATA
-    addr: 0x70
+    addr: 0x40003070
     size_bits: 32
     description: FIFO Input/Output Data
     read_allowed: true
@@ -16905,11 +16905,11 @@ modules:
   name: USART_0
   description: None
   base_addr: 0x40000000
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40000000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -17094,7 +17094,7 @@ modules:
         1: ENABLED
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x40000010
     size_bits: 32
     description: Module Mode Select
     read_allowed: true
@@ -17185,7 +17185,7 @@ modules:
         1: MASTER
   - !Register
     name: FLOWCN
-    addr: 0x20
+    addr: 0x40000020
     size_bits: 32
     description: Flow Control
     read_allowed: true
@@ -17288,7 +17288,7 @@ modules:
         3: 1_4TH
   - !Register
     name: CONTROL
-    addr: 0x30
+    addr: 0x40000030
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -17506,7 +17506,7 @@ modules:
         1: ENABLED
   - !Register
     name: IPDELAY
-    addr: 0x40
+    addr: 0x40000040
     size_bits: 32
     description: Inter-Packet Delay
     read_allowed: true
@@ -17519,7 +17519,7 @@ modules:
       description: 'Inter-Packet Delay. '
   - !Register
     name: BAUDRATE
-    addr: 0x50
+    addr: 0x40000050
     size_bits: 32
     description: Transmit and Receive Baud Rate
     read_allowed: true
@@ -17537,7 +17537,7 @@ modules:
       description: 'Transmitter Baud Rate Control. '
   - !Register
     name: FIFOCN
-    addr: 0x60
+    addr: 0x40000060
     size_bits: 32
     description: FIFO Control
     read_allowed: true
@@ -17643,7 +17643,7 @@ modules:
         1: SET
   - !Register
     name: DATA
-    addr: 0x70
+    addr: 0x40000070
     size_bits: 32
     description: FIFO Input/Output Data
     read_allowed: true
@@ -17658,11 +17658,11 @@ modules:
   name: USART_1
   description: None
   base_addr: 0x40001000
-  size: 0xffc
+  size: 0x74
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x40001000
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -17847,7 +17847,7 @@ modules:
         1: ENABLED
   - !Register
     name: MODE
-    addr: 0x10
+    addr: 0x40001010
     size_bits: 32
     description: Module Mode Select
     read_allowed: true
@@ -17938,7 +17938,7 @@ modules:
         1: MASTER
   - !Register
     name: FLOWCN
-    addr: 0x20
+    addr: 0x40001020
     size_bits: 32
     description: Flow Control
     read_allowed: true
@@ -18041,7 +18041,7 @@ modules:
         3: 1_4TH
   - !Register
     name: CONTROL
-    addr: 0x30
+    addr: 0x40001030
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -18259,7 +18259,7 @@ modules:
         1: ENABLED
   - !Register
     name: IPDELAY
-    addr: 0x40
+    addr: 0x40001040
     size_bits: 32
     description: Inter-Packet Delay
     read_allowed: true
@@ -18272,7 +18272,7 @@ modules:
       description: 'Inter-Packet Delay. '
   - !Register
     name: BAUDRATE
-    addr: 0x50
+    addr: 0x40001050
     size_bits: 32
     description: Transmit and Receive Baud Rate
     read_allowed: true
@@ -18290,7 +18290,7 @@ modules:
       description: 'Transmitter Baud Rate Control. '
   - !Register
     name: FIFOCN
-    addr: 0x60
+    addr: 0x40001060
     size_bits: 32
     description: FIFO Control
     read_allowed: true
@@ -18396,7 +18396,7 @@ modules:
         1: SET
   - !Register
     name: DATA
-    addr: 0x70
+    addr: 0x40001070
     size_bits: 32
     description: FIFO Input/Output Data
     read_allowed: true
@@ -18411,11 +18411,11 @@ modules:
   name: USB_0
   description: None
   base_addr: 0x40018000
-  size: 0xffc
+  size: 0xa34
   registers:
   - !Register
     name: FADDR
-    addr: 0x0
+    addr: 0x40018000
     size_bits: 32
     description: Function Address
     read_allowed: true
@@ -18438,7 +18438,7 @@ modules:
         1: SET
   - !Register
     name: POWER
-    addr: 0x10
+    addr: 0x40018010
     size_bits: 32
     description: Power Control
     read_allowed: true
@@ -18507,7 +18507,7 @@ modules:
         1: SEND_ON_SOF
   - !Register
     name: IOINT
-    addr: 0x20
+    addr: 0x40018020
     size_bits: 32
     description: IN/OUT Endpoint Interrupt Flags
     read_allowed: true
@@ -18587,7 +18587,7 @@ modules:
         1: SET
   - !Register
     name: CMINT
-    addr: 0x30
+    addr: 0x40018030
     size_bits: 32
     description: Common Interrupt Flags
     read_allowed: true
@@ -18627,7 +18627,7 @@ modules:
         1: SET
   - !Register
     name: IOINTE
-    addr: 0x40
+    addr: 0x40018040
     size_bits: 32
     description: IN/OUT Endpoint Interrupt Control
     read_allowed: true
@@ -18708,7 +18708,7 @@ modules:
         1: ENABLED
   - !Register
     name: CMINTEPE
-    addr: 0x50
+    addr: 0x40018050
     size_bits: 32
     description: Common Interrupt and Endpoint Control
     read_allowed: true
@@ -18789,7 +18789,7 @@ modules:
         1: ENABLED
   - !Register
     name: CRCONTROL
-    addr: 0x60
+    addr: 0x40018060
     size_bits: 32
     description: Clock Recovery Control
     read_allowed: true
@@ -18829,7 +18829,7 @@ modules:
         1: ENABLED
   - !Register
     name: FRAME
-    addr: 0x70
+    addr: 0x40018070
     size_bits: 32
     description: Frame Number
     read_allowed: true
@@ -18844,7 +18844,7 @@ modules:
       write_allowed: false
   - !Register
     name: TCONTROL
-    addr: 0x200
+    addr: 0x40018200
     size_bits: 32
     description: Transceiver Control
     read_allowed: true
@@ -18916,7 +18916,7 @@ modules:
         1: ENABLED
   - !Register
     name: CLKSEL
-    addr: 0x300
+    addr: 0x40018300
     size_bits: 32
     description: Module Clock Select
     read_allowed: true
@@ -18953,7 +18953,7 @@ modules:
         1: SET
   - !Register
     name: OSCCONTROL
-    addr: 0x310
+    addr: 0x40018310
     size_bits: 32
     description: Oscillator Control
     read_allowed: true
@@ -18977,7 +18977,7 @@ modules:
         1: ENABLED
   - !Register
     name: AFADJUST
-    addr: 0x320
+    addr: 0x40018320
     size_bits: 32
     description: Oscillator Additional Frequency Adjust
     read_allowed: true
@@ -18999,7 +18999,7 @@ modules:
         1: ENABLED
   - !Register
     name: FADJUST
-    addr: 0x330
+    addr: 0x40018330
     size_bits: 32
     description: Oscillator Frequency Adjust
     read_allowed: true
@@ -19013,7 +19013,7 @@ modules:
       description: 'Oscillator Output Frequency Adjust. '
   - !Register
     name: DMAFIFO
-    addr: 0x400
+    addr: 0x40018400
     size_bits: 32
     description: DMA Data FIFO Access
     read_allowed: true
@@ -19026,7 +19026,7 @@ modules:
       description: 'DMA Data FIFO Access. '
   - !Register
     name: DMACONTROL
-    addr: 0x410
+    addr: 0x40018410
     size_bits: 32
     description: DMA Control
     read_allowed: true
@@ -19067,7 +19067,7 @@ modules:
         1: SET
   - !Register
     name: EP0CONTROL
-    addr: 0x810
+    addr: 0x40018810
     size_bits: 32
     description: Endpoint 0 Control
     read_allowed: true
@@ -19143,7 +19143,7 @@ modules:
         1: SET
   - !Register
     name: EP0COUNT
-    addr: 0x820
+    addr: 0x40018820
     size_bits: 32
     description: Endpoint 0 Data Count
     read_allowed: true
@@ -19158,7 +19158,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP0FIFO
-    addr: 0x830
+    addr: 0x40018830
     size_bits: 32
     description: Endpoint 0 Data FIFO Access
     read_allowed: true
@@ -19171,7 +19171,7 @@ modules:
       description: 'Endpoint 0 Data FIFO. '
   - !Register
     name: EPMPSIZE_1
-    addr: 0x880
+    addr: 0x40018880
     size_bits: 32
     description: Endpoint Maximum Packet Size
     read_allowed: true
@@ -19189,7 +19189,7 @@ modules:
       description: 'OUT Maximum Packet Size. '
   - !Register
     name: EPCONTROL_1
-    addr: 0x890
+    addr: 0x40018890
     size_bits: 32
     description: Endpoint Control
     read_allowed: true
@@ -19395,7 +19395,7 @@ modules:
         1: ENABLED
   - !Register
     name: EPCOUNT_1
-    addr: 0x8a0
+    addr: 0x400188a0
     size_bits: 32
     description: Endpoint Data Count
     read_allowed: true
@@ -19410,7 +19410,7 @@ modules:
       write_allowed: false
   - !Register
     name: EPFIFO_1
-    addr: 0x8b0
+    addr: 0x400188b0
     size_bits: 32
     description: Endpoint Data FIFO Access
     read_allowed: true
@@ -19423,7 +19423,7 @@ modules:
       description: 'Endpoint Data FIFO. '
   - !Register
     name: EPMPSIZE_2
-    addr: 0x900
+    addr: 0x40018900
     size_bits: 32
     description: Endpoint Maximum Packet Size
     read_allowed: true
@@ -19441,7 +19441,7 @@ modules:
       description: 'OUT Maximum Packet Size. '
   - !Register
     name: EPCONTROL_2
-    addr: 0x910
+    addr: 0x40018910
     size_bits: 32
     description: Endpoint Control
     read_allowed: true
@@ -19647,7 +19647,7 @@ modules:
         1: ENABLED
   - !Register
     name: EPCOUNT_2
-    addr: 0x920
+    addr: 0x40018920
     size_bits: 32
     description: Endpoint Data Count
     read_allowed: true
@@ -19662,7 +19662,7 @@ modules:
       write_allowed: false
   - !Register
     name: EPFIFO_2
-    addr: 0x930
+    addr: 0x40018930
     size_bits: 32
     description: Endpoint Data FIFO Access
     read_allowed: true
@@ -19675,7 +19675,7 @@ modules:
       description: 'Endpoint Data FIFO. '
   - !Register
     name: EPMPSIZE_3
-    addr: 0x980
+    addr: 0x40018980
     size_bits: 32
     description: Endpoint Maximum Packet Size
     read_allowed: true
@@ -19693,7 +19693,7 @@ modules:
       description: 'OUT Maximum Packet Size. '
   - !Register
     name: EPCONTROL_3
-    addr: 0x990
+    addr: 0x40018990
     size_bits: 32
     description: Endpoint Control
     read_allowed: true
@@ -19899,7 +19899,7 @@ modules:
         1: ENABLED
   - !Register
     name: EPCOUNT_3
-    addr: 0x9a0
+    addr: 0x400189a0
     size_bits: 32
     description: Endpoint Data Count
     read_allowed: true
@@ -19914,7 +19914,7 @@ modules:
       write_allowed: false
   - !Register
     name: EPFIFO_3
-    addr: 0x9b0
+    addr: 0x400189b0
     size_bits: 32
     description: Endpoint Data FIFO Access
     read_allowed: true
@@ -19927,7 +19927,7 @@ modules:
       description: 'Endpoint Data FIFO. '
   - !Register
     name: EPMPSIZE_4
-    addr: 0xa00
+    addr: 0x40018a00
     size_bits: 32
     description: Endpoint Maximum Packet Size
     read_allowed: true
@@ -19945,7 +19945,7 @@ modules:
       description: 'OUT Maximum Packet Size. '
   - !Register
     name: EPCONTROL_4
-    addr: 0xa10
+    addr: 0x40018a10
     size_bits: 32
     description: Endpoint Control
     read_allowed: true
@@ -20151,7 +20151,7 @@ modules:
         1: ENABLED
   - !Register
     name: EPCOUNT_4
-    addr: 0xa20
+    addr: 0x40018a20
     size_bits: 32
     description: Endpoint Data Count
     read_allowed: true
@@ -20166,7 +20166,7 @@ modules:
       write_allowed: false
   - !Register
     name: EPFIFO_4
-    addr: 0xa30
+    addr: 0x40018a30
     size_bits: 32
     description: Endpoint Data FIFO Access
     read_allowed: true
@@ -20181,11 +20181,11 @@ modules:
   name: VMON_0
   description: None
   base_addr: 0x4002f000
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x4002f000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -20266,11 +20266,11 @@ modules:
   name: VREF_0
   description: None
   base_addr: 0x40039010
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40039010
     size_bits: 32
     description: Voltage Reference Control
     read_allowed: true
@@ -20304,11 +20304,11 @@ modules:
   name: EXTVREG_0
   description: None
   base_addr: 0x40042000
-  size: 0xffc
+  size: 0x54
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40042000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -20364,7 +20364,7 @@ modules:
         1: ENABLED
   - !Register
     name: CONFIG
-    addr: 0x10
+    addr: 0x40042010
     size_bits: 32
     description: Module Configuration
     read_allowed: true
@@ -20442,7 +20442,7 @@ modules:
       description: 'Regulator Output Voltage Select. '
   - !Register
     name: STATUS
-    addr: 0x20
+    addr: 0x40042020
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -20460,7 +20460,7 @@ modules:
         1: SET
   - !Register
     name: CSCONTROL
-    addr: 0x40
+    addr: 0x40042040
     size_bits: 32
     description: Current Sense Control
     read_allowed: true
@@ -20484,7 +20484,7 @@ modules:
         1: ENABLED
   - !Register
     name: CSCONFIG
-    addr: 0x50
+    addr: 0x40042050
     size_bits: 32
     description: Current Sense Configuration
     read_allowed: true
@@ -20525,11 +20525,11 @@ modules:
   name: VREG_0
   description: None
   base_addr: 0x40040000
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40040000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -20598,11 +20598,11 @@ modules:
   name: LDO_0
   description: None
   base_addr: 0x40039000
-  size: 0xffc
+  size: 0x4
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40039000
     size_bits: 32
     description: Control
     read_allowed: true
@@ -20629,11 +20629,11 @@ modules:
   name: WDTIMER_0
   description: None
   base_addr: 0x40030000
-  size: 0xffc
+  size: 0x34
   registers:
   - !Register
     name: CONTROL
-    addr: 0x0
+    addr: 0x40030000
     size_bits: 32
     description: Module Control
     read_allowed: true
@@ -20658,7 +20658,7 @@ modules:
         1: HALT
   - !Register
     name: STATUS
-    addr: 0x10
+    addr: 0x40030010
     size_bits: 32
     description: Module Status
     read_allowed: true
@@ -20714,7 +20714,7 @@ modules:
         1: UPDATING
   - !Register
     name: THRESHOLD
-    addr: 0x20
+    addr: 0x40030020
     size_bits: 32
     description: Threshold Values
     read_allowed: true
@@ -20733,7 +20733,7 @@ modules:
       description: 'Reset Threshold. '
   - !Register
     name: WDTKEY
-    addr: 0x30
+    addr: 0x40030030
     size_bits: 32
     description: Module Key
     read_allowed: true

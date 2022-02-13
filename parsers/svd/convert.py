@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
 import sys
+import math
 
 # TODO: remove hack
 sys.path.append("/home/robbe/open-hardware-definitions/parsers/svd/cmsis-svd/python")
 from cmsis_svd.parser import SVDParser
 
 from open_hardware_definitions import Device, Module, Register, Field
+from open_hardware_definitions.helpers import HexInt
 
 def convert(svd_dev_path):
   svd_dev = SVDParser.for_xml_file(svd_dev_path).get_device()
@@ -23,10 +25,10 @@ def convert(svd_dev_path):
     mod = Module(
       name=per.name,
       base_addr=per.base_address,
-      size=per.address_block.size,
       description=per.description,
     )
 
+    max_addr = per.base_address
     for reg in per.registers:
       fields = []
       for f in reg.fields:
@@ -46,9 +48,12 @@ def convert(svd_dev_path):
           enum_values=evs if len(evs.keys()) > 0 else None
         ))
 
+      size = reg.size if reg.size else svd_dev.width
+
+      max_addr = max(max_addr, per.base_address + reg.address_offset + math.ceil(size/8))
       mod.registers.append(Register(
         name=reg.name,
-        addr=reg.address_offset,
+        addr=per.base_address + reg.address_offset,
         size_bits=reg.size,
         description=reg.description,
         read_allowed=('read' in reg.access if reg.access else None),
@@ -57,6 +62,7 @@ def convert(svd_dev_path):
         fields=fields
       ))
 
+    mod.size = HexInt(max_addr - per.base_address)
     dev.modules.append(mod)
 
   return dev

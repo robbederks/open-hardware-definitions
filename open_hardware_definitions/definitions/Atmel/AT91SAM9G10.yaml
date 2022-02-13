@@ -8,17 +8,16 @@ modules:
   name: UHP
   description: USB Host Port
   base_addr: 0x500000
-  size: 0x100000
-  registers: []
+  size: 0x0
 - !Module
   name: LCDC
   description: LCD Controller
   base_addr: 0x600000
-  size: 0x100000
+  size: 0x1000
   registers:
   - !Register
     name: DMABADDR1
-    addr: 0x0
+    addr: 0x600000
     size_bits: 32
     description: DMA Base Address Register 1
     read_allowed: true
@@ -32,7 +31,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMABADDR2
-    addr: 0x4
+    addr: 0x600004
     size_bits: 32
     description: DMA Base Address Register 2
     read_allowed: true
@@ -46,7 +45,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMAFRMPT1
-    addr: 0x8
+    addr: 0x600008
     size_bits: 32
     description: DMA Frame Pointer Register 1
     read_allowed: true
@@ -60,7 +59,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMAFRMPT2
-    addr: 0xc
+    addr: 0x60000c
     size_bits: 32
     description: DMA Frame Pointer Register 2
     read_allowed: true
@@ -74,7 +73,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMAFRMADD1
-    addr: 0x10
+    addr: 0x600010
     size_bits: 32
     description: DMA Frame Address Register 1
     read_allowed: true
@@ -88,7 +87,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMAFRMADD2
-    addr: 0x14
+    addr: 0x600014
     size_bits: 32
     description: DMA Frame Address Register 2
     read_allowed: true
@@ -102,7 +101,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMAFRMCFG
-    addr: 0x18
+    addr: 0x600018
     size_bits: 32
     description: DMA Frame Configuration Register
     read_allowed: true
@@ -124,7 +123,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMACON
-    addr: 0x1c
+    addr: 0x60001c
     size_bits: 32
     description: DMA Control Register
     read_allowed: true
@@ -153,7 +152,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDCON1
-    addr: 0x800
+    addr: 0x600800
     size_bits: 32
     description: LCD Control Register 1
     read_allowed: true
@@ -183,7 +182,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDCON2
-    addr: 0x804
+    addr: 0x600804
     size_bits: 32
     description: LCD Control Register 2
     read_allowed: true
@@ -268,7 +267,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDTIM1
-    addr: 0x808
+    addr: 0x600808
     size_bits: 32
     description: LCD Timing Register 1
     read_allowed: true
@@ -310,7 +309,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDTIM2
-    addr: 0x80c
+    addr: 0x60080c
     size_bits: 32
     description: LCD Timing Register 2
     read_allowed: true
@@ -339,7 +338,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDFRMCFG
-    addr: 0x810
+    addr: 0x600810
     size_bits: 32
     description: LCD Frame Configuration Register
     read_allowed: true
@@ -361,7 +360,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDFIFO
-    addr: 0x814
+    addr: 0x600814
     size_bits: 32
     description: LCD FIFO Register
     read_allowed: true
@@ -376,7 +375,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCDMVAL
-    addr: 0x818
+    addr: 0x600818
     size_bits: 32
     description: LCDMOD Toggle Rate Value Register
     read_allowed: true
@@ -398,7 +397,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP1_2
-    addr: 0x81c
+    addr: 0x60081c
     size_bits: 32
     description: Dithering Pattern DP1_2
     read_allowed: true
@@ -414,7 +413,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP4_7
-    addr: 0x820
+    addr: 0x600820
     size_bits: 32
     description: Dithering Pattern DP4_7
     read_allowed: true
@@ -430,7 +429,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP3_5
-    addr: 0x824
+    addr: 0x600824
     size_bits: 32
     description: Dithering Pattern DP3_5
     read_allowed: true
@@ -446,7 +445,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP2_3
-    addr: 0x828
+    addr: 0x600828
     size_bits: 32
     description: Dithering Pattern DP2_3
     read_allowed: true
@@ -462,7 +461,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP5_7
-    addr: 0x82c
+    addr: 0x60082c
     size_bits: 32
     description: Dithering Pattern DP5_7
     read_allowed: true
@@ -478,7 +477,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP3_4
-    addr: 0x830
+    addr: 0x600830
     size_bits: 32
     description: Dithering Pattern DP3_4
     read_allowed: true
@@ -494,7 +493,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP4_5
-    addr: 0x834
+    addr: 0x600834
     size_bits: 32
     description: Dithering Pattern DP4_5
     read_allowed: true
@@ -510,7 +509,7 @@ modules:
       write_allowed: true
   - !Register
     name: DP6_7
-    addr: 0x838
+    addr: 0x600838
     size_bits: 32
     description: Dithering Pattern DP6_7
     read_allowed: true
@@ -526,7 +525,7 @@ modules:
       write_allowed: true
   - !Register
     name: PWRCON
-    addr: 0x83c
+    addr: 0x60083c
     size_bits: 32
     description: Power Control Register
     read_allowed: true
@@ -554,7 +553,7 @@ modules:
       write_allowed: true
   - !Register
     name: CONTRAST_CTR
-    addr: 0x840
+    addr: 0x600840
     size_bits: 32
     description: Contrast Control Register
     read_allowed: true
@@ -580,15 +579,14 @@ modules:
       write_allowed: true
   - !Register
     name: CONTRAST_VAL
-    addr: 0x844
+    addr: 0x600844
     size_bits: 32
     description: Contrast Value Register
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LCD_IER
-    addr: 0x848
+    addr: 0x600848
     size_bits: 32
     description: LCD Interrupt Enable Register
     read_allowed: false
@@ -638,7 +636,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCD_IDR
-    addr: 0x84c
+    addr: 0x60084c
     size_bits: 32
     description: LCD Interrupt Disable Register
     read_allowed: false
@@ -688,7 +686,7 @@ modules:
       write_allowed: true
   - !Register
     name: LCD_IMR
-    addr: 0x850
+    addr: 0x600850
     size_bits: 32
     description: LCD Interrupt Mask Register
     read_allowed: true
@@ -738,7 +736,7 @@ modules:
       write_allowed: false
   - !Register
     name: LCD_ISR
-    addr: 0x854
+    addr: 0x600854
     size_bits: 32
     description: LCD Interrupt Status Register
     read_allowed: true
@@ -788,7 +786,7 @@ modules:
       write_allowed: false
   - !Register
     name: LCD_ICR
-    addr: 0x858
+    addr: 0x600858
     size_bits: 32
     description: LCD Interrupt Clear Register
     read_allowed: false
@@ -838,15 +836,14 @@ modules:
       write_allowed: true
   - !Register
     name: LCD_WPCR
-    addr: 0x8e4
+    addr: 0x6008e4
     size_bits: 32
     description: Write Protection Control Register
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LCD_WPSR
-    addr: 0x8e8
+    addr: 0x6008e8
     size_bits: 32
     description: Write Protection Status Register
     read_allowed: true
@@ -868,2061 +865,1805 @@ modules:
       write_allowed: false
   - !Register
     name: LUTENTRY[0]
-    addr: 0xc00
+    addr: 0x600c00
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[1]
-    addr: 0xc04
+    addr: 0x600c04
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[2]
-    addr: 0xc08
+    addr: 0x600c08
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[3]
-    addr: 0xc0c
+    addr: 0x600c0c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[4]
-    addr: 0xc10
+    addr: 0x600c10
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[5]
-    addr: 0xc14
+    addr: 0x600c14
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[6]
-    addr: 0xc18
+    addr: 0x600c18
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[7]
-    addr: 0xc1c
+    addr: 0x600c1c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[8]
-    addr: 0xc20
+    addr: 0x600c20
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[9]
-    addr: 0xc24
+    addr: 0x600c24
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[10]
-    addr: 0xc28
+    addr: 0x600c28
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[11]
-    addr: 0xc2c
+    addr: 0x600c2c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[12]
-    addr: 0xc30
+    addr: 0x600c30
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[13]
-    addr: 0xc34
+    addr: 0x600c34
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[14]
-    addr: 0xc38
+    addr: 0x600c38
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[15]
-    addr: 0xc3c
+    addr: 0x600c3c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[16]
-    addr: 0xc40
+    addr: 0x600c40
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[17]
-    addr: 0xc44
+    addr: 0x600c44
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[18]
-    addr: 0xc48
+    addr: 0x600c48
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[19]
-    addr: 0xc4c
+    addr: 0x600c4c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[20]
-    addr: 0xc50
+    addr: 0x600c50
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[21]
-    addr: 0xc54
+    addr: 0x600c54
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[22]
-    addr: 0xc58
+    addr: 0x600c58
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[23]
-    addr: 0xc5c
+    addr: 0x600c5c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[24]
-    addr: 0xc60
+    addr: 0x600c60
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[25]
-    addr: 0xc64
+    addr: 0x600c64
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[26]
-    addr: 0xc68
+    addr: 0x600c68
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[27]
-    addr: 0xc6c
+    addr: 0x600c6c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[28]
-    addr: 0xc70
+    addr: 0x600c70
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[29]
-    addr: 0xc74
+    addr: 0x600c74
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[30]
-    addr: 0xc78
+    addr: 0x600c78
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[31]
-    addr: 0xc7c
+    addr: 0x600c7c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[32]
-    addr: 0xc80
+    addr: 0x600c80
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[33]
-    addr: 0xc84
+    addr: 0x600c84
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[34]
-    addr: 0xc88
+    addr: 0x600c88
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[35]
-    addr: 0xc8c
+    addr: 0x600c8c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[36]
-    addr: 0xc90
+    addr: 0x600c90
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[37]
-    addr: 0xc94
+    addr: 0x600c94
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[38]
-    addr: 0xc98
+    addr: 0x600c98
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[39]
-    addr: 0xc9c
+    addr: 0x600c9c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[40]
-    addr: 0xca0
+    addr: 0x600ca0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[41]
-    addr: 0xca4
+    addr: 0x600ca4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[42]
-    addr: 0xca8
+    addr: 0x600ca8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[43]
-    addr: 0xcac
+    addr: 0x600cac
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[44]
-    addr: 0xcb0
+    addr: 0x600cb0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[45]
-    addr: 0xcb4
+    addr: 0x600cb4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[46]
-    addr: 0xcb8
+    addr: 0x600cb8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[47]
-    addr: 0xcbc
+    addr: 0x600cbc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[48]
-    addr: 0xcc0
+    addr: 0x600cc0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[49]
-    addr: 0xcc4
+    addr: 0x600cc4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[50]
-    addr: 0xcc8
+    addr: 0x600cc8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[51]
-    addr: 0xccc
+    addr: 0x600ccc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[52]
-    addr: 0xcd0
+    addr: 0x600cd0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[53]
-    addr: 0xcd4
+    addr: 0x600cd4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[54]
-    addr: 0xcd8
+    addr: 0x600cd8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[55]
-    addr: 0xcdc
+    addr: 0x600cdc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[56]
-    addr: 0xce0
+    addr: 0x600ce0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[57]
-    addr: 0xce4
+    addr: 0x600ce4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[58]
-    addr: 0xce8
+    addr: 0x600ce8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[59]
-    addr: 0xcec
+    addr: 0x600cec
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[60]
-    addr: 0xcf0
+    addr: 0x600cf0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[61]
-    addr: 0xcf4
+    addr: 0x600cf4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[62]
-    addr: 0xcf8
+    addr: 0x600cf8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[63]
-    addr: 0xcfc
+    addr: 0x600cfc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[64]
-    addr: 0xd00
+    addr: 0x600d00
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[65]
-    addr: 0xd04
+    addr: 0x600d04
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[66]
-    addr: 0xd08
+    addr: 0x600d08
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[67]
-    addr: 0xd0c
+    addr: 0x600d0c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[68]
-    addr: 0xd10
+    addr: 0x600d10
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[69]
-    addr: 0xd14
+    addr: 0x600d14
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[70]
-    addr: 0xd18
+    addr: 0x600d18
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[71]
-    addr: 0xd1c
+    addr: 0x600d1c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[72]
-    addr: 0xd20
+    addr: 0x600d20
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[73]
-    addr: 0xd24
+    addr: 0x600d24
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[74]
-    addr: 0xd28
+    addr: 0x600d28
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[75]
-    addr: 0xd2c
+    addr: 0x600d2c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[76]
-    addr: 0xd30
+    addr: 0x600d30
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[77]
-    addr: 0xd34
+    addr: 0x600d34
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[78]
-    addr: 0xd38
+    addr: 0x600d38
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[79]
-    addr: 0xd3c
+    addr: 0x600d3c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[80]
-    addr: 0xd40
+    addr: 0x600d40
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[81]
-    addr: 0xd44
+    addr: 0x600d44
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[82]
-    addr: 0xd48
+    addr: 0x600d48
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[83]
-    addr: 0xd4c
+    addr: 0x600d4c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[84]
-    addr: 0xd50
+    addr: 0x600d50
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[85]
-    addr: 0xd54
+    addr: 0x600d54
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[86]
-    addr: 0xd58
+    addr: 0x600d58
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[87]
-    addr: 0xd5c
+    addr: 0x600d5c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[88]
-    addr: 0xd60
+    addr: 0x600d60
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[89]
-    addr: 0xd64
+    addr: 0x600d64
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[90]
-    addr: 0xd68
+    addr: 0x600d68
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[91]
-    addr: 0xd6c
+    addr: 0x600d6c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[92]
-    addr: 0xd70
+    addr: 0x600d70
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[93]
-    addr: 0xd74
+    addr: 0x600d74
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[94]
-    addr: 0xd78
+    addr: 0x600d78
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[95]
-    addr: 0xd7c
+    addr: 0x600d7c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[96]
-    addr: 0xd80
+    addr: 0x600d80
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[97]
-    addr: 0xd84
+    addr: 0x600d84
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[98]
-    addr: 0xd88
+    addr: 0x600d88
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[99]
-    addr: 0xd8c
+    addr: 0x600d8c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[100]
-    addr: 0xd90
+    addr: 0x600d90
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[101]
-    addr: 0xd94
+    addr: 0x600d94
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[102]
-    addr: 0xd98
+    addr: 0x600d98
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[103]
-    addr: 0xd9c
+    addr: 0x600d9c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[104]
-    addr: 0xda0
+    addr: 0x600da0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[105]
-    addr: 0xda4
+    addr: 0x600da4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[106]
-    addr: 0xda8
+    addr: 0x600da8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[107]
-    addr: 0xdac
+    addr: 0x600dac
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[108]
-    addr: 0xdb0
+    addr: 0x600db0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[109]
-    addr: 0xdb4
+    addr: 0x600db4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[110]
-    addr: 0xdb8
+    addr: 0x600db8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[111]
-    addr: 0xdbc
+    addr: 0x600dbc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[112]
-    addr: 0xdc0
+    addr: 0x600dc0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[113]
-    addr: 0xdc4
+    addr: 0x600dc4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[114]
-    addr: 0xdc8
+    addr: 0x600dc8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[115]
-    addr: 0xdcc
+    addr: 0x600dcc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[116]
-    addr: 0xdd0
+    addr: 0x600dd0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[117]
-    addr: 0xdd4
+    addr: 0x600dd4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[118]
-    addr: 0xdd8
+    addr: 0x600dd8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[119]
-    addr: 0xddc
+    addr: 0x600ddc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[120]
-    addr: 0xde0
+    addr: 0x600de0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[121]
-    addr: 0xde4
+    addr: 0x600de4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[122]
-    addr: 0xde8
+    addr: 0x600de8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[123]
-    addr: 0xdec
+    addr: 0x600dec
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[124]
-    addr: 0xdf0
+    addr: 0x600df0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[125]
-    addr: 0xdf4
+    addr: 0x600df4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[126]
-    addr: 0xdf8
+    addr: 0x600df8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[127]
-    addr: 0xdfc
+    addr: 0x600dfc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[128]
-    addr: 0xe00
+    addr: 0x600e00
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[129]
-    addr: 0xe04
+    addr: 0x600e04
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[130]
-    addr: 0xe08
+    addr: 0x600e08
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[131]
-    addr: 0xe0c
+    addr: 0x600e0c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[132]
-    addr: 0xe10
+    addr: 0x600e10
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[133]
-    addr: 0xe14
+    addr: 0x600e14
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[134]
-    addr: 0xe18
+    addr: 0x600e18
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[135]
-    addr: 0xe1c
+    addr: 0x600e1c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[136]
-    addr: 0xe20
+    addr: 0x600e20
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[137]
-    addr: 0xe24
+    addr: 0x600e24
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[138]
-    addr: 0xe28
+    addr: 0x600e28
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[139]
-    addr: 0xe2c
+    addr: 0x600e2c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[140]
-    addr: 0xe30
+    addr: 0x600e30
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[141]
-    addr: 0xe34
+    addr: 0x600e34
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[142]
-    addr: 0xe38
+    addr: 0x600e38
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[143]
-    addr: 0xe3c
+    addr: 0x600e3c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[144]
-    addr: 0xe40
+    addr: 0x600e40
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[145]
-    addr: 0xe44
+    addr: 0x600e44
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[146]
-    addr: 0xe48
+    addr: 0x600e48
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[147]
-    addr: 0xe4c
+    addr: 0x600e4c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[148]
-    addr: 0xe50
+    addr: 0x600e50
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[149]
-    addr: 0xe54
+    addr: 0x600e54
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[150]
-    addr: 0xe58
+    addr: 0x600e58
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[151]
-    addr: 0xe5c
+    addr: 0x600e5c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[152]
-    addr: 0xe60
+    addr: 0x600e60
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[153]
-    addr: 0xe64
+    addr: 0x600e64
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[154]
-    addr: 0xe68
+    addr: 0x600e68
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[155]
-    addr: 0xe6c
+    addr: 0x600e6c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[156]
-    addr: 0xe70
+    addr: 0x600e70
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[157]
-    addr: 0xe74
+    addr: 0x600e74
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[158]
-    addr: 0xe78
+    addr: 0x600e78
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[159]
-    addr: 0xe7c
+    addr: 0x600e7c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[160]
-    addr: 0xe80
+    addr: 0x600e80
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[161]
-    addr: 0xe84
+    addr: 0x600e84
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[162]
-    addr: 0xe88
+    addr: 0x600e88
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[163]
-    addr: 0xe8c
+    addr: 0x600e8c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[164]
-    addr: 0xe90
+    addr: 0x600e90
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[165]
-    addr: 0xe94
+    addr: 0x600e94
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[166]
-    addr: 0xe98
+    addr: 0x600e98
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[167]
-    addr: 0xe9c
+    addr: 0x600e9c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[168]
-    addr: 0xea0
+    addr: 0x600ea0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[169]
-    addr: 0xea4
+    addr: 0x600ea4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[170]
-    addr: 0xea8
+    addr: 0x600ea8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[171]
-    addr: 0xeac
+    addr: 0x600eac
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[172]
-    addr: 0xeb0
+    addr: 0x600eb0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[173]
-    addr: 0xeb4
+    addr: 0x600eb4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[174]
-    addr: 0xeb8
+    addr: 0x600eb8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[175]
-    addr: 0xebc
+    addr: 0x600ebc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[176]
-    addr: 0xec0
+    addr: 0x600ec0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[177]
-    addr: 0xec4
+    addr: 0x600ec4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[178]
-    addr: 0xec8
+    addr: 0x600ec8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[179]
-    addr: 0xecc
+    addr: 0x600ecc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[180]
-    addr: 0xed0
+    addr: 0x600ed0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[181]
-    addr: 0xed4
+    addr: 0x600ed4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[182]
-    addr: 0xed8
+    addr: 0x600ed8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[183]
-    addr: 0xedc
+    addr: 0x600edc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[184]
-    addr: 0xee0
+    addr: 0x600ee0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[185]
-    addr: 0xee4
+    addr: 0x600ee4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[186]
-    addr: 0xee8
+    addr: 0x600ee8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[187]
-    addr: 0xeec
+    addr: 0x600eec
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[188]
-    addr: 0xef0
+    addr: 0x600ef0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[189]
-    addr: 0xef4
+    addr: 0x600ef4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[190]
-    addr: 0xef8
+    addr: 0x600ef8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[191]
-    addr: 0xefc
+    addr: 0x600efc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[192]
-    addr: 0xf00
+    addr: 0x600f00
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[193]
-    addr: 0xf04
+    addr: 0x600f04
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[194]
-    addr: 0xf08
+    addr: 0x600f08
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[195]
-    addr: 0xf0c
+    addr: 0x600f0c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[196]
-    addr: 0xf10
+    addr: 0x600f10
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[197]
-    addr: 0xf14
+    addr: 0x600f14
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[198]
-    addr: 0xf18
+    addr: 0x600f18
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[199]
-    addr: 0xf1c
+    addr: 0x600f1c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[200]
-    addr: 0xf20
+    addr: 0x600f20
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[201]
-    addr: 0xf24
+    addr: 0x600f24
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[202]
-    addr: 0xf28
+    addr: 0x600f28
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[203]
-    addr: 0xf2c
+    addr: 0x600f2c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[204]
-    addr: 0xf30
+    addr: 0x600f30
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[205]
-    addr: 0xf34
+    addr: 0x600f34
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[206]
-    addr: 0xf38
+    addr: 0x600f38
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[207]
-    addr: 0xf3c
+    addr: 0x600f3c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[208]
-    addr: 0xf40
+    addr: 0x600f40
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[209]
-    addr: 0xf44
+    addr: 0x600f44
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[210]
-    addr: 0xf48
+    addr: 0x600f48
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[211]
-    addr: 0xf4c
+    addr: 0x600f4c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[212]
-    addr: 0xf50
+    addr: 0x600f50
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[213]
-    addr: 0xf54
+    addr: 0x600f54
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[214]
-    addr: 0xf58
+    addr: 0x600f58
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[215]
-    addr: 0xf5c
+    addr: 0x600f5c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[216]
-    addr: 0xf60
+    addr: 0x600f60
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[217]
-    addr: 0xf64
+    addr: 0x600f64
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[218]
-    addr: 0xf68
+    addr: 0x600f68
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[219]
-    addr: 0xf6c
+    addr: 0x600f6c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[220]
-    addr: 0xf70
+    addr: 0x600f70
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[221]
-    addr: 0xf74
+    addr: 0x600f74
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[222]
-    addr: 0xf78
+    addr: 0x600f78
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[223]
-    addr: 0xf7c
+    addr: 0x600f7c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[224]
-    addr: 0xf80
+    addr: 0x600f80
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[225]
-    addr: 0xf84
+    addr: 0x600f84
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[226]
-    addr: 0xf88
+    addr: 0x600f88
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[227]
-    addr: 0xf8c
+    addr: 0x600f8c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[228]
-    addr: 0xf90
+    addr: 0x600f90
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[229]
-    addr: 0xf94
+    addr: 0x600f94
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[230]
-    addr: 0xf98
+    addr: 0x600f98
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[231]
-    addr: 0xf9c
+    addr: 0x600f9c
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[232]
-    addr: 0xfa0
+    addr: 0x600fa0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[233]
-    addr: 0xfa4
+    addr: 0x600fa4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[234]
-    addr: 0xfa8
+    addr: 0x600fa8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[235]
-    addr: 0xfac
+    addr: 0x600fac
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[236]
-    addr: 0xfb0
+    addr: 0x600fb0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[237]
-    addr: 0xfb4
+    addr: 0x600fb4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[238]
-    addr: 0xfb8
+    addr: 0x600fb8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[239]
-    addr: 0xfbc
+    addr: 0x600fbc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[240]
-    addr: 0xfc0
+    addr: 0x600fc0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[241]
-    addr: 0xfc4
+    addr: 0x600fc4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[242]
-    addr: 0xfc8
+    addr: 0x600fc8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[243]
-    addr: 0xfcc
+    addr: 0x600fcc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[244]
-    addr: 0xfd0
+    addr: 0x600fd0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[245]
-    addr: 0xfd4
+    addr: 0x600fd4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[246]
-    addr: 0xfd8
+    addr: 0x600fd8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[247]
-    addr: 0xfdc
+    addr: 0x600fdc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[248]
-    addr: 0xfe0
+    addr: 0x600fe0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[249]
-    addr: 0xfe4
+    addr: 0x600fe4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[250]
-    addr: 0xfe8
+    addr: 0x600fe8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[251]
-    addr: 0xfec
+    addr: 0x600fec
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[252]
-    addr: 0xff0
+    addr: 0x600ff0
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[253]
-    addr: 0xff4
+    addr: 0x600ff4
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[254]
-    addr: 0xff8
+    addr: 0x600ff8
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: LUTENTRY[255]
-    addr: 0xffc
+    addr: 0x600ffc
     size_bits: 32
     description: Palette entry
     read_allowed: true
     write_allowed: true
-    fields: []
 - !Module
   name: TC0
   description: Timer Counter 0
   base_addr: 0xfffa0000
-  size: 0x4000
+  size: 0xc8
   registers:
   - !Register
     name: CCR0
-    addr: 0x0
+    addr: 0xfffa0000
     size_bits: 32
     description: Channel Control Register (channel = 0)
     read_allowed: false
@@ -2951,7 +2692,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMR0
-    addr: 0x4
+    addr: 0xfffa0004
     size_bits: 32
     description: Channel Mode Register (channel = 0)
     read_allowed: true
@@ -3064,7 +2805,7 @@ modules:
         3: EDGE
   - !Register
     name: CMR0_WAVE_EQ_1
-    addr: 0x4
+    addr: 0xfffa0004
     size_bits: 32
     description: Channel Mode Register (channel = 0)
     read_allowed: true
@@ -3266,7 +3007,7 @@ modules:
         3: TOGGLE
   - !Register
     name: CV0
-    addr: 0x10
+    addr: 0xfffa0010
     size_bits: 32
     description: Counter Value (channel = 0)
     read_allowed: true
@@ -3281,7 +3022,7 @@ modules:
       write_allowed: false
   - !Register
     name: RA0
-    addr: 0x14
+    addr: 0xfffa0014
     size_bits: 32
     description: Register A (channel = 0)
     read_allowed: true
@@ -3296,7 +3037,7 @@ modules:
       write_allowed: true
   - !Register
     name: RB0
-    addr: 0x18
+    addr: 0xfffa0018
     size_bits: 32
     description: Register B (channel = 0)
     read_allowed: true
@@ -3311,7 +3052,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC0
-    addr: 0x1c
+    addr: 0xfffa001c
     size_bits: 32
     description: Register C (channel = 0)
     read_allowed: true
@@ -3326,7 +3067,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR0
-    addr: 0x20
+    addr: 0xfffa0020
     size_bits: 32
     description: Status Register (channel = 0)
     read_allowed: true
@@ -3411,7 +3152,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER0
-    addr: 0x24
+    addr: 0xfffa0024
     size_bits: 32
     description: Interrupt Enable Register (channel = 0)
     read_allowed: false
@@ -3475,7 +3216,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR0
-    addr: 0x28
+    addr: 0xfffa0028
     size_bits: 32
     description: Interrupt Disable Register (channel = 0)
     read_allowed: false
@@ -3539,7 +3280,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR0
-    addr: 0x2c
+    addr: 0xfffa002c
     size_bits: 32
     description: Interrupt Mask Register (channel = 0)
     read_allowed: true
@@ -3603,7 +3344,7 @@ modules:
       write_allowed: false
   - !Register
     name: CCR1
-    addr: 0x40
+    addr: 0xfffa0040
     size_bits: 32
     description: Channel Control Register (channel = 1)
     read_allowed: false
@@ -3632,7 +3373,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMR1
-    addr: 0x44
+    addr: 0xfffa0044
     size_bits: 32
     description: Channel Mode Register (channel = 1)
     read_allowed: true
@@ -3745,7 +3486,7 @@ modules:
         3: EDGE
   - !Register
     name: CMR1_WAVE_EQ_1
-    addr: 0x44
+    addr: 0xfffa0044
     size_bits: 32
     description: Channel Mode Register (channel = 1)
     read_allowed: true
@@ -3947,7 +3688,7 @@ modules:
         3: TOGGLE
   - !Register
     name: CV1
-    addr: 0x50
+    addr: 0xfffa0050
     size_bits: 32
     description: Counter Value (channel = 1)
     read_allowed: true
@@ -3962,7 +3703,7 @@ modules:
       write_allowed: false
   - !Register
     name: RA1
-    addr: 0x54
+    addr: 0xfffa0054
     size_bits: 32
     description: Register A (channel = 1)
     read_allowed: true
@@ -3977,7 +3718,7 @@ modules:
       write_allowed: true
   - !Register
     name: RB1
-    addr: 0x58
+    addr: 0xfffa0058
     size_bits: 32
     description: Register B (channel = 1)
     read_allowed: true
@@ -3992,7 +3733,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC1
-    addr: 0x5c
+    addr: 0xfffa005c
     size_bits: 32
     description: Register C (channel = 1)
     read_allowed: true
@@ -4007,7 +3748,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR1
-    addr: 0x60
+    addr: 0xfffa0060
     size_bits: 32
     description: Status Register (channel = 1)
     read_allowed: true
@@ -4092,7 +3833,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER1
-    addr: 0x64
+    addr: 0xfffa0064
     size_bits: 32
     description: Interrupt Enable Register (channel = 1)
     read_allowed: false
@@ -4156,7 +3897,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR1
-    addr: 0x68
+    addr: 0xfffa0068
     size_bits: 32
     description: Interrupt Disable Register (channel = 1)
     read_allowed: false
@@ -4220,7 +3961,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR1
-    addr: 0x6c
+    addr: 0xfffa006c
     size_bits: 32
     description: Interrupt Mask Register (channel = 1)
     read_allowed: true
@@ -4284,7 +4025,7 @@ modules:
       write_allowed: false
   - !Register
     name: CCR2
-    addr: 0x80
+    addr: 0xfffa0080
     size_bits: 32
     description: Channel Control Register (channel = 2)
     read_allowed: false
@@ -4313,7 +4054,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMR2
-    addr: 0x84
+    addr: 0xfffa0084
     size_bits: 32
     description: Channel Mode Register (channel = 2)
     read_allowed: true
@@ -4426,7 +4167,7 @@ modules:
         3: EDGE
   - !Register
     name: CMR2_WAVE_EQ_1
-    addr: 0x84
+    addr: 0xfffa0084
     size_bits: 32
     description: Channel Mode Register (channel = 2)
     read_allowed: true
@@ -4628,7 +4369,7 @@ modules:
         3: TOGGLE
   - !Register
     name: CV2
-    addr: 0x90
+    addr: 0xfffa0090
     size_bits: 32
     description: Counter Value (channel = 2)
     read_allowed: true
@@ -4643,7 +4384,7 @@ modules:
       write_allowed: false
   - !Register
     name: RA2
-    addr: 0x94
+    addr: 0xfffa0094
     size_bits: 32
     description: Register A (channel = 2)
     read_allowed: true
@@ -4658,7 +4399,7 @@ modules:
       write_allowed: true
   - !Register
     name: RB2
-    addr: 0x98
+    addr: 0xfffa0098
     size_bits: 32
     description: Register B (channel = 2)
     read_allowed: true
@@ -4673,7 +4414,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC2
-    addr: 0x9c
+    addr: 0xfffa009c
     size_bits: 32
     description: Register C (channel = 2)
     read_allowed: true
@@ -4688,7 +4429,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR2
-    addr: 0xa0
+    addr: 0xfffa00a0
     size_bits: 32
     description: Status Register (channel = 2)
     read_allowed: true
@@ -4773,7 +4514,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER2
-    addr: 0xa4
+    addr: 0xfffa00a4
     size_bits: 32
     description: Interrupt Enable Register (channel = 2)
     read_allowed: false
@@ -4837,7 +4578,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR2
-    addr: 0xa8
+    addr: 0xfffa00a8
     size_bits: 32
     description: Interrupt Disable Register (channel = 2)
     read_allowed: false
@@ -4901,7 +4642,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR2
-    addr: 0xac
+    addr: 0xfffa00ac
     size_bits: 32
     description: Interrupt Mask Register (channel = 2)
     read_allowed: true
@@ -4965,7 +4706,7 @@ modules:
       write_allowed: false
   - !Register
     name: BCR
-    addr: 0xc0
+    addr: 0xfffa00c0
     size_bits: 32
     description: Block Control Register
     read_allowed: false
@@ -4980,7 +4721,7 @@ modules:
       write_allowed: true
   - !Register
     name: BMR
-    addr: 0xc4
+    addr: 0xfffa00c4
     size_bits: 32
     description: Block Mode Register
     read_allowed: true
@@ -5023,11 +4764,11 @@ modules:
   name: UDP
   description: USB Device Port
   base_addr: 0xfffa4000
-  size: 0x4000
+  size: 0x78
   registers:
   - !Register
     name: FRM_NUM
-    addr: 0x0
+    addr: 0xfffa4000
     size_bits: 32
     description: Frame Number Register
     read_allowed: true
@@ -5056,7 +4797,7 @@ modules:
       write_allowed: false
   - !Register
     name: GLB_STAT
-    addr: 0x4
+    addr: 0xfffa4004
     size_bits: 32
     description: Global State Register
     read_allowed: true
@@ -5079,7 +4820,7 @@ modules:
       write_allowed: true
   - !Register
     name: FADDR
-    addr: 0x8
+    addr: 0xfffa4008
     size_bits: 32
     description: Function Address Register
     read_allowed: true
@@ -5102,7 +4843,7 @@ modules:
       write_allowed: true
   - !Register
     name: IER
-    addr: 0x10
+    addr: 0xfffa4010
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -5180,7 +4921,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x14
+    addr: 0xfffa4014
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -5258,7 +4999,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x18
+    addr: 0xfffa4018
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -5344,7 +5085,7 @@ modules:
       write_allowed: false
   - !Register
     name: ISR
-    addr: 0x1c
+    addr: 0xfffa401c
     size_bits: 32
     description: Interrupt Status Register
     read_allowed: true
@@ -5429,7 +5170,7 @@ modules:
       write_allowed: false
   - !Register
     name: ICR
-    addr: 0x20
+    addr: 0xfffa4020
     size_bits: 32
     description: Interrupt Clear Register
     read_allowed: false
@@ -5472,7 +5213,7 @@ modules:
       write_allowed: true
   - !Register
     name: RST_EP
-    addr: 0x28
+    addr: 0xfffa4028
     size_bits: 32
     description: Reset Endpoint Register
     read_allowed: true
@@ -5522,7 +5263,7 @@ modules:
       write_allowed: true
   - !Register
     name: TXVC
-    addr: 0x74
+    addr: 0xfffa4074
     size_bits: 32
     description: Transceiver Control Register
     read_allowed: true
@@ -5537,7 +5278,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[0]
-    addr: 0x2c
+    addr: 0xfffa402c
     size_bits: 32
     description: Endpoint Control and Status Register (ept_num = 0)
     read_allowed: true
@@ -5628,7 +5369,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[1]
-    addr: 0x30
+    addr: 0xfffa4030
     size_bits: 32
     description: Endpoint Control and Status Register (ept_num = 0)
     read_allowed: true
@@ -5719,7 +5460,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[2]
-    addr: 0x34
+    addr: 0xfffa4034
     size_bits: 32
     description: Endpoint Control and Status Register (ept_num = 0)
     read_allowed: true
@@ -5810,7 +5551,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[3]
-    addr: 0x38
+    addr: 0xfffa4038
     size_bits: 32
     description: Endpoint Control and Status Register (ept_num = 0)
     read_allowed: true
@@ -5901,7 +5642,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[4]
-    addr: 0x3c
+    addr: 0xfffa403c
     size_bits: 32
     description: Endpoint Control and Status Register (ept_num = 0)
     read_allowed: true
@@ -5992,7 +5733,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[5]
-    addr: 0x40
+    addr: 0xfffa4040
     size_bits: 32
     description: Endpoint Control and Status Register (ept_num = 0)
     read_allowed: true
@@ -6083,7 +5824,7 @@ modules:
       write_allowed: true
   - !Register
     name: FDR[0]
-    addr: 0x4c
+    addr: 0xfffa404c
     size_bits: 32
     description: Endpoint FIFO Data Register (ept_num = 0)
     read_allowed: true
@@ -6098,7 +5839,7 @@ modules:
       write_allowed: true
   - !Register
     name: FDR[1]
-    addr: 0x50
+    addr: 0xfffa4050
     size_bits: 32
     description: Endpoint FIFO Data Register (ept_num = 0)
     read_allowed: true
@@ -6113,7 +5854,7 @@ modules:
       write_allowed: true
   - !Register
     name: FDR[2]
-    addr: 0x54
+    addr: 0xfffa4054
     size_bits: 32
     description: Endpoint FIFO Data Register (ept_num = 0)
     read_allowed: true
@@ -6128,7 +5869,7 @@ modules:
       write_allowed: true
   - !Register
     name: FDR[3]
-    addr: 0x58
+    addr: 0xfffa4058
     size_bits: 32
     description: Endpoint FIFO Data Register (ept_num = 0)
     read_allowed: true
@@ -6143,7 +5884,7 @@ modules:
       write_allowed: true
   - !Register
     name: FDR[4]
-    addr: 0x5c
+    addr: 0xfffa405c
     size_bits: 32
     description: Endpoint FIFO Data Register (ept_num = 0)
     read_allowed: true
@@ -6158,7 +5899,7 @@ modules:
       write_allowed: true
   - !Register
     name: FDR[5]
-    addr: 0x60
+    addr: 0xfffa4060
     size_bits: 32
     description: Endpoint FIFO Data Register (ept_num = 0)
     read_allowed: true
@@ -6175,11 +5916,11 @@ modules:
   name: MCI
   description: MultiMedia Card Interface
   base_addr: 0xfffa8000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffa8000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -6222,7 +5963,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffa8004
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -6284,7 +6025,7 @@ modules:
       write_allowed: true
   - !Register
     name: DTOR
-    addr: 0x8
+    addr: 0xfffa8008
     size_bits: 32
     description: Data Timeout Register
     read_allowed: true
@@ -6306,7 +6047,7 @@ modules:
       write_allowed: true
   - !Register
     name: SDCR
-    addr: 0xc
+    addr: 0xfffa800c
     size_bits: 32
     description: SD/SDIO Card Register
     read_allowed: true
@@ -6328,7 +6069,7 @@ modules:
       write_allowed: true
   - !Register
     name: ARGR
-    addr: 0x10
+    addr: 0xfffa8010
     size_bits: 32
     description: Argument Register
     read_allowed: true
@@ -6343,7 +6084,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMDR
-    addr: 0x14
+    addr: 0xfffa8014
     size_bits: 32
     description: Command Register
     read_allowed: false
@@ -6414,7 +6155,7 @@ modules:
       write_allowed: true
   - !Register
     name: BLKR
-    addr: 0x18
+    addr: 0xfffa8018
     size_bits: 32
     description: Block Register
     read_allowed: true
@@ -6436,7 +6177,7 @@ modules:
       write_allowed: true
   - !Register
     name: RDR
-    addr: 0x30
+    addr: 0xfffa8030
     size_bits: 32
     description: Receive Data Register
     read_allowed: true
@@ -6451,7 +6192,7 @@ modules:
       write_allowed: false
   - !Register
     name: TDR
-    addr: 0x34
+    addr: 0xfffa8034
     size_bits: 32
     description: Transmit Data Register
     read_allowed: false
@@ -6466,7 +6207,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x40
+    addr: 0xfffa8040
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -6608,7 +6349,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x44
+    addr: 0xfffa8044
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -6749,7 +6490,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x48
+    addr: 0xfffa8048
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -6890,7 +6631,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x4c
+    addr: 0xfffa804c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -7031,7 +6772,7 @@ modules:
       write_allowed: false
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffa8100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -7046,7 +6787,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffa8104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -7061,7 +6802,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffa8108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -7076,7 +6817,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffa810c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -7091,7 +6832,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffa8110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -7106,7 +6847,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffa8114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -7121,7 +6862,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffa8118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -7136,7 +6877,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffa811c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -7151,7 +6892,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffa8120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -7187,7 +6928,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffa8124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -7209,7 +6950,7 @@ modules:
       write_allowed: false
   - !Register
     name: RSPR[0]
-    addr: 0x20
+    addr: 0xfffa8020
     size_bits: 32
     description: Response Register
     read_allowed: true
@@ -7224,7 +6965,7 @@ modules:
       write_allowed: false
   - !Register
     name: RSPR[1]
-    addr: 0x24
+    addr: 0xfffa8024
     size_bits: 32
     description: Response Register
     read_allowed: true
@@ -7239,7 +6980,7 @@ modules:
       write_allowed: false
   - !Register
     name: RSPR[2]
-    addr: 0x28
+    addr: 0xfffa8028
     size_bits: 32
     description: Response Register
     read_allowed: true
@@ -7254,7 +6995,7 @@ modules:
       write_allowed: false
   - !Register
     name: RSPR[3]
-    addr: 0x2c
+    addr: 0xfffa802c
     size_bits: 32
     description: Response Register
     read_allowed: true
@@ -7271,11 +7012,11 @@ modules:
   name: TWI
   description: Two-wire Interface
   base_addr: 0xfffac000
-  size: 0x4000
+  size: 0x38
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffac000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -7339,7 +7080,7 @@ modules:
       write_allowed: true
   - !Register
     name: MMR
-    addr: 0x4
+    addr: 0xfffac004
     size_bits: 32
     description: Master Mode Register
     read_allowed: true
@@ -7368,7 +7109,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR
-    addr: 0x8
+    addr: 0xfffac008
     size_bits: 32
     description: Slave Mode Register
     read_allowed: true
@@ -7383,7 +7124,7 @@ modules:
       write_allowed: true
   - !Register
     name: IADR
-    addr: 0xc
+    addr: 0xfffac00c
     size_bits: 32
     description: Internal Address Register
     read_allowed: true
@@ -7398,7 +7139,7 @@ modules:
       write_allowed: true
   - !Register
     name: CWGR
-    addr: 0x10
+    addr: 0xfffac010
     size_bits: 32
     description: Clock Waveform Generator Register
     read_allowed: true
@@ -7427,7 +7168,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x20
+    addr: 0xfffac020
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -7513,7 +7254,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x24
+    addr: 0xfffac024
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -7591,7 +7332,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x28
+    addr: 0xfffac028
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -7669,7 +7410,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x2c
+    addr: 0xfffac02c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -7747,7 +7488,7 @@ modules:
       write_allowed: false
   - !Register
     name: RHR
-    addr: 0x30
+    addr: 0xfffac030
     size_bits: 32
     description: Receive Holding Register
     read_allowed: true
@@ -7762,7 +7503,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x34
+    addr: 0xfffac034
     size_bits: 32
     description: Transmit Holding Register
     read_allowed: false
@@ -7779,11 +7520,11 @@ modules:
   name: USART0
   description: Universal Synchronous Asynchronous Receiver Transmitter 0
   base_addr: 0xfffb0000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffb0000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -7903,7 +7644,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffb0004
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -8076,7 +7817,7 @@ modules:
       write_allowed: true
   - !Register
     name: IER
-    addr: 0x8
+    addr: 0xfffb0008
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -8192,7 +7933,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0xc
+    addr: 0xfffb000c
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -8309,7 +8050,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x10
+    addr: 0xfffb0010
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -8424,7 +8165,7 @@ modules:
       write_allowed: false
   - !Register
     name: CSR
-    addr: 0x14
+    addr: 0xfffb0014
     size_bits: 32
     description: Channel Status Register
     read_allowed: true
@@ -8550,7 +8291,7 @@ modules:
       write_allowed: false
   - !Register
     name: RHR
-    addr: 0x18
+    addr: 0xfffb0018
     size_bits: 32
     description: Receiver Holding Register
     read_allowed: true
@@ -8572,7 +8313,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x1c
+    addr: 0xfffb001c
     size_bits: 32
     description: Transmitter Holding Register
     read_allowed: false
@@ -8594,7 +8335,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRGR
-    addr: 0x20
+    addr: 0xfffb0020
     size_bits: 32
     description: Baud Rate Generator Register
     read_allowed: true
@@ -8616,7 +8357,7 @@ modules:
       write_allowed: true
   - !Register
     name: RTOR
-    addr: 0x24
+    addr: 0xfffb0024
     size_bits: 32
     description: Receiver Time-out Register
     read_allowed: true
@@ -8631,7 +8372,7 @@ modules:
       write_allowed: true
   - !Register
     name: TTGR
-    addr: 0x28
+    addr: 0xfffb0028
     size_bits: 32
     description: Transmitter Timeguard Register
     read_allowed: true
@@ -8646,7 +8387,7 @@ modules:
       write_allowed: true
   - !Register
     name: FIDI
-    addr: 0x40
+    addr: 0xfffb0040
     size_bits: 32
     description: FI DI Ratio Register
     read_allowed: true
@@ -8662,7 +8403,7 @@ modules:
       write_allowed: true
   - !Register
     name: NER
-    addr: 0x44
+    addr: 0xfffb0044
     size_bits: 32
     description: Number of Errors Register
     read_allowed: true
@@ -8677,7 +8418,7 @@ modules:
       write_allowed: false
   - !Register
     name: IF
-    addr: 0x4c
+    addr: 0xfffb004c
     size_bits: 32
     description: IrDA Filter Register
     read_allowed: true
@@ -8692,7 +8433,7 @@ modules:
       write_allowed: true
   - !Register
     name: MAN
-    addr: 0x50
+    addr: 0xfffb0050
     size_bits: 32
     description: Manchester Encoder Decoder Register
     read_allowed: true
@@ -8767,7 +8508,7 @@ modules:
       write_allowed: true
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffb0100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -8782,7 +8523,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffb0104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -8797,7 +8538,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffb0108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -8812,7 +8553,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffb010c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -8827,7 +8568,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffb0110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -8842,7 +8583,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffb0114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -8857,7 +8598,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffb0118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -8872,7 +8613,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffb011c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -8887,7 +8628,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffb0120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -8923,7 +8664,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffb0124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -8947,11 +8688,11 @@ modules:
   name: USART1
   description: Universal Synchronous Asynchronous Receiver Transmitter 1
   base_addr: 0xfffb4000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffb4000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -9071,7 +8812,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffb4004
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -9244,7 +8985,7 @@ modules:
       write_allowed: true
   - !Register
     name: IER
-    addr: 0x8
+    addr: 0xfffb4008
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -9360,7 +9101,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0xc
+    addr: 0xfffb400c
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -9477,7 +9218,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x10
+    addr: 0xfffb4010
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -9592,7 +9333,7 @@ modules:
       write_allowed: false
   - !Register
     name: CSR
-    addr: 0x14
+    addr: 0xfffb4014
     size_bits: 32
     description: Channel Status Register
     read_allowed: true
@@ -9718,7 +9459,7 @@ modules:
       write_allowed: false
   - !Register
     name: RHR
-    addr: 0x18
+    addr: 0xfffb4018
     size_bits: 32
     description: Receiver Holding Register
     read_allowed: true
@@ -9740,7 +9481,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x1c
+    addr: 0xfffb401c
     size_bits: 32
     description: Transmitter Holding Register
     read_allowed: false
@@ -9762,7 +9503,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRGR
-    addr: 0x20
+    addr: 0xfffb4020
     size_bits: 32
     description: Baud Rate Generator Register
     read_allowed: true
@@ -9784,7 +9525,7 @@ modules:
       write_allowed: true
   - !Register
     name: RTOR
-    addr: 0x24
+    addr: 0xfffb4024
     size_bits: 32
     description: Receiver Time-out Register
     read_allowed: true
@@ -9799,7 +9540,7 @@ modules:
       write_allowed: true
   - !Register
     name: TTGR
-    addr: 0x28
+    addr: 0xfffb4028
     size_bits: 32
     description: Transmitter Timeguard Register
     read_allowed: true
@@ -9814,7 +9555,7 @@ modules:
       write_allowed: true
   - !Register
     name: FIDI
-    addr: 0x40
+    addr: 0xfffb4040
     size_bits: 32
     description: FI DI Ratio Register
     read_allowed: true
@@ -9830,7 +9571,7 @@ modules:
       write_allowed: true
   - !Register
     name: NER
-    addr: 0x44
+    addr: 0xfffb4044
     size_bits: 32
     description: Number of Errors Register
     read_allowed: true
@@ -9845,7 +9586,7 @@ modules:
       write_allowed: false
   - !Register
     name: IF
-    addr: 0x4c
+    addr: 0xfffb404c
     size_bits: 32
     description: IrDA Filter Register
     read_allowed: true
@@ -9860,7 +9601,7 @@ modules:
       write_allowed: true
   - !Register
     name: MAN
-    addr: 0x50
+    addr: 0xfffb4050
     size_bits: 32
     description: Manchester Encoder Decoder Register
     read_allowed: true
@@ -9935,7 +9676,7 @@ modules:
       write_allowed: true
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffb4100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -9950,7 +9691,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffb4104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -9965,7 +9706,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffb4108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -9980,7 +9721,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffb410c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -9995,7 +9736,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffb4110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -10010,7 +9751,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffb4114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -10025,7 +9766,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffb4118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -10040,7 +9781,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffb411c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -10055,7 +9796,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffb4120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -10091,7 +9832,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffb4124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -10115,11 +9856,11 @@ modules:
   name: USART2
   description: Universal Synchronous Asynchronous Receiver Transmitter 2
   base_addr: 0xfffb8000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffb8000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -10239,7 +9980,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffb8004
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -10412,7 +10153,7 @@ modules:
       write_allowed: true
   - !Register
     name: IER
-    addr: 0x8
+    addr: 0xfffb8008
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -10528,7 +10269,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0xc
+    addr: 0xfffb800c
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -10645,7 +10386,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x10
+    addr: 0xfffb8010
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -10760,7 +10501,7 @@ modules:
       write_allowed: false
   - !Register
     name: CSR
-    addr: 0x14
+    addr: 0xfffb8014
     size_bits: 32
     description: Channel Status Register
     read_allowed: true
@@ -10886,7 +10627,7 @@ modules:
       write_allowed: false
   - !Register
     name: RHR
-    addr: 0x18
+    addr: 0xfffb8018
     size_bits: 32
     description: Receiver Holding Register
     read_allowed: true
@@ -10908,7 +10649,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x1c
+    addr: 0xfffb801c
     size_bits: 32
     description: Transmitter Holding Register
     read_allowed: false
@@ -10930,7 +10671,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRGR
-    addr: 0x20
+    addr: 0xfffb8020
     size_bits: 32
     description: Baud Rate Generator Register
     read_allowed: true
@@ -10952,7 +10693,7 @@ modules:
       write_allowed: true
   - !Register
     name: RTOR
-    addr: 0x24
+    addr: 0xfffb8024
     size_bits: 32
     description: Receiver Time-out Register
     read_allowed: true
@@ -10967,7 +10708,7 @@ modules:
       write_allowed: true
   - !Register
     name: TTGR
-    addr: 0x28
+    addr: 0xfffb8028
     size_bits: 32
     description: Transmitter Timeguard Register
     read_allowed: true
@@ -10982,7 +10723,7 @@ modules:
       write_allowed: true
   - !Register
     name: FIDI
-    addr: 0x40
+    addr: 0xfffb8040
     size_bits: 32
     description: FI DI Ratio Register
     read_allowed: true
@@ -10998,7 +10739,7 @@ modules:
       write_allowed: true
   - !Register
     name: NER
-    addr: 0x44
+    addr: 0xfffb8044
     size_bits: 32
     description: Number of Errors Register
     read_allowed: true
@@ -11013,7 +10754,7 @@ modules:
       write_allowed: false
   - !Register
     name: IF
-    addr: 0x4c
+    addr: 0xfffb804c
     size_bits: 32
     description: IrDA Filter Register
     read_allowed: true
@@ -11028,7 +10769,7 @@ modules:
       write_allowed: true
   - !Register
     name: MAN
-    addr: 0x50
+    addr: 0xfffb8050
     size_bits: 32
     description: Manchester Encoder Decoder Register
     read_allowed: true
@@ -11103,7 +10844,7 @@ modules:
       write_allowed: true
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffb8100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -11118,7 +10859,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffb8104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -11133,7 +10874,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffb8108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -11148,7 +10889,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffb810c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -11163,7 +10904,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffb8110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -11178,7 +10919,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffb8114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -11193,7 +10934,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffb8118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -11208,7 +10949,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffb811c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -11223,7 +10964,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffb8120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -11259,7 +11000,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffb8124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -11283,11 +11024,11 @@ modules:
   name: SSC0
   description: Synchronous Serial Controller 0
   base_addr: 0xfffbc000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffbc000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -11330,7 +11071,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMR
-    addr: 0x4
+    addr: 0xfffbc004
     size_bits: 32
     description: Clock Mode Register
     read_allowed: true
@@ -11345,7 +11086,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCMR
-    addr: 0x10
+    addr: 0xfffbc010
     size_bits: 32
     description: Receive Clock Mode Register
     read_allowed: true
@@ -11409,7 +11150,7 @@ modules:
       write_allowed: true
   - !Register
     name: RFMR
-    addr: 0x14
+    addr: 0xfffbc014
     size_bits: 32
     description: Receive Frame Mode Register
     read_allowed: true
@@ -11466,7 +11207,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCMR
-    addr: 0x18
+    addr: 0xfffbc018
     size_bits: 32
     description: Transmit Clock Mode Register
     read_allowed: true
@@ -11523,7 +11264,7 @@ modules:
       write_allowed: true
   - !Register
     name: TFMR
-    addr: 0x1c
+    addr: 0xfffbc01c
     size_bits: 32
     description: Transmit Frame Mode Register
     read_allowed: true
@@ -11587,7 +11328,7 @@ modules:
       write_allowed: true
   - !Register
     name: RHR
-    addr: 0x20
+    addr: 0xfffbc020
     size_bits: 32
     description: Receive Holding Register
     read_allowed: true
@@ -11602,7 +11343,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x24
+    addr: 0xfffbc024
     size_bits: 32
     description: Transmit Holding Register
     read_allowed: false
@@ -11617,7 +11358,7 @@ modules:
       write_allowed: true
   - !Register
     name: RSHR
-    addr: 0x30
+    addr: 0xfffbc030
     size_bits: 32
     description: Receive Sync. Holding Register
     read_allowed: true
@@ -11632,7 +11373,7 @@ modules:
       write_allowed: false
   - !Register
     name: TSHR
-    addr: 0x34
+    addr: 0xfffbc034
     size_bits: 32
     description: Transmit Sync. Holding Register
     read_allowed: true
@@ -11647,7 +11388,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC0R
-    addr: 0x38
+    addr: 0xfffbc038
     size_bits: 32
     description: Receive Compare 0 Register
     read_allowed: true
@@ -11662,7 +11403,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC1R
-    addr: 0x3c
+    addr: 0xfffbc03c
     size_bits: 32
     description: Receive Compare 1 Register
     read_allowed: true
@@ -11677,7 +11418,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x40
+    addr: 0xfffbc040
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -11784,7 +11525,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x44
+    addr: 0xfffbc044
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -11876,7 +11617,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x48
+    addr: 0xfffbc048
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -11968,7 +11709,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x4c
+    addr: 0xfffbc04c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -12060,7 +11801,7 @@ modules:
       write_allowed: false
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffbc100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -12075,7 +11816,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffbc104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -12090,7 +11831,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffbc108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -12105,7 +11846,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffbc10c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -12120,7 +11861,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffbc110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -12135,7 +11876,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffbc114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -12150,7 +11891,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffbc118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -12165,7 +11906,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffbc11c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -12180,7 +11921,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffbc120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -12216,7 +11957,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffbc124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -12240,11 +11981,11 @@ modules:
   name: SSC1
   description: Synchronous Serial Controller 1
   base_addr: 0xfffc0000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffc0000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -12287,7 +12028,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMR
-    addr: 0x4
+    addr: 0xfffc0004
     size_bits: 32
     description: Clock Mode Register
     read_allowed: true
@@ -12302,7 +12043,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCMR
-    addr: 0x10
+    addr: 0xfffc0010
     size_bits: 32
     description: Receive Clock Mode Register
     read_allowed: true
@@ -12366,7 +12107,7 @@ modules:
       write_allowed: true
   - !Register
     name: RFMR
-    addr: 0x14
+    addr: 0xfffc0014
     size_bits: 32
     description: Receive Frame Mode Register
     read_allowed: true
@@ -12423,7 +12164,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCMR
-    addr: 0x18
+    addr: 0xfffc0018
     size_bits: 32
     description: Transmit Clock Mode Register
     read_allowed: true
@@ -12480,7 +12221,7 @@ modules:
       write_allowed: true
   - !Register
     name: TFMR
-    addr: 0x1c
+    addr: 0xfffc001c
     size_bits: 32
     description: Transmit Frame Mode Register
     read_allowed: true
@@ -12544,7 +12285,7 @@ modules:
       write_allowed: true
   - !Register
     name: RHR
-    addr: 0x20
+    addr: 0xfffc0020
     size_bits: 32
     description: Receive Holding Register
     read_allowed: true
@@ -12559,7 +12300,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x24
+    addr: 0xfffc0024
     size_bits: 32
     description: Transmit Holding Register
     read_allowed: false
@@ -12574,7 +12315,7 @@ modules:
       write_allowed: true
   - !Register
     name: RSHR
-    addr: 0x30
+    addr: 0xfffc0030
     size_bits: 32
     description: Receive Sync. Holding Register
     read_allowed: true
@@ -12589,7 +12330,7 @@ modules:
       write_allowed: false
   - !Register
     name: TSHR
-    addr: 0x34
+    addr: 0xfffc0034
     size_bits: 32
     description: Transmit Sync. Holding Register
     read_allowed: true
@@ -12604,7 +12345,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC0R
-    addr: 0x38
+    addr: 0xfffc0038
     size_bits: 32
     description: Receive Compare 0 Register
     read_allowed: true
@@ -12619,7 +12360,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC1R
-    addr: 0x3c
+    addr: 0xfffc003c
     size_bits: 32
     description: Receive Compare 1 Register
     read_allowed: true
@@ -12634,7 +12375,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x40
+    addr: 0xfffc0040
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -12741,7 +12482,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x44
+    addr: 0xfffc0044
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -12833,7 +12574,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x48
+    addr: 0xfffc0048
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -12925,7 +12666,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x4c
+    addr: 0xfffc004c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -13017,7 +12758,7 @@ modules:
       write_allowed: false
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffc0100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -13032,7 +12773,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffc0104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -13047,7 +12788,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffc0108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -13062,7 +12803,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffc010c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -13077,7 +12818,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffc0110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -13092,7 +12833,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffc0114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -13107,7 +12848,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffc0118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -13122,7 +12863,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffc011c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -13137,7 +12878,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffc0120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -13173,7 +12914,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffc0124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -13197,11 +12938,11 @@ modules:
   name: SSC2
   description: Synchronous Serial Controller 2
   base_addr: 0xfffc4000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffc4000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -13244,7 +12985,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMR
-    addr: 0x4
+    addr: 0xfffc4004
     size_bits: 32
     description: Clock Mode Register
     read_allowed: true
@@ -13259,7 +13000,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCMR
-    addr: 0x10
+    addr: 0xfffc4010
     size_bits: 32
     description: Receive Clock Mode Register
     read_allowed: true
@@ -13323,7 +13064,7 @@ modules:
       write_allowed: true
   - !Register
     name: RFMR
-    addr: 0x14
+    addr: 0xfffc4014
     size_bits: 32
     description: Receive Frame Mode Register
     read_allowed: true
@@ -13380,7 +13121,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCMR
-    addr: 0x18
+    addr: 0xfffc4018
     size_bits: 32
     description: Transmit Clock Mode Register
     read_allowed: true
@@ -13437,7 +13178,7 @@ modules:
       write_allowed: true
   - !Register
     name: TFMR
-    addr: 0x1c
+    addr: 0xfffc401c
     size_bits: 32
     description: Transmit Frame Mode Register
     read_allowed: true
@@ -13501,7 +13242,7 @@ modules:
       write_allowed: true
   - !Register
     name: RHR
-    addr: 0x20
+    addr: 0xfffc4020
     size_bits: 32
     description: Receive Holding Register
     read_allowed: true
@@ -13516,7 +13257,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x24
+    addr: 0xfffc4024
     size_bits: 32
     description: Transmit Holding Register
     read_allowed: false
@@ -13531,7 +13272,7 @@ modules:
       write_allowed: true
   - !Register
     name: RSHR
-    addr: 0x30
+    addr: 0xfffc4030
     size_bits: 32
     description: Receive Sync. Holding Register
     read_allowed: true
@@ -13546,7 +13287,7 @@ modules:
       write_allowed: false
   - !Register
     name: TSHR
-    addr: 0x34
+    addr: 0xfffc4034
     size_bits: 32
     description: Transmit Sync. Holding Register
     read_allowed: true
@@ -13561,7 +13302,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC0R
-    addr: 0x38
+    addr: 0xfffc4038
     size_bits: 32
     description: Receive Compare 0 Register
     read_allowed: true
@@ -13576,7 +13317,7 @@ modules:
       write_allowed: true
   - !Register
     name: RC1R
-    addr: 0x3c
+    addr: 0xfffc403c
     size_bits: 32
     description: Receive Compare 1 Register
     read_allowed: true
@@ -13591,7 +13332,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x40
+    addr: 0xfffc4040
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -13698,7 +13439,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x44
+    addr: 0xfffc4044
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -13790,7 +13531,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x48
+    addr: 0xfffc4048
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -13882,7 +13623,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x4c
+    addr: 0xfffc404c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -13974,7 +13715,7 @@ modules:
       write_allowed: false
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffc4100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -13989,7 +13730,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffc4104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -14004,7 +13745,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffc4108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -14019,7 +13760,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffc410c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -14034,7 +13775,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffc4110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -14049,7 +13790,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffc4114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -14064,7 +13805,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffc4118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -14079,7 +13820,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffc411c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -14094,7 +13835,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffc4120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -14130,7 +13871,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffc4124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -14154,11 +13895,11 @@ modules:
   name: SPI0
   description: Serial Peripheral Interface 0
   base_addr: 0xfffc8000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffc8000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -14194,7 +13935,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffc8004
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -14258,7 +13999,7 @@ modules:
       write_allowed: true
   - !Register
     name: RDR
-    addr: 0x8
+    addr: 0xfffc8008
     size_bits: 32
     description: Receive Data Register
     read_allowed: true
@@ -14280,7 +14021,7 @@ modules:
       write_allowed: false
   - !Register
     name: TDR
-    addr: 0xc
+    addr: 0xfffc800c
     size_bits: 32
     description: Transmit Data Register
     read_allowed: false
@@ -14309,7 +14050,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x10
+    addr: 0xfffc8010
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -14395,7 +14136,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x14
+    addr: 0xfffc8014
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -14473,7 +14214,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x18
+    addr: 0xfffc8018
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -14551,7 +14292,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x1c
+    addr: 0xfffc801c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -14629,7 +14370,7 @@ modules:
       write_allowed: false
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffc8100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -14644,7 +14385,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffc8104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -14659,7 +14400,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffc8108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -14674,7 +14415,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffc810c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -14689,7 +14430,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffc8110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -14704,7 +14445,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffc8114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -14719,7 +14460,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffc8118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -14734,7 +14475,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffc811c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -14749,7 +14490,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffc8120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -14785,7 +14526,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffc8124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -14807,7 +14548,7 @@ modules:
       write_allowed: false
   - !Register
     name: CSR[0]
-    addr: 0x30
+    addr: 0xfffc8030
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -14874,7 +14615,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[1]
-    addr: 0x34
+    addr: 0xfffc8034
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -14941,7 +14682,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[2]
-    addr: 0x38
+    addr: 0xfffc8038
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -15008,7 +14749,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[3]
-    addr: 0x3c
+    addr: 0xfffc803c
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -15077,11 +14818,11 @@ modules:
   name: SPI1
   description: Serial Peripheral Interface 1
   base_addr: 0xfffcc000
-  size: 0x4000
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffcc000
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -15117,7 +14858,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffcc004
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -15181,7 +14922,7 @@ modules:
       write_allowed: true
   - !Register
     name: RDR
-    addr: 0x8
+    addr: 0xfffcc008
     size_bits: 32
     description: Receive Data Register
     read_allowed: true
@@ -15203,7 +14944,7 @@ modules:
       write_allowed: false
   - !Register
     name: TDR
-    addr: 0xc
+    addr: 0xfffcc00c
     size_bits: 32
     description: Transmit Data Register
     read_allowed: false
@@ -15232,7 +14973,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x10
+    addr: 0xfffcc010
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -15318,7 +15059,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x14
+    addr: 0xfffcc014
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -15396,7 +15137,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x18
+    addr: 0xfffcc018
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -15474,7 +15215,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x1c
+    addr: 0xfffcc01c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -15552,7 +15293,7 @@ modules:
       write_allowed: false
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffcc100
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -15567,7 +15308,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffcc104
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -15582,7 +15323,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffcc108
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -15597,7 +15338,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffcc10c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -15612,7 +15353,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffcc110
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -15627,7 +15368,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffcc114
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -15642,7 +15383,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffcc118
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -15657,7 +15398,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffcc11c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -15672,7 +15413,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffcc120
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -15708,7 +15449,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffcc124
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -15730,7 +15471,7 @@ modules:
       write_allowed: false
   - !Register
     name: CSR[0]
-    addr: 0x30
+    addr: 0xfffcc030
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -15797,7 +15538,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[1]
-    addr: 0x34
+    addr: 0xfffcc034
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -15864,7 +15605,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[2]
-    addr: 0x38
+    addr: 0xfffcc038
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -15931,7 +15672,7 @@ modules:
       write_allowed: true
   - !Register
     name: CSR[3]
-    addr: 0x3c
+    addr: 0xfffcc03c
     size_bits: 32
     description: Chip Select Register
     read_allowed: true
@@ -16000,11 +15741,11 @@ modules:
   name: SDRAMC
   description: SDRAM Controller
   base_addr: 0xffffea00
-  size: 0x200
+  size: 0x28
   registers:
   - !Register
     name: MR
-    addr: 0x0
+    addr: 0xffffea00
     size_bits: 32
     description: SDRAMC Mode Register
     read_allowed: true
@@ -16019,7 +15760,7 @@ modules:
       write_allowed: true
   - !Register
     name: TR
-    addr: 0x4
+    addr: 0xffffea04
     size_bits: 32
     description: SDRAMC Refresh Timer Register
     read_allowed: true
@@ -16034,7 +15775,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0xffffea08
     size_bits: 32
     description: SDRAMC Configuration Register
     read_allowed: true
@@ -16120,7 +15861,7 @@ modules:
       write_allowed: true
   - !Register
     name: LPR
-    addr: 0x10
+    addr: 0xffffea10
     size_bits: 32
     description: SDRAMC Low Power Register
     read_allowed: true
@@ -16163,7 +15904,7 @@ modules:
       write_allowed: true
   - !Register
     name: IER
-    addr: 0x14
+    addr: 0xffffea14
     size_bits: 32
     description: SDRAMC Interrupt Enable Register
     read_allowed: false
@@ -16178,7 +15919,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x18
+    addr: 0xffffea18
     size_bits: 32
     description: SDRAMC Interrupt Disable Register
     read_allowed: false
@@ -16193,7 +15934,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x1c
+    addr: 0xffffea1c
     size_bits: 32
     description: SDRAMC Interrupt Mask Register
     read_allowed: true
@@ -16208,7 +15949,7 @@ modules:
       write_allowed: false
   - !Register
     name: ISR
-    addr: 0x20
+    addr: 0xffffea20
     size_bits: 32
     description: SDRAMC Interrupt Status Register
     read_allowed: true
@@ -16223,7 +15964,7 @@ modules:
       write_allowed: false
   - !Register
     name: MDR
-    addr: 0x24
+    addr: 0xffffea24
     size_bits: 32
     description: SDRAMC Memory Device Register
     read_allowed: true
@@ -16240,11 +15981,11 @@ modules:
   name: SMC
   description: Static Memory Controller
   base_addr: 0xffffec00
-  size: 0x200
+  size: 0x80
   registers:
   - !Register
     name: SETUP0
-    addr: 0x0
+    addr: 0xffffec00
     size_bits: 32
     description: SMC Setup Register (CS_number = 0)
     read_allowed: true
@@ -16280,7 +16021,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE0
-    addr: 0x4
+    addr: 0xffffec04
     size_bits: 32
     description: SMC Pulse Register (CS_number = 0)
     read_allowed: true
@@ -16317,7 +16058,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE0
-    addr: 0x8
+    addr: 0xffffec08
     size_bits: 32
     description: SMC Cycle Register (CS_number = 0)
     read_allowed: true
@@ -16340,7 +16081,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE0
-    addr: 0xc
+    addr: 0xffffec0c
     size_bits: 32
     description: SMC Mode Register (CS_number = 0)
     read_allowed: true
@@ -16410,7 +16151,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP1
-    addr: 0x10
+    addr: 0xffffec10
     size_bits: 32
     description: SMC Setup Register (CS_number = 1)
     read_allowed: true
@@ -16446,7 +16187,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE1
-    addr: 0x14
+    addr: 0xffffec14
     size_bits: 32
     description: SMC Pulse Register (CS_number = 1)
     read_allowed: true
@@ -16483,7 +16224,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE1
-    addr: 0x18
+    addr: 0xffffec18
     size_bits: 32
     description: SMC Cycle Register (CS_number = 1)
     read_allowed: true
@@ -16506,7 +16247,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE1
-    addr: 0x1c
+    addr: 0xffffec1c
     size_bits: 32
     description: SMC Mode Register (CS_number = 1)
     read_allowed: true
@@ -16576,7 +16317,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP2
-    addr: 0x20
+    addr: 0xffffec20
     size_bits: 32
     description: SMC Setup Register (CS_number = 2)
     read_allowed: true
@@ -16612,7 +16353,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE2
-    addr: 0x24
+    addr: 0xffffec24
     size_bits: 32
     description: SMC Pulse Register (CS_number = 2)
     read_allowed: true
@@ -16649,7 +16390,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE2
-    addr: 0x28
+    addr: 0xffffec28
     size_bits: 32
     description: SMC Cycle Register (CS_number = 2)
     read_allowed: true
@@ -16672,7 +16413,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE2
-    addr: 0x2c
+    addr: 0xffffec2c
     size_bits: 32
     description: SMC Mode Register (CS_number = 2)
     read_allowed: true
@@ -16742,7 +16483,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP3
-    addr: 0x30
+    addr: 0xffffec30
     size_bits: 32
     description: SMC Setup Register (CS_number = 3)
     read_allowed: true
@@ -16778,7 +16519,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE3
-    addr: 0x34
+    addr: 0xffffec34
     size_bits: 32
     description: SMC Pulse Register (CS_number = 3)
     read_allowed: true
@@ -16815,7 +16556,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE3
-    addr: 0x38
+    addr: 0xffffec38
     size_bits: 32
     description: SMC Cycle Register (CS_number = 3)
     read_allowed: true
@@ -16838,7 +16579,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE3
-    addr: 0x3c
+    addr: 0xffffec3c
     size_bits: 32
     description: SMC Mode Register (CS_number = 3)
     read_allowed: true
@@ -16908,7 +16649,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP4
-    addr: 0x40
+    addr: 0xffffec40
     size_bits: 32
     description: SMC Setup Register (CS_number = 4)
     read_allowed: true
@@ -16944,7 +16685,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE4
-    addr: 0x44
+    addr: 0xffffec44
     size_bits: 32
     description: SMC Pulse Register (CS_number = 4)
     read_allowed: true
@@ -16981,7 +16722,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE4
-    addr: 0x48
+    addr: 0xffffec48
     size_bits: 32
     description: SMC Cycle Register (CS_number = 4)
     read_allowed: true
@@ -17004,7 +16745,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE4
-    addr: 0x4c
+    addr: 0xffffec4c
     size_bits: 32
     description: SMC Mode Register (CS_number = 4)
     read_allowed: true
@@ -17074,7 +16815,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP5
-    addr: 0x50
+    addr: 0xffffec50
     size_bits: 32
     description: SMC Setup Register (CS_number = 5)
     read_allowed: true
@@ -17110,7 +16851,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE5
-    addr: 0x54
+    addr: 0xffffec54
     size_bits: 32
     description: SMC Pulse Register (CS_number = 5)
     read_allowed: true
@@ -17147,7 +16888,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE5
-    addr: 0x58
+    addr: 0xffffec58
     size_bits: 32
     description: SMC Cycle Register (CS_number = 5)
     read_allowed: true
@@ -17170,7 +16911,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE5
-    addr: 0x5c
+    addr: 0xffffec5c
     size_bits: 32
     description: SMC Mode Register (CS_number = 5)
     read_allowed: true
@@ -17240,7 +16981,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP6
-    addr: 0x60
+    addr: 0xffffec60
     size_bits: 32
     description: SMC Setup Register (CS_number = 6)
     read_allowed: true
@@ -17276,7 +17017,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE6
-    addr: 0x64
+    addr: 0xffffec64
     size_bits: 32
     description: SMC Pulse Register (CS_number = 6)
     read_allowed: true
@@ -17313,7 +17054,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE6
-    addr: 0x68
+    addr: 0xffffec68
     size_bits: 32
     description: SMC Cycle Register (CS_number = 6)
     read_allowed: true
@@ -17336,7 +17077,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE6
-    addr: 0x6c
+    addr: 0xffffec6c
     size_bits: 32
     description: SMC Mode Register (CS_number = 6)
     read_allowed: true
@@ -17406,7 +17147,7 @@ modules:
       write_allowed: true
   - !Register
     name: SETUP7
-    addr: 0x70
+    addr: 0xffffec70
     size_bits: 32
     description: SMC Setup Register (CS_number = 7)
     read_allowed: true
@@ -17442,7 +17183,7 @@ modules:
       write_allowed: true
   - !Register
     name: PULSE7
-    addr: 0x74
+    addr: 0xffffec74
     size_bits: 32
     description: SMC Pulse Register (CS_number = 7)
     read_allowed: true
@@ -17479,7 +17220,7 @@ modules:
       write_allowed: true
   - !Register
     name: CYCLE7
-    addr: 0x78
+    addr: 0xffffec78
     size_bits: 32
     description: SMC Cycle Register (CS_number = 7)
     read_allowed: true
@@ -17502,7 +17243,7 @@ modules:
       write_allowed: true
   - !Register
     name: MODE7
-    addr: 0x7c
+    addr: 0xffffec7c
     size_bits: 32
     description: SMC Mode Register (CS_number = 7)
     read_allowed: true
@@ -17574,11 +17315,11 @@ modules:
   name: MATRIX
   description: AHB Bus Matrix
   base_addr: 0xffffee00
-  size: 0x200
+  size: 0x38
   registers:
   - !Register
     name: MATRIX_MCFG
-    addr: 0x0
+    addr: 0xffffee00
     size_bits: 32
     description: Master Configuration Register
     read_allowed: false
@@ -17600,7 +17341,7 @@ modules:
       write_allowed: true
   - !Register
     name: MATRIX_TCR
-    addr: 0x24
+    addr: 0xffffee24
     size_bits: 32
     description: MATRIX TCM Configuration Register
     read_allowed: true
@@ -17622,7 +17363,7 @@ modules:
       write_allowed: true
   - !Register
     name: EBI_CSA
-    addr: 0x30
+    addr: 0xffffee30
     size_bits: 32
     description: EBI Chip Select Assignment Register
     read_allowed: true
@@ -17665,7 +17406,7 @@ modules:
       write_allowed: true
   - !Register
     name: USB_PUCR
-    addr: 0x34
+    addr: 0xffffee34
     size_bits: 32
     description: USB Pad Pull-up Control Register
     read_allowed: true
@@ -17680,7 +17421,7 @@ modules:
       write_allowed: true
   - !Register
     name: MATRIX_SCFG[0]
-    addr: 0x4
+    addr: 0xffffee04
     size_bits: 32
     description: Slave Configuration Register
     read_allowed: true
@@ -17708,7 +17449,7 @@ modules:
       write_allowed: true
   - !Register
     name: MATRIX_SCFG[1]
-    addr: 0x8
+    addr: 0xffffee08
     size_bits: 32
     description: Slave Configuration Register
     read_allowed: true
@@ -17736,7 +17477,7 @@ modules:
       write_allowed: true
   - !Register
     name: MATRIX_SCFG[2]
-    addr: 0xc
+    addr: 0xffffee0c
     size_bits: 32
     description: Slave Configuration Register
     read_allowed: true
@@ -17764,7 +17505,7 @@ modules:
       write_allowed: true
   - !Register
     name: MATRIX_SCFG[3]
-    addr: 0x10
+    addr: 0xffffee10
     size_bits: 32
     description: Slave Configuration Register
     read_allowed: true
@@ -17792,7 +17533,7 @@ modules:
       write_allowed: true
   - !Register
     name: MATRIX_SCFG[4]
-    addr: 0x14
+    addr: 0xffffee14
     size_bits: 32
     description: Slave Configuration Register
     read_allowed: true
@@ -17822,11 +17563,11 @@ modules:
   name: AIC
   description: Advanced Interrupt Controller
   base_addr: 0xfffff000
-  size: 0x200
+  size: 0x14c
   registers:
   - !Register
     name: IVR
-    addr: 0x100
+    addr: 0xfffff100
     size_bits: 32
     description: Interrupt Vector Register
     read_allowed: true
@@ -17841,7 +17582,7 @@ modules:
       write_allowed: false
   - !Register
     name: FVR
-    addr: 0x104
+    addr: 0xfffff104
     size_bits: 32
     description: FIQ Interrupt Vector Register
     read_allowed: true
@@ -17856,7 +17597,7 @@ modules:
       write_allowed: false
   - !Register
     name: ISR
-    addr: 0x108
+    addr: 0xfffff108
     size_bits: 32
     description: Interrupt Status Register
     read_allowed: true
@@ -17871,7 +17612,7 @@ modules:
       write_allowed: false
   - !Register
     name: IPR
-    addr: 0x10c
+    addr: 0xfffff10c
     size_bits: 32
     description: Interrupt Pending Register
     read_allowed: true
@@ -18103,7 +17844,7 @@ modules:
       write_allowed: false
   - !Register
     name: IMR
-    addr: 0x110
+    addr: 0xfffff110
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -18335,7 +18076,7 @@ modules:
       write_allowed: false
   - !Register
     name: CISR
-    addr: 0x114
+    addr: 0xfffff114
     size_bits: 32
     description: Core Interrupt Status Register
     read_allowed: true
@@ -18357,7 +18098,7 @@ modules:
       write_allowed: false
   - !Register
     name: IECR
-    addr: 0x120
+    addr: 0xfffff120
     size_bits: 32
     description: Interrupt Enable Command Register
     read_allowed: false
@@ -18589,7 +18330,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDCR
-    addr: 0x124
+    addr: 0xfffff124
     size_bits: 32
     description: Interrupt Disable Command Register
     read_allowed: false
@@ -18821,7 +18562,7 @@ modules:
       write_allowed: true
   - !Register
     name: ICCR
-    addr: 0x128
+    addr: 0xfffff128
     size_bits: 32
     description: Interrupt Clear Command Register
     read_allowed: false
@@ -19053,7 +18794,7 @@ modules:
       write_allowed: true
   - !Register
     name: ISCR
-    addr: 0x12c
+    addr: 0xfffff12c
     size_bits: 32
     description: Interrupt Set Command Register
     read_allowed: false
@@ -19285,15 +19026,14 @@ modules:
       write_allowed: true
   - !Register
     name: EOICR
-    addr: 0x130
+    addr: 0xfffff130
     size_bits: 32
     description: End of Interrupt Command Register
     read_allowed: false
     write_allowed: true
-    fields: []
   - !Register
     name: SPU
-    addr: 0x134
+    addr: 0xfffff134
     size_bits: 32
     description: Spurious Interrupt Vector Register
     read_allowed: true
@@ -19308,7 +19048,7 @@ modules:
       write_allowed: true
   - !Register
     name: DCR
-    addr: 0x138
+    addr: 0xfffff138
     size_bits: 32
     description: Debug Control Register
     read_allowed: true
@@ -19330,7 +19070,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFER
-    addr: 0x140
+    addr: 0xfffff140
     size_bits: 32
     description: Fast Forcing Enable Register
     read_allowed: false
@@ -19555,7 +19295,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFDR
-    addr: 0x144
+    addr: 0xfffff144
     size_bits: 32
     description: Fast Forcing Disable Register
     read_allowed: false
@@ -19780,7 +19520,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFSR
-    addr: 0x148
+    addr: 0xfffff148
     size_bits: 32
     description: Fast Forcing Status Register
     read_allowed: true
@@ -20005,7 +19745,7 @@ modules:
       write_allowed: false
   - !Register
     name: SMR[0]
-    addr: 0x0
+    addr: 0xfffff000
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20027,7 +19767,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[1]
-    addr: 0x4
+    addr: 0xfffff004
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20049,7 +19789,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[2]
-    addr: 0x8
+    addr: 0xfffff008
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20071,7 +19811,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[3]
-    addr: 0xc
+    addr: 0xfffff00c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20093,7 +19833,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[4]
-    addr: 0x10
+    addr: 0xfffff010
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20115,7 +19855,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[5]
-    addr: 0x14
+    addr: 0xfffff014
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20137,7 +19877,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[6]
-    addr: 0x18
+    addr: 0xfffff018
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20159,7 +19899,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[7]
-    addr: 0x1c
+    addr: 0xfffff01c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20181,7 +19921,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[8]
-    addr: 0x20
+    addr: 0xfffff020
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20203,7 +19943,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[9]
-    addr: 0x24
+    addr: 0xfffff024
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20225,7 +19965,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[10]
-    addr: 0x28
+    addr: 0xfffff028
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20247,7 +19987,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[11]
-    addr: 0x2c
+    addr: 0xfffff02c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20269,7 +20009,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[12]
-    addr: 0x30
+    addr: 0xfffff030
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20291,7 +20031,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[13]
-    addr: 0x34
+    addr: 0xfffff034
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20313,7 +20053,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[14]
-    addr: 0x38
+    addr: 0xfffff038
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20335,7 +20075,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[15]
-    addr: 0x3c
+    addr: 0xfffff03c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20357,7 +20097,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[16]
-    addr: 0x40
+    addr: 0xfffff040
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20379,7 +20119,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[17]
-    addr: 0x44
+    addr: 0xfffff044
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20401,7 +20141,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[18]
-    addr: 0x48
+    addr: 0xfffff048
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20423,7 +20163,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[19]
-    addr: 0x4c
+    addr: 0xfffff04c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20445,7 +20185,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[20]
-    addr: 0x50
+    addr: 0xfffff050
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20467,7 +20207,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[21]
-    addr: 0x54
+    addr: 0xfffff054
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20489,7 +20229,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[22]
-    addr: 0x58
+    addr: 0xfffff058
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20511,7 +20251,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[23]
-    addr: 0x5c
+    addr: 0xfffff05c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20533,7 +20273,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[24]
-    addr: 0x60
+    addr: 0xfffff060
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20555,7 +20295,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[25]
-    addr: 0x64
+    addr: 0xfffff064
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20577,7 +20317,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[26]
-    addr: 0x68
+    addr: 0xfffff068
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20599,7 +20339,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[27]
-    addr: 0x6c
+    addr: 0xfffff06c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20621,7 +20361,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[28]
-    addr: 0x70
+    addr: 0xfffff070
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20643,7 +20383,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[29]
-    addr: 0x74
+    addr: 0xfffff074
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20665,7 +20405,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[30]
-    addr: 0x78
+    addr: 0xfffff078
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20687,7 +20427,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMR[31]
-    addr: 0x7c
+    addr: 0xfffff07c
     size_bits: 32
     description: Source Mode Register
     read_allowed: true
@@ -20709,7 +20449,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[0]
-    addr: 0x80
+    addr: 0xfffff080
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20724,7 +20464,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[1]
-    addr: 0x84
+    addr: 0xfffff084
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20739,7 +20479,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[2]
-    addr: 0x88
+    addr: 0xfffff088
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20754,7 +20494,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[3]
-    addr: 0x8c
+    addr: 0xfffff08c
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20769,7 +20509,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[4]
-    addr: 0x90
+    addr: 0xfffff090
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20784,7 +20524,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[5]
-    addr: 0x94
+    addr: 0xfffff094
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20799,7 +20539,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[6]
-    addr: 0x98
+    addr: 0xfffff098
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20814,7 +20554,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[7]
-    addr: 0x9c
+    addr: 0xfffff09c
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20829,7 +20569,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[8]
-    addr: 0xa0
+    addr: 0xfffff0a0
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20844,7 +20584,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[9]
-    addr: 0xa4
+    addr: 0xfffff0a4
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20859,7 +20599,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[10]
-    addr: 0xa8
+    addr: 0xfffff0a8
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20874,7 +20614,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[11]
-    addr: 0xac
+    addr: 0xfffff0ac
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20889,7 +20629,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[12]
-    addr: 0xb0
+    addr: 0xfffff0b0
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20904,7 +20644,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[13]
-    addr: 0xb4
+    addr: 0xfffff0b4
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20919,7 +20659,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[14]
-    addr: 0xb8
+    addr: 0xfffff0b8
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20934,7 +20674,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[15]
-    addr: 0xbc
+    addr: 0xfffff0bc
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20949,7 +20689,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[16]
-    addr: 0xc0
+    addr: 0xfffff0c0
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20964,7 +20704,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[17]
-    addr: 0xc4
+    addr: 0xfffff0c4
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20979,7 +20719,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[18]
-    addr: 0xc8
+    addr: 0xfffff0c8
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -20994,7 +20734,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[19]
-    addr: 0xcc
+    addr: 0xfffff0cc
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21009,7 +20749,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[20]
-    addr: 0xd0
+    addr: 0xfffff0d0
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21024,7 +20764,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[21]
-    addr: 0xd4
+    addr: 0xfffff0d4
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21039,7 +20779,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[22]
-    addr: 0xd8
+    addr: 0xfffff0d8
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21054,7 +20794,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[23]
-    addr: 0xdc
+    addr: 0xfffff0dc
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21069,7 +20809,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[24]
-    addr: 0xe0
+    addr: 0xfffff0e0
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21084,7 +20824,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[25]
-    addr: 0xe4
+    addr: 0xfffff0e4
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21099,7 +20839,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[26]
-    addr: 0xe8
+    addr: 0xfffff0e8
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21114,7 +20854,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[27]
-    addr: 0xec
+    addr: 0xfffff0ec
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21129,7 +20869,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[28]
-    addr: 0xf0
+    addr: 0xfffff0f0
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21144,7 +20884,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[29]
-    addr: 0xf4
+    addr: 0xfffff0f4
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21159,7 +20899,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[30]
-    addr: 0xf8
+    addr: 0xfffff0f8
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21174,7 +20914,7 @@ modules:
       write_allowed: true
   - !Register
     name: SVR[31]
-    addr: 0xfc
+    addr: 0xfffff0fc
     size_bits: 32
     description: Source Vector Register
     read_allowed: true
@@ -21191,11 +20931,11 @@ modules:
   name: DBGU
   description: Debug Unit
   base_addr: 0xfffff200
-  size: 0x200
+  size: 0x128
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffff200
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -21252,7 +20992,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffff204
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -21274,7 +21014,7 @@ modules:
       write_allowed: true
   - !Register
     name: IER
-    addr: 0x8
+    addr: 0xfffff208
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -21366,7 +21106,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0xc
+    addr: 0xfffff20c
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -21458,7 +21198,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x10
+    addr: 0xfffff210
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -21550,7 +21290,7 @@ modules:
       write_allowed: false
   - !Register
     name: SR
-    addr: 0x14
+    addr: 0xfffff214
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -21642,7 +21382,7 @@ modules:
       write_allowed: false
   - !Register
     name: RHR
-    addr: 0x18
+    addr: 0xfffff218
     size_bits: 32
     description: Receive Holding Register
     read_allowed: true
@@ -21657,7 +21397,7 @@ modules:
       write_allowed: false
   - !Register
     name: THR
-    addr: 0x1c
+    addr: 0xfffff21c
     size_bits: 32
     description: Transmit Holding Register
     read_allowed: false
@@ -21672,7 +21412,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRGR
-    addr: 0x20
+    addr: 0xfffff220
     size_bits: 32
     description: Baud Rate Generator Register
     read_allowed: true
@@ -21687,7 +21427,7 @@ modules:
       write_allowed: true
   - !Register
     name: CIDR
-    addr: 0x40
+    addr: 0xfffff240
     size_bits: 32
     description: Chip ID Register
     read_allowed: true
@@ -21750,7 +21490,7 @@ modules:
       write_allowed: false
   - !Register
     name: EXID
-    addr: 0x44
+    addr: 0xfffff244
     size_bits: 32
     description: Chip ID Extension Register
     read_allowed: true
@@ -21765,7 +21505,7 @@ modules:
       write_allowed: false
   - !Register
     name: FNR
-    addr: 0x48
+    addr: 0xfffff248
     size_bits: 32
     description: Force NTRST Register
     read_allowed: true
@@ -21780,7 +21520,7 @@ modules:
       write_allowed: true
   - !Register
     name: RPR
-    addr: 0x100
+    addr: 0xfffff300
     size_bits: 32
     description: Receive Pointer Register
     read_allowed: true
@@ -21795,7 +21535,7 @@ modules:
       write_allowed: true
   - !Register
     name: RCR
-    addr: 0x104
+    addr: 0xfffff304
     size_bits: 32
     description: Receive Counter Register
     read_allowed: true
@@ -21810,7 +21550,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x108
+    addr: 0xfffff308
     size_bits: 32
     description: Transmit Pointer Register
     read_allowed: true
@@ -21825,7 +21565,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0x10c
+    addr: 0xfffff30c
     size_bits: 32
     description: Transmit Counter Register
     read_allowed: true
@@ -21840,7 +21580,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNPR
-    addr: 0x110
+    addr: 0xfffff310
     size_bits: 32
     description: Receive Next Pointer Register
     read_allowed: true
@@ -21855,7 +21595,7 @@ modules:
       write_allowed: true
   - !Register
     name: RNCR
-    addr: 0x114
+    addr: 0xfffff314
     size_bits: 32
     description: Receive Next Counter Register
     read_allowed: true
@@ -21870,7 +21610,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNPR
-    addr: 0x118
+    addr: 0xfffff318
     size_bits: 32
     description: Transmit Next Pointer Register
     read_allowed: true
@@ -21885,7 +21625,7 @@ modules:
       write_allowed: true
   - !Register
     name: TNCR
-    addr: 0x11c
+    addr: 0xfffff31c
     size_bits: 32
     description: Transmit Next Counter Register
     read_allowed: true
@@ -21900,7 +21640,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTCR
-    addr: 0x120
+    addr: 0xfffff320
     size_bits: 32
     description: Transfer Control Register
     read_allowed: false
@@ -21936,7 +21676,7 @@ modules:
       write_allowed: true
   - !Register
     name: PTSR
-    addr: 0x124
+    addr: 0xfffff324
     size_bits: 32
     description: Transfer Status Register
     read_allowed: true
@@ -21960,11 +21700,11 @@ modules:
   name: PIOA
   description: Parallel Input/Output Controller A
   base_addr: 0xfffff400
-  size: 0x200
+  size: 0xac
   registers:
   - !Register
     name: PER
-    addr: 0x0
+    addr: 0xfffff400
     size_bits: 32
     description: PIO Enable Register
     read_allowed: false
@@ -22196,7 +21936,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDR
-    addr: 0x4
+    addr: 0xfffff404
     size_bits: 32
     description: PIO Disable Register
     read_allowed: false
@@ -22428,7 +22168,7 @@ modules:
       write_allowed: true
   - !Register
     name: PSR
-    addr: 0x8
+    addr: 0xfffff408
     size_bits: 32
     description: PIO Status Register
     read_allowed: true
@@ -22660,7 +22400,7 @@ modules:
       write_allowed: false
   - !Register
     name: OER
-    addr: 0x10
+    addr: 0xfffff410
     size_bits: 32
     description: Output Enable Register
     read_allowed: false
@@ -22892,7 +22632,7 @@ modules:
       write_allowed: true
   - !Register
     name: ODR
-    addr: 0x14
+    addr: 0xfffff414
     size_bits: 32
     description: Output Disable Register
     read_allowed: false
@@ -23124,7 +22864,7 @@ modules:
       write_allowed: true
   - !Register
     name: OSR
-    addr: 0x18
+    addr: 0xfffff418
     size_bits: 32
     description: Output Status Register
     read_allowed: true
@@ -23356,7 +23096,7 @@ modules:
       write_allowed: false
   - !Register
     name: IFER
-    addr: 0x20
+    addr: 0xfffff420
     size_bits: 32
     description: Glitch Input Filter Enable Register
     read_allowed: false
@@ -23588,7 +23328,7 @@ modules:
       write_allowed: true
   - !Register
     name: IFDR
-    addr: 0x24
+    addr: 0xfffff424
     size_bits: 32
     description: Glitch Input Filter Disable Register
     read_allowed: false
@@ -23820,7 +23560,7 @@ modules:
       write_allowed: true
   - !Register
     name: IFSR
-    addr: 0x28
+    addr: 0xfffff428
     size_bits: 32
     description: Glitch Input Filter Status Register
     read_allowed: true
@@ -24052,7 +23792,7 @@ modules:
       write_allowed: false
   - !Register
     name: SODR
-    addr: 0x30
+    addr: 0xfffff430
     size_bits: 32
     description: Set Output Data Register
     read_allowed: false
@@ -24284,7 +24024,7 @@ modules:
       write_allowed: true
   - !Register
     name: CODR
-    addr: 0x34
+    addr: 0xfffff434
     size_bits: 32
     description: Clear Output Data Register
     read_allowed: false
@@ -24516,7 +24256,7 @@ modules:
       write_allowed: true
   - !Register
     name: ODSR
-    addr: 0x38
+    addr: 0xfffff438
     size_bits: 32
     description: Output Data Status Register
     read_allowed: true
@@ -24748,7 +24488,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDSR
-    addr: 0x3c
+    addr: 0xfffff43c
     size_bits: 32
     description: Pin Data Status Register
     read_allowed: true
@@ -24980,7 +24720,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x40
+    addr: 0xfffff440
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -25212,7 +24952,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x44
+    addr: 0xfffff444
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -25444,7 +25184,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x48
+    addr: 0xfffff448
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -25676,7 +25416,7 @@ modules:
       write_allowed: false
   - !Register
     name: ISR
-    addr: 0x4c
+    addr: 0xfffff44c
     size_bits: 32
     description: Interrupt Status Register
     read_allowed: true
@@ -25908,7 +25648,7 @@ modules:
       write_allowed: false
   - !Register
     name: MDER
-    addr: 0x50
+    addr: 0xfffff450
     size_bits: 32
     description: Multi-driver Enable Register
     read_allowed: false
@@ -26140,7 +25880,7 @@ modules:
       write_allowed: true
   - !Register
     name: MDDR
-    addr: 0x54
+    addr: 0xfffff454
     size_bits: 32
     description: Multi-driver Disable Register
     read_allowed: false
@@ -26372,7 +26112,7 @@ modules:
       write_allowed: true
   - !Register
     name: MDSR
-    addr: 0x58
+    addr: 0xfffff458
     size_bits: 32
     description: Multi-driver Status Register
     read_allowed: true
@@ -26604,7 +26344,7 @@ modules:
       write_allowed: false
   - !Register
     name: PUDR
-    addr: 0x60
+    addr: 0xfffff460
     size_bits: 32
     description: Pull-up Disable Register
     read_allowed: false
@@ -26836,7 +26576,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUER
-    addr: 0x64
+    addr: 0xfffff464
     size_bits: 32
     description: Pull-up Enable Register
     read_allowed: false
@@ -27068,7 +26808,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUSR
-    addr: 0x68
+    addr: 0xfffff468
     size_bits: 32
     description: Pad Pull-up Status Register
     read_allowed: true
@@ -27300,7 +27040,7 @@ modules:
       write_allowed: false
   - !Register
     name: ASR
-    addr: 0x70
+    addr: 0xfffff470
     size_bits: 32
     description: Peripheral A Select Register
     read_allowed: false
@@ -27532,7 +27272,7 @@ modules:
       write_allowed: true
   - !Register
     name: BSR
-    addr: 0x74
+    addr: 0xfffff474
     size_bits: 32
     description: Peripheral B Select Register
     read_allowed: false
@@ -27764,7 +27504,7 @@ modules:
       write_allowed: true
   - !Register
     name: ABSR
-    addr: 0x78
+    addr: 0xfffff478
     size_bits: 32
     description: AB Status Register
     read_allowed: true
@@ -27996,7 +27736,7 @@ modules:
       write_allowed: false
   - !Register
     name: OWER
-    addr: 0xa0
+    addr: 0xfffff4a0
     size_bits: 32
     description: Output Write Enable
     read_allowed: false
@@ -28228,7 +27968,7 @@ modules:
       write_allowed: true
   - !Register
     name: OWDR
-    addr: 0xa4
+    addr: 0xfffff4a4
     size_bits: 32
     description: Output Write Disable
     read_allowed: false
@@ -28460,7 +28200,7 @@ modules:
       write_allowed: true
   - !Register
     name: OWSR
-    addr: 0xa8
+    addr: 0xfffff4a8
     size_bits: 32
     description: Output Write Status Register
     read_allowed: true
@@ -28694,11 +28434,11 @@ modules:
   name: PIOB
   description: Parallel Input/Output Controller B
   base_addr: 0xfffff600
-  size: 0x200
+  size: 0xac
   registers:
   - !Register
     name: PER
-    addr: 0x0
+    addr: 0xfffff600
     size_bits: 32
     description: PIO Enable Register
     read_allowed: false
@@ -28930,7 +28670,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDR
-    addr: 0x4
+    addr: 0xfffff604
     size_bits: 32
     description: PIO Disable Register
     read_allowed: false
@@ -29162,7 +28902,7 @@ modules:
       write_allowed: true
   - !Register
     name: PSR
-    addr: 0x8
+    addr: 0xfffff608
     size_bits: 32
     description: PIO Status Register
     read_allowed: true
@@ -29394,7 +29134,7 @@ modules:
       write_allowed: false
   - !Register
     name: OER
-    addr: 0x10
+    addr: 0xfffff610
     size_bits: 32
     description: Output Enable Register
     read_allowed: false
@@ -29626,7 +29366,7 @@ modules:
       write_allowed: true
   - !Register
     name: ODR
-    addr: 0x14
+    addr: 0xfffff614
     size_bits: 32
     description: Output Disable Register
     read_allowed: false
@@ -29858,7 +29598,7 @@ modules:
       write_allowed: true
   - !Register
     name: OSR
-    addr: 0x18
+    addr: 0xfffff618
     size_bits: 32
     description: Output Status Register
     read_allowed: true
@@ -30090,7 +29830,7 @@ modules:
       write_allowed: false
   - !Register
     name: IFER
-    addr: 0x20
+    addr: 0xfffff620
     size_bits: 32
     description: Glitch Input Filter Enable Register
     read_allowed: false
@@ -30322,7 +30062,7 @@ modules:
       write_allowed: true
   - !Register
     name: IFDR
-    addr: 0x24
+    addr: 0xfffff624
     size_bits: 32
     description: Glitch Input Filter Disable Register
     read_allowed: false
@@ -30554,7 +30294,7 @@ modules:
       write_allowed: true
   - !Register
     name: IFSR
-    addr: 0x28
+    addr: 0xfffff628
     size_bits: 32
     description: Glitch Input Filter Status Register
     read_allowed: true
@@ -30786,7 +30526,7 @@ modules:
       write_allowed: false
   - !Register
     name: SODR
-    addr: 0x30
+    addr: 0xfffff630
     size_bits: 32
     description: Set Output Data Register
     read_allowed: false
@@ -31018,7 +30758,7 @@ modules:
       write_allowed: true
   - !Register
     name: CODR
-    addr: 0x34
+    addr: 0xfffff634
     size_bits: 32
     description: Clear Output Data Register
     read_allowed: false
@@ -31250,7 +30990,7 @@ modules:
       write_allowed: true
   - !Register
     name: ODSR
-    addr: 0x38
+    addr: 0xfffff638
     size_bits: 32
     description: Output Data Status Register
     read_allowed: true
@@ -31482,7 +31222,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDSR
-    addr: 0x3c
+    addr: 0xfffff63c
     size_bits: 32
     description: Pin Data Status Register
     read_allowed: true
@@ -31714,7 +31454,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x40
+    addr: 0xfffff640
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -31946,7 +31686,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x44
+    addr: 0xfffff644
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -32178,7 +31918,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x48
+    addr: 0xfffff648
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -32410,7 +32150,7 @@ modules:
       write_allowed: false
   - !Register
     name: ISR
-    addr: 0x4c
+    addr: 0xfffff64c
     size_bits: 32
     description: Interrupt Status Register
     read_allowed: true
@@ -32642,7 +32382,7 @@ modules:
       write_allowed: false
   - !Register
     name: MDER
-    addr: 0x50
+    addr: 0xfffff650
     size_bits: 32
     description: Multi-driver Enable Register
     read_allowed: false
@@ -32874,7 +32614,7 @@ modules:
       write_allowed: true
   - !Register
     name: MDDR
-    addr: 0x54
+    addr: 0xfffff654
     size_bits: 32
     description: Multi-driver Disable Register
     read_allowed: false
@@ -33106,7 +32846,7 @@ modules:
       write_allowed: true
   - !Register
     name: MDSR
-    addr: 0x58
+    addr: 0xfffff658
     size_bits: 32
     description: Multi-driver Status Register
     read_allowed: true
@@ -33338,7 +33078,7 @@ modules:
       write_allowed: false
   - !Register
     name: PUDR
-    addr: 0x60
+    addr: 0xfffff660
     size_bits: 32
     description: Pull-up Disable Register
     read_allowed: false
@@ -33570,7 +33310,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUER
-    addr: 0x64
+    addr: 0xfffff664
     size_bits: 32
     description: Pull-up Enable Register
     read_allowed: false
@@ -33802,7 +33542,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUSR
-    addr: 0x68
+    addr: 0xfffff668
     size_bits: 32
     description: Pad Pull-up Status Register
     read_allowed: true
@@ -34034,7 +33774,7 @@ modules:
       write_allowed: false
   - !Register
     name: ASR
-    addr: 0x70
+    addr: 0xfffff670
     size_bits: 32
     description: Peripheral A Select Register
     read_allowed: false
@@ -34266,7 +34006,7 @@ modules:
       write_allowed: true
   - !Register
     name: BSR
-    addr: 0x74
+    addr: 0xfffff674
     size_bits: 32
     description: Peripheral B Select Register
     read_allowed: false
@@ -34498,7 +34238,7 @@ modules:
       write_allowed: true
   - !Register
     name: ABSR
-    addr: 0x78
+    addr: 0xfffff678
     size_bits: 32
     description: AB Status Register
     read_allowed: true
@@ -34730,7 +34470,7 @@ modules:
       write_allowed: false
   - !Register
     name: OWER
-    addr: 0xa0
+    addr: 0xfffff6a0
     size_bits: 32
     description: Output Write Enable
     read_allowed: false
@@ -34962,7 +34702,7 @@ modules:
       write_allowed: true
   - !Register
     name: OWDR
-    addr: 0xa4
+    addr: 0xfffff6a4
     size_bits: 32
     description: Output Write Disable
     read_allowed: false
@@ -35194,7 +34934,7 @@ modules:
       write_allowed: true
   - !Register
     name: OWSR
-    addr: 0xa8
+    addr: 0xfffff6a8
     size_bits: 32
     description: Output Write Status Register
     read_allowed: true
@@ -35428,11 +35168,11 @@ modules:
   name: PIOC
   description: Parallel Input/Output Controller C
   base_addr: 0xfffff800
-  size: 0x200
+  size: 0xac
   registers:
   - !Register
     name: PER
-    addr: 0x0
+    addr: 0xfffff800
     size_bits: 32
     description: PIO Enable Register
     read_allowed: false
@@ -35664,7 +35404,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDR
-    addr: 0x4
+    addr: 0xfffff804
     size_bits: 32
     description: PIO Disable Register
     read_allowed: false
@@ -35896,7 +35636,7 @@ modules:
       write_allowed: true
   - !Register
     name: PSR
-    addr: 0x8
+    addr: 0xfffff808
     size_bits: 32
     description: PIO Status Register
     read_allowed: true
@@ -36128,7 +35868,7 @@ modules:
       write_allowed: false
   - !Register
     name: OER
-    addr: 0x10
+    addr: 0xfffff810
     size_bits: 32
     description: Output Enable Register
     read_allowed: false
@@ -36360,7 +36100,7 @@ modules:
       write_allowed: true
   - !Register
     name: ODR
-    addr: 0x14
+    addr: 0xfffff814
     size_bits: 32
     description: Output Disable Register
     read_allowed: false
@@ -36592,7 +36332,7 @@ modules:
       write_allowed: true
   - !Register
     name: OSR
-    addr: 0x18
+    addr: 0xfffff818
     size_bits: 32
     description: Output Status Register
     read_allowed: true
@@ -36824,7 +36564,7 @@ modules:
       write_allowed: false
   - !Register
     name: IFER
-    addr: 0x20
+    addr: 0xfffff820
     size_bits: 32
     description: Glitch Input Filter Enable Register
     read_allowed: false
@@ -37056,7 +36796,7 @@ modules:
       write_allowed: true
   - !Register
     name: IFDR
-    addr: 0x24
+    addr: 0xfffff824
     size_bits: 32
     description: Glitch Input Filter Disable Register
     read_allowed: false
@@ -37288,7 +37028,7 @@ modules:
       write_allowed: true
   - !Register
     name: IFSR
-    addr: 0x28
+    addr: 0xfffff828
     size_bits: 32
     description: Glitch Input Filter Status Register
     read_allowed: true
@@ -37520,7 +37260,7 @@ modules:
       write_allowed: false
   - !Register
     name: SODR
-    addr: 0x30
+    addr: 0xfffff830
     size_bits: 32
     description: Set Output Data Register
     read_allowed: false
@@ -37752,7 +37492,7 @@ modules:
       write_allowed: true
   - !Register
     name: CODR
-    addr: 0x34
+    addr: 0xfffff834
     size_bits: 32
     description: Clear Output Data Register
     read_allowed: false
@@ -37984,7 +37724,7 @@ modules:
       write_allowed: true
   - !Register
     name: ODSR
-    addr: 0x38
+    addr: 0xfffff838
     size_bits: 32
     description: Output Data Status Register
     read_allowed: true
@@ -38216,7 +37956,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDSR
-    addr: 0x3c
+    addr: 0xfffff83c
     size_bits: 32
     description: Pin Data Status Register
     read_allowed: true
@@ -38448,7 +38188,7 @@ modules:
       write_allowed: false
   - !Register
     name: IER
-    addr: 0x40
+    addr: 0xfffff840
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -38680,7 +38420,7 @@ modules:
       write_allowed: true
   - !Register
     name: IDR
-    addr: 0x44
+    addr: 0xfffff844
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -38912,7 +38652,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMR
-    addr: 0x48
+    addr: 0xfffff848
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -39144,7 +38884,7 @@ modules:
       write_allowed: false
   - !Register
     name: ISR
-    addr: 0x4c
+    addr: 0xfffff84c
     size_bits: 32
     description: Interrupt Status Register
     read_allowed: true
@@ -39376,7 +39116,7 @@ modules:
       write_allowed: false
   - !Register
     name: MDER
-    addr: 0x50
+    addr: 0xfffff850
     size_bits: 32
     description: Multi-driver Enable Register
     read_allowed: false
@@ -39608,7 +39348,7 @@ modules:
       write_allowed: true
   - !Register
     name: MDDR
-    addr: 0x54
+    addr: 0xfffff854
     size_bits: 32
     description: Multi-driver Disable Register
     read_allowed: false
@@ -39840,7 +39580,7 @@ modules:
       write_allowed: true
   - !Register
     name: MDSR
-    addr: 0x58
+    addr: 0xfffff858
     size_bits: 32
     description: Multi-driver Status Register
     read_allowed: true
@@ -40072,7 +39812,7 @@ modules:
       write_allowed: false
   - !Register
     name: PUDR
-    addr: 0x60
+    addr: 0xfffff860
     size_bits: 32
     description: Pull-up Disable Register
     read_allowed: false
@@ -40304,7 +40044,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUER
-    addr: 0x64
+    addr: 0xfffff864
     size_bits: 32
     description: Pull-up Enable Register
     read_allowed: false
@@ -40536,7 +40276,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUSR
-    addr: 0x68
+    addr: 0xfffff868
     size_bits: 32
     description: Pad Pull-up Status Register
     read_allowed: true
@@ -40768,7 +40508,7 @@ modules:
       write_allowed: false
   - !Register
     name: ASR
-    addr: 0x70
+    addr: 0xfffff870
     size_bits: 32
     description: Peripheral A Select Register
     read_allowed: false
@@ -41000,7 +40740,7 @@ modules:
       write_allowed: true
   - !Register
     name: BSR
-    addr: 0x74
+    addr: 0xfffff874
     size_bits: 32
     description: Peripheral B Select Register
     read_allowed: false
@@ -41232,7 +40972,7 @@ modules:
       write_allowed: true
   - !Register
     name: ABSR
-    addr: 0x78
+    addr: 0xfffff878
     size_bits: 32
     description: AB Status Register
     read_allowed: true
@@ -41464,7 +41204,7 @@ modules:
       write_allowed: false
   - !Register
     name: OWER
-    addr: 0xa0
+    addr: 0xfffff8a0
     size_bits: 32
     description: Output Write Enable
     read_allowed: false
@@ -41696,7 +41436,7 @@ modules:
       write_allowed: true
   - !Register
     name: OWDR
-    addr: 0xa4
+    addr: 0xfffff8a4
     size_bits: 32
     description: Output Write Disable
     read_allowed: false
@@ -41928,7 +41668,7 @@ modules:
       write_allowed: true
   - !Register
     name: OWSR
-    addr: 0xa8
+    addr: 0xfffff8a8
     size_bits: 32
     description: Output Write Status Register
     read_allowed: true
@@ -42162,11 +41902,11 @@ modules:
   name: PMC
   description: Power Management Controller
   base_addr: 0xfffffc00
-  size: 0x200
+  size: 0x84
   registers:
   - !Register
     name: PMC_SCER
-    addr: 0x0
+    addr: 0xfffffc00
     size_bits: 32
     description: System Clock Enable Register
     read_allowed: false
@@ -42229,7 +41969,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_SCDR
-    addr: 0x4
+    addr: 0xfffffc04
     size_bits: 32
     description: System Clock Disable Register
     read_allowed: false
@@ -42299,7 +42039,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_SCSR
-    addr: 0x8
+    addr: 0xfffffc08
     size_bits: 32
     description: System Clock Status Register
     read_allowed: true
@@ -42370,7 +42110,7 @@ modules:
       write_allowed: false
   - !Register
     name: PMC_PCER
-    addr: 0x10
+    addr: 0xfffffc10
     size_bits: 32
     description: Peripheral Clock Enable Register
     read_allowed: false
@@ -42588,7 +42328,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCDR
-    addr: 0x14
+    addr: 0xfffffc14
     size_bits: 32
     description: Peripheral Clock Disable Register
     read_allowed: false
@@ -42806,7 +42546,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCSR
-    addr: 0x18
+    addr: 0xfffffc18
     size_bits: 32
     description: Peripheral Clock Status Register
     read_allowed: true
@@ -43024,7 +42764,7 @@ modules:
       write_allowed: false
   - !Register
     name: CKGR_MOR
-    addr: 0x20
+    addr: 0xfffffc20
     size_bits: 32
     description: Main Oscillator Register
     read_allowed: true
@@ -43053,7 +42793,7 @@ modules:
       write_allowed: true
   - !Register
     name: CKGR_MCFR
-    addr: 0x24
+    addr: 0xfffffc24
     size_bits: 32
     description: Main Clock Frequency Register
     read_allowed: true
@@ -43075,7 +42815,7 @@ modules:
       write_allowed: false
   - !Register
     name: CKGR_PLLAR
-    addr: 0x28
+    addr: 0xfffffc28
     size_bits: 32
     description: PLL A Register
     read_allowed: true
@@ -43118,7 +42858,7 @@ modules:
       write_allowed: true
   - !Register
     name: CKGR_PLLBR
-    addr: 0x2c
+    addr: 0xfffffc2c
     size_bits: 32
     description: PLL B Register
     read_allowed: true
@@ -43162,7 +42902,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_MCKR
-    addr: 0x30
+    addr: 0xfffffc30
     size_bits: 32
     description: Master Clock Register
     read_allowed: true
@@ -43191,7 +42931,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_IER
-    addr: 0x60
+    addr: 0xfffffc60
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: false
@@ -43255,7 +42995,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_IDR
-    addr: 0x64
+    addr: 0xfffffc64
     size_bits: 32
     description: Interrupt Disable Register
     read_allowed: false
@@ -43319,7 +43059,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_SR
-    addr: 0x68
+    addr: 0xfffffc68
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -43384,7 +43124,7 @@ modules:
       write_allowed: false
   - !Register
     name: PMC_IMR
-    addr: 0x6c
+    addr: 0xfffffc6c
     size_bits: 32
     description: Interrupt Mask Register
     read_allowed: true
@@ -43448,7 +43188,7 @@ modules:
       write_allowed: false
   - !Register
     name: PMC_PLLICPR
-    addr: 0x80
+    addr: 0xfffffc80
     size_bits: 32
     description: Charge Pump Current Register
     read_allowed: false
@@ -43470,7 +43210,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[0]
-    addr: 0x40
+    addr: 0xfffffc40
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43492,7 +43232,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[1]
-    addr: 0x44
+    addr: 0xfffffc44
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43514,7 +43254,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[2]
-    addr: 0x48
+    addr: 0xfffffc48
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43536,7 +43276,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[3]
-    addr: 0x4c
+    addr: 0xfffffc4c
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43558,7 +43298,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[4]
-    addr: 0x50
+    addr: 0xfffffc50
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43580,7 +43320,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[5]
-    addr: 0x54
+    addr: 0xfffffc54
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43602,7 +43342,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[6]
-    addr: 0x58
+    addr: 0xfffffc58
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43624,7 +43364,7 @@ modules:
       write_allowed: true
   - !Register
     name: PMC_PCK[7]
-    addr: 0x5c
+    addr: 0xfffffc5c
     size_bits: 32
     description: Programmable Clock 0 Register
     read_allowed: true
@@ -43648,11 +43388,11 @@ modules:
   name: RSTC
   description: Reset Controller
   base_addr: 0xfffffd00
-  size: 0x200
+  size: 0xc
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffffd00
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -43688,7 +43428,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x4
+    addr: 0xfffffd04
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -43725,7 +43465,7 @@ modules:
       write_allowed: false
   - !Register
     name: MR
-    addr: 0x8
+    addr: 0xfffffd08
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -43763,11 +43503,11 @@ modules:
   name: SHDWC
   description: Shutdown Controller
   base_addr: 0xfffffd10
-  size: 0x200
+  size: 0xc
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffffd10
     size_bits: 32
     description: Shutdown Control Register
     read_allowed: false
@@ -43789,7 +43529,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffffd14
     size_bits: 32
     description: Shutdown Mode Register
     read_allowed: true
@@ -43819,7 +43559,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x8
+    addr: 0xfffffd18
     size_bits: 32
     description: Shutdown Status Register
     read_allowed: true
@@ -43843,11 +43583,11 @@ modules:
   name: RTT
   description: Real-time Timer
   base_addr: 0xfffffd20
-  size: 0x200
+  size: 0x10
   registers:
   - !Register
     name: MR
-    addr: 0x0
+    addr: 0xfffffd20
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -43884,7 +43624,7 @@ modules:
       write_allowed: true
   - !Register
     name: AR
-    addr: 0x4
+    addr: 0xfffffd24
     size_bits: 32
     description: Alarm Register
     read_allowed: true
@@ -43900,7 +43640,7 @@ modules:
       write_allowed: true
   - !Register
     name: VR
-    addr: 0x8
+    addr: 0xfffffd28
     size_bits: 32
     description: Value Register
     read_allowed: true
@@ -43915,7 +43655,7 @@ modules:
       write_allowed: false
   - !Register
     name: SR
-    addr: 0xc
+    addr: 0xfffffd2c
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -43939,11 +43679,11 @@ modules:
   name: PIT
   description: Periodic Interval Timer
   base_addr: 0xfffffd30
-  size: 0x200
+  size: 0x10
   registers:
   - !Register
     name: MR
-    addr: 0x0
+    addr: 0xfffffd30
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -43973,7 +43713,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x4
+    addr: 0xfffffd34
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -43988,7 +43728,7 @@ modules:
       write_allowed: false
   - !Register
     name: PIVR
-    addr: 0x8
+    addr: 0xfffffd38
     size_bits: 32
     description: Periodic Interval Value Register
     read_allowed: true
@@ -44010,7 +43750,7 @@ modules:
       write_allowed: false
   - !Register
     name: PIIR
-    addr: 0xc
+    addr: 0xfffffd3c
     size_bits: 32
     description: Periodic Interval Image Register
     read_allowed: true
@@ -44034,11 +43774,11 @@ modules:
   name: WDT
   description: Watchdog Timer
   base_addr: 0xfffffd40
-  size: 0x200
+  size: 0xc
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0xfffffd40
     size_bits: 32
     description: Control Register
     read_allowed: false
@@ -44060,7 +43800,7 @@ modules:
       write_allowed: true
   - !Register
     name: MR
-    addr: 0x4
+    addr: 0xfffffd44
     size_bits: 32
     description: Mode Register
     read_allowed: true
@@ -44125,7 +43865,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR
-    addr: 0x8
+    addr: 0xfffffd48
     size_bits: 32
     description: Status Register
     read_allowed: true
@@ -44149,11 +43889,11 @@ modules:
   name: GPBR
   description: General Purpose Backup Register
   base_addr: 0xfffffd50
-  size: 0x200
+  size: 0x10
   registers:
   - !Register
     name: GPBR0
-    addr: 0x0
+    addr: 0xfffffd50
     size_bits: 32
     description: General Purpose Backup Register 0
     read_allowed: true
@@ -44168,7 +43908,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPBR1
-    addr: 0x4
+    addr: 0xfffffd54
     size_bits: 32
     description: General Purpose Backup Register 1
     read_allowed: true
@@ -44183,7 +43923,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPBR2
-    addr: 0x8
+    addr: 0xfffffd58
     size_bits: 32
     description: General Purpose Backup Register 2
     read_allowed: true
@@ -44198,7 +43938,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPBR3
-    addr: 0xc
+    addr: 0xfffffd5c
     size_bits: 32
     description: General Purpose Backup Register 3
     read_allowed: true

@@ -13,7 +13,7 @@ modules:
   registers:
   - !Register
     name: BACKKEY3
-    addr: 0x0
+    addr: 0x400
     size_bits: 8
     description: Backdoor Comparison Key 3.
     read_allowed: true
@@ -29,7 +29,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY2
-    addr: 0x1
+    addr: 0x401
     size_bits: 8
     description: Backdoor Comparison Key 2.
     read_allowed: true
@@ -45,7 +45,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY1
-    addr: 0x2
+    addr: 0x402
     size_bits: 8
     description: Backdoor Comparison Key 1.
     read_allowed: true
@@ -61,7 +61,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY0
-    addr: 0x3
+    addr: 0x403
     size_bits: 8
     description: Backdoor Comparison Key 0.
     read_allowed: true
@@ -77,7 +77,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY7
-    addr: 0x4
+    addr: 0x404
     size_bits: 8
     description: Backdoor Comparison Key 7.
     read_allowed: true
@@ -93,7 +93,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY6
-    addr: 0x5
+    addr: 0x405
     size_bits: 8
     description: Backdoor Comparison Key 6.
     read_allowed: true
@@ -109,7 +109,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY5
-    addr: 0x6
+    addr: 0x406
     size_bits: 8
     description: Backdoor Comparison Key 5.
     read_allowed: true
@@ -125,7 +125,7 @@ modules:
       write_allowed: false
   - !Register
     name: BACKKEY4
-    addr: 0x7
+    addr: 0x407
     size_bits: 8
     description: Backdoor Comparison Key 4.
     read_allowed: true
@@ -141,7 +141,7 @@ modules:
       write_allowed: false
   - !Register
     name: FPROT3
-    addr: 0x8
+    addr: 0x408
     size_bits: 8
     description: Non-volatile P-Flash Protection 1 - Low Register
     read_allowed: true
@@ -157,7 +157,7 @@ modules:
       write_allowed: false
   - !Register
     name: FPROT2
-    addr: 0x9
+    addr: 0x409
     size_bits: 8
     description: Non-volatile P-Flash Protection 1 - High Register
     read_allowed: true
@@ -173,7 +173,7 @@ modules:
       write_allowed: false
   - !Register
     name: FPROT1
-    addr: 0xa
+    addr: 0x40a
     size_bits: 8
     description: Non-volatile P-Flash Protection 0 - Low Register
     read_allowed: true
@@ -189,7 +189,7 @@ modules:
       write_allowed: false
   - !Register
     name: FPROT0
-    addr: 0xb
+    addr: 0x40b
     size_bits: 8
     description: Non-volatile P-Flash Protection 0 - High Register
     read_allowed: true
@@ -205,7 +205,7 @@ modules:
       write_allowed: false
   - !Register
     name: FSEC
-    addr: 0xc
+    addr: 0x40c
     size_bits: 8
     description: Non-volatile Flash Security Register
     read_allowed: true
@@ -254,7 +254,7 @@ modules:
         3: '11'
   - !Register
     name: FOPT
-    addr: 0xd
+    addr: 0x40d
     size_bits: 8
     description: Non-volatile Flash Option Register
     read_allowed: true
@@ -336,11 +336,11 @@ modules:
   name: DMA
   description: DMA Controller
   base_addr: 0x40008000
-  size: 0x40
+  size: 0x140
   registers:
   - !Register
     name: SAR0
-    addr: 0x100
+    addr: 0x40008100
     size_bits: 32
     description: Source Address Register
     read_allowed: true
@@ -355,7 +355,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAR0
-    addr: 0x104
+    addr: 0x40008104
     size_bits: 32
     description: Destination Address Register
     read_allowed: true
@@ -370,7 +370,7 @@ modules:
       write_allowed: true
   - !Register
     name: DSR_BCR0
-    addr: 0x108
+    addr: 0x40008108
     size_bits: 32
     description: DMA Status Register / Byte Count Register
     read_allowed: true
@@ -445,15 +445,14 @@ modules:
         1: '1'
   - !Register
     name: DSR0
-    addr: 0x10b
+    addr: 0x4000810b
     size_bits: 8
     description: DMA_DSR0 register.
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: DCR0
-    addr: 0x10c
+    addr: 0x4000810c
     size_bits: 32
     description: DMA Control Register
     read_allowed: true
@@ -659,7 +658,7 @@ modules:
         1: '1'
   - !Register
     name: SAR1
-    addr: 0x110
+    addr: 0x40008110
     size_bits: 32
     description: Source Address Register
     read_allowed: true
@@ -674,7 +673,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAR1
-    addr: 0x114
+    addr: 0x40008114
     size_bits: 32
     description: Destination Address Register
     read_allowed: true
@@ -689,7 +688,7 @@ modules:
       write_allowed: true
   - !Register
     name: DSR_BCR1
-    addr: 0x118
+    addr: 0x40008118
     size_bits: 32
     description: DMA Status Register / Byte Count Register
     read_allowed: true
@@ -764,15 +763,14 @@ modules:
         1: '1'
   - !Register
     name: DSR1
-    addr: 0x11b
+    addr: 0x4000811b
     size_bits: 8
     description: DMA_DSR1 register.
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: DCR1
-    addr: 0x11c
+    addr: 0x4000811c
     size_bits: 32
     description: DMA Control Register
     read_allowed: true
@@ -978,7 +976,7 @@ modules:
         1: '1'
   - !Register
     name: SAR2
-    addr: 0x120
+    addr: 0x40008120
     size_bits: 32
     description: Source Address Register
     read_allowed: true
@@ -993,7 +991,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAR2
-    addr: 0x124
+    addr: 0x40008124
     size_bits: 32
     description: Destination Address Register
     read_allowed: true
@@ -1008,7 +1006,7 @@ modules:
       write_allowed: true
   - !Register
     name: DSR_BCR2
-    addr: 0x128
+    addr: 0x40008128
     size_bits: 32
     description: DMA Status Register / Byte Count Register
     read_allowed: true
@@ -1083,15 +1081,14 @@ modules:
         1: '1'
   - !Register
     name: DSR2
-    addr: 0x12b
+    addr: 0x4000812b
     size_bits: 8
     description: DMA_DSR2 register.
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: DCR2
-    addr: 0x12c
+    addr: 0x4000812c
     size_bits: 32
     description: DMA Control Register
     read_allowed: true
@@ -1297,7 +1294,7 @@ modules:
         1: '1'
   - !Register
     name: SAR3
-    addr: 0x130
+    addr: 0x40008130
     size_bits: 32
     description: Source Address Register
     read_allowed: true
@@ -1312,7 +1309,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAR3
-    addr: 0x134
+    addr: 0x40008134
     size_bits: 32
     description: Destination Address Register
     read_allowed: true
@@ -1327,7 +1324,7 @@ modules:
       write_allowed: true
   - !Register
     name: DSR_BCR3
-    addr: 0x138
+    addr: 0x40008138
     size_bits: 32
     description: DMA Status Register / Byte Count Register
     read_allowed: true
@@ -1402,15 +1399,14 @@ modules:
         1: '1'
   - !Register
     name: DSR3
-    addr: 0x13b
+    addr: 0x4000813b
     size_bits: 8
     description: DMA_DSR3 register.
     read_allowed: true
     write_allowed: true
-    fields: []
   - !Register
     name: DCR3
-    addr: 0x13c
+    addr: 0x4000813c
     size_bits: 32
     description: DMA Control Register
     read_allowed: true
@@ -1622,7 +1618,7 @@ modules:
   registers:
   - !Register
     name: FSTAT
-    addr: 0x0
+    addr: 0x40020000
     size_bits: 8
     description: Flash Status Register
     read_allowed: true
@@ -1677,7 +1673,7 @@ modules:
         1: '1'
   - !Register
     name: FCNFG
-    addr: 0x1
+    addr: 0x40020001
     size_bits: 8
     description: Flash Configuration Register
     read_allowed: true
@@ -1725,7 +1721,7 @@ modules:
         1: '1'
   - !Register
     name: FSEC
-    addr: 0x2
+    addr: 0x40020002
     size_bits: 8
     description: Flash Security Register
     read_allowed: true
@@ -1781,7 +1777,7 @@ modules:
         3: '11'
   - !Register
     name: FOPT
-    addr: 0x3
+    addr: 0x40020003
     size_bits: 8
     description: Flash Option Register
     read_allowed: true
@@ -1796,7 +1792,7 @@ modules:
       write_allowed: false
   - !Register
     name: FCCOB3
-    addr: 0x4
+    addr: 0x40020004
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1812,7 +1808,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB2
-    addr: 0x5
+    addr: 0x40020005
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1828,7 +1824,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB1
-    addr: 0x6
+    addr: 0x40020006
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1844,7 +1840,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB0
-    addr: 0x7
+    addr: 0x40020007
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1860,7 +1856,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB7
-    addr: 0x8
+    addr: 0x40020008
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1876,7 +1872,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB6
-    addr: 0x9
+    addr: 0x40020009
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1892,7 +1888,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB5
-    addr: 0xa
+    addr: 0x4002000a
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1908,7 +1904,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB4
-    addr: 0xb
+    addr: 0x4002000b
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1924,7 +1920,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOBB
-    addr: 0xc
+    addr: 0x4002000c
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1940,7 +1936,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOBA
-    addr: 0xd
+    addr: 0x4002000d
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1956,7 +1952,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB9
-    addr: 0xe
+    addr: 0x4002000e
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1972,7 +1968,7 @@ modules:
       write_allowed: true
   - !Register
     name: FCCOB8
-    addr: 0xf
+    addr: 0x4002000f
     size_bits: 8
     description: Flash Common Command Object Registers
     read_allowed: true
@@ -1988,7 +1984,7 @@ modules:
       write_allowed: true
   - !Register
     name: FPROT3
-    addr: 0x10
+    addr: 0x40020010
     size_bits: 8
     description: Program Flash Protection Registers
     read_allowed: true
@@ -2006,7 +2002,7 @@ modules:
         1: '1'
   - !Register
     name: FPROT2
-    addr: 0x11
+    addr: 0x40020011
     size_bits: 8
     description: Program Flash Protection Registers
     read_allowed: true
@@ -2024,7 +2020,7 @@ modules:
         1: '1'
   - !Register
     name: FPROT1
-    addr: 0x12
+    addr: 0x40020012
     size_bits: 8
     description: Program Flash Protection Registers
     read_allowed: true
@@ -2042,7 +2038,7 @@ modules:
         1: '1'
   - !Register
     name: FPROT0
-    addr: 0x13
+    addr: 0x40020013
     size_bits: 8
     description: Program Flash Protection Registers
     read_allowed: true
@@ -2066,7 +2062,7 @@ modules:
   registers:
   - !Register
     name: CHCFG0
-    addr: 0x0
+    addr: 0x40021000
     size_bits: 8
     description: Channel Configuration register
     read_allowed: true
@@ -2144,7 +2140,7 @@ modules:
         1: '1'
   - !Register
     name: CHCFG1
-    addr: 0x1
+    addr: 0x40021001
     size_bits: 8
     description: Channel Configuration register
     read_allowed: true
@@ -2222,7 +2218,7 @@ modules:
         1: '1'
   - !Register
     name: CHCFG2
-    addr: 0x2
+    addr: 0x40021002
     size_bits: 8
     description: Channel Configuration register
     read_allowed: true
@@ -2300,7 +2296,7 @@ modules:
         1: '1'
   - !Register
     name: CHCFG3
-    addr: 0x3
+    addr: 0x40021003
     size_bits: 8
     description: Channel Configuration register
     read_allowed: true
@@ -2384,7 +2380,7 @@ modules:
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x40032000
     size_bits: 32
     description: CRC Data register
     read_allowed: true
@@ -2421,7 +2417,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATAL
-    addr: 0x0
+    addr: 0x40032000
     size_bits: 16
     description: CRC_DATAL register.
     read_allowed: true
@@ -2437,7 +2433,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATALL
-    addr: 0x0
+    addr: 0x40032000
     size_bits: 8
     description: CRC_DATALL register.
     read_allowed: true
@@ -2453,7 +2449,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATALU
-    addr: 0x1
+    addr: 0x40032001
     size_bits: 8
     description: CRC_DATALU register.
     read_allowed: true
@@ -2469,7 +2465,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATAH
-    addr: 0x2
+    addr: 0x40032002
     size_bits: 16
     description: CRC_DATAH register.
     read_allowed: true
@@ -2485,7 +2481,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATAHL
-    addr: 0x2
+    addr: 0x40032002
     size_bits: 8
     description: CRC_DATAHL register.
     read_allowed: true
@@ -2501,7 +2497,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATAHU
-    addr: 0x3
+    addr: 0x40032003
     size_bits: 8
     description: CRC_DATAHU register.
     read_allowed: true
@@ -2517,7 +2513,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLY
-    addr: 0x4
+    addr: 0x40032004
     size_bits: 32
     description: CRC Polynomial register
     read_allowed: true
@@ -2540,7 +2536,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLYL
-    addr: 0x4
+    addr: 0x40032004
     size_bits: 16
     description: CRC_GPOLYL register.
     read_allowed: true
@@ -2557,7 +2553,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLYLL
-    addr: 0x4
+    addr: 0x40032004
     size_bits: 8
     description: CRC_GPOLYLL register.
     read_allowed: true
@@ -2573,7 +2569,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLYLU
-    addr: 0x5
+    addr: 0x40032005
     size_bits: 8
     description: CRC_GPOLYLU register.
     read_allowed: true
@@ -2589,7 +2585,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLYH
-    addr: 0x6
+    addr: 0x40032006
     size_bits: 16
     description: CRC_GPOLYH register.
     read_allowed: true
@@ -2605,7 +2601,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLYHL
-    addr: 0x6
+    addr: 0x40032006
     size_bits: 8
     description: CRC_GPOLYHL register.
     read_allowed: true
@@ -2621,7 +2617,7 @@ modules:
       write_allowed: true
   - !Register
     name: GPOLYHU
-    addr: 0x7
+    addr: 0x40032007
     size_bits: 8
     description: CRC_GPOLYHU register.
     read_allowed: true
@@ -2637,7 +2633,7 @@ modules:
       write_allowed: true
   - !Register
     name: CTRL
-    addr: 0x8
+    addr: 0x40032008
     size_bits: 32
     description: CRC Control register
     read_allowed: true
@@ -2699,7 +2695,7 @@ modules:
         3: '11'
   - !Register
     name: CTRLHU
-    addr: 0xb
+    addr: 0x4003200b
     size_bits: 8
     description: CRC_CTRLHU register.
     read_allowed: true
@@ -2767,7 +2763,7 @@ modules:
   registers:
   - !Register
     name: MCR
-    addr: 0x0
+    addr: 0x40037000
     size_bits: 32
     description: PIT Module Control Register
     read_allowed: true
@@ -2796,7 +2792,7 @@ modules:
         1: '1'
   - !Register
     name: LTMR64H
-    addr: 0xe0
+    addr: 0x400370e0
     size_bits: 32
     description: PIT Upper Lifetime Timer Register
     read_allowed: true
@@ -2811,7 +2807,7 @@ modules:
       write_allowed: false
   - !Register
     name: LTMR64L
-    addr: 0xe4
+    addr: 0x400370e4
     size_bits: 32
     description: PIT Lower Lifetime Timer Register
     read_allowed: true
@@ -2826,7 +2822,7 @@ modules:
       write_allowed: false
   - !Register
     name: LDVAL0
-    addr: 0x100
+    addr: 0x40037100
     size_bits: 32
     description: Timer Load Value Register
     read_allowed: true
@@ -2841,7 +2837,7 @@ modules:
       write_allowed: true
   - !Register
     name: LDVAL1
-    addr: 0x110
+    addr: 0x40037110
     size_bits: 32
     description: Timer Load Value Register
     read_allowed: true
@@ -2856,7 +2852,7 @@ modules:
       write_allowed: true
   - !Register
     name: CVAL0
-    addr: 0x104
+    addr: 0x40037104
     size_bits: 32
     description: Current Timer Value Register
     read_allowed: true
@@ -2871,7 +2867,7 @@ modules:
       write_allowed: false
   - !Register
     name: CVAL1
-    addr: 0x114
+    addr: 0x40037114
     size_bits: 32
     description: Current Timer Value Register
     read_allowed: true
@@ -2886,7 +2882,7 @@ modules:
       write_allowed: false
   - !Register
     name: TCTRL0
-    addr: 0x108
+    addr: 0x40037108
     size_bits: 32
     description: Timer Control Register
     read_allowed: true
@@ -2924,7 +2920,7 @@ modules:
         1: '1'
   - !Register
     name: TCTRL1
-    addr: 0x118
+    addr: 0x40037118
     size_bits: 32
     description: Timer Control Register
     read_allowed: true
@@ -2962,7 +2958,7 @@ modules:
         1: '1'
   - !Register
     name: TFLG0
-    addr: 0x10c
+    addr: 0x4003710c
     size_bits: 32
     description: Timer Flag Register
     read_allowed: true
@@ -2980,7 +2976,7 @@ modules:
         1: '1'
   - !Register
     name: TFLG1
-    addr: 0x11c
+    addr: 0x4003711c
     size_bits: 32
     description: Timer Flag Register
     read_allowed: true
@@ -3004,7 +3000,7 @@ modules:
   registers:
   - !Register
     name: SC
-    addr: 0x0
+    addr: 0x40038000
     size_bits: 32
     description: Status and Control
     read_allowed: true
@@ -3079,7 +3075,7 @@ modules:
         1: '1'
   - !Register
     name: CNT
-    addr: 0x4
+    addr: 0x40038004
     size_bits: 32
     description: Counter
     read_allowed: true
@@ -3094,7 +3090,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0x8
+    addr: 0x40038008
     size_bits: 32
     description: Modulo
     read_allowed: true
@@ -3110,7 +3106,7 @@ modules:
       write_allowed: true
   - !Register
     name: STATUS
-    addr: 0x50
+    addr: 0x40038050
     size_bits: 32
     description: Capture and Compare Status
     read_allowed: true
@@ -3188,7 +3184,7 @@ modules:
         1: '1'
   - !Register
     name: POL
-    addr: 0x70
+    addr: 0x40038070
     size_bits: 32
     description: Channel Polarity
     read_allowed: true
@@ -3256,7 +3252,7 @@ modules:
         1: '1'
   - !Register
     name: CONF
-    addr: 0x84
+    addr: 0x40038084
     size_bits: 32
     description: Configuration
     read_allowed: true
@@ -3384,7 +3380,7 @@ modules:
         15: '1111'
   - !Register
     name: C0SC
-    addr: 0xc
+    addr: 0x4003800c
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -3450,7 +3446,7 @@ modules:
         1: '1'
   - !Register
     name: C1SC
-    addr: 0x14
+    addr: 0x40038014
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -3516,7 +3512,7 @@ modules:
         1: '1'
   - !Register
     name: C2SC
-    addr: 0x1c
+    addr: 0x4003801c
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -3582,7 +3578,7 @@ modules:
         1: '1'
   - !Register
     name: C3SC
-    addr: 0x24
+    addr: 0x40038024
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -3648,7 +3644,7 @@ modules:
         1: '1'
   - !Register
     name: C4SC
-    addr: 0x2c
+    addr: 0x4003802c
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -3714,7 +3710,7 @@ modules:
         1: '1'
   - !Register
     name: C5SC
-    addr: 0x34
+    addr: 0x40038034
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -3780,7 +3776,7 @@ modules:
         1: '1'
   - !Register
     name: C0V
-    addr: 0x10
+    addr: 0x40038010
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -3795,7 +3791,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1V
-    addr: 0x18
+    addr: 0x40038018
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -3810,7 +3806,7 @@ modules:
       write_allowed: true
   - !Register
     name: C2V
-    addr: 0x20
+    addr: 0x40038020
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -3825,7 +3821,7 @@ modules:
       write_allowed: true
   - !Register
     name: C3V
-    addr: 0x28
+    addr: 0x40038028
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -3840,7 +3836,7 @@ modules:
       write_allowed: true
   - !Register
     name: C4V
-    addr: 0x30
+    addr: 0x40038030
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -3855,7 +3851,7 @@ modules:
       write_allowed: true
   - !Register
     name: C5V
-    addr: 0x38
+    addr: 0x40038038
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -3876,7 +3872,7 @@ modules:
   registers:
   - !Register
     name: SC
-    addr: 0x0
+    addr: 0x40039000
     size_bits: 32
     description: Status and Control
     read_allowed: true
@@ -3951,7 +3947,7 @@ modules:
         1: '1'
   - !Register
     name: CNT
-    addr: 0x4
+    addr: 0x40039004
     size_bits: 32
     description: Counter
     read_allowed: true
@@ -3966,7 +3962,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0x8
+    addr: 0x40039008
     size_bits: 32
     description: Modulo
     read_allowed: true
@@ -3982,7 +3978,7 @@ modules:
       write_allowed: true
   - !Register
     name: STATUS
-    addr: 0x50
+    addr: 0x40039050
     size_bits: 32
     description: Capture and Compare Status
     read_allowed: true
@@ -4060,7 +4056,7 @@ modules:
         1: '1'
   - !Register
     name: POL
-    addr: 0x70
+    addr: 0x40039070
     size_bits: 32
     description: Channel Polarity
     read_allowed: true
@@ -4128,7 +4124,7 @@ modules:
         1: '1'
   - !Register
     name: CONF
-    addr: 0x84
+    addr: 0x40039084
     size_bits: 32
     description: Configuration
     read_allowed: true
@@ -4256,7 +4252,7 @@ modules:
         15: '1111'
   - !Register
     name: C0SC
-    addr: 0xc
+    addr: 0x4003900c
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -4322,7 +4318,7 @@ modules:
         1: '1'
   - !Register
     name: C1SC
-    addr: 0x14
+    addr: 0x40039014
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -4388,7 +4384,7 @@ modules:
         1: '1'
   - !Register
     name: C0V
-    addr: 0x10
+    addr: 0x40039010
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -4403,7 +4399,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1V
-    addr: 0x18
+    addr: 0x40039018
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -4424,7 +4420,7 @@ modules:
   registers:
   - !Register
     name: SC
-    addr: 0x0
+    addr: 0x4003a000
     size_bits: 32
     description: Status and Control
     read_allowed: true
@@ -4499,7 +4495,7 @@ modules:
         1: '1'
   - !Register
     name: CNT
-    addr: 0x4
+    addr: 0x4003a004
     size_bits: 32
     description: Counter
     read_allowed: true
@@ -4514,7 +4510,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0x8
+    addr: 0x4003a008
     size_bits: 32
     description: Modulo
     read_allowed: true
@@ -4530,7 +4526,7 @@ modules:
       write_allowed: true
   - !Register
     name: STATUS
-    addr: 0x50
+    addr: 0x4003a050
     size_bits: 32
     description: Capture and Compare Status
     read_allowed: true
@@ -4608,7 +4604,7 @@ modules:
         1: '1'
   - !Register
     name: POL
-    addr: 0x70
+    addr: 0x4003a070
     size_bits: 32
     description: Channel Polarity
     read_allowed: true
@@ -4676,7 +4672,7 @@ modules:
         1: '1'
   - !Register
     name: CONF
-    addr: 0x84
+    addr: 0x4003a084
     size_bits: 32
     description: Configuration
     read_allowed: true
@@ -4804,7 +4800,7 @@ modules:
         15: '1111'
   - !Register
     name: C0SC
-    addr: 0xc
+    addr: 0x4003a00c
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -4870,7 +4866,7 @@ modules:
         1: '1'
   - !Register
     name: C1SC
-    addr: 0x14
+    addr: 0x4003a014
     size_bits: 32
     description: Channel (n) Status and Control
     read_allowed: true
@@ -4936,7 +4932,7 @@ modules:
         1: '1'
   - !Register
     name: C0V
-    addr: 0x10
+    addr: 0x4003a010
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -4951,7 +4947,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1V
-    addr: 0x18
+    addr: 0x4003a018
     size_bits: 32
     description: Channel (n) Value
     read_allowed: true
@@ -4972,7 +4968,7 @@ modules:
   registers:
   - !Register
     name: CFG1
-    addr: 0x8
+    addr: 0x4003b008
     size_bits: 32
     description: ADC Configuration Register 1
     read_allowed: true
@@ -5036,7 +5032,7 @@ modules:
         1: '1'
   - !Register
     name: CFG2
-    addr: 0xc
+    addr: 0x4003b00c
     size_bits: 32
     description: ADC Configuration Register 2
     read_allowed: true
@@ -5086,7 +5082,7 @@ modules:
         1: '1'
   - !Register
     name: SC2
-    addr: 0x20
+    addr: 0x4003b020
     size_bits: 32
     description: Status and Control Register 2
     read_allowed: true
@@ -5164,7 +5160,7 @@ modules:
         1: '1'
   - !Register
     name: SC3
-    addr: 0x24
+    addr: 0x4003b024
     size_bits: 32
     description: Status and Control Register 3
     read_allowed: true
@@ -5221,7 +5217,7 @@ modules:
       write_allowed: true
   - !Register
     name: OFS
-    addr: 0x28
+    addr: 0x4003b028
     size_bits: 32
     description: ADC Offset Correction Register
     read_allowed: true
@@ -5237,7 +5233,7 @@ modules:
       write_allowed: true
   - !Register
     name: PG
-    addr: 0x2c
+    addr: 0x4003b02c
     size_bits: 32
     description: ADC Plus-Side Gain Register
     read_allowed: true
@@ -5253,7 +5249,7 @@ modules:
       write_allowed: true
   - !Register
     name: MG
-    addr: 0x30
+    addr: 0x4003b030
     size_bits: 32
     description: ADC Minus-Side Gain Register
     read_allowed: true
@@ -5269,7 +5265,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLPD
-    addr: 0x34
+    addr: 0x4003b034
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5285,7 +5281,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLPS
-    addr: 0x38
+    addr: 0x4003b038
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5301,7 +5297,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLP4
-    addr: 0x3c
+    addr: 0x4003b03c
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5317,7 +5313,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLP3
-    addr: 0x40
+    addr: 0x4003b040
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5333,7 +5329,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLP2
-    addr: 0x44
+    addr: 0x4003b044
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5349,7 +5345,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLP1
-    addr: 0x48
+    addr: 0x4003b048
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5365,7 +5361,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLP0
-    addr: 0x4c
+    addr: 0x4003b04c
     size_bits: 32
     description: ADC Plus-Side General Calibration Value Register
     read_allowed: true
@@ -5381,7 +5377,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLMD
-    addr: 0x54
+    addr: 0x4003b054
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5397,7 +5393,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLMS
-    addr: 0x58
+    addr: 0x4003b058
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5413,7 +5409,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLM4
-    addr: 0x5c
+    addr: 0x4003b05c
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5429,7 +5425,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLM3
-    addr: 0x60
+    addr: 0x4003b060
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5445,7 +5441,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLM2
-    addr: 0x64
+    addr: 0x4003b064
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5461,7 +5457,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLM1
-    addr: 0x68
+    addr: 0x4003b068
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5477,7 +5473,7 @@ modules:
       write_allowed: true
   - !Register
     name: CLM0
-    addr: 0x6c
+    addr: 0x4003b06c
     size_bits: 32
     description: ADC Minus-Side General Calibration Value Register
     read_allowed: true
@@ -5493,7 +5489,7 @@ modules:
       write_allowed: true
   - !Register
     name: SC1A
-    addr: 0x0
+    addr: 0x4003b000
     size_bits: 32
     description: ADC Status and Control Registers 1
     read_allowed: true
@@ -5569,7 +5565,7 @@ modules:
         1: '1'
   - !Register
     name: SC1B
-    addr: 0x4
+    addr: 0x4003b004
     size_bits: 32
     description: ADC Status and Control Registers 1
     read_allowed: true
@@ -5645,7 +5641,7 @@ modules:
         1: '1'
   - !Register
     name: RA
-    addr: 0x10
+    addr: 0x4003b010
     size_bits: 32
     description: ADC Data Result Register
     read_allowed: true
@@ -5660,7 +5656,7 @@ modules:
       write_allowed: false
   - !Register
     name: RB
-    addr: 0x14
+    addr: 0x4003b014
     size_bits: 32
     description: ADC Data Result Register
     read_allowed: true
@@ -5675,7 +5671,7 @@ modules:
       write_allowed: false
   - !Register
     name: CV1
-    addr: 0x18
+    addr: 0x4003b018
     size_bits: 32
     description: Compare Value Registers
     read_allowed: true
@@ -5690,7 +5686,7 @@ modules:
       write_allowed: true
   - !Register
     name: CV2
-    addr: 0x1c
+    addr: 0x4003b01c
     size_bits: 32
     description: Compare Value Registers
     read_allowed: true
@@ -5711,7 +5707,7 @@ modules:
   registers:
   - !Register
     name: TSR
-    addr: 0x0
+    addr: 0x4003d000
     size_bits: 32
     description: RTC Time Seconds Register
     read_allowed: true
@@ -5726,7 +5722,7 @@ modules:
       write_allowed: true
   - !Register
     name: TPR
-    addr: 0x4
+    addr: 0x4003d004
     size_bits: 32
     description: RTC Time Prescaler Register
     read_allowed: true
@@ -5741,7 +5737,7 @@ modules:
       write_allowed: true
   - !Register
     name: TAR
-    addr: 0x8
+    addr: 0x4003d008
     size_bits: 32
     description: RTC Time Alarm Register
     read_allowed: true
@@ -5756,7 +5752,7 @@ modules:
       write_allowed: true
   - !Register
     name: TCR
-    addr: 0xc
+    addr: 0x4003d00c
     size_bits: 32
     description: RTC Time Compensation Register
     read_allowed: true
@@ -5798,7 +5794,7 @@ modules:
       write_allowed: false
   - !Register
     name: CR
-    addr: 0x10
+    addr: 0x4003d010
     size_bits: 32
     description: RTC Control Register
     read_allowed: true
@@ -5916,7 +5912,7 @@ modules:
         1: '1'
   - !Register
     name: SR
-    addr: 0x14
+    addr: 0x4003d014
     size_bits: 32
     description: RTC Status Register
     read_allowed: true
@@ -5965,7 +5961,7 @@ modules:
         1: '1'
   - !Register
     name: LR
-    addr: 0x18
+    addr: 0x4003d018
     size_bits: 32
     description: RTC Lock Register
     read_allowed: true
@@ -6014,7 +6010,7 @@ modules:
         1: '1'
   - !Register
     name: IER
-    addr: 0x1c
+    addr: 0x4003d01c
     size_bits: 32
     description: RTC Interrupt Enable Register
     read_allowed: true
@@ -6079,7 +6075,7 @@ modules:
   registers:
   - !Register
     name: SR
-    addr: 0x20
+    addr: 0x4003f020
     size_bits: 8
     description: DAC Status Register
     read_allowed: true
@@ -6108,7 +6104,7 @@ modules:
         1: '1'
   - !Register
     name: C0
-    addr: 0x21
+    addr: 0x4003f021
     size_bits: 8
     description: DAC Control Register
     read_allowed: true
@@ -6186,7 +6182,7 @@ modules:
         1: '1'
   - !Register
     name: C1
-    addr: 0x22
+    addr: 0x4003f022
     size_bits: 8
     description: DAC Control Register 1
     read_allowed: true
@@ -6225,7 +6221,7 @@ modules:
         1: '1'
   - !Register
     name: C2
-    addr: 0x23
+    addr: 0x4003f023
     size_bits: 8
     description: DAC Control Register 2
     read_allowed: true
@@ -6248,7 +6244,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAT0L
-    addr: 0x0
+    addr: 0x4003f000
     size_bits: 8
     description: DAC Data Low Register
     read_allowed: true
@@ -6263,7 +6259,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAT1L
-    addr: 0x2
+    addr: 0x4003f002
     size_bits: 8
     description: DAC Data Low Register
     read_allowed: true
@@ -6278,7 +6274,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAT0H
-    addr: 0x1
+    addr: 0x4003f001
     size_bits: 8
     description: DAC Data High Register
     read_allowed: true
@@ -6293,7 +6289,7 @@ modules:
       write_allowed: true
   - !Register
     name: DAT1H
-    addr: 0x3
+    addr: 0x4003f003
     size_bits: 8
     description: DAC Data High Register
     read_allowed: true
@@ -6314,7 +6310,7 @@ modules:
   registers:
   - !Register
     name: CSR
-    addr: 0x0
+    addr: 0x40040000
     size_bits: 32
     description: Low Power Timer Control Status Register
     read_allowed: true
@@ -6394,7 +6390,7 @@ modules:
         1: '1'
   - !Register
     name: PSR
-    addr: 0x4
+    addr: 0x40040004
     size_bits: 32
     description: Low Power Timer Prescale Register
     read_allowed: true
@@ -6448,7 +6444,7 @@ modules:
         15: '1111'
   - !Register
     name: CMR
-    addr: 0x8
+    addr: 0x40040008
     size_bits: 32
     description: Low Power Timer Compare Register
     read_allowed: true
@@ -6463,7 +6459,7 @@ modules:
       write_allowed: true
   - !Register
     name: CNR
-    addr: 0xc
+    addr: 0x4004000c
     size_bits: 32
     description: Low Power Timer Counter Register
     read_allowed: true
@@ -6484,7 +6480,7 @@ modules:
   registers:
   - !Register
     name: REG0
-    addr: 0x0
+    addr: 0x40041000
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6520,7 +6516,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG1
-    addr: 0x4
+    addr: 0x40041004
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6556,7 +6552,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG2
-    addr: 0x8
+    addr: 0x40041008
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6592,7 +6588,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG3
-    addr: 0xc
+    addr: 0x4004100c
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6628,7 +6624,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG4
-    addr: 0x10
+    addr: 0x40041010
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6664,7 +6660,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG5
-    addr: 0x14
+    addr: 0x40041014
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6700,7 +6696,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG6
-    addr: 0x18
+    addr: 0x40041018
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6736,7 +6732,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG7
-    addr: 0x1c
+    addr: 0x4004101c
     size_bits: 32
     description: Register file register
     read_allowed: true
@@ -6778,7 +6774,7 @@ modules:
   registers:
   - !Register
     name: SOPT1
-    addr: 0x0
+    addr: 0x40047000
     size_bits: 32
     description: System Options Register 1
     read_allowed: true
@@ -6807,7 +6803,7 @@ modules:
         3: '11'
   - !Register
     name: SOPT2
-    addr: 0x1004
+    addr: 0x40048004
     size_bits: 32
     description: System Options Register 2
     read_allowed: true
@@ -6886,7 +6882,7 @@ modules:
         3: '11'
   - !Register
     name: SOPT4
-    addr: 0x100c
+    addr: 0x4004800c
     size_bits: 32
     description: System Options Register 4
     read_allowed: true
@@ -6944,7 +6940,7 @@ modules:
         1: '1'
   - !Register
     name: SOPT5
-    addr: 0x1010
+    addr: 0x40048010
     size_bits: 32
     description: System Options Register 5
     read_allowed: true
@@ -7024,7 +7020,7 @@ modules:
         1: '1'
   - !Register
     name: SOPT7
-    addr: 0x1018
+    addr: 0x40048018
     size_bits: 32
     description: System Options Register 7
     read_allowed: true
@@ -7070,7 +7066,7 @@ modules:
         1: '1'
   - !Register
     name: SDID
-    addr: 0x1024
+    addr: 0x40048024
     size_bits: 32
     description: System Device Identification Register
     read_allowed: true
@@ -7137,7 +7133,7 @@ modules:
         1: '0001'
   - !Register
     name: SCGC4
-    addr: 0x1034
+    addr: 0x40048034
     size_bits: 32
     description: System Clock Gating Control Register 4
     read_allowed: true
@@ -7216,7 +7212,7 @@ modules:
         1: '1'
   - !Register
     name: SCGC5
-    addr: 0x1038
+    addr: 0x40048038
     size_bits: 32
     description: System Clock Gating Control Register 5
     read_allowed: true
@@ -7315,7 +7311,7 @@ modules:
         1: '1'
   - !Register
     name: SCGC6
-    addr: 0x103c
+    addr: 0x4004803c
     size_bits: 32
     description: System Clock Gating Control Register 6
     read_allowed: true
@@ -7424,7 +7420,7 @@ modules:
         1: '1'
   - !Register
     name: SCGC7
-    addr: 0x1040
+    addr: 0x40048040
     size_bits: 32
     description: System Clock Gating Control Register 7
     read_allowed: true
@@ -7443,7 +7439,7 @@ modules:
         1: '1'
   - !Register
     name: CLKDIV1
-    addr: 0x1044
+    addr: 0x40048044
     size_bits: 32
     description: System Clock Divider Register 1
     read_allowed: true
@@ -7492,7 +7488,7 @@ modules:
         15: '1111'
   - !Register
     name: FCFG1
-    addr: 0x104c
+    addr: 0x4004804c
     size_bits: 32
     description: Flash Configuration Register 1
     read_allowed: true
@@ -7534,7 +7530,7 @@ modules:
         15: '1111'
   - !Register
     name: FCFG2
-    addr: 0x1050
+    addr: 0x40048050
     size_bits: 32
     description: Flash Configuration Register 2
     read_allowed: true
@@ -7550,7 +7546,7 @@ modules:
       write_allowed: false
   - !Register
     name: UIDMH
-    addr: 0x1058
+    addr: 0x40048058
     size_bits: 32
     description: Unique Identification Register Mid-High
     read_allowed: true
@@ -7565,7 +7561,7 @@ modules:
       write_allowed: false
   - !Register
     name: UIDML
-    addr: 0x105c
+    addr: 0x4004805c
     size_bits: 32
     description: Unique Identification Register Mid Low
     read_allowed: true
@@ -7580,7 +7576,7 @@ modules:
       write_allowed: false
   - !Register
     name: UIDL
-    addr: 0x1060
+    addr: 0x40048060
     size_bits: 32
     description: Unique Identification Register Low
     read_allowed: true
@@ -7595,7 +7591,7 @@ modules:
       write_allowed: false
   - !Register
     name: COPC
-    addr: 0x1100
+    addr: 0x40048100
     size_bits: 32
     description: COP Control Register
     read_allowed: true
@@ -7668,7 +7664,7 @@ modules:
         3: '11'
   - !Register
     name: SRVCOP
-    addr: 0x1104
+    addr: 0x40048104
     size_bits: 32
     description: Service COP
     read_allowed: false
@@ -7689,7 +7685,7 @@ modules:
   registers:
   - !Register
     name: PCR0
-    addr: 0x0
+    addr: 0x40049000
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -7791,7 +7787,7 @@ modules:
         1: '1'
   - !Register
     name: PCR1
-    addr: 0x4
+    addr: 0x40049004
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -7893,7 +7889,7 @@ modules:
         1: '1'
   - !Register
     name: PCR2
-    addr: 0x8
+    addr: 0x40049008
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -7995,7 +7991,7 @@ modules:
         1: '1'
   - !Register
     name: PCR3
-    addr: 0xc
+    addr: 0x4004900c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8097,7 +8093,7 @@ modules:
         1: '1'
   - !Register
     name: PCR4
-    addr: 0x10
+    addr: 0x40049010
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8199,7 +8195,7 @@ modules:
         1: '1'
   - !Register
     name: PCR5
-    addr: 0x14
+    addr: 0x40049014
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8301,7 +8297,7 @@ modules:
         1: '1'
   - !Register
     name: PCR6
-    addr: 0x18
+    addr: 0x40049018
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8403,7 +8399,7 @@ modules:
         1: '1'
   - !Register
     name: PCR7
-    addr: 0x1c
+    addr: 0x4004901c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8505,7 +8501,7 @@ modules:
         1: '1'
   - !Register
     name: PCR8
-    addr: 0x20
+    addr: 0x40049020
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8607,7 +8603,7 @@ modules:
         1: '1'
   - !Register
     name: PCR9
-    addr: 0x24
+    addr: 0x40049024
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8709,7 +8705,7 @@ modules:
         1: '1'
   - !Register
     name: PCR10
-    addr: 0x28
+    addr: 0x40049028
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8811,7 +8807,7 @@ modules:
         1: '1'
   - !Register
     name: PCR11
-    addr: 0x2c
+    addr: 0x4004902c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -8913,7 +8909,7 @@ modules:
         1: '1'
   - !Register
     name: PCR12
-    addr: 0x30
+    addr: 0x40049030
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9015,7 +9011,7 @@ modules:
         1: '1'
   - !Register
     name: PCR13
-    addr: 0x34
+    addr: 0x40049034
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9117,7 +9113,7 @@ modules:
         1: '1'
   - !Register
     name: PCR14
-    addr: 0x38
+    addr: 0x40049038
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9219,7 +9215,7 @@ modules:
         1: '1'
   - !Register
     name: PCR15
-    addr: 0x3c
+    addr: 0x4004903c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9321,7 +9317,7 @@ modules:
         1: '1'
   - !Register
     name: PCR16
-    addr: 0x40
+    addr: 0x40049040
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9423,7 +9419,7 @@ modules:
         1: '1'
   - !Register
     name: PCR17
-    addr: 0x44
+    addr: 0x40049044
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9525,7 +9521,7 @@ modules:
         1: '1'
   - !Register
     name: PCR18
-    addr: 0x48
+    addr: 0x40049048
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9627,7 +9623,7 @@ modules:
         1: '1'
   - !Register
     name: PCR19
-    addr: 0x4c
+    addr: 0x4004904c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9729,7 +9725,7 @@ modules:
         1: '1'
   - !Register
     name: PCR20
-    addr: 0x50
+    addr: 0x40049050
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9831,7 +9827,7 @@ modules:
         1: '1'
   - !Register
     name: PCR21
-    addr: 0x54
+    addr: 0x40049054
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -9932,7 +9928,7 @@ modules:
         1: '1'
   - !Register
     name: PCR22
-    addr: 0x58
+    addr: 0x40049058
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10033,7 +10029,7 @@ modules:
         1: '1'
   - !Register
     name: PCR23
-    addr: 0x5c
+    addr: 0x4004905c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10134,7 +10130,7 @@ modules:
         1: '1'
   - !Register
     name: PCR24
-    addr: 0x60
+    addr: 0x40049060
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10236,7 +10232,7 @@ modules:
         1: '1'
   - !Register
     name: PCR25
-    addr: 0x64
+    addr: 0x40049064
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10338,7 +10334,7 @@ modules:
         1: '1'
   - !Register
     name: PCR26
-    addr: 0x68
+    addr: 0x40049068
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10440,7 +10436,7 @@ modules:
         1: '1'
   - !Register
     name: PCR27
-    addr: 0x6c
+    addr: 0x4004906c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10542,7 +10538,7 @@ modules:
         1: '1'
   - !Register
     name: PCR28
-    addr: 0x70
+    addr: 0x40049070
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10644,7 +10640,7 @@ modules:
         1: '1'
   - !Register
     name: PCR29
-    addr: 0x74
+    addr: 0x40049074
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10746,7 +10742,7 @@ modules:
         1: '1'
   - !Register
     name: PCR30
-    addr: 0x78
+    addr: 0x40049078
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10847,7 +10843,7 @@ modules:
         1: '1'
   - !Register
     name: PCR31
-    addr: 0x7c
+    addr: 0x4004907c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -10948,7 +10944,7 @@ modules:
         1: '1'
   - !Register
     name: GPCLR
-    addr: 0x80
+    addr: 0x40049080
     size_bits: 32
     description: Global Pin Control Low Register
     read_allowed: false
@@ -10973,7 +10969,7 @@ modules:
         1: '1'
   - !Register
     name: GPCHR
-    addr: 0x84
+    addr: 0x40049084
     size_bits: 32
     description: Global Pin Control High Register
     read_allowed: false
@@ -10998,7 +10994,7 @@ modules:
         1: '1'
   - !Register
     name: ISFR
-    addr: 0xa0
+    addr: 0x400490a0
     size_bits: 32
     description: Interrupt Status Flag Register
     read_allowed: true
@@ -11022,7 +11018,7 @@ modules:
   registers:
   - !Register
     name: PCR0
-    addr: 0x0
+    addr: 0x4004a000
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11124,7 +11120,7 @@ modules:
         1: '1'
   - !Register
     name: PCR1
-    addr: 0x4
+    addr: 0x4004a004
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11226,7 +11222,7 @@ modules:
         1: '1'
   - !Register
     name: PCR2
-    addr: 0x8
+    addr: 0x4004a008
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11328,7 +11324,7 @@ modules:
         1: '1'
   - !Register
     name: PCR3
-    addr: 0xc
+    addr: 0x4004a00c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11430,7 +11426,7 @@ modules:
         1: '1'
   - !Register
     name: PCR4
-    addr: 0x10
+    addr: 0x4004a010
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11532,7 +11528,7 @@ modules:
         1: '1'
   - !Register
     name: PCR5
-    addr: 0x14
+    addr: 0x4004a014
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11634,7 +11630,7 @@ modules:
         1: '1'
   - !Register
     name: PCR6
-    addr: 0x18
+    addr: 0x4004a018
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11736,7 +11732,7 @@ modules:
         1: '1'
   - !Register
     name: PCR7
-    addr: 0x1c
+    addr: 0x4004a01c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11838,7 +11834,7 @@ modules:
         1: '1'
   - !Register
     name: PCR8
-    addr: 0x20
+    addr: 0x4004a020
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -11940,7 +11936,7 @@ modules:
         1: '1'
   - !Register
     name: PCR9
-    addr: 0x24
+    addr: 0x4004a024
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12042,7 +12038,7 @@ modules:
         1: '1'
   - !Register
     name: PCR10
-    addr: 0x28
+    addr: 0x4004a028
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12144,7 +12140,7 @@ modules:
         1: '1'
   - !Register
     name: PCR11
-    addr: 0x2c
+    addr: 0x4004a02c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12246,7 +12242,7 @@ modules:
         1: '1'
   - !Register
     name: PCR12
-    addr: 0x30
+    addr: 0x4004a030
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12348,7 +12344,7 @@ modules:
         1: '1'
   - !Register
     name: PCR13
-    addr: 0x34
+    addr: 0x4004a034
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12450,7 +12446,7 @@ modules:
         1: '1'
   - !Register
     name: PCR14
-    addr: 0x38
+    addr: 0x4004a038
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12552,7 +12548,7 @@ modules:
         1: '1'
   - !Register
     name: PCR15
-    addr: 0x3c
+    addr: 0x4004a03c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12654,7 +12650,7 @@ modules:
         1: '1'
   - !Register
     name: PCR16
-    addr: 0x40
+    addr: 0x4004a040
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12756,7 +12752,7 @@ modules:
         1: '1'
   - !Register
     name: PCR17
-    addr: 0x44
+    addr: 0x4004a044
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12858,7 +12854,7 @@ modules:
         1: '1'
   - !Register
     name: PCR18
-    addr: 0x48
+    addr: 0x4004a048
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -12960,7 +12956,7 @@ modules:
         1: '1'
   - !Register
     name: PCR19
-    addr: 0x4c
+    addr: 0x4004a04c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13062,7 +13058,7 @@ modules:
         1: '1'
   - !Register
     name: PCR20
-    addr: 0x50
+    addr: 0x4004a050
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13164,7 +13160,7 @@ modules:
         1: '1'
   - !Register
     name: PCR21
-    addr: 0x54
+    addr: 0x4004a054
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13266,7 +13262,7 @@ modules:
         1: '1'
   - !Register
     name: PCR22
-    addr: 0x58
+    addr: 0x4004a058
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13368,7 +13364,7 @@ modules:
         1: '1'
   - !Register
     name: PCR23
-    addr: 0x5c
+    addr: 0x4004a05c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13470,7 +13466,7 @@ modules:
         1: '1'
   - !Register
     name: PCR24
-    addr: 0x60
+    addr: 0x4004a060
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13571,7 +13567,7 @@ modules:
         1: '1'
   - !Register
     name: PCR25
-    addr: 0x64
+    addr: 0x4004a064
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13672,7 +13668,7 @@ modules:
         1: '1'
   - !Register
     name: PCR26
-    addr: 0x68
+    addr: 0x4004a068
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13773,7 +13769,7 @@ modules:
         1: '1'
   - !Register
     name: PCR27
-    addr: 0x6c
+    addr: 0x4004a06c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13874,7 +13870,7 @@ modules:
         1: '1'
   - !Register
     name: PCR28
-    addr: 0x70
+    addr: 0x4004a070
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -13975,7 +13971,7 @@ modules:
         1: '1'
   - !Register
     name: PCR29
-    addr: 0x74
+    addr: 0x4004a074
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14076,7 +14072,7 @@ modules:
         1: '1'
   - !Register
     name: PCR30
-    addr: 0x78
+    addr: 0x4004a078
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14177,7 +14173,7 @@ modules:
         1: '1'
   - !Register
     name: PCR31
-    addr: 0x7c
+    addr: 0x4004a07c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14278,7 +14274,7 @@ modules:
         1: '1'
   - !Register
     name: GPCLR
-    addr: 0x80
+    addr: 0x4004a080
     size_bits: 32
     description: Global Pin Control Low Register
     read_allowed: false
@@ -14303,7 +14299,7 @@ modules:
         1: '1'
   - !Register
     name: GPCHR
-    addr: 0x84
+    addr: 0x4004a084
     size_bits: 32
     description: Global Pin Control High Register
     read_allowed: false
@@ -14328,7 +14324,7 @@ modules:
         1: '1'
   - !Register
     name: ISFR
-    addr: 0xa0
+    addr: 0x4004a0a0
     size_bits: 32
     description: Interrupt Status Flag Register
     read_allowed: true
@@ -14352,7 +14348,7 @@ modules:
   registers:
   - !Register
     name: PCR0
-    addr: 0x0
+    addr: 0x4004b000
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14454,7 +14450,7 @@ modules:
         1: '1'
   - !Register
     name: PCR1
-    addr: 0x4
+    addr: 0x4004b004
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14556,7 +14552,7 @@ modules:
         1: '1'
   - !Register
     name: PCR2
-    addr: 0x8
+    addr: 0x4004b008
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14658,7 +14654,7 @@ modules:
         1: '1'
   - !Register
     name: PCR3
-    addr: 0xc
+    addr: 0x4004b00c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14760,7 +14756,7 @@ modules:
         1: '1'
   - !Register
     name: PCR4
-    addr: 0x10
+    addr: 0x4004b010
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14862,7 +14858,7 @@ modules:
         1: '1'
   - !Register
     name: PCR5
-    addr: 0x14
+    addr: 0x4004b014
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -14964,7 +14960,7 @@ modules:
         1: '1'
   - !Register
     name: PCR6
-    addr: 0x18
+    addr: 0x4004b018
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15066,7 +15062,7 @@ modules:
         1: '1'
   - !Register
     name: PCR7
-    addr: 0x1c
+    addr: 0x4004b01c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15168,7 +15164,7 @@ modules:
         1: '1'
   - !Register
     name: PCR8
-    addr: 0x20
+    addr: 0x4004b020
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15270,7 +15266,7 @@ modules:
         1: '1'
   - !Register
     name: PCR9
-    addr: 0x24
+    addr: 0x4004b024
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15372,7 +15368,7 @@ modules:
         1: '1'
   - !Register
     name: PCR10
-    addr: 0x28
+    addr: 0x4004b028
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15474,7 +15470,7 @@ modules:
         1: '1'
   - !Register
     name: PCR11
-    addr: 0x2c
+    addr: 0x4004b02c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15576,7 +15572,7 @@ modules:
         1: '1'
   - !Register
     name: PCR12
-    addr: 0x30
+    addr: 0x4004b030
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15678,7 +15674,7 @@ modules:
         1: '1'
   - !Register
     name: PCR13
-    addr: 0x34
+    addr: 0x4004b034
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15780,7 +15776,7 @@ modules:
         1: '1'
   - !Register
     name: PCR14
-    addr: 0x38
+    addr: 0x4004b038
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15882,7 +15878,7 @@ modules:
         1: '1'
   - !Register
     name: PCR15
-    addr: 0x3c
+    addr: 0x4004b03c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -15984,7 +15980,7 @@ modules:
         1: '1'
   - !Register
     name: PCR16
-    addr: 0x40
+    addr: 0x4004b040
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16086,7 +16082,7 @@ modules:
         1: '1'
   - !Register
     name: PCR17
-    addr: 0x44
+    addr: 0x4004b044
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16188,7 +16184,7 @@ modules:
         1: '1'
   - !Register
     name: PCR18
-    addr: 0x48
+    addr: 0x4004b048
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16290,7 +16286,7 @@ modules:
         1: '1'
   - !Register
     name: PCR19
-    addr: 0x4c
+    addr: 0x4004b04c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16392,7 +16388,7 @@ modules:
         1: '1'
   - !Register
     name: PCR20
-    addr: 0x50
+    addr: 0x4004b050
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16494,7 +16490,7 @@ modules:
         1: '1'
   - !Register
     name: PCR21
-    addr: 0x54
+    addr: 0x4004b054
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16596,7 +16592,7 @@ modules:
         1: '1'
   - !Register
     name: PCR22
-    addr: 0x58
+    addr: 0x4004b058
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16698,7 +16694,7 @@ modules:
         1: '1'
   - !Register
     name: PCR23
-    addr: 0x5c
+    addr: 0x4004b05c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16800,7 +16796,7 @@ modules:
         1: '1'
   - !Register
     name: PCR24
-    addr: 0x60
+    addr: 0x4004b060
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -16901,7 +16897,7 @@ modules:
         1: '1'
   - !Register
     name: PCR25
-    addr: 0x64
+    addr: 0x4004b064
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17002,7 +16998,7 @@ modules:
         1: '1'
   - !Register
     name: PCR26
-    addr: 0x68
+    addr: 0x4004b068
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17103,7 +17099,7 @@ modules:
         1: '1'
   - !Register
     name: PCR27
-    addr: 0x6c
+    addr: 0x4004b06c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17204,7 +17200,7 @@ modules:
         1: '1'
   - !Register
     name: PCR28
-    addr: 0x70
+    addr: 0x4004b070
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17305,7 +17301,7 @@ modules:
         1: '1'
   - !Register
     name: PCR29
-    addr: 0x74
+    addr: 0x4004b074
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17406,7 +17402,7 @@ modules:
         1: '1'
   - !Register
     name: PCR30
-    addr: 0x78
+    addr: 0x4004b078
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17507,7 +17503,7 @@ modules:
         1: '1'
   - !Register
     name: PCR31
-    addr: 0x7c
+    addr: 0x4004b07c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17608,7 +17604,7 @@ modules:
         1: '1'
   - !Register
     name: GPCLR
-    addr: 0x80
+    addr: 0x4004b080
     size_bits: 32
     description: Global Pin Control Low Register
     read_allowed: false
@@ -17633,7 +17629,7 @@ modules:
         1: '1'
   - !Register
     name: GPCHR
-    addr: 0x84
+    addr: 0x4004b084
     size_bits: 32
     description: Global Pin Control High Register
     read_allowed: false
@@ -17658,7 +17654,7 @@ modules:
         1: '1'
   - !Register
     name: ISFR
-    addr: 0xa0
+    addr: 0x4004b0a0
     size_bits: 32
     description: Interrupt Status Flag Register
     read_allowed: true
@@ -17682,7 +17678,7 @@ modules:
   registers:
   - !Register
     name: PCR0
-    addr: 0x0
+    addr: 0x4004c000
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17784,7 +17780,7 @@ modules:
         1: '1'
   - !Register
     name: PCR1
-    addr: 0x4
+    addr: 0x4004c004
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17886,7 +17882,7 @@ modules:
         1: '1'
   - !Register
     name: PCR2
-    addr: 0x8
+    addr: 0x4004c008
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -17988,7 +17984,7 @@ modules:
         1: '1'
   - !Register
     name: PCR3
-    addr: 0xc
+    addr: 0x4004c00c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18090,7 +18086,7 @@ modules:
         1: '1'
   - !Register
     name: PCR4
-    addr: 0x10
+    addr: 0x4004c010
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18192,7 +18188,7 @@ modules:
         1: '1'
   - !Register
     name: PCR5
-    addr: 0x14
+    addr: 0x4004c014
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18294,7 +18290,7 @@ modules:
         1: '1'
   - !Register
     name: PCR6
-    addr: 0x18
+    addr: 0x4004c018
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18396,7 +18392,7 @@ modules:
         1: '1'
   - !Register
     name: PCR7
-    addr: 0x1c
+    addr: 0x4004c01c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18498,7 +18494,7 @@ modules:
         1: '1'
   - !Register
     name: PCR8
-    addr: 0x20
+    addr: 0x4004c020
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18600,7 +18596,7 @@ modules:
         1: '1'
   - !Register
     name: PCR9
-    addr: 0x24
+    addr: 0x4004c024
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18702,7 +18698,7 @@ modules:
         1: '1'
   - !Register
     name: PCR10
-    addr: 0x28
+    addr: 0x4004c028
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18804,7 +18800,7 @@ modules:
         1: '1'
   - !Register
     name: PCR11
-    addr: 0x2c
+    addr: 0x4004c02c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -18906,7 +18902,7 @@ modules:
         1: '1'
   - !Register
     name: PCR12
-    addr: 0x30
+    addr: 0x4004c030
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19008,7 +19004,7 @@ modules:
         1: '1'
   - !Register
     name: PCR13
-    addr: 0x34
+    addr: 0x4004c034
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19110,7 +19106,7 @@ modules:
         1: '1'
   - !Register
     name: PCR14
-    addr: 0x38
+    addr: 0x4004c038
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19212,7 +19208,7 @@ modules:
         1: '1'
   - !Register
     name: PCR15
-    addr: 0x3c
+    addr: 0x4004c03c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19314,7 +19310,7 @@ modules:
         1: '1'
   - !Register
     name: PCR16
-    addr: 0x40
+    addr: 0x4004c040
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19415,7 +19411,7 @@ modules:
         1: '1'
   - !Register
     name: PCR17
-    addr: 0x44
+    addr: 0x4004c044
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19516,7 +19512,7 @@ modules:
         1: '1'
   - !Register
     name: PCR18
-    addr: 0x48
+    addr: 0x4004c048
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19617,7 +19613,7 @@ modules:
         1: '1'
   - !Register
     name: PCR19
-    addr: 0x4c
+    addr: 0x4004c04c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19718,7 +19714,7 @@ modules:
         1: '1'
   - !Register
     name: PCR20
-    addr: 0x50
+    addr: 0x4004c050
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19819,7 +19815,7 @@ modules:
         1: '1'
   - !Register
     name: PCR21
-    addr: 0x54
+    addr: 0x4004c054
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -19920,7 +19916,7 @@ modules:
         1: '1'
   - !Register
     name: PCR22
-    addr: 0x58
+    addr: 0x4004c058
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20021,7 +20017,7 @@ modules:
         1: '1'
   - !Register
     name: PCR23
-    addr: 0x5c
+    addr: 0x4004c05c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20122,7 +20118,7 @@ modules:
         1: '1'
   - !Register
     name: PCR24
-    addr: 0x60
+    addr: 0x4004c060
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20223,7 +20219,7 @@ modules:
         1: '1'
   - !Register
     name: PCR25
-    addr: 0x64
+    addr: 0x4004c064
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20324,7 +20320,7 @@ modules:
         1: '1'
   - !Register
     name: PCR26
-    addr: 0x68
+    addr: 0x4004c068
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20425,7 +20421,7 @@ modules:
         1: '1'
   - !Register
     name: PCR27
-    addr: 0x6c
+    addr: 0x4004c06c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20526,7 +20522,7 @@ modules:
         1: '1'
   - !Register
     name: PCR28
-    addr: 0x70
+    addr: 0x4004c070
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20627,7 +20623,7 @@ modules:
         1: '1'
   - !Register
     name: PCR29
-    addr: 0x74
+    addr: 0x4004c074
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20728,7 +20724,7 @@ modules:
         1: '1'
   - !Register
     name: PCR30
-    addr: 0x78
+    addr: 0x4004c078
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20829,7 +20825,7 @@ modules:
         1: '1'
   - !Register
     name: PCR31
-    addr: 0x7c
+    addr: 0x4004c07c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -20930,7 +20926,7 @@ modules:
         1: '1'
   - !Register
     name: GPCLR
-    addr: 0x80
+    addr: 0x4004c080
     size_bits: 32
     description: Global Pin Control Low Register
     read_allowed: false
@@ -20955,7 +20951,7 @@ modules:
         1: '1'
   - !Register
     name: GPCHR
-    addr: 0x84
+    addr: 0x4004c084
     size_bits: 32
     description: Global Pin Control High Register
     read_allowed: false
@@ -20980,7 +20976,7 @@ modules:
         1: '1'
   - !Register
     name: ISFR
-    addr: 0xa0
+    addr: 0x4004c0a0
     size_bits: 32
     description: Interrupt Status Flag Register
     read_allowed: true
@@ -21004,7 +21000,7 @@ modules:
   registers:
   - !Register
     name: PCR0
-    addr: 0x0
+    addr: 0x4004d000
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21106,7 +21102,7 @@ modules:
         1: '1'
   - !Register
     name: PCR1
-    addr: 0x4
+    addr: 0x4004d004
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21208,7 +21204,7 @@ modules:
         1: '1'
   - !Register
     name: PCR2
-    addr: 0x8
+    addr: 0x4004d008
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21310,7 +21306,7 @@ modules:
         1: '1'
   - !Register
     name: PCR3
-    addr: 0xc
+    addr: 0x4004d00c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21412,7 +21408,7 @@ modules:
         1: '1'
   - !Register
     name: PCR4
-    addr: 0x10
+    addr: 0x4004d010
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21514,7 +21510,7 @@ modules:
         1: '1'
   - !Register
     name: PCR5
-    addr: 0x14
+    addr: 0x4004d014
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21616,7 +21612,7 @@ modules:
         1: '1'
   - !Register
     name: PCR6
-    addr: 0x18
+    addr: 0x4004d018
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21718,7 +21714,7 @@ modules:
         1: '1'
   - !Register
     name: PCR7
-    addr: 0x1c
+    addr: 0x4004d01c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21820,7 +21816,7 @@ modules:
         1: '1'
   - !Register
     name: PCR8
-    addr: 0x20
+    addr: 0x4004d020
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -21922,7 +21918,7 @@ modules:
         1: '1'
   - !Register
     name: PCR9
-    addr: 0x24
+    addr: 0x4004d024
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22024,7 +22020,7 @@ modules:
         1: '1'
   - !Register
     name: PCR10
-    addr: 0x28
+    addr: 0x4004d028
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22126,7 +22122,7 @@ modules:
         1: '1'
   - !Register
     name: PCR11
-    addr: 0x2c
+    addr: 0x4004d02c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22228,7 +22224,7 @@ modules:
         1: '1'
   - !Register
     name: PCR12
-    addr: 0x30
+    addr: 0x4004d030
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22330,7 +22326,7 @@ modules:
         1: '1'
   - !Register
     name: PCR13
-    addr: 0x34
+    addr: 0x4004d034
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22431,7 +22427,7 @@ modules:
         1: '1'
   - !Register
     name: PCR14
-    addr: 0x38
+    addr: 0x4004d038
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22532,7 +22528,7 @@ modules:
         1: '1'
   - !Register
     name: PCR15
-    addr: 0x3c
+    addr: 0x4004d03c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22633,7 +22629,7 @@ modules:
         1: '1'
   - !Register
     name: PCR16
-    addr: 0x40
+    addr: 0x4004d040
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22735,7 +22731,7 @@ modules:
         1: '1'
   - !Register
     name: PCR17
-    addr: 0x44
+    addr: 0x4004d044
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22837,7 +22833,7 @@ modules:
         1: '1'
   - !Register
     name: PCR18
-    addr: 0x48
+    addr: 0x4004d048
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -22939,7 +22935,7 @@ modules:
         1: '1'
   - !Register
     name: PCR19
-    addr: 0x4c
+    addr: 0x4004d04c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23041,7 +23037,7 @@ modules:
         1: '1'
   - !Register
     name: PCR20
-    addr: 0x50
+    addr: 0x4004d050
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23143,7 +23139,7 @@ modules:
         1: '1'
   - !Register
     name: PCR21
-    addr: 0x54
+    addr: 0x4004d054
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23245,7 +23241,7 @@ modules:
         1: '1'
   - !Register
     name: PCR22
-    addr: 0x58
+    addr: 0x4004d058
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23347,7 +23343,7 @@ modules:
         1: '1'
   - !Register
     name: PCR23
-    addr: 0x5c
+    addr: 0x4004d05c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23449,7 +23445,7 @@ modules:
         1: '1'
   - !Register
     name: PCR24
-    addr: 0x60
+    addr: 0x4004d060
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23551,7 +23547,7 @@ modules:
         1: '1'
   - !Register
     name: PCR25
-    addr: 0x64
+    addr: 0x4004d064
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23653,7 +23649,7 @@ modules:
         1: '1'
   - !Register
     name: PCR26
-    addr: 0x68
+    addr: 0x4004d068
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23755,7 +23751,7 @@ modules:
         1: '1'
   - !Register
     name: PCR27
-    addr: 0x6c
+    addr: 0x4004d06c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23857,7 +23853,7 @@ modules:
         1: '1'
   - !Register
     name: PCR28
-    addr: 0x70
+    addr: 0x4004d070
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -23959,7 +23955,7 @@ modules:
         1: '1'
   - !Register
     name: PCR29
-    addr: 0x74
+    addr: 0x4004d074
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -24061,7 +24057,7 @@ modules:
         1: '1'
   - !Register
     name: PCR30
-    addr: 0x78
+    addr: 0x4004d078
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -24163,7 +24159,7 @@ modules:
         1: '1'
   - !Register
     name: PCR31
-    addr: 0x7c
+    addr: 0x4004d07c
     size_bits: 32
     description: Pin Control Register n
     read_allowed: true
@@ -24265,7 +24261,7 @@ modules:
         1: '1'
   - !Register
     name: GPCLR
-    addr: 0x80
+    addr: 0x4004d080
     size_bits: 32
     description: Global Pin Control Low Register
     read_allowed: false
@@ -24290,7 +24286,7 @@ modules:
         1: '1'
   - !Register
     name: GPCHR
-    addr: 0x84
+    addr: 0x4004d084
     size_bits: 32
     description: Global Pin Control High Register
     read_allowed: false
@@ -24315,7 +24311,7 @@ modules:
         1: '1'
   - !Register
     name: ISFR
-    addr: 0xa0
+    addr: 0x4004d0a0
     size_bits: 32
     description: Interrupt Status Flag Register
     read_allowed: true
@@ -24339,7 +24335,7 @@ modules:
   registers:
   - !Register
     name: BAUD
-    addr: 0x0
+    addr: 0x40054000
     size_bits: 32
     description: LPUART Baud Rate Register
     read_allowed: true
@@ -24474,7 +24470,7 @@ modules:
         1: '1'
   - !Register
     name: STAT
-    addr: 0x4
+    addr: 0x40054004
     size_bits: 32
     description: LPUART Status Register
     read_allowed: true
@@ -24663,7 +24659,7 @@ modules:
         1: '1'
   - !Register
     name: CTRL
-    addr: 0x8
+    addr: 0x40054008
     size_bits: 32
     description: LPUART Control Register
     read_allowed: true
@@ -24941,7 +24937,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATA
-    addr: 0xc
+    addr: 0x4005400c
     size_bits: 32
     description: LPUART Data Register
     read_allowed: true
@@ -25072,7 +25068,7 @@ modules:
         1: '1'
   - !Register
     name: MATCH
-    addr: 0x10
+    addr: 0x40054010
     size_bits: 32
     description: LPUART Match Address Register
     read_allowed: true
@@ -25100,7 +25096,7 @@ modules:
   registers:
   - !Register
     name: BAUD
-    addr: 0x0
+    addr: 0x40055000
     size_bits: 32
     description: LPUART Baud Rate Register
     read_allowed: true
@@ -25235,7 +25231,7 @@ modules:
         1: '1'
   - !Register
     name: STAT
-    addr: 0x4
+    addr: 0x40055004
     size_bits: 32
     description: LPUART Status Register
     read_allowed: true
@@ -25424,7 +25420,7 @@ modules:
         1: '1'
   - !Register
     name: CTRL
-    addr: 0x8
+    addr: 0x40055008
     size_bits: 32
     description: LPUART Control Register
     read_allowed: true
@@ -25702,7 +25698,7 @@ modules:
       write_allowed: true
   - !Register
     name: DATA
-    addr: 0xc
+    addr: 0x4005500c
     size_bits: 32
     description: LPUART Data Register
     read_allowed: true
@@ -25833,7 +25829,7 @@ modules:
         1: '1'
   - !Register
     name: MATCH
-    addr: 0x10
+    addr: 0x40055010
     size_bits: 32
     description: LPUART Match Address Register
     read_allowed: true
@@ -25861,7 +25857,7 @@ modules:
   registers:
   - !Register
     name: VERID
-    addr: 0x0
+    addr: 0x4005f000
     size_bits: 32
     description: Version ID Register
     read_allowed: true
@@ -25894,7 +25890,7 @@ modules:
       write_allowed: false
   - !Register
     name: PARAM
-    addr: 0x4
+    addr: 0x4005f004
     size_bits: 32
     description: Parameter Register
     read_allowed: true
@@ -25931,7 +25927,7 @@ modules:
       write_allowed: false
   - !Register
     name: CTRL
-    addr: 0x8
+    addr: 0x4005f008
     size_bits: 32
     description: FlexIO Control Register
     read_allowed: true
@@ -25989,7 +25985,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTSTAT
-    addr: 0x10
+    addr: 0x4005f010
     size_bits: 32
     description: Shifter Status Register
     read_allowed: true
@@ -26007,7 +26003,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTERR
-    addr: 0x14
+    addr: 0x4005f014
     size_bits: 32
     description: Shifter Error Register
     read_allowed: true
@@ -26025,7 +26021,7 @@ modules:
         1: '1'
   - !Register
     name: TIMSTAT
-    addr: 0x18
+    addr: 0x4005f018
     size_bits: 32
     description: Timer Status Register
     read_allowed: true
@@ -26043,7 +26039,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTSIEN
-    addr: 0x20
+    addr: 0x4005f020
     size_bits: 32
     description: Shifter Status Interrupt Enable
     read_allowed: true
@@ -26061,7 +26057,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTEIEN
-    addr: 0x24
+    addr: 0x4005f024
     size_bits: 32
     description: Shifter Error Interrupt Enable
     read_allowed: true
@@ -26079,7 +26075,7 @@ modules:
         1: '1'
   - !Register
     name: TIMIEN
-    addr: 0x28
+    addr: 0x4005f028
     size_bits: 32
     description: Timer Interrupt Enable Register
     read_allowed: true
@@ -26097,7 +26093,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTSDEN
-    addr: 0x30
+    addr: 0x4005f030
     size_bits: 32
     description: Shifter Status DMA Enable
     read_allowed: true
@@ -26115,7 +26111,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTCTL0
-    addr: 0x80
+    addr: 0x4005f080
     size_bits: 32
     description: Shifter Control N Register
     read_allowed: true
@@ -26182,7 +26178,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTCTL1
-    addr: 0x84
+    addr: 0x4005f084
     size_bits: 32
     description: Shifter Control N Register
     read_allowed: true
@@ -26249,7 +26245,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTCTL2
-    addr: 0x88
+    addr: 0x4005f088
     size_bits: 32
     description: Shifter Control N Register
     read_allowed: true
@@ -26316,7 +26312,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTCTL3
-    addr: 0x8c
+    addr: 0x4005f08c
     size_bits: 32
     description: Shifter Control N Register
     read_allowed: true
@@ -26383,7 +26379,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTCFG0
-    addr: 0x100
+    addr: 0x4005f100
     size_bits: 32
     description: Shifter Configuration N Register
     read_allowed: true
@@ -26425,7 +26421,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTCFG1
-    addr: 0x104
+    addr: 0x4005f104
     size_bits: 32
     description: Shifter Configuration N Register
     read_allowed: true
@@ -26467,7 +26463,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTCFG2
-    addr: 0x108
+    addr: 0x4005f108
     size_bits: 32
     description: Shifter Configuration N Register
     read_allowed: true
@@ -26509,7 +26505,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTCFG3
-    addr: 0x10c
+    addr: 0x4005f10c
     size_bits: 32
     description: Shifter Configuration N Register
     read_allowed: true
@@ -26551,7 +26547,7 @@ modules:
         1: '1'
   - !Register
     name: SHIFTBUF0
-    addr: 0x200
+    addr: 0x4005f200
     size_bits: 32
     description: Shifter Buffer N Register
     read_allowed: true
@@ -26566,7 +26562,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUF1
-    addr: 0x204
+    addr: 0x4005f204
     size_bits: 32
     description: Shifter Buffer N Register
     read_allowed: true
@@ -26581,7 +26577,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUF2
-    addr: 0x208
+    addr: 0x4005f208
     size_bits: 32
     description: Shifter Buffer N Register
     read_allowed: true
@@ -26596,7 +26592,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUF3
-    addr: 0x20c
+    addr: 0x4005f20c
     size_bits: 32
     description: Shifter Buffer N Register
     read_allowed: true
@@ -26611,7 +26607,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBIS0
-    addr: 0x280
+    addr: 0x4005f280
     size_bits: 32
     description: Shifter Buffer N Bit Swapped Register
     read_allowed: true
@@ -26626,7 +26622,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBIS1
-    addr: 0x284
+    addr: 0x4005f284
     size_bits: 32
     description: Shifter Buffer N Bit Swapped Register
     read_allowed: true
@@ -26641,7 +26637,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBIS2
-    addr: 0x288
+    addr: 0x4005f288
     size_bits: 32
     description: Shifter Buffer N Bit Swapped Register
     read_allowed: true
@@ -26656,7 +26652,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBIS3
-    addr: 0x28c
+    addr: 0x4005f28c
     size_bits: 32
     description: Shifter Buffer N Bit Swapped Register
     read_allowed: true
@@ -26671,7 +26667,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBYS0
-    addr: 0x300
+    addr: 0x4005f300
     size_bits: 32
     description: Shifter Buffer N Byte Swapped Register
     read_allowed: true
@@ -26686,7 +26682,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBYS1
-    addr: 0x304
+    addr: 0x4005f304
     size_bits: 32
     description: Shifter Buffer N Byte Swapped Register
     read_allowed: true
@@ -26701,7 +26697,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBYS2
-    addr: 0x308
+    addr: 0x4005f308
     size_bits: 32
     description: Shifter Buffer N Byte Swapped Register
     read_allowed: true
@@ -26716,7 +26712,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBYS3
-    addr: 0x30c
+    addr: 0x4005f30c
     size_bits: 32
     description: Shifter Buffer N Byte Swapped Register
     read_allowed: true
@@ -26731,7 +26727,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBBS0
-    addr: 0x380
+    addr: 0x4005f380
     size_bits: 32
     description: Shifter Buffer N Bit Byte Swapped Register
     read_allowed: true
@@ -26746,7 +26742,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBBS1
-    addr: 0x384
+    addr: 0x4005f384
     size_bits: 32
     description: Shifter Buffer N Bit Byte Swapped Register
     read_allowed: true
@@ -26761,7 +26757,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBBS2
-    addr: 0x388
+    addr: 0x4005f388
     size_bits: 32
     description: Shifter Buffer N Bit Byte Swapped Register
     read_allowed: true
@@ -26776,7 +26772,7 @@ modules:
       write_allowed: true
   - !Register
     name: SHIFTBUFBBS3
-    addr: 0x38c
+    addr: 0x4005f38c
     size_bits: 32
     description: Shifter Buffer N Bit Byte Swapped Register
     read_allowed: true
@@ -26791,7 +26787,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCTL0
-    addr: 0x400
+    addr: 0x4005f400
     size_bits: 32
     description: Timer Control N Register
     read_allowed: true
@@ -26867,7 +26863,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCTL1
-    addr: 0x404
+    addr: 0x4005f404
     size_bits: 32
     description: Timer Control N Register
     read_allowed: true
@@ -26943,7 +26939,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCTL2
-    addr: 0x408
+    addr: 0x4005f408
     size_bits: 32
     description: Timer Control N Register
     read_allowed: true
@@ -27019,7 +27015,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCTL3
-    addr: 0x40c
+    addr: 0x4005f40c
     size_bits: 32
     description: Timer Control N Register
     read_allowed: true
@@ -27095,7 +27091,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCFG0
-    addr: 0x480
+    addr: 0x4005f480
     size_bits: 32
     description: Timer Configuration N Register
     read_allowed: true
@@ -27194,7 +27190,7 @@ modules:
         3: '11'
   - !Register
     name: TIMCFG1
-    addr: 0x484
+    addr: 0x4005f484
     size_bits: 32
     description: Timer Configuration N Register
     read_allowed: true
@@ -27293,7 +27289,7 @@ modules:
         3: '11'
   - !Register
     name: TIMCFG2
-    addr: 0x488
+    addr: 0x4005f488
     size_bits: 32
     description: Timer Configuration N Register
     read_allowed: true
@@ -27392,7 +27388,7 @@ modules:
         3: '11'
   - !Register
     name: TIMCFG3
-    addr: 0x48c
+    addr: 0x4005f48c
     size_bits: 32
     description: Timer Configuration N Register
     read_allowed: true
@@ -27491,7 +27487,7 @@ modules:
         3: '11'
   - !Register
     name: TIMCMP0
-    addr: 0x500
+    addr: 0x4005f500
     size_bits: 32
     description: Timer Compare N Register
     read_allowed: true
@@ -27506,7 +27502,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCMP1
-    addr: 0x504
+    addr: 0x4005f504
     size_bits: 32
     description: Timer Compare N Register
     read_allowed: true
@@ -27521,7 +27517,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCMP2
-    addr: 0x508
+    addr: 0x4005f508
     size_bits: 32
     description: Timer Compare N Register
     read_allowed: true
@@ -27536,7 +27532,7 @@ modules:
       write_allowed: true
   - !Register
     name: TIMCMP3
-    addr: 0x50c
+    addr: 0x4005f50c
     size_bits: 32
     description: Timer Compare N Register
     read_allowed: true
@@ -27557,7 +27553,7 @@ modules:
   registers:
   - !Register
     name: C1
-    addr: 0x0
+    addr: 0x40064000
     size_bits: 8
     description: MCG Control Register 1
     read_allowed: true
@@ -27598,7 +27594,7 @@ modules:
         3: '11'
   - !Register
     name: C2
-    addr: 0x1
+    addr: 0x40064001
     size_bits: 8
     description: MCG Control Register 2
     read_allowed: true
@@ -27649,7 +27645,7 @@ modules:
         3: '11'
   - !Register
     name: S
-    addr: 0x6
+    addr: 0x40064006
     size_bits: 8
     description: MCG Status Register
     read_allowed: true
@@ -27679,7 +27675,7 @@ modules:
         2: '10'
   - !Register
     name: SC
-    addr: 0x8
+    addr: 0x40064008
     size_bits: 8
     description: MCG Status and Control Register
     read_allowed: true
@@ -27703,7 +27699,7 @@ modules:
         7: '111'
   - !Register
     name: MC
-    addr: 0x18
+    addr: 0x40064018
     size_bits: 8
     description: MCG Miscellaneous Control Register
     read_allowed: true
@@ -27753,7 +27749,7 @@ modules:
   registers:
   - !Register
     name: CR
-    addr: 0x0
+    addr: 0x40065000
     size_bits: 8
     description: OSC Control Register
     read_allowed: true
@@ -27827,7 +27823,7 @@ modules:
   registers:
   - !Register
     name: A1
-    addr: 0x0
+    addr: 0x40066000
     size_bits: 8
     description: I2C Address Register 1
     read_allowed: true
@@ -27842,7 +27838,7 @@ modules:
       write_allowed: true
   - !Register
     name: F
-    addr: 0x1
+    addr: 0x40066001
     size_bits: 8
     description: I2C Frequency Divider register
     read_allowed: true
@@ -27868,7 +27864,7 @@ modules:
         2: '10'
   - !Register
     name: C1
-    addr: 0x2
+    addr: 0x40066002
     size_bits: 8
     description: I2C Control Register 1
     read_allowed: true
@@ -27953,7 +27949,7 @@ modules:
         1: '1'
   - !Register
     name: S
-    addr: 0x3
+    addr: 0x40066003
     size_bits: 8
     description: I2C Status register
     read_allowed: true
@@ -28042,7 +28038,7 @@ modules:
         1: '1'
   - !Register
     name: D
-    addr: 0x4
+    addr: 0x40066004
     size_bits: 8
     description: I2C Data I/O register
     read_allowed: true
@@ -28057,7 +28053,7 @@ modules:
       write_allowed: true
   - !Register
     name: C2
-    addr: 0x5
+    addr: 0x40066005
     size_bits: 8
     description: I2C Control Register 2
     read_allowed: true
@@ -28122,7 +28118,7 @@ modules:
         1: '1'
   - !Register
     name: FLT
-    addr: 0x6
+    addr: 0x40066006
     size_bits: 8
     description: I2C Programmable Input Glitch Filter Register
     read_allowed: true
@@ -28179,7 +28175,7 @@ modules:
         1: '1'
   - !Register
     name: RA
-    addr: 0x7
+    addr: 0x40066007
     size_bits: 8
     description: I2C Range Address register
     read_allowed: true
@@ -28194,7 +28190,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMB
-    addr: 0x8
+    addr: 0x40066008
     size_bits: 8
     description: I2C SMBus Control and Status register
     read_allowed: true
@@ -28282,7 +28278,7 @@ modules:
         1: '1'
   - !Register
     name: A2
-    addr: 0x9
+    addr: 0x40066009
     size_bits: 8
     description: I2C Address Register 2
     read_allowed: true
@@ -28298,7 +28294,7 @@ modules:
       write_allowed: true
   - !Register
     name: SLTH
-    addr: 0xa
+    addr: 0x4006600a
     size_bits: 8
     description: I2C SCL Low Timeout Register High
     read_allowed: true
@@ -28313,7 +28309,7 @@ modules:
       write_allowed: true
   - !Register
     name: SLTL
-    addr: 0xb
+    addr: 0x4006600b
     size_bits: 8
     description: I2C SCL Low Timeout Register Low
     read_allowed: true
@@ -28328,7 +28324,7 @@ modules:
       write_allowed: true
   - !Register
     name: S2
-    addr: 0xc
+    addr: 0x4006600c
     size_bits: 8
     description: I2C Status register 2
     read_allowed: true
@@ -28363,7 +28359,7 @@ modules:
   registers:
   - !Register
     name: A1
-    addr: 0x0
+    addr: 0x40067000
     size_bits: 8
     description: I2C Address Register 1
     read_allowed: true
@@ -28378,7 +28374,7 @@ modules:
       write_allowed: true
   - !Register
     name: F
-    addr: 0x1
+    addr: 0x40067001
     size_bits: 8
     description: I2C Frequency Divider register
     read_allowed: true
@@ -28404,7 +28400,7 @@ modules:
         2: '10'
   - !Register
     name: C1
-    addr: 0x2
+    addr: 0x40067002
     size_bits: 8
     description: I2C Control Register 1
     read_allowed: true
@@ -28489,7 +28485,7 @@ modules:
         1: '1'
   - !Register
     name: S
-    addr: 0x3
+    addr: 0x40067003
     size_bits: 8
     description: I2C Status register
     read_allowed: true
@@ -28578,7 +28574,7 @@ modules:
         1: '1'
   - !Register
     name: D
-    addr: 0x4
+    addr: 0x40067004
     size_bits: 8
     description: I2C Data I/O register
     read_allowed: true
@@ -28593,7 +28589,7 @@ modules:
       write_allowed: true
   - !Register
     name: C2
-    addr: 0x5
+    addr: 0x40067005
     size_bits: 8
     description: I2C Control Register 2
     read_allowed: true
@@ -28658,7 +28654,7 @@ modules:
         1: '1'
   - !Register
     name: FLT
-    addr: 0x6
+    addr: 0x40067006
     size_bits: 8
     description: I2C Programmable Input Glitch Filter Register
     read_allowed: true
@@ -28715,7 +28711,7 @@ modules:
         1: '1'
   - !Register
     name: RA
-    addr: 0x7
+    addr: 0x40067007
     size_bits: 8
     description: I2C Range Address register
     read_allowed: true
@@ -28730,7 +28726,7 @@ modules:
       write_allowed: true
   - !Register
     name: SMB
-    addr: 0x8
+    addr: 0x40067008
     size_bits: 8
     description: I2C SMBus Control and Status register
     read_allowed: true
@@ -28818,7 +28814,7 @@ modules:
         1: '1'
   - !Register
     name: A2
-    addr: 0x9
+    addr: 0x40067009
     size_bits: 8
     description: I2C Address Register 2
     read_allowed: true
@@ -28834,7 +28830,7 @@ modules:
       write_allowed: true
   - !Register
     name: SLTH
-    addr: 0xa
+    addr: 0x4006700a
     size_bits: 8
     description: I2C SCL Low Timeout Register High
     read_allowed: true
@@ -28849,7 +28845,7 @@ modules:
       write_allowed: true
   - !Register
     name: SLTL
-    addr: 0xb
+    addr: 0x4006700b
     size_bits: 8
     description: I2C SCL Low Timeout Register Low
     read_allowed: true
@@ -28864,7 +28860,7 @@ modules:
       write_allowed: true
   - !Register
     name: S2
-    addr: 0xc
+    addr: 0x4006700c
     size_bits: 8
     description: I2C Status register 2
     read_allowed: true
@@ -28899,7 +28895,7 @@ modules:
   registers:
   - !Register
     name: BDH
-    addr: 0x0
+    addr: 0x4006c000
     size_bits: 8
     description: 'UART Baud Rate Registers: High'
     read_allowed: true
@@ -28924,7 +28920,7 @@ modules:
         1: '1'
   - !Register
     name: BDL
-    addr: 0x1
+    addr: 0x4006c001
     size_bits: 8
     description: 'UART Baud Rate Registers: Low'
     read_allowed: true
@@ -28940,7 +28936,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1
-    addr: 0x2
+    addr: 0x4006c002
     size_bits: 8
     description: UART Control Register 1
     read_allowed: true
@@ -29018,7 +29014,7 @@ modules:
         1: '1'
   - !Register
     name: C2
-    addr: 0x3
+    addr: 0x4006c003
     size_bits: 8
     description: UART Control Register 2
     read_allowed: true
@@ -29106,7 +29102,7 @@ modules:
         1: '1'
   - !Register
     name: S1
-    addr: 0x4
+    addr: 0x4006c004
     size_bits: 8
     description: UART Status Register 1
     read_allowed: true
@@ -29195,7 +29191,7 @@ modules:
         1: '1'
   - !Register
     name: S2
-    addr: 0x5
+    addr: 0x4006c005
     size_bits: 8
     description: UART Status Register 2
     read_allowed: true
@@ -29263,7 +29259,7 @@ modules:
         1: '1'
   - !Register
     name: C3
-    addr: 0x6
+    addr: 0x4006c006
     size_bits: 8
     description: UART Control Register 3
     read_allowed: true
@@ -29345,7 +29341,7 @@ modules:
       write_allowed: false
   - !Register
     name: D
-    addr: 0x7
+    addr: 0x4006c007
     size_bits: 8
     description: UART Data Register
     read_allowed: true
@@ -29361,7 +29357,7 @@ modules:
       write_allowed: true
   - !Register
     name: MA1
-    addr: 0x8
+    addr: 0x4006c008
     size_bits: 8
     description: UART Match Address Registers 1
     read_allowed: true
@@ -29376,7 +29372,7 @@ modules:
       write_allowed: true
   - !Register
     name: MA2
-    addr: 0x9
+    addr: 0x4006c009
     size_bits: 8
     description: UART Match Address Registers 2
     read_allowed: true
@@ -29391,7 +29387,7 @@ modules:
       write_allowed: true
   - !Register
     name: C4
-    addr: 0xa
+    addr: 0x4006c00a
     size_bits: 8
     description: UART Control Register 4
     read_allowed: true
@@ -29436,7 +29432,7 @@ modules:
         1: '1'
   - !Register
     name: C5
-    addr: 0xb
+    addr: 0x4006c00b
     size_bits: 8
     description: UART Control Register 5
     read_allowed: true
@@ -29464,7 +29460,7 @@ modules:
         1: '1'
   - !Register
     name: C7816
-    addr: 0x18
+    addr: 0x4006c018
     size_bits: 8
     description: UART 7816 Control Register
     read_allowed: true
@@ -29522,7 +29518,7 @@ modules:
         1: '1'
   - !Register
     name: IE7816
-    addr: 0x19
+    addr: 0x4006c019
     size_bits: 8
     description: UART 7816 Interrupt Enable Register
     read_allowed: true
@@ -29610,7 +29606,7 @@ modules:
         1: '1'
   - !Register
     name: IS7816
-    addr: 0x1a
+    addr: 0x4006c01a
     size_bits: 8
     description: UART 7816 Interrupt Status Register
     read_allowed: true
@@ -29698,7 +29694,7 @@ modules:
         1: '1'
   - !Register
     name: WP7816
-    addr: 0x1b
+    addr: 0x4006c01b
     size_bits: 8
     description: UART 7816 Wait Parameter Register
     read_allowed: true
@@ -29713,7 +29709,7 @@ modules:
       write_allowed: true
   - !Register
     name: WN7816
-    addr: 0x1c
+    addr: 0x4006c01c
     size_bits: 8
     description: UART 7816 Wait N Register
     read_allowed: true
@@ -29728,7 +29724,7 @@ modules:
       write_allowed: true
   - !Register
     name: WF7816
-    addr: 0x1d
+    addr: 0x4006c01d
     size_bits: 8
     description: UART 7816 Wait FD Register
     read_allowed: true
@@ -29744,7 +29740,7 @@ modules:
       write_allowed: true
   - !Register
     name: ET7816
-    addr: 0x1e
+    addr: 0x4006c01e
     size_bits: 8
     description: UART 7816 Error Threshold Register
     read_allowed: true
@@ -29769,7 +29765,7 @@ modules:
         1: '1'
   - !Register
     name: TL7816
-    addr: 0x1f
+    addr: 0x4006c01f
     size_bits: 8
     description: UART 7816 Transmit Length Register
     read_allowed: true
@@ -29784,7 +29780,7 @@ modules:
       write_allowed: true
   - !Register
     name: AP7816A_T0
-    addr: 0x3a
+    addr: 0x4006c03a
     size_bits: 8
     description: UART 7816 ATR Duration Timer Register A
     read_allowed: true
@@ -29799,7 +29795,7 @@ modules:
       write_allowed: true
   - !Register
     name: AP7816B_T0
-    addr: 0x3b
+    addr: 0x4006c03b
     size_bits: 8
     description: UART 7816 ATR Duration Timer Register B
     read_allowed: true
@@ -29814,7 +29810,7 @@ modules:
       write_allowed: true
   - !Register
     name: WP7816A_T0
-    addr: 0x3c
+    addr: 0x4006c03c
     size_bits: 8
     description: UART 7816 Wait Parameter Register A
     read_allowed: true
@@ -29829,7 +29825,7 @@ modules:
       write_allowed: true
   - !Register
     name: WP7816A_T1
-    addr: 0x3c
+    addr: 0x4006c03c
     size_bits: 8
     description: UART 7816 Wait Parameter Register A
     read_allowed: true
@@ -29844,7 +29840,7 @@ modules:
       write_allowed: true
   - !Register
     name: WP7816B_T0
-    addr: 0x3d
+    addr: 0x4006c03d
     size_bits: 8
     description: UART 7816 Wait Parameter Register B
     read_allowed: true
@@ -29860,7 +29856,7 @@ modules:
       write_allowed: true
   - !Register
     name: WP7816B_T1
-    addr: 0x3d
+    addr: 0x4006c03d
     size_bits: 8
     description: UART 7816 Wait Parameter Register B
     read_allowed: true
@@ -29876,7 +29872,7 @@ modules:
       write_allowed: true
   - !Register
     name: WGP7816_T1
-    addr: 0x3e
+    addr: 0x4006c03e
     size_bits: 8
     description: UART 7816 Wait and Guard Parameter Register
     read_allowed: true
@@ -29899,7 +29895,7 @@ modules:
       write_allowed: true
   - !Register
     name: WP7816C_T1
-    addr: 0x3f
+    addr: 0x4006c03f
     size_bits: 8
     description: UART 7816 Wait Parameter Register C
     read_allowed: true
@@ -29922,7 +29918,7 @@ modules:
   registers:
   - !Register
     name: CR0
-    addr: 0x0
+    addr: 0x40073000
     size_bits: 8
     description: CMP Control Register 0
     read_allowed: true
@@ -29958,7 +29954,7 @@ modules:
         7: '111'
   - !Register
     name: CR1
-    addr: 0x1
+    addr: 0x40073001
     size_bits: 8
     description: CMP Control Register 1
     read_allowed: true
@@ -30046,7 +30042,7 @@ modules:
         1: '1'
   - !Register
     name: FPR
-    addr: 0x2
+    addr: 0x40073002
     size_bits: 8
     description: CMP Filter Period Register
     read_allowed: true
@@ -30061,7 +30057,7 @@ modules:
       write_allowed: true
   - !Register
     name: SCR
-    addr: 0x3
+    addr: 0x40073003
     size_bits: 8
     description: CMP Status and Control Register
     read_allowed: true
@@ -30126,7 +30122,7 @@ modules:
         1: '1'
   - !Register
     name: DACCR
-    addr: 0x4
+    addr: 0x40073004
     size_bits: 8
     description: DAC Control Register
     read_allowed: true
@@ -30161,7 +30157,7 @@ modules:
         1: '1'
   - !Register
     name: MUXCR
-    addr: 0x5
+    addr: 0x40073005
     size_bits: 8
     description: MUX Control Register
     read_allowed: true
@@ -30217,7 +30213,7 @@ modules:
   registers:
   - !Register
     name: TRM
-    addr: 0x0
+    addr: 0x40074000
     size_bits: 8
     description: VREF Trim Register
     read_allowed: true
@@ -30246,7 +30242,7 @@ modules:
         1: '1'
   - !Register
     name: SC
-    addr: 0x1
+    addr: 0x40074001
     size_bits: 8
     description: VREF Status and Control Register
     read_allowed: true
@@ -30311,7 +30307,7 @@ modules:
   registers:
   - !Register
     name: S
-    addr: 0x0
+    addr: 0x40076000
     size_bits: 8
     description: SPI Status Register
     read_allowed: true
@@ -30362,7 +30358,7 @@ modules:
         1: '1'
   - !Register
     name: BR
-    addr: 0x1
+    addr: 0x40076001
     size_bits: 8
     description: SPI Baud Rate Register
     read_allowed: true
@@ -30403,7 +30399,7 @@ modules:
         7: '111'
   - !Register
     name: C2
-    addr: 0x2
+    addr: 0x40076002
     size_bits: 8
     description: SPI Control Register 2
     read_allowed: true
@@ -30491,7 +30487,7 @@ modules:
         1: '1'
   - !Register
     name: C1
-    addr: 0x3
+    addr: 0x40076003
     size_bits: 8
     description: SPI Control Register 1
     read_allowed: true
@@ -30581,7 +30577,7 @@ modules:
         1: '1'
   - !Register
     name: ML
-    addr: 0x4
+    addr: 0x40076004
     size_bits: 8
     description: SPI Match Register low
     read_allowed: true
@@ -30596,7 +30592,7 @@ modules:
       write_allowed: true
   - !Register
     name: MH
-    addr: 0x5
+    addr: 0x40076005
     size_bits: 8
     description: SPI match register high
     read_allowed: true
@@ -30611,7 +30607,7 @@ modules:
       write_allowed: true
   - !Register
     name: DL
-    addr: 0x6
+    addr: 0x40076006
     size_bits: 8
     description: SPI Data Register low
     read_allowed: true
@@ -30626,7 +30622,7 @@ modules:
       write_allowed: true
   - !Register
     name: DH
-    addr: 0x7
+    addr: 0x40076007
     size_bits: 8
     description: SPI data register high
     read_allowed: true
@@ -30647,7 +30643,7 @@ modules:
   registers:
   - !Register
     name: S
-    addr: 0x0
+    addr: 0x40077000
     size_bits: 8
     description: SPI Status Register
     read_allowed: true
@@ -30738,7 +30734,7 @@ modules:
         1: '1'
   - !Register
     name: BR
-    addr: 0x1
+    addr: 0x40077001
     size_bits: 8
     description: SPI Baud Rate Register
     read_allowed: true
@@ -30779,7 +30775,7 @@ modules:
         7: '111'
   - !Register
     name: C2
-    addr: 0x2
+    addr: 0x40077002
     size_bits: 8
     description: SPI Control Register 2
     read_allowed: true
@@ -30867,7 +30863,7 @@ modules:
         1: '1'
   - !Register
     name: C1
-    addr: 0x3
+    addr: 0x40077003
     size_bits: 8
     description: SPI Control Register 1
     read_allowed: true
@@ -30957,7 +30953,7 @@ modules:
         1: '1'
   - !Register
     name: ML
-    addr: 0x4
+    addr: 0x40077004
     size_bits: 8
     description: SPI Match Register low
     read_allowed: true
@@ -30972,7 +30968,7 @@ modules:
       write_allowed: true
   - !Register
     name: MH
-    addr: 0x5
+    addr: 0x40077005
     size_bits: 8
     description: SPI match register high
     read_allowed: true
@@ -30987,7 +30983,7 @@ modules:
       write_allowed: true
   - !Register
     name: DL
-    addr: 0x6
+    addr: 0x40077006
     size_bits: 8
     description: SPI Data Register low
     read_allowed: true
@@ -31002,7 +30998,7 @@ modules:
       write_allowed: true
   - !Register
     name: DH
-    addr: 0x7
+    addr: 0x40077007
     size_bits: 8
     description: SPI data register high
     read_allowed: true
@@ -31017,7 +31013,7 @@ modules:
       write_allowed: true
   - !Register
     name: CI
-    addr: 0xa
+    addr: 0x4007700a
     size_bits: 8
     description: SPI clear interrupt register
     read_allowed: true
@@ -31093,7 +31089,7 @@ modules:
         1: '1'
   - !Register
     name: C3
-    addr: 0xb
+    addr: 0x4007700b
     size_bits: 8
     description: SPI control register 3
     read_allowed: true
@@ -31167,7 +31163,7 @@ modules:
   registers:
   - !Register
     name: PE1
-    addr: 0x0
+    addr: 0x4007c000
     size_bits: 8
     description: LLWU Pin Enable 1 register
     read_allowed: true
@@ -31223,7 +31219,7 @@ modules:
         3: '11'
   - !Register
     name: PE2
-    addr: 0x1
+    addr: 0x4007c001
     size_bits: 8
     description: LLWU Pin Enable 2 register
     read_allowed: true
@@ -31279,7 +31275,7 @@ modules:
         3: '11'
   - !Register
     name: PE3
-    addr: 0x2
+    addr: 0x4007c002
     size_bits: 8
     description: LLWU Pin Enable 3 register
     read_allowed: true
@@ -31335,7 +31331,7 @@ modules:
         3: '11'
   - !Register
     name: PE4
-    addr: 0x3
+    addr: 0x4007c003
     size_bits: 8
     description: LLWU Pin Enable 4 register
     read_allowed: true
@@ -31391,7 +31387,7 @@ modules:
         3: '11'
   - !Register
     name: ME
-    addr: 0x4
+    addr: 0x4007c004
     size_bits: 8
     description: LLWU Module Enable register
     read_allowed: true
@@ -31479,7 +31475,7 @@ modules:
         1: '1'
   - !Register
     name: F1
-    addr: 0x5
+    addr: 0x4007c005
     size_bits: 8
     description: LLWU Flag 1 register
     read_allowed: true
@@ -31567,7 +31563,7 @@ modules:
         1: '1'
   - !Register
     name: F2
-    addr: 0x6
+    addr: 0x4007c006
     size_bits: 8
     description: LLWU Flag 2 register
     read_allowed: true
@@ -31655,7 +31651,7 @@ modules:
         1: '1'
   - !Register
     name: F3
-    addr: 0x7
+    addr: 0x4007c007
     size_bits: 8
     description: LLWU Flag 3 register
     read_allowed: true
@@ -31743,7 +31739,7 @@ modules:
         1: '1'
   - !Register
     name: FILT1
-    addr: 0x8
+    addr: 0x4007c008
     size_bits: 8
     description: LLWU Pin Filter 1 register
     read_allowed: true
@@ -31783,7 +31779,7 @@ modules:
         1: '1'
   - !Register
     name: FILT2
-    addr: 0x9
+    addr: 0x4007c009
     size_bits: 8
     description: LLWU Pin Filter 2 register
     read_allowed: true
@@ -31829,7 +31825,7 @@ modules:
   registers:
   - !Register
     name: LVDSC1
-    addr: 0x0
+    addr: 0x4007d000
     size_bits: 8
     description: Low Voltage Detect Status And Control 1 register
     read_allowed: true
@@ -31885,7 +31881,7 @@ modules:
         1: '1'
   - !Register
     name: LVDSC2
-    addr: 0x1
+    addr: 0x4007d001
     size_bits: 8
     description: Low Voltage Detect Status And Control 2 register
     read_allowed: true
@@ -31932,7 +31928,7 @@ modules:
         1: '1'
   - !Register
     name: REGSC
-    addr: 0x2
+    addr: 0x4007d002
     size_bits: 8
     description: Regulator Status And Control register
     read_allowed: true
@@ -31997,7 +31993,7 @@ modules:
   registers:
   - !Register
     name: PMPROT
-    addr: 0x0
+    addr: 0x4007e000
     size_bits: 8
     description: Power Mode Protection register
     read_allowed: true
@@ -32036,7 +32032,7 @@ modules:
         1: '1'
   - !Register
     name: PMCTRL
-    addr: 0x1
+    addr: 0x4007e001
     size_bits: 8
     description: Power Mode Control register
     read_allowed: true
@@ -32078,7 +32074,7 @@ modules:
         2: '10'
   - !Register
     name: STOPCTRL
-    addr: 0x2
+    addr: 0x4007e002
     size_bits: 8
     description: Stop Control Register
     read_allowed: true
@@ -32129,7 +32125,7 @@ modules:
         2: '10'
   - !Register
     name: PMSTAT
-    addr: 0x3
+    addr: 0x4007e003
     size_bits: 8
     description: Power Mode Status register
     read_allowed: true
@@ -32151,7 +32147,7 @@ modules:
   registers:
   - !Register
     name: SRS0
-    addr: 0x0
+    addr: 0x4007f000
     size_bits: 8
     description: System Reset Status Register 0
     read_allowed: true
@@ -32210,7 +32206,7 @@ modules:
         1: '1'
   - !Register
     name: SRS1
-    addr: 0x1
+    addr: 0x4007f001
     size_bits: 8
     description: System Reset Status Register 1
     read_allowed: true
@@ -32258,7 +32254,7 @@ modules:
         1: '1'
   - !Register
     name: RPFC
-    addr: 0x4
+    addr: 0x4007f004
     size_bits: 8
     description: Reset Pin Filter Control register
     read_allowed: true
@@ -32287,7 +32283,7 @@ modules:
         1: '1'
   - !Register
     name: RPFW
-    addr: 0x5
+    addr: 0x4007f005
     size_bits: 8
     description: Reset Pin Filter Width register
     read_allowed: true
@@ -32335,7 +32331,7 @@ modules:
         31: '11111'
   - !Register
     name: FM
-    addr: 0x6
+    addr: 0x4007f006
     size_bits: 8
     description: Force Mode Register
     read_allowed: true
@@ -32355,7 +32351,7 @@ modules:
         3: '11'
   - !Register
     name: MR
-    addr: 0x7
+    addr: 0x4007f007
     size_bits: 8
     description: Mode Register
     read_allowed: true
@@ -32375,7 +32371,7 @@ modules:
         3: '11'
   - !Register
     name: SSRS0
-    addr: 0x8
+    addr: 0x4007f008
     size_bits: 8
     description: Sticky System Reset Status Register 0
     read_allowed: true
@@ -32434,7 +32430,7 @@ modules:
         1: '1'
   - !Register
     name: SSRS1
-    addr: 0x9
+    addr: 0x4007f009
     size_bits: 8
     description: Sticky System Reset Status Register 1
     read_allowed: true
@@ -32488,7 +32484,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0x400ff000
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -32506,7 +32502,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0x400ff004
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -32524,7 +32520,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0x400ff008
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -32542,7 +32538,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0x400ff00c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -32560,7 +32556,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0x400ff010
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -32578,7 +32574,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0x400ff014
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -32602,7 +32598,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0x400ff040
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -32620,7 +32616,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0x400ff044
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -32638,7 +32634,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0x400ff048
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -32656,7 +32652,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0x400ff04c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -32674,7 +32670,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0x400ff050
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -32692,7 +32688,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0x400ff054
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -32716,7 +32712,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0x400ff080
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -32734,7 +32730,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0x400ff084
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -32752,7 +32748,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0x400ff088
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -32770,7 +32766,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0x400ff08c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -32788,7 +32784,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0x400ff090
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -32806,7 +32802,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0x400ff094
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -32830,7 +32826,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0x400ff0c0
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -32848,7 +32844,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0x400ff0c4
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -32866,7 +32862,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0x400ff0c8
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -32884,7 +32880,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0x400ff0cc
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -32902,7 +32898,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0x400ff0d0
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -32920,7 +32916,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0x400ff0d4
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -32944,7 +32940,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0x400ff100
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -32962,7 +32958,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0x400ff104
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -32980,7 +32976,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0x400ff108
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -32998,7 +32994,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0x400ff10c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -33016,7 +33012,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0x400ff110
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -33034,7 +33030,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0x400ff114
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -33058,7 +33054,7 @@ modules:
   registers:
   - !Register
     name: POSITION
-    addr: 0x0
+    addr: 0xf0000000
     size_bits: 32
     description: MTB Position Register
     read_allowed: true
@@ -33080,7 +33076,7 @@ modules:
       write_allowed: true
   - !Register
     name: MASTER
-    addr: 0x4
+    addr: 0xf0000004
     size_bits: 32
     description: MTB Master Register
     read_allowed: true
@@ -33138,7 +33134,7 @@ modules:
       write_allowed: true
   - !Register
     name: FLOW
-    addr: 0x8
+    addr: 0xf0000008
     size_bits: 32
     description: MTB Flow Register
     read_allowed: true
@@ -33167,7 +33163,7 @@ modules:
       write_allowed: true
   - !Register
     name: BASE
-    addr: 0xc
+    addr: 0xf000000c
     size_bits: 32
     description: MTB Base Register
     read_allowed: true
@@ -33182,7 +33178,7 @@ modules:
       write_allowed: false
   - !Register
     name: MODECTRL
-    addr: 0xf00
+    addr: 0xf0000f00
     size_bits: 32
     description: Integration Mode Control Register
     read_allowed: true
@@ -33197,7 +33193,7 @@ modules:
       write_allowed: false
   - !Register
     name: TAGSET
-    addr: 0xfa0
+    addr: 0xf0000fa0
     size_bits: 32
     description: Claim TAG Set Register
     read_allowed: true
@@ -33212,7 +33208,7 @@ modules:
       write_allowed: false
   - !Register
     name: TAGCLEAR
-    addr: 0xfa4
+    addr: 0xf0000fa4
     size_bits: 32
     description: Claim TAG Clear Register
     read_allowed: true
@@ -33227,7 +33223,7 @@ modules:
       write_allowed: false
   - !Register
     name: LOCKACCESS
-    addr: 0xfb0
+    addr: 0xf0000fb0
     size_bits: 32
     description: Lock Access Register
     read_allowed: true
@@ -33242,7 +33238,7 @@ modules:
       write_allowed: false
   - !Register
     name: LOCKSTAT
-    addr: 0xfb4
+    addr: 0xf0000fb4
     size_bits: 32
     description: Lock Status Register
     read_allowed: true
@@ -33257,7 +33253,7 @@ modules:
       write_allowed: false
   - !Register
     name: AUTHSTAT
-    addr: 0xfb8
+    addr: 0xf0000fb8
     size_bits: 32
     description: Authentication Status Register
     read_allowed: true
@@ -33293,7 +33289,7 @@ modules:
       write_allowed: false
   - !Register
     name: DEVICEARCH
-    addr: 0xfbc
+    addr: 0xf0000fbc
     size_bits: 32
     description: Device Architecture Register
     read_allowed: true
@@ -33309,7 +33305,7 @@ modules:
       write_allowed: false
   - !Register
     name: DEVICECFG
-    addr: 0xfc8
+    addr: 0xf0000fc8
     size_bits: 32
     description: Device Configuration Register
     read_allowed: true
@@ -33324,7 +33320,7 @@ modules:
       write_allowed: false
   - !Register
     name: DEVICETYPID
-    addr: 0xfcc
+    addr: 0xf0000fcc
     size_bits: 32
     description: Device Type Identifier Register
     read_allowed: true
@@ -33340,7 +33336,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID4
-    addr: 0xfd0
+    addr: 0xf0000fd0
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33355,7 +33351,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID5
-    addr: 0xfd4
+    addr: 0xf0000fd4
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33370,7 +33366,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID6
-    addr: 0xfd8
+    addr: 0xf0000fd8
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33385,7 +33381,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID7
-    addr: 0xfdc
+    addr: 0xf0000fdc
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33400,7 +33396,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID0
-    addr: 0xfe0
+    addr: 0xf0000fe0
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33415,7 +33411,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID1
-    addr: 0xfe4
+    addr: 0xf0000fe4
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33430,7 +33426,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID2
-    addr: 0xfe8
+    addr: 0xf0000fe8
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33445,7 +33441,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID3
-    addr: 0xfec
+    addr: 0xf0000fec
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33460,7 +33456,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID0
-    addr: 0xff0
+    addr: 0xf0000ff0
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33475,7 +33471,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID1
-    addr: 0xff4
+    addr: 0xf0000ff4
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33490,7 +33486,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID2
-    addr: 0xff8
+    addr: 0xf0000ff8
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33505,7 +33501,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID3
-    addr: 0xffc
+    addr: 0xf0000ffc
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33526,7 +33522,7 @@ modules:
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0xf0001000
     size_bits: 32
     description: MTB DWT Control Register
     read_allowed: true
@@ -33549,7 +33545,7 @@ modules:
       write_allowed: false
   - !Register
     name: FCT0
-    addr: 0x28
+    addr: 0xf0001028
     size_bits: 32
     description: MTB_DWT Comparator Function Register 0
     read_allowed: true
@@ -33609,7 +33605,7 @@ modules:
         1: '1'
   - !Register
     name: FCT1
-    addr: 0x38
+    addr: 0xf0001038
     size_bits: 32
     description: MTB_DWT Comparator Function Register 1
     read_allowed: true
@@ -33640,7 +33636,7 @@ modules:
         1: '1'
   - !Register
     name: TBCTRL
-    addr: 0x200
+    addr: 0xf0001200
     size_bits: 32
     description: MTB_DWT Trace Buffer Control Register
     read_allowed: true
@@ -33676,7 +33672,7 @@ modules:
       write_allowed: false
   - !Register
     name: DEVICECFG
-    addr: 0xfc8
+    addr: 0xf0001fc8
     size_bits: 32
     description: Device Configuration Register
     read_allowed: true
@@ -33691,7 +33687,7 @@ modules:
       write_allowed: false
   - !Register
     name: DEVICETYPID
-    addr: 0xfcc
+    addr: 0xf0001fcc
     size_bits: 32
     description: Device Type Identifier Register
     read_allowed: true
@@ -33707,7 +33703,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMP0
-    addr: 0x20
+    addr: 0xf0001020
     size_bits: 32
     description: MTB_DWT Comparator Register
     read_allowed: true
@@ -33722,7 +33718,7 @@ modules:
       write_allowed: true
   - !Register
     name: COMP1
-    addr: 0x30
+    addr: 0xf0001030
     size_bits: 32
     description: MTB_DWT Comparator Register
     read_allowed: true
@@ -33737,7 +33733,7 @@ modules:
       write_allowed: true
   - !Register
     name: MASK0
-    addr: 0x24
+    addr: 0xf0001024
     size_bits: 32
     description: MTB_DWT Comparator Mask Register
     read_allowed: true
@@ -33752,7 +33748,7 @@ modules:
       write_allowed: true
   - !Register
     name: MASK1
-    addr: 0x34
+    addr: 0xf0001034
     size_bits: 32
     description: MTB_DWT Comparator Mask Register
     read_allowed: true
@@ -33767,7 +33763,7 @@ modules:
       write_allowed: true
   - !Register
     name: PERIPHID4
-    addr: 0xfd0
+    addr: 0xf0001fd0
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33782,7 +33778,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID5
-    addr: 0xfd4
+    addr: 0xf0001fd4
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33797,7 +33793,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID6
-    addr: 0xfd8
+    addr: 0xf0001fd8
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33812,7 +33808,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID7
-    addr: 0xfdc
+    addr: 0xf0001fdc
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33827,7 +33823,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID0
-    addr: 0xfe0
+    addr: 0xf0001fe0
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33842,7 +33838,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID1
-    addr: 0xfe4
+    addr: 0xf0001fe4
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33857,7 +33853,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID2
-    addr: 0xfe8
+    addr: 0xf0001fe8
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33872,7 +33868,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID3
-    addr: 0xfec
+    addr: 0xf0001fec
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -33887,7 +33883,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID0
-    addr: 0xff0
+    addr: 0xf0001ff0
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33902,7 +33898,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID1
-    addr: 0xff4
+    addr: 0xf0001ff4
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33917,7 +33913,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID2
-    addr: 0xff8
+    addr: 0xf0001ff8
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33932,7 +33928,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID3
-    addr: 0xffc
+    addr: 0xf0001ffc
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -33953,7 +33949,7 @@ modules:
   registers:
   - !Register
     name: TABLEMARK
-    addr: 0xc
+    addr: 0xf000200c
     size_bits: 32
     description: End of Table Marker Register
     read_allowed: true
@@ -33968,7 +33964,7 @@ modules:
       write_allowed: false
   - !Register
     name: SYSACCESS
-    addr: 0xfcc
+    addr: 0xf0002fcc
     size_bits: 32
     description: System Access Register
     read_allowed: true
@@ -33984,7 +33980,7 @@ modules:
       write_allowed: false
   - !Register
     name: ENTRY0
-    addr: 0x0
+    addr: 0xf0002000
     size_bits: 32
     description: Entry
     read_allowed: true
@@ -33999,7 +33995,7 @@ modules:
       write_allowed: false
   - !Register
     name: ENTRY1
-    addr: 0x4
+    addr: 0xf0002004
     size_bits: 32
     description: Entry
     read_allowed: true
@@ -34014,7 +34010,7 @@ modules:
       write_allowed: false
   - !Register
     name: ENTRY2
-    addr: 0x8
+    addr: 0xf0002008
     size_bits: 32
     description: Entry
     read_allowed: true
@@ -34029,7 +34025,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID4
-    addr: 0xfd0
+    addr: 0xf0002fd0
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34044,7 +34040,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID5
-    addr: 0xfd4
+    addr: 0xf0002fd4
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34059,7 +34055,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID6
-    addr: 0xfd8
+    addr: 0xf0002fd8
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34074,7 +34070,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID7
-    addr: 0xfdc
+    addr: 0xf0002fdc
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34089,7 +34085,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID0
-    addr: 0xfe0
+    addr: 0xf0002fe0
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34104,7 +34100,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID1
-    addr: 0xfe4
+    addr: 0xf0002fe4
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34119,7 +34115,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID2
-    addr: 0xfe8
+    addr: 0xf0002fe8
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34134,7 +34130,7 @@ modules:
       write_allowed: false
   - !Register
     name: PERIPHID3
-    addr: 0xfec
+    addr: 0xf0002fec
     size_bits: 32
     description: Peripheral ID Register
     read_allowed: true
@@ -34149,7 +34145,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID0
-    addr: 0xff0
+    addr: 0xf0002ff0
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -34164,7 +34160,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID1
-    addr: 0xff4
+    addr: 0xf0002ff4
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -34179,7 +34175,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID2
-    addr: 0xff8
+    addr: 0xf0002ff8
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -34194,7 +34190,7 @@ modules:
       write_allowed: false
   - !Register
     name: COMPID3
-    addr: 0xffc
+    addr: 0xf0002ffc
     size_bits: 32
     description: Component ID Register
     read_allowed: true
@@ -34211,11 +34207,11 @@ modules:
   name: MCM
   description: Core Platform Miscellaneous Control Module
   base_addr: 0xf0003000
-  size: 0x3c
+  size: 0x44
   registers:
   - !Register
     name: PLASC
-    addr: 0x8
+    addr: 0xf0003008
     size_bits: 16
     description: Crossbar Switch (AXBS) Slave Configuration
     read_allowed: true
@@ -34235,7 +34231,7 @@ modules:
         1: '1'
   - !Register
     name: PLAMC
-    addr: 0xa
+    addr: 0xf000300a
     size_bits: 16
     description: Crossbar Switch (AXBS) Master Configuration
     read_allowed: true
@@ -34255,7 +34251,7 @@ modules:
         1: '1'
   - !Register
     name: PLACR
-    addr: 0xc
+    addr: 0xf000300c
     size_bits: 32
     description: Platform Control Register
     read_allowed: true
@@ -34341,7 +34337,7 @@ modules:
         1: '1'
   - !Register
     name: CPO
-    addr: 0x40
+    addr: 0xf0003040
     size_bits: 32
     description: Compute Operation Control Register
     read_allowed: true
@@ -34385,7 +34381,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0xf8000000
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -34403,7 +34399,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0xf8000004
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -34421,7 +34417,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0xf8000008
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -34439,7 +34435,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0xf800000c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -34457,7 +34453,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0xf8000010
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -34475,7 +34471,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0xf8000014
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -34499,7 +34495,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0xf8000040
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -34517,7 +34513,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0xf8000044
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -34535,7 +34531,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0xf8000048
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -34553,7 +34549,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0xf800004c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -34571,7 +34567,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0xf8000050
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -34589,7 +34585,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0xf8000054
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -34613,7 +34609,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0xf8000080
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -34631,7 +34627,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0xf8000084
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -34649,7 +34645,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0xf8000088
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -34667,7 +34663,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0xf800008c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -34685,7 +34681,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0xf8000090
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -34703,7 +34699,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0xf8000094
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -34727,7 +34723,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0xf80000c0
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -34745,7 +34741,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0xf80000c4
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -34763,7 +34759,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0xf80000c8
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -34781,7 +34777,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0xf80000cc
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -34799,7 +34795,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0xf80000d0
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -34817,7 +34813,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0xf80000d4
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true
@@ -34841,7 +34837,7 @@ modules:
   registers:
   - !Register
     name: PDOR
-    addr: 0x0
+    addr: 0xf8000100
     size_bits: 32
     description: Port Data Output Register
     read_allowed: true
@@ -34859,7 +34855,7 @@ modules:
         1: '1'
   - !Register
     name: PSOR
-    addr: 0x4
+    addr: 0xf8000104
     size_bits: 32
     description: Port Set Output Register
     read_allowed: false
@@ -34877,7 +34873,7 @@ modules:
         1: '1'
   - !Register
     name: PCOR
-    addr: 0x8
+    addr: 0xf8000108
     size_bits: 32
     description: Port Clear Output Register
     read_allowed: false
@@ -34895,7 +34891,7 @@ modules:
         1: '1'
   - !Register
     name: PTOR
-    addr: 0xc
+    addr: 0xf800010c
     size_bits: 32
     description: Port Toggle Output Register
     read_allowed: false
@@ -34913,7 +34909,7 @@ modules:
         1: '1'
   - !Register
     name: PDIR
-    addr: 0x10
+    addr: 0xf8000110
     size_bits: 32
     description: Port Data Input Register
     read_allowed: true
@@ -34931,7 +34927,7 @@ modules:
         1: '1'
   - !Register
     name: PDDR
-    addr: 0x14
+    addr: 0xf8000114
     size_bits: 32
     description: Port Data Direction Register
     read_allowed: true

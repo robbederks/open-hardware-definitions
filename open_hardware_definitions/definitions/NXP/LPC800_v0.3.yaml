@@ -8,11 +8,11 @@ modules:
   name: WWDT
   description: Windowed Watchdog Timer (WWDT)
   base_addr: 0x40000000
-  size: 0xfff
+  size: 0x1c
   registers:
   - !Register
     name: MOD
-    addr: 0x0
+    addr: 0x40000000
     size_bits: 32
     description: Watchdog mode register. This register contains the basic mode and
       status of the Watchdog Timer.
@@ -74,7 +74,7 @@ modules:
         The value read from a reserved bit is not defined.
   - !Register
     name: TC
-    addr: 0x4
+    addr: 0x40000004
     size_bits: 32
     description: Watchdog timer constant register. This 24-bit register determines
       the time-out value.
@@ -95,7 +95,7 @@ modules:
         The value read from a reserved bit is not defined.
   - !Register
     name: FEED
-    addr: 0x8
+    addr: 0x40000008
     size_bits: 32
     description: Watchdog feed sequence register. Writing 0xAA followed by 0x55 to
       this register reloads the Watchdog timer with the value contained in WDTC.
@@ -115,7 +115,7 @@ modules:
         The value read from a reserved bit is not defined.
   - !Register
     name: TV
-    addr: 0xc
+    addr: 0x4000000c
     size_bits: 32
     description: Watchdog timer value register. This 24-bit register reads out the
       current value of the Watchdog timer.
@@ -136,7 +136,7 @@ modules:
         The value read from a reserved bit is not defined.
   - !Register
     name: WARNINT
-    addr: 0x14
+    addr: 0x40000014
     size_bits: 32
     description: Watchdog Warning Interrupt compare value.
     read_allowed: true
@@ -155,7 +155,7 @@ modules:
         The value read from a reserved bit is not defined.
   - !Register
     name: WINDOW
-    addr: 0x18
+    addr: 0x40000018
     size_bits: 32
     description: Watchdog Window compare value.
     read_allowed: true
@@ -177,11 +177,11 @@ modules:
   name: MRT
   description: Multi-Rate Timer (MRT)
   base_addr: 0x40004000
-  size: 0xfff
+  size: 0xfc
   registers:
   - !Register
     name: IDLE_CH
-    addr: 0xf4
+    addr: 0x400040f4
     size_bits: 32
     description: Idle channel register. This register returns the number of the first
       idle channel.
@@ -206,7 +206,7 @@ modules:
       description: Reserved.
   - !Register
     name: IRQ_FLAG
-    addr: 0xf8
+    addr: 0x400040f8
     size_bits: 32
     description: Global interrupt flag register
     read_allowed: true
@@ -251,7 +251,7 @@ modules:
       description: Reserved.
   - !Register
     name: INTVAL0
-    addr: 0x0
+    addr: 0x40004000
     description: MRT0 Time interval value register. This value is loaded into the
       TIMER0 register.
     read_allowed: true
@@ -284,7 +284,7 @@ modules:
         1: FORCE_LOAD_THE_INTV
   - !Register
     name: INTVAL1
-    addr: 0x10
+    addr: 0x40004010
     description: MRT0 Time interval value register. This value is loaded into the
       TIMER0 register.
     read_allowed: true
@@ -317,7 +317,7 @@ modules:
         1: FORCE_LOAD_THE_INTV
   - !Register
     name: INTVAL2
-    addr: 0x20
+    addr: 0x40004020
     description: MRT0 Time interval value register. This value is loaded into the
       TIMER0 register.
     read_allowed: true
@@ -350,7 +350,7 @@ modules:
         1: FORCE_LOAD_THE_INTV
   - !Register
     name: INTVAL3
-    addr: 0x30
+    addr: 0x40004030
     description: MRT0 Time interval value register. This value is loaded into the
       TIMER0 register.
     read_allowed: true
@@ -383,7 +383,7 @@ modules:
         1: FORCE_LOAD_THE_INTV
   - !Register
     name: TIMER0
-    addr: 0x4
+    addr: 0x40004004
     description: MRT0 Timer register. This register reads the value of the down-counter.
     read_allowed: true
     write_allowed: false
@@ -405,7 +405,7 @@ modules:
       description: Reserved.
   - !Register
     name: TIMER1
-    addr: 0x14
+    addr: 0x40004014
     description: MRT0 Timer register. This register reads the value of the down-counter.
     read_allowed: true
     write_allowed: false
@@ -427,7 +427,7 @@ modules:
       description: Reserved.
   - !Register
     name: TIMER2
-    addr: 0x24
+    addr: 0x40004024
     description: MRT0 Timer register. This register reads the value of the down-counter.
     read_allowed: true
     write_allowed: false
@@ -449,7 +449,7 @@ modules:
       description: Reserved.
   - !Register
     name: TIMER3
-    addr: 0x34
+    addr: 0x40004034
     description: MRT0 Timer register. This register reads the value of the down-counter.
     read_allowed: true
     write_allowed: false
@@ -471,7 +471,7 @@ modules:
       description: Reserved.
   - !Register
     name: CTRL0
-    addr: 0x8
+    addr: 0x40004008
     description: MRT0 Control register. This register controls the MRT0 modes.
     read_allowed: true
     write_allowed: true
@@ -501,7 +501,7 @@ modules:
       description: Reserved.
   - !Register
     name: CTRL1
-    addr: 0x18
+    addr: 0x40004018
     description: MRT0 Control register. This register controls the MRT0 modes.
     read_allowed: true
     write_allowed: true
@@ -531,7 +531,7 @@ modules:
       description: Reserved.
   - !Register
     name: CTRL2
-    addr: 0x28
+    addr: 0x40004028
     description: MRT0 Control register. This register controls the MRT0 modes.
     read_allowed: true
     write_allowed: true
@@ -561,7 +561,7 @@ modules:
       description: Reserved.
   - !Register
     name: CTRL3
-    addr: 0x38
+    addr: 0x40004038
     description: MRT0 Control register. This register controls the MRT0 modes.
     read_allowed: true
     write_allowed: true
@@ -591,7 +591,7 @@ modules:
       description: Reserved.
   - !Register
     name: STAT0
-    addr: 0xc
+    addr: 0x4000400c
     description: MRT0 Status register.
     read_allowed: true
     write_allowed: true
@@ -619,7 +619,7 @@ modules:
       description: Reserved.
   - !Register
     name: STAT1
-    addr: 0x1c
+    addr: 0x4000401c
     description: MRT0 Status register.
     read_allowed: true
     write_allowed: true
@@ -647,7 +647,7 @@ modules:
       description: Reserved.
   - !Register
     name: STAT2
-    addr: 0x2c
+    addr: 0x4000402c
     description: MRT0 Status register.
     read_allowed: true
     write_allowed: true
@@ -675,7 +675,7 @@ modules:
       description: Reserved.
   - !Register
     name: STAT3
-    addr: 0x3c
+    addr: 0x4000403c
     description: MRT0 Status register.
     read_allowed: true
     write_allowed: true
@@ -705,11 +705,11 @@ modules:
   name: WKT
   description: Self wake-up timer (WKT)
   base_addr: 0x40008000
-  size: 0xfff
+  size: 0x10
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x40008000
     size_bits: 32
     description: Self wake-up timer control register.
     read_allowed: true
@@ -746,7 +746,7 @@ modules:
       description: Reserved.
   - !Register
     name: COUNT
-    addr: 0xc
+    addr: 0x4000800c
     size_bits: 32
     description: Counter register.
     read_allowed: true
@@ -763,11 +763,11 @@ modules:
   name: SWM
   description: Switch matrix (SWM)
   base_addr: 0x4000c000
-  size: 0xfff
+  size: 0x1c4
   registers:
   - !Register
     name: PINASSIGN0
-    addr: 0x0
+    addr: 0x4000c000
     size_bits: 32
     description: Pin assign register 0. Assign movable functions U0_TXD, U0_RXD, U0_RTS,
       U0_CTS
@@ -805,7 +805,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN1
-    addr: 0x4
+    addr: 0x4000c004
     size_bits: 32
     description: Pin assign register 1. Assign movable functions U0_SCLC, U1_TXD,
       U1_RXD
@@ -843,7 +843,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN2
-    addr: 0x8
+    addr: 0x4000c008
     size_bits: 32
     description: Pin assign register 2. Assign movable functions U2_TXD, U2_RXD
     read_allowed: true
@@ -880,7 +880,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN3
-    addr: 0xc
+    addr: 0x4000c00c
     size_bits: 32
     description: Pin assignregister 3. Assign movable function SPI0_SCK
     read_allowed: true
@@ -917,7 +917,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN4
-    addr: 0x10
+    addr: 0x4000c010
     size_bits: 32
     description: Pin assign register 4. Assign movable functions SPI0_MOSI, SPI0_MISO,
       SPI0_SSEL, SPI1_SCK
@@ -955,7 +955,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN5
-    addr: 0x14
+    addr: 0x4000c014
     size_bits: 32
     description: Pin assign register 5. Assign movable functions SPI1_MOSI, SPI1_MISO,
       SPI1_SSEL, CTIN_0
@@ -993,7 +993,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN6
-    addr: 0x18
+    addr: 0x4000c018
     size_bits: 32
     description: Pin assign register 6. Assign movable functions CTIN_1, CTIN_2, CTIN_3,
       CTOUT_0
@@ -1031,7 +1031,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN7
-    addr: 0x1c
+    addr: 0x4000c01c
     size_bits: 32
     description: Pin assign egister 7. Assign movable functions CTOUT_1, CTOUT_2,
       CTOUT_3, I2C_SDA
@@ -1069,7 +1069,7 @@ modules:
         to PIO0_17 (= 0x11).'
   - !Register
     name: PINASSIGN8
-    addr: 0x20
+    addr: 0x4000c020
     size_bits: 32
     description: Pin assign register 8. Assign movable functions I2C_SCL, ACMP_O,
       CLKOUT, GPIO_INT_BMAT
@@ -1107,7 +1107,7 @@ modules:
         (= 0) to PIO0_17 (= 0x11).'
   - !Register
     name: PINENABLE0
-    addr: 0x1c0
+    addr: 0x4000c1c0
     size_bits: 32
     description: Pin enable register 0. Enables fixed-pin functions ACMP_I0, ACMP_I1,
       SWCLK, SWDIO, XTALIN, XTALOUT, RESET, CLKIN, VDDCMP
@@ -1218,11 +1218,11 @@ modules:
   name: PMU
   description: Power Management Unit (PMU)
   base_addr: 0x40020000
-  size: 0xfff
+  size: 0x18
   registers:
   - !Register
     name: PCON
-    addr: 0x0
+    addr: 0x40020000
     size_bits: 32
     description: Power control register
     read_allowed: true
@@ -1279,7 +1279,7 @@ modules:
       description: Reserved. Do not write ones to this bit.
   - !Register
     name: DPDCTRL
-    addr: 0x14
+    addr: 0x40020014
     size_bits: 32
     description: Deep power-down control register
     read_allowed: true
@@ -1336,7 +1336,7 @@ modules:
       description: Data retained during Deep power-down mode. or reserved?
   - !Register
     name: GPREG0
-    addr: 0x4
+    addr: 0x40020004
     description: General purpose register 0
     read_allowed: true
     write_allowed: true
@@ -1348,7 +1348,7 @@ modules:
       description: Data retained during Deep power-down mode.
   - !Register
     name: GPREG1
-    addr: 0x8
+    addr: 0x40020008
     description: General purpose register 0
     read_allowed: true
     write_allowed: true
@@ -1360,7 +1360,7 @@ modules:
       description: Data retained during Deep power-down mode.
   - !Register
     name: GPREG2
-    addr: 0xc
+    addr: 0x4002000c
     description: General purpose register 0
     read_allowed: true
     write_allowed: true
@@ -1372,7 +1372,7 @@ modules:
       description: Data retained during Deep power-down mode.
   - !Register
     name: GPREG3
-    addr: 0x10
+    addr: 0x40020010
     description: General purpose register 0
     read_allowed: true
     write_allowed: true
@@ -1386,11 +1386,11 @@ modules:
   name: CMP
   description: Analog comparator
   base_addr: 0x40024000
-  size: 0xfff
+  size: 0x8
   registers:
   - !Register
     name: CTRL
-    addr: 0x0
+    addr: 0x40024000
     size_bits: 32
     description: Comparator control register
     read_allowed: true
@@ -1512,7 +1512,7 @@ modules:
       description: Reserved
   - !Register
     name: LAD
-    addr: 0x4
+    addr: 0x40024004
     size_bits: 32
     description: Voltage ladder register
     read_allowed: true
@@ -1547,11 +1547,11 @@ modules:
   name: FLASHCTRL
   description: ' Flash controller '
   base_addr: 0x40040000
-  size: 0xfff
+  size: 0x30
   registers:
   - !Register
     name: FLASHCFG
-    addr: 0x10
+    addr: 0x40040010
     size_bits: 32
     description: Flash configuration register
     read_allowed: true
@@ -1576,7 +1576,7 @@ modules:
         Bits 31:2 must be written back exactly as read.
   - !Register
     name: FMSSTART
-    addr: 0x20
+    addr: 0x40040020
     size_bits: 32
     description: Signature start address register
     read_allowed: true
@@ -1596,7 +1596,7 @@ modules:
         The value read from a reserved bit is not defined.
   - !Register
     name: FMSSTOP
-    addr: 0x24
+    addr: 0x40040024
     size_bits: 32
     description: Signature stop-address register
     read_allowed: true
@@ -1624,7 +1624,7 @@ modules:
         the end of signature generation, this bit is automatically cleared.
   - !Register
     name: FMSW0
-    addr: 0x2c
+    addr: 0x4004002c
     size_bits: 32
     description: 'Signature Word '
     read_allowed: true
@@ -1639,11 +1639,11 @@ modules:
   name: IOCON
   description: I/O configuration (IOCON)
   base_addr: 0x40044000
-  size: 0xfff
+  size: 0x4c
   registers:
   - !Register
     name: PIO0_17
-    addr: 0x0
+    addr: 0x40044000
     size_bits: 32
     description: I/O configuration for pin PIO0_17
     read_allowed: true
@@ -1725,7 +1725,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_13
-    addr: 0x4
+    addr: 0x40044004
     size_bits: 32
     description: I/O configuration for pin PIO0_13
     read_allowed: true
@@ -1807,7 +1807,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_12
-    addr: 0x8
+    addr: 0x40044008
     size_bits: 32
     description: I/O configuration for pin PIO0_12
     read_allowed: true
@@ -1889,7 +1889,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_5
-    addr: 0xc
+    addr: 0x4004400c
     size_bits: 32
     description: I/O configuration for pin PIO0_5/RESET
     read_allowed: true
@@ -1971,7 +1971,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_4
-    addr: 0x10
+    addr: 0x40044010
     size_bits: 32
     description: I/O configuration for pin PIO0_4
     read_allowed: true
@@ -2053,7 +2053,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_3
-    addr: 0x14
+    addr: 0x40044014
     size_bits: 32
     description: I/O configuration for pin PIO0_3/SWCLK
     read_allowed: true
@@ -2135,7 +2135,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_2
-    addr: 0x18
+    addr: 0x40044018
     size_bits: 32
     description: I/O configuration for pin PIO0_2/SWDIO
     read_allowed: true
@@ -2217,7 +2217,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_11
-    addr: 0x1c
+    addr: 0x4004401c
     size_bits: 32
     description: I/O configuration for pin PIO0_11. This is the pin configuration
       for the true open-drain pin.
@@ -2291,7 +2291,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_10
-    addr: 0x20
+    addr: 0x40044020
     size_bits: 32
     description: I/O configuration for pin PIO0_10. This is the pin configuration
       for the true open-drain pin.
@@ -2365,7 +2365,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_16
-    addr: 0x24
+    addr: 0x40044024
     size_bits: 32
     description: I/O configuration for pin PIO0_16
     read_allowed: true
@@ -2447,7 +2447,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_15
-    addr: 0x28
+    addr: 0x40044028
     size_bits: 32
     description: I/O configuration for pin PIO0_15
     read_allowed: true
@@ -2529,7 +2529,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_1
-    addr: 0x2c
+    addr: 0x4004402c
     size_bits: 32
     description: I/O configuration for pin PIO0_1/ACMP_I1/CLKIN
     read_allowed: true
@@ -2611,7 +2611,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_9
-    addr: 0x34
+    addr: 0x40044034
     size_bits: 32
     description: I/O configuration for pin PIO0_9/XTALOUT
     read_allowed: true
@@ -2693,7 +2693,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_8
-    addr: 0x38
+    addr: 0x40044038
     size_bits: 32
     description: I/O configuration for pin PIO0_8/XTALIN
     read_allowed: true
@@ -2775,7 +2775,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_7
-    addr: 0x3c
+    addr: 0x4004403c
     size_bits: 32
     description: I/O configuration for pin PIO0_7
     read_allowed: true
@@ -2857,7 +2857,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_6
-    addr: 0x40
+    addr: 0x40044040
     size_bits: 32
     description: I/O configuration for pin PIO0_6/VDDCMP
     read_allowed: true
@@ -2939,7 +2939,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_0
-    addr: 0x44
+    addr: 0x40044044
     size_bits: 32
     description: I/O configuration for pin PIO0_0/ACMP_I0
     read_allowed: true
@@ -3021,7 +3021,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIO0_14
-    addr: 0x48
+    addr: 0x40044048
     size_bits: 32
     description: I/O configuration for pin PIO0_14
     read_allowed: true
@@ -3105,11 +3105,11 @@ modules:
   name: SYSCON
   description: System configuration (SYSCON)
   base_addr: 0x40048000
-  size: 0xfff
+  size: 0x3f8
   registers:
   - !Register
     name: SYSMEMREMAP
-    addr: 0x0
+    addr: 0x40048000
     size_bits: 32
     description: System memory remap
     read_allowed: true
@@ -3132,7 +3132,7 @@ modules:
       description: Reserved
   - !Register
     name: PRESETCTRL
-    addr: 0x4
+    addr: 0x40048004
     size_bits: 32
     description: Peripheral reset control
     read_allowed: true
@@ -3250,7 +3250,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSPLLCTRL
-    addr: 0x8
+    addr: 0x40048008
     size_bits: 32
     description: System PLL control
     read_allowed: true
@@ -3279,7 +3279,7 @@ modules:
       description: Reserved. Do not write ones to reserved bits.
   - !Register
     name: SYSPLLSTAT
-    addr: 0xc
+    addr: 0x4004800c
     size_bits: 32
     description: System PLL status
     read_allowed: true
@@ -3300,7 +3300,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSOSCCTRL
-    addr: 0x20
+    addr: 0x40048020
     size_bits: 32
     description: System oscillator control
     read_allowed: true
@@ -3329,7 +3329,7 @@ modules:
       description: Reserved
   - !Register
     name: WDTOSCCTRL
-    addr: 0x24
+    addr: 0x40048024
     size_bits: 32
     description: Watchdog oscillator control
     read_allowed: true
@@ -3371,7 +3371,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSRSTSTAT
-    addr: 0x30
+    addr: 0x40048030
     size_bits: 32
     description: System reset status register
     read_allowed: true
@@ -3424,7 +3424,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSPLLCLKSEL
-    addr: 0x40
+    addr: 0x40048040
     size_bits: 32
     description: System PLL clock source select
     read_allowed: true
@@ -3447,7 +3447,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSPLLCLKUEN
-    addr: 0x44
+    addr: 0x40048044
     size_bits: 32
     description: System PLL clock source update enable
     read_allowed: true
@@ -3468,7 +3468,7 @@ modules:
       description: Reserved
   - !Register
     name: MAINCLKSEL
-    addr: 0x70
+    addr: 0x40048070
     size_bits: 32
     description: Main clock source select
     read_allowed: true
@@ -3491,7 +3491,7 @@ modules:
       description: Reserved
   - !Register
     name: MAINCLKUEN
-    addr: 0x74
+    addr: 0x40048074
     size_bits: 32
     description: Main clock source update enable
     read_allowed: true
@@ -3512,7 +3512,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSAHBCLKDIV
-    addr: 0x78
+    addr: 0x40048078
     size_bits: 32
     description: System clock divider
     read_allowed: true
@@ -3531,7 +3531,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSAHBCLKCTRL
-    addr: 0x80
+    addr: 0x40048080
     size_bits: 32
     description: System clock control
     read_allowed: true
@@ -3706,7 +3706,7 @@ modules:
       description: Reserved
   - !Register
     name: UARTCLKDIV
-    addr: 0x94
+    addr: 0x40048094
     size_bits: 32
     description: UART clock divider
     read_allowed: true
@@ -3725,7 +3725,7 @@ modules:
       description: Reserved
   - !Register
     name: CLKOUTSEL
-    addr: 0xe0
+    addr: 0x400480e0
     size_bits: 32
     description: CLKOUT clock source select
     read_allowed: true
@@ -3748,7 +3748,7 @@ modules:
       description: Reserved
   - !Register
     name: CLKOUTUEN
-    addr: 0xe4
+    addr: 0x400480e4
     size_bits: 32
     description: CLKOUT clock source update enable
     read_allowed: true
@@ -3769,7 +3769,7 @@ modules:
       description: Reserved
   - !Register
     name: CLKOUTDIV
-    addr: 0xe8
+    addr: 0x400480e8
     size_bits: 32
     description: CLKOUT clock divider
     read_allowed: true
@@ -3788,7 +3788,7 @@ modules:
       description: Reserved
   - !Register
     name: UARTFRGDIV
-    addr: 0xf0
+    addr: 0x400480f0
     size_bits: 32
     description: UART fractional generator divider value
     read_allowed: true
@@ -3807,7 +3807,7 @@ modules:
       description: Reserved
   - !Register
     name: UARTFRGMULT
-    addr: 0xf4
+    addr: 0x400480f4
     size_bits: 32
     description: UART fractional generator multiplier value
     read_allowed: true
@@ -3826,7 +3826,7 @@ modules:
       description: Reserved
   - !Register
     name: EXTTRACECMD
-    addr: 0xfc
+    addr: 0x400480fc
     size_bits: 32
     description: External trace buffer command register
     read_allowed: true
@@ -3849,7 +3849,7 @@ modules:
       description: Reserved
   - !Register
     name: PIOPORCAP0
-    addr: 0x100
+    addr: 0x40048100
     size_bits: 32
     description: POR captured PIO status 0
     read_allowed: true
@@ -3867,7 +3867,7 @@ modules:
       description: Reserved.
   - !Register
     name: IOCONCLKDIV6
-    addr: 0x134
+    addr: 0x40048134
     size_bits: 32
     description: Peripheral clock 6 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -3886,7 +3886,7 @@ modules:
       description: Reserved
   - !Register
     name: IOCONCLKDIV5
-    addr: 0x138
+    addr: 0x40048138
     size_bits: 32
     description: Peripheral clock 5 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -3905,7 +3905,7 @@ modules:
       description: Reserved
   - !Register
     name: IOCONCLKDIV4
-    addr: 0x13c
+    addr: 0x4004813c
     size_bits: 32
     description: Peripheral clock 4 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -3924,7 +3924,7 @@ modules:
       description: Reserved
   - !Register
     name: IOCONCLKDIV3
-    addr: 0x140
+    addr: 0x40048140
     size_bits: 32
     description: Peripheral clock 3 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -3943,7 +3943,7 @@ modules:
       description: Reserved
   - !Register
     name: IOCONCLKDIV2
-    addr: 0x144
+    addr: 0x40048144
     size_bits: 32
     description: Peripheral clock 2 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -3962,7 +3962,7 @@ modules:
       description: Reserved
   - !Register
     name: IOCONCLKDIV1
-    addr: 0x148
+    addr: 0x40048148
     size_bits: 32
     description: Peripheral clock 1 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -3981,7 +3981,7 @@ modules:
       description: Reserved
   - !Register
     name: IOCONCLKDIV0
-    addr: 0x14c
+    addr: 0x4004814c
     size_bits: 32
     description: Peripheral clock 0 to the IOCON block for programmable glitch filter
     read_allowed: true
@@ -4000,7 +4000,7 @@ modules:
       description: Reserved
   - !Register
     name: BODCTRL
-    addr: 0x150
+    addr: 0x40048150
     size_bits: 32
     description: Brown-Out Detect
     read_allowed: true
@@ -4041,7 +4041,7 @@ modules:
       description: Reserved
   - !Register
     name: SYSTCKCAL
-    addr: 0x154
+    addr: 0x40048154
     size_bits: 32
     description: System tick counter calibration
     read_allowed: true
@@ -4059,7 +4059,7 @@ modules:
       description: Reserved
   - !Register
     name: IRQLATENCY
-    addr: 0x170
+    addr: 0x40048170
     size_bits: 32
     description: IQR delay. Allows trade-off between interrupt latency and determinism.
     read_allowed: true
@@ -4078,7 +4078,7 @@ modules:
       description: Reserved
   - !Register
     name: NMISRC
-    addr: 0x174
+    addr: 0x40048174
     size_bits: 32
     description: NMI Source Control
     read_allowed: true
@@ -4104,7 +4104,7 @@ modules:
         source selected by bits 4:0.
   - !Register
     name: STARTERP0
-    addr: 0x204
+    addr: 0x40048204
     size_bits: 32
     description: Start logic 0 pin wake-up enable register
     read_allowed: true
@@ -4181,7 +4181,7 @@ modules:
       description: Reserved
   - !Register
     name: STARTERP1
-    addr: 0x214
+    addr: 0x40048214
     size_bits: 32
     description: Start logic 1 interrupt wake-up enable register
     read_allowed: true
@@ -4223,7 +4223,7 @@ modules:
         1: ENABLED
   - !Register
     name: PDSLEEPCFG
-    addr: 0x230
+    addr: 0x40048230
     size_bits: 32
     description: Power-down states in deep-sleep mode
     read_allowed: true
@@ -4261,7 +4261,7 @@ modules:
       description: Reserved
   - !Register
     name: PDAWAKECFG
-    addr: 0x234
+    addr: 0x40048234
     size_bits: 32
     description: Power-down states for wake-up from deep-sleep
     read_allowed: true
@@ -4356,7 +4356,7 @@ modules:
       description: Reserved
   - !Register
     name: PDRUNCFG
-    addr: 0x238
+    addr: 0x40048238
     size_bits: 32
     description: Power configuration register
     read_allowed: true
@@ -4451,7 +4451,7 @@ modules:
       description: Reserved
   - !Register
     name: DEVICE_ID
-    addr: 0x3f4
+    addr: 0x400483f4
     size_bits: 32
     description: Device ID
     read_allowed: true
@@ -4464,7 +4464,7 @@ modules:
       description: TBD
   - !Register
     name: PINTSEL0
-    addr: 0x178
+    addr: 0x40048178
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4482,7 +4482,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL1
-    addr: 0x17c
+    addr: 0x4004817c
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4500,7 +4500,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL2
-    addr: 0x180
+    addr: 0x40048180
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4518,7 +4518,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL3
-    addr: 0x184
+    addr: 0x40048184
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4536,7 +4536,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL4
-    addr: 0x188
+    addr: 0x40048188
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4554,7 +4554,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL5
-    addr: 0x18c
+    addr: 0x4004818c
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4572,7 +4572,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL6
-    addr: 0x190
+    addr: 0x40048190
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4590,7 +4590,7 @@ modules:
       description: Reserved
   - !Register
     name: PINTSEL7
-    addr: 0x194
+    addr: 0x40048194
     description: GPIO Pin Interrupt Select register 0
     read_allowed: true
     write_allowed: true
@@ -4610,11 +4610,11 @@ modules:
   name: I2C
   description: I2C-bus interface
   base_addr: 0x40050000
-  size: 0xfff
+  size: 0x84
   registers:
   - !Register
     name: CFG
-    addr: 0x0
+    addr: 0x40050000
     size_bits: 32
     description: Configuration for shared functions.
     read_allowed: true
@@ -4671,7 +4671,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: STAT
-    addr: 0x4
+    addr: 0x40050004
     size_bits: 32
     description: Status register for Master, Slave, and Monitor functions.
     read_allowed: true
@@ -4873,7 +4873,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENSET
-    addr: 0x8
+    addr: 0x40050008
     size_bits: 32
     description: Interrupt Enable Set and read register.
     read_allowed: true
@@ -5009,7 +5009,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENCLR
-    addr: 0xc
+    addr: 0x4005000c
     size_bits: 32
     description: Interrupt Enable Clear register.
     read_allowed: false
@@ -5113,7 +5113,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: TIMEOUT
-    addr: 0x10
+    addr: 0x40050010
     size_bits: 32
     description: Time-out value register.
     read_allowed: true
@@ -5145,7 +5145,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: DIV
-    addr: 0x14
+    addr: 0x40050014
     size_bits: 32
     description: Clock pre-divider for the entire I2C block. This determines what
       time increments are used for the MSTTIME and SLVTIME registers.
@@ -5168,7 +5168,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTSTAT
-    addr: 0x18
+    addr: 0x40050018
     size_bits: 32
     description: Interrupt Status register for Master, Slave, and Monitor functions.
     read_allowed: true
@@ -5271,7 +5271,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: MSTCTL
-    addr: 0x20
+    addr: 0x40050020
     size_bits: 32
     description: Master control register.
     read_allowed: true
@@ -5308,7 +5308,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: MSTTIME
-    addr: 0x24
+    addr: 0x40050024
     size_bits: 32
     description: Master timing configuration.
     read_allowed: true
@@ -5358,7 +5358,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: MSTDAT
-    addr: 0x28
+    addr: 0x40050028
     size_bits: 32
     description: Combined Master receiver and transmitter data register.
     read_allowed: true
@@ -5377,7 +5377,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVCTL
-    addr: 0x40
+    addr: 0x40050040
     size_bits: 32
     description: Slave control register.
     read_allowed: true
@@ -5406,7 +5406,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVDAT
-    addr: 0x44
+    addr: 0x40050044
     size_bits: 32
     description: Combined Slave receiver and transmitter data register.
     read_allowed: true
@@ -5425,7 +5425,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVQUAL0
-    addr: 0x58
+    addr: 0x40050058
     size_bits: 32
     description: Slave Qualification for address 0.
     read_allowed: true
@@ -5458,7 +5458,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: MONRXDAT
-    addr: 0x80
+    addr: 0x40050080
     size_bits: 32
     description: Monitor receiver data register.
     read_allowed: true
@@ -5502,7 +5502,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVADR0
-    addr: 0x48
+    addr: 0x40050048
     description: Slave address 0.
     read_allowed: true
     write_allowed: true
@@ -5529,7 +5529,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVADR1
-    addr: 0x4c
+    addr: 0x4005004c
     description: Slave address 0.
     read_allowed: true
     write_allowed: true
@@ -5556,7 +5556,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVADR2
-    addr: 0x50
+    addr: 0x40050050
     description: Slave address 0.
     read_allowed: true
     write_allowed: true
@@ -5583,7 +5583,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: SLVADR3
-    addr: 0x54
+    addr: 0x40050054
     description: Slave address 0.
     read_allowed: true
     write_allowed: true
@@ -5612,11 +5612,11 @@ modules:
   name: SPI0
   description: SPI
   base_addr: 0x40058000
-  size: 0xfff
+  size: 0x2c
   registers:
   - !Register
     name: CFG
-    addr: 0x0
+    addr: 0x40058000
     size_bits: 32
     description: SPI Configuration register
     read_allowed: true
@@ -5697,7 +5697,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: DLY
-    addr: 0x4
+    addr: 0x40058004
     size_bits: 32
     description: SPI Delay register
     read_allowed: true
@@ -5744,7 +5744,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: STAT
-    addr: 0x8
+    addr: 0x40058008
     size_bits: 32
     description: SPI Status. Some status flags can be cleared by writing a 1 to that
       bit position
@@ -5834,7 +5834,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENSET
-    addr: 0xc
+    addr: 0x4005800c
     size_bits: 32
     description: SPI Interrupt Enable read and Set. A complete value may be read from
       this register. Writing a 1 to any implemented bit position causes that bit to
@@ -5906,7 +5906,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENCLR
-    addr: 0x10
+    addr: 0x40058010
     size_bits: 32
     description: SPI Interrupt Enable Clear. Writing a 1 to any implemented bit position
       causes the corresponding bit in INTENSET to be cleared.
@@ -5950,7 +5950,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: RXDAT
-    addr: 0x14
+    addr: 0x40058014
     size_bits: 32
     description: SPI Receive Data
     read_allowed: true
@@ -5991,7 +5991,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: TXDATCTL
-    addr: 0x18
+    addr: 0x40058018
     size_bits: 32
     description: SPI Transmit Data with Control
     read_allowed: true
@@ -6072,7 +6072,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: TXDAT
-    addr: 0x1c
+    addr: 0x4005801c
     size_bits: 32
     description: SPI Transmit Data
     read_allowed: true
@@ -6091,7 +6091,7 @@ modules:
       description: Reserved. Only zero should be written.
   - !Register
     name: TXCTL
-    addr: 0x20
+    addr: 0x40058020
     size_bits: 32
     description: SPI Transmit Control
     read_allowed: true
@@ -6144,7 +6144,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: DIV
-    addr: 0x24
+    addr: 0x40058024
     size_bits: 32
     description: SPI clock Divider
     read_allowed: true
@@ -6165,7 +6165,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTSTAT
-    addr: 0x28
+    addr: 0x40058028
     size_bits: 32
     description: SPI Interrupt Status
     read_allowed: true
@@ -6211,11 +6211,11 @@ modules:
   name: SPI1
   description: SPI
   base_addr: 0x4005c000
-  size: 0xfff
+  size: 0x2c
   registers:
   - !Register
     name: CFG
-    addr: 0x0
+    addr: 0x4005c000
     size_bits: 32
     description: SPI Configuration register
     read_allowed: true
@@ -6296,7 +6296,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: DLY
-    addr: 0x4
+    addr: 0x4005c004
     size_bits: 32
     description: SPI Delay register
     read_allowed: true
@@ -6343,7 +6343,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: STAT
-    addr: 0x8
+    addr: 0x4005c008
     size_bits: 32
     description: SPI Status. Some status flags can be cleared by writing a 1 to that
       bit position
@@ -6433,7 +6433,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENSET
-    addr: 0xc
+    addr: 0x4005c00c
     size_bits: 32
     description: SPI Interrupt Enable read and Set. A complete value may be read from
       this register. Writing a 1 to any implemented bit position causes that bit to
@@ -6505,7 +6505,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENCLR
-    addr: 0x10
+    addr: 0x4005c010
     size_bits: 32
     description: SPI Interrupt Enable Clear. Writing a 1 to any implemented bit position
       causes the corresponding bit in INTENSET to be cleared.
@@ -6549,7 +6549,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: RXDAT
-    addr: 0x14
+    addr: 0x4005c014
     size_bits: 32
     description: SPI Receive Data
     read_allowed: true
@@ -6590,7 +6590,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: TXDATCTL
-    addr: 0x18
+    addr: 0x4005c018
     size_bits: 32
     description: SPI Transmit Data with Control
     read_allowed: true
@@ -6671,7 +6671,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: TXDAT
-    addr: 0x1c
+    addr: 0x4005c01c
     size_bits: 32
     description: SPI Transmit Data
     read_allowed: true
@@ -6690,7 +6690,7 @@ modules:
       description: Reserved. Only zero should be written.
   - !Register
     name: TXCTL
-    addr: 0x20
+    addr: 0x4005c020
     size_bits: 32
     description: SPI Transmit Control
     read_allowed: true
@@ -6743,7 +6743,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: DIV
-    addr: 0x24
+    addr: 0x4005c024
     size_bits: 32
     description: SPI clock Divider
     read_allowed: true
@@ -6764,7 +6764,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTSTAT
-    addr: 0x28
+    addr: 0x4005c028
     size_bits: 32
     description: SPI Interrupt Status
     read_allowed: true
@@ -6810,11 +6810,11 @@ modules:
   name: USART0
   description: USART
   base_addr: 0x40064000
-  size: 0xfff
+  size: 0x28
   registers:
   - !Register
     name: CFG
-    addr: 0x0
+    addr: 0x40064000
     size_bits: 32
     description: USART Configuration register. Basic USART configuration settings
       that typically are not changed during operation.
@@ -6933,7 +6933,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: CTRL
-    addr: 0x4
+    addr: 0x40064004
     size_bits: 32
     description: USART Control register. USART control settings that are more likely
       to change during operation.
@@ -7003,7 +7003,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: STAT
-    addr: 0x8
+    addr: 0x40064008
     size_bits: 32
     description: USART Status register. The complete status value can be read here.
       Writing 1s clears some bits in the register. Some bits can be cleared by writing
@@ -7135,7 +7135,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENSET
-    addr: 0xc
+    addr: 0x4006400c
     size_bits: 32
     description: Interrupt Enable read and Set register. Contains an individual interrupt
       enable bit for each potential USART interrupt. A complete value may be read
@@ -7230,7 +7230,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENCLR
-    addr: 0x10
+    addr: 0x40064010
     size_bits: 32
     description: Interrupt Enable Clear register. Allows clearing any combination
       of bits in the INTENSET register. Writing a 1 to any implemented bit position
@@ -7315,7 +7315,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: RXDATA
-    addr: 0x14
+    addr: 0x40064014
     size_bits: 32
     description: Receiver Data register. Contains the last character received.
     read_allowed: true
@@ -7334,7 +7334,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: RXDATASTAT
-    addr: 0x18
+    addr: 0x40064018
     size_bits: 32
     description: Receiver Data with Status register. Combines the last character received
       with the current USART receive status. Allows software to recover incoming data
@@ -7382,7 +7382,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: TXDATA
-    addr: 0x1c
+    addr: 0x4006401c
     size_bits: 32
     description: Transmit Data register. Data to be transmitted is written here.
     read_allowed: true
@@ -7401,7 +7401,7 @@ modules:
       description: Reserved. Only zero should be written.
   - !Register
     name: BRG
-    addr: 0x20
+    addr: 0x40064020
     size_bits: 32
     description: Baud Rate Generator register. 16-bit integer baud rate divisor value.
     read_allowed: true
@@ -7424,7 +7424,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTSTAT
-    addr: 0x24
+    addr: 0x40064024
     size_bits: 32
     description: Interrupt status register. Reflects interrupts that are currently
       enabled.
@@ -7513,11 +7513,11 @@ modules:
   name: USART1
   description: USART
   base_addr: 0x40068000
-  size: 0xfff
+  size: 0x28
   registers:
   - !Register
     name: CFG
-    addr: 0x0
+    addr: 0x40068000
     size_bits: 32
     description: USART Configuration register. Basic USART configuration settings
       that typically are not changed during operation.
@@ -7636,7 +7636,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: CTRL
-    addr: 0x4
+    addr: 0x40068004
     size_bits: 32
     description: USART Control register. USART control settings that are more likely
       to change during operation.
@@ -7706,7 +7706,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: STAT
-    addr: 0x8
+    addr: 0x40068008
     size_bits: 32
     description: USART Status register. The complete status value can be read here.
       Writing 1s clears some bits in the register. Some bits can be cleared by writing
@@ -7838,7 +7838,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENSET
-    addr: 0xc
+    addr: 0x4006800c
     size_bits: 32
     description: Interrupt Enable read and Set register. Contains an individual interrupt
       enable bit for each potential USART interrupt. A complete value may be read
@@ -7933,7 +7933,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENCLR
-    addr: 0x10
+    addr: 0x40068010
     size_bits: 32
     description: Interrupt Enable Clear register. Allows clearing any combination
       of bits in the INTENSET register. Writing a 1 to any implemented bit position
@@ -8018,7 +8018,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: RXDATA
-    addr: 0x14
+    addr: 0x40068014
     size_bits: 32
     description: Receiver Data register. Contains the last character received.
     read_allowed: true
@@ -8037,7 +8037,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: RXDATASTAT
-    addr: 0x18
+    addr: 0x40068018
     size_bits: 32
     description: Receiver Data with Status register. Combines the last character received
       with the current USART receive status. Allows software to recover incoming data
@@ -8085,7 +8085,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: TXDATA
-    addr: 0x1c
+    addr: 0x4006801c
     size_bits: 32
     description: Transmit Data register. Data to be transmitted is written here.
     read_allowed: true
@@ -8104,7 +8104,7 @@ modules:
       description: Reserved. Only zero should be written.
   - !Register
     name: BRG
-    addr: 0x20
+    addr: 0x40068020
     size_bits: 32
     description: Baud Rate Generator register. 16-bit integer baud rate divisor value.
     read_allowed: true
@@ -8127,7 +8127,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTSTAT
-    addr: 0x24
+    addr: 0x40068024
     size_bits: 32
     description: Interrupt status register. Reflects interrupts that are currently
       enabled.
@@ -8216,11 +8216,11 @@ modules:
   name: USART2
   description: USART
   base_addr: 0x4006c000
-  size: 0xfff
+  size: 0x28
   registers:
   - !Register
     name: CFG
-    addr: 0x0
+    addr: 0x4006c000
     size_bits: 32
     description: USART Configuration register. Basic USART configuration settings
       that typically are not changed during operation.
@@ -8339,7 +8339,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: CTRL
-    addr: 0x4
+    addr: 0x4006c004
     size_bits: 32
     description: USART Control register. USART control settings that are more likely
       to change during operation.
@@ -8409,7 +8409,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: STAT
-    addr: 0x8
+    addr: 0x4006c008
     size_bits: 32
     description: USART Status register. The complete status value can be read here.
       Writing 1s clears some bits in the register. Some bits can be cleared by writing
@@ -8541,7 +8541,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENSET
-    addr: 0xc
+    addr: 0x4006c00c
     size_bits: 32
     description: Interrupt Enable read and Set register. Contains an individual interrupt
       enable bit for each potential USART interrupt. A complete value may be read
@@ -8636,7 +8636,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTENCLR
-    addr: 0x10
+    addr: 0x4006c010
     size_bits: 32
     description: Interrupt Enable Clear register. Allows clearing any combination
       of bits in the INTENSET register. Writing a 1 to any implemented bit position
@@ -8721,7 +8721,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: RXDATA
-    addr: 0x14
+    addr: 0x4006c014
     size_bits: 32
     description: Receiver Data register. Contains the last character received.
     read_allowed: true
@@ -8740,7 +8740,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: RXDATASTAT
-    addr: 0x18
+    addr: 0x4006c018
     size_bits: 32
     description: Receiver Data with Status register. Combines the last character received
       with the current USART receive status. Allows software to recover incoming data
@@ -8788,7 +8788,7 @@ modules:
       description: Reserved, the value read from a reserved bit is not defined.
   - !Register
     name: TXDATA
-    addr: 0x1c
+    addr: 0x4006c01c
     size_bits: 32
     description: Transmit Data register. Data to be transmitted is written here.
     read_allowed: true
@@ -8807,7 +8807,7 @@ modules:
       description: Reserved. Only zero should be written.
   - !Register
     name: BRG
-    addr: 0x20
+    addr: 0x4006c020
     size_bits: 32
     description: Baud Rate Generator register. 16-bit integer baud rate divisor value.
     read_allowed: true
@@ -8830,7 +8830,7 @@ modules:
       description: Reserved. Read value is undefined, only zero should be written.
   - !Register
     name: INTSTAT
-    addr: 0x24
+    addr: 0x4006c024
     size_bits: 32
     description: Interrupt status register. Reflects interrupts that are currently
       enabled.
@@ -8919,11 +8919,11 @@ modules:
   name: CRC
   description: Cyclic Redundancy Check (CRC) engine
   base_addr: 0x50000000
-  size: 0xfff
+  size: 0xc
   registers:
   - !Register
     name: MODE
-    addr: 0x0
+    addr: 0x50000000
     size_bits: 32
     description: CRC mode register
     read_allowed: true
@@ -8966,7 +8966,7 @@ modules:
       description: Always 0 when read
   - !Register
     name: SEED
-    addr: 0x4
+    addr: 0x50000004
     size_bits: 32
     description: CRC seed register
     read_allowed: true
@@ -8982,7 +8982,7 @@ modules:
         access to this register will overrule the CRC calculation in progresses.
   - !Register
     name: SUM
-    addr: 0x8
+    addr: 0x50000008
     size_bits: 32
     description: CRC checksum register
     read_allowed: true
@@ -8997,7 +8997,7 @@ modules:
         selected bit order and 1's complement post-processes.
   - !Register
     name: WR_DATA
-    addr: 0x8
+    addr: 0x50000008
     size_bits: 32
     description: CRC data register
     read_allowed: false
@@ -9014,11 +9014,11 @@ modules:
   name: SCT
   description: State Configurable Timer (SCT)
   base_addr: 0x50004000
-  size: 0xfff
+  size: 0x520
   registers:
   - !Register
     name: CONFIG
-    addr: 0x0
+    addr: 0x50004000
     size_bits: 32
     description: SCT configuration register
     read_allowed: true
@@ -9109,7 +9109,7 @@ modules:
       description: Reserved
   - !Register
     name: CTRL
-    addr: 0x4
+    addr: 0x50004004
     size_bits: 32
     description: SCT control register
     read_allowed: true
@@ -9222,7 +9222,7 @@ modules:
       description: Reserved
   - !Register
     name: LIMIT
-    addr: 0x8
+    addr: 0x50004008
     size_bits: 32
     description: SCT limit register
     read_allowed: true
@@ -9252,7 +9252,7 @@ modules:
       description: Reserved.
   - !Register
     name: HALT
-    addr: 0xc
+    addr: 0x5000400c
     size_bits: 32
     description: SCT halt condition register
     read_allowed: true
@@ -9282,7 +9282,7 @@ modules:
       description: Reserved.
   - !Register
     name: STOP
-    addr: 0x10
+    addr: 0x50004010
     size_bits: 32
     description: SCT stop condition register
     read_allowed: true
@@ -9312,7 +9312,7 @@ modules:
       description: Reserved.
   - !Register
     name: START
-    addr: 0x14
+    addr: 0x50004014
     size_bits: 32
     description: SCT start condition register
     read_allowed: true
@@ -9342,7 +9342,7 @@ modules:
       description: Reserved.
   - !Register
     name: COUNT
-    addr: 0x40
+    addr: 0x50004040
     size_bits: 32
     description: SCT counter register
     read_allowed: true
@@ -9362,7 +9362,7 @@ modules:
         UNIFY = 1, read or write the upper 16 bits of the 32-bit unified counter.
   - !Register
     name: STATE
-    addr: 0x44
+    addr: 0x50004044
     size_bits: 32
     description: SCT state register
     read_allowed: true
@@ -9390,7 +9390,7 @@ modules:
       description: Reserved.
   - !Register
     name: INPUT
-    addr: 0x48
+    addr: 0x50004048
     size_bits: 32
     description: SCT input register
     read_allowed: true
@@ -9448,7 +9448,7 @@ modules:
       description: Reserved
   - !Register
     name: REGMODE
-    addr: 0x4c
+    addr: 0x5000404c
     size_bits: 32
     description: SCT match/capture registers mode register
     read_allowed: true
@@ -9480,7 +9480,7 @@ modules:
       description: Reserved.
   - !Register
     name: OUTPUT
-    addr: 0x50
+    addr: 0x50004050
     size_bits: 32
     description: SCT output register
     read_allowed: true
@@ -9500,7 +9500,7 @@ modules:
       description: Reserved
   - !Register
     name: OUTPUTDIRCTRL
-    addr: 0x54
+    addr: 0x50004054
     size_bits: 32
     description: SCT output counter direction control register
     read_allowed: true
@@ -9553,7 +9553,7 @@ modules:
       description: Reserved
   - !Register
     name: RES
-    addr: 0x58
+    addr: 0x50004058
     size_bits: 32
     description: SCT conflict resolution register
     read_allowed: true
@@ -9606,7 +9606,7 @@ modules:
       description: Reserved
   - !Register
     name: EVEN
-    addr: 0xf0
+    addr: 0x500040f0
     size_bits: 32
     description: SCT event enable register
     read_allowed: true
@@ -9626,7 +9626,7 @@ modules:
       description: Reserved
   - !Register
     name: EVFLAG
-    addr: 0xf4
+    addr: 0x500040f4
     size_bits: 32
     description: SCT event flag register
     read_allowed: true
@@ -9645,7 +9645,7 @@ modules:
       description: Reserved
   - !Register
     name: CONEN
-    addr: 0xf8
+    addr: 0x500040f8
     size_bits: 32
     description: SCT conflict enable register
     read_allowed: true
@@ -9665,7 +9665,7 @@ modules:
       description: Reserved
   - !Register
     name: CONFLAG
-    addr: 0xfc
+    addr: 0x500040fc
     size_bits: 32
     description: SCT conflict flag register
     read_allowed: true
@@ -9699,7 +9699,7 @@ modules:
         H, MATCH H, or the Output register when the H  counter was not halted.
   - !Register
     name: EV0_STATE
-    addr: 0x300
+    addr: 0x50004300
     size_bits: 32
     description: SCT event state register 0
     read_allowed: true
@@ -9719,7 +9719,7 @@ modules:
       description: Reserved.
   - !Register
     name: EV0_CTRL
-    addr: 0x304
+    addr: 0x50004304
     size_bits: 32
     description: SCT event control register 0
     read_allowed: true
@@ -9824,7 +9824,7 @@ modules:
       description: Reserved
   - !Register
     name: EV1_STATE
-    addr: 0x308
+    addr: 0x50004308
     size_bits: 32
     description: SCT event state register 1
     read_allowed: true
@@ -9844,7 +9844,7 @@ modules:
       description: Reserved.
   - !Register
     name: EV1_CTRL
-    addr: 0x30c
+    addr: 0x5000430c
     size_bits: 32
     description: SCT event control register 1
     read_allowed: true
@@ -9949,7 +9949,7 @@ modules:
       description: Reserved
   - !Register
     name: EV2_STATE
-    addr: 0x310
+    addr: 0x50004310
     size_bits: 32
     description: SCT event state register 2
     read_allowed: true
@@ -9969,7 +9969,7 @@ modules:
       description: Reserved.
   - !Register
     name: EV2_CTRL
-    addr: 0x314
+    addr: 0x50004314
     size_bits: 32
     description: SCT event control register 2
     read_allowed: true
@@ -10074,7 +10074,7 @@ modules:
       description: Reserved
   - !Register
     name: EV3_STATE
-    addr: 0x318
+    addr: 0x50004318
     size_bits: 32
     description: SCT event state register 3
     read_allowed: true
@@ -10094,7 +10094,7 @@ modules:
       description: Reserved.
   - !Register
     name: EV3_CTRL
-    addr: 0x31c
+    addr: 0x5000431c
     size_bits: 32
     description: SCT event control register 3
     read_allowed: true
@@ -10199,7 +10199,7 @@ modules:
       description: Reserved
   - !Register
     name: EV4_STATE
-    addr: 0x320
+    addr: 0x50004320
     size_bits: 32
     description: SCT event state register 4
     read_allowed: true
@@ -10219,7 +10219,7 @@ modules:
       description: Reserved.
   - !Register
     name: EV4_CTRL
-    addr: 0x324
+    addr: 0x50004324
     size_bits: 32
     description: SCT event control register 4
     read_allowed: true
@@ -10324,7 +10324,7 @@ modules:
       description: Reserved
   - !Register
     name: EV5_STATE
-    addr: 0x328
+    addr: 0x50004328
     size_bits: 32
     description: SCT event state register 5
     read_allowed: true
@@ -10344,7 +10344,7 @@ modules:
       description: Reserved.
   - !Register
     name: EV5_CTRL
-    addr: 0x32c
+    addr: 0x5000432c
     size_bits: 32
     description: SCT event control register 5
     read_allowed: true
@@ -10449,7 +10449,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT0_SET
-    addr: 0x500
+    addr: 0x50004500
     size_bits: 32
     description: SCT output 0 set register
     read_allowed: true
@@ -10468,7 +10468,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT0_CLR
-    addr: 0x504
+    addr: 0x50004504
     size_bits: 32
     description: SCT output 0 clear register
     read_allowed: true
@@ -10487,7 +10487,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT1_SET
-    addr: 0x508
+    addr: 0x50004508
     size_bits: 32
     description: SCT output 1 set register
     read_allowed: true
@@ -10506,7 +10506,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT1_CLR
-    addr: 0x50c
+    addr: 0x5000450c
     size_bits: 32
     description: SCT output 1 clear register
     read_allowed: true
@@ -10525,7 +10525,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT2_SET
-    addr: 0x510
+    addr: 0x50004510
     size_bits: 32
     description: SCT output 2 set register
     read_allowed: true
@@ -10544,7 +10544,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT2_CLR
-    addr: 0x514
+    addr: 0x50004514
     size_bits: 32
     description: SCT output 2 clear register
     read_allowed: true
@@ -10563,7 +10563,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT3_SET
-    addr: 0x518
+    addr: 0x50004518
     size_bits: 32
     description: SCT output 3 set register
     read_allowed: true
@@ -10582,7 +10582,7 @@ modules:
       description: Reserved
   - !Register
     name: OUT3_CLR
-    addr: 0x51c
+    addr: 0x5000451c
     size_bits: 32
     description: SCT output 3 clear register
     read_allowed: true
@@ -10601,7 +10601,7 @@ modules:
       description: Reserved
   - !Register
     name: MATCH0
-    addr: 0x100
+    addr: 0x50004100
     description: SCT match value register of match channels 0 to 4; REGMOD0 to REGMODE4
       = 0
     read_allowed: true
@@ -10623,7 +10623,7 @@ modules:
         value to be compared to the unified counter.
   - !Register
     name: MATCH1
-    addr: 0x104
+    addr: 0x50004104
     description: SCT match value register of match channels 0 to 4; REGMOD0 to REGMODE4
       = 0
     read_allowed: true
@@ -10645,7 +10645,7 @@ modules:
         value to be compared to the unified counter.
   - !Register
     name: MATCH2
-    addr: 0x108
+    addr: 0x50004108
     description: SCT match value register of match channels 0 to 4; REGMOD0 to REGMODE4
       = 0
     read_allowed: true
@@ -10667,7 +10667,7 @@ modules:
         value to be compared to the unified counter.
   - !Register
     name: MATCH3
-    addr: 0x10c
+    addr: 0x5000410c
     description: SCT match value register of match channels 0 to 4; REGMOD0 to REGMODE4
       = 0
     read_allowed: true
@@ -10689,7 +10689,7 @@ modules:
         value to be compared to the unified counter.
   - !Register
     name: MATCH4
-    addr: 0x110
+    addr: 0x50004110
     description: SCT match value register of match channels 0 to 4; REGMOD0 to REGMODE4
       = 0
     read_allowed: true
@@ -10711,7 +10711,7 @@ modules:
         value to be compared to the unified counter.
   - !Register
     name: CAP0
-    addr: 0x100
+    addr: 0x50004100
     description: SCT capture register of capture channel 0 to 4; REGMOD0 to REGMODE4
       = 1
     read_allowed: true
@@ -10733,7 +10733,7 @@ modules:
         at which this register was last captured.
   - !Register
     name: CAP1
-    addr: 0x104
+    addr: 0x50004104
     description: SCT capture register of capture channel 0 to 4; REGMOD0 to REGMODE4
       = 1
     read_allowed: true
@@ -10755,7 +10755,7 @@ modules:
         at which this register was last captured.
   - !Register
     name: CAP2
-    addr: 0x108
+    addr: 0x50004108
     description: SCT capture register of capture channel 0 to 4; REGMOD0 to REGMODE4
       = 1
     read_allowed: true
@@ -10777,7 +10777,7 @@ modules:
         at which this register was last captured.
   - !Register
     name: CAP3
-    addr: 0x10c
+    addr: 0x5000410c
     description: SCT capture register of capture channel 0 to 4; REGMOD0 to REGMODE4
       = 1
     read_allowed: true
@@ -10799,7 +10799,7 @@ modules:
         at which this register was last captured.
   - !Register
     name: CAP4
-    addr: 0x110
+    addr: 0x50004110
     description: SCT capture register of capture channel 0 to 4; REGMOD0 to REGMODE4
       = 1
     read_allowed: true
@@ -10821,7 +10821,7 @@ modules:
         at which this register was last captured.
   - !Register
     name: MATCHREL0
-    addr: 0x200
+    addr: 0x50004200
     description: SCT match reload value register 0 to 4 REGMOD0 = 0 to REGMODE4 =
       0
     read_allowed: true
@@ -10843,7 +10843,7 @@ modules:
         32-bit value to be loaded into the MATCHn register.
   - !Register
     name: MATCHREL1
-    addr: 0x204
+    addr: 0x50004204
     description: SCT match reload value register 0 to 4 REGMOD0 = 0 to REGMODE4 =
       0
     read_allowed: true
@@ -10865,7 +10865,7 @@ modules:
         32-bit value to be loaded into the MATCHn register.
   - !Register
     name: MATCHREL2
-    addr: 0x208
+    addr: 0x50004208
     description: SCT match reload value register 0 to 4 REGMOD0 = 0 to REGMODE4 =
       0
     read_allowed: true
@@ -10887,7 +10887,7 @@ modules:
         32-bit value to be loaded into the MATCHn register.
   - !Register
     name: MATCHREL3
-    addr: 0x20c
+    addr: 0x5000420c
     description: SCT match reload value register 0 to 4 REGMOD0 = 0 to REGMODE4 =
       0
     read_allowed: true
@@ -10909,7 +10909,7 @@ modules:
         32-bit value to be loaded into the MATCHn register.
   - !Register
     name: MATCHREL4
-    addr: 0x210
+    addr: 0x50004210
     description: SCT match reload value register 0 to 4 REGMOD0 = 0 to REGMODE4 =
       0
     read_allowed: true
@@ -10931,7 +10931,7 @@ modules:
         32-bit value to be loaded into the MATCHn register.
   - !Register
     name: CAPCTRL0
-    addr: 0x200
+    addr: 0x50004200
     description: SCT capture control register 0 to 4; REGMOD0 = 1 to REGMODE4 = 1
     read_allowed: true
     write_allowed: true
@@ -10961,7 +10961,7 @@ modules:
       description: Reserved.
   - !Register
     name: CAPCTRL1
-    addr: 0x204
+    addr: 0x50004204
     description: SCT capture control register 0 to 4; REGMOD0 = 1 to REGMODE4 = 1
     read_allowed: true
     write_allowed: true
@@ -10991,7 +10991,7 @@ modules:
       description: Reserved.
   - !Register
     name: CAPCTRL2
-    addr: 0x208
+    addr: 0x50004208
     description: SCT capture control register 0 to 4; REGMOD0 = 1 to REGMODE4 = 1
     read_allowed: true
     write_allowed: true
@@ -11021,7 +11021,7 @@ modules:
       description: Reserved.
   - !Register
     name: CAPCTRL3
-    addr: 0x20c
+    addr: 0x5000420c
     description: SCT capture control register 0 to 4; REGMOD0 = 1 to REGMODE4 = 1
     read_allowed: true
     write_allowed: true
@@ -11051,7 +11051,7 @@ modules:
       description: Reserved.
   - !Register
     name: CAPCTRL4
-    addr: 0x210
+    addr: 0x50004210
     description: SCT capture control register 0 to 4; REGMOD0 = 1 to REGMODE4 = 1
     read_allowed: true
     write_allowed: true
@@ -11083,11 +11083,11 @@ modules:
   name: GPIO_PORT
   description: General Purpose I/O port (GPIO)
   base_addr: 0xa0000000
-  size: 0xfffff
+  size: 0x2304
   registers:
   - !Register
     name: DIR0
-    addr: 0x2000
+    addr: 0xa0002000
     size_bits: 32
     description: Direction registers port 0
     read_allowed: true
@@ -11106,7 +11106,7 @@ modules:
       description: Reserved.
   - !Register
     name: MASK0
-    addr: 0x2080
+    addr: 0xa0002080
     size_bits: 32
     description: Mask register port 0
     read_allowed: true
@@ -11127,7 +11127,7 @@ modules:
       description: Reserved.
   - !Register
     name: PIN0
-    addr: 0x2100
+    addr: 0xa0002100
     size_bits: 32
     description: Port pin register port 0
     read_allowed: true
@@ -11147,7 +11147,7 @@ modules:
       description: Reserved.
   - !Register
     name: MPIN0
-    addr: 0x2180
+    addr: 0xa0002180
     size_bits: 32
     description: Masked port register port 0
     read_allowed: true
@@ -11170,7 +11170,7 @@ modules:
       description: Reserved.
   - !Register
     name: SET0
-    addr: 0x2200
+    addr: 0xa0002200
     size_bits: 32
     description: 'Write: Set register for port 0 Read: output bits for port 0'
     read_allowed: true
@@ -11189,7 +11189,7 @@ modules:
       description: Reserved.
   - !Register
     name: CLR0
-    addr: 0x2280
+    addr: 0xa0002280
     size_bits: 32
     description: Clear port 0
     read_allowed: false
@@ -11207,7 +11207,7 @@ modules:
       description: Reserved.
   - !Register
     name: NOT0
-    addr: 0x2300
+    addr: 0xa0002300
     size_bits: 32
     description: Toggle port 0
     read_allowed: false
@@ -11225,7 +11225,7 @@ modules:
       description: Reserved.
   - !Register
     name: B0
-    addr: 0x0
+    addr: 0xa0000000
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11240,7 +11240,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B1
-    addr: 0x1
+    addr: 0xa0000001
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11255,7 +11255,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B2
-    addr: 0x2
+    addr: 0xa0000002
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11270,7 +11270,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B3
-    addr: 0x3
+    addr: 0xa0000003
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11285,7 +11285,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B4
-    addr: 0x4
+    addr: 0xa0000004
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11300,7 +11300,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B5
-    addr: 0x5
+    addr: 0xa0000005
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11315,7 +11315,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B6
-    addr: 0x6
+    addr: 0xa0000006
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11330,7 +11330,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B7
-    addr: 0x7
+    addr: 0xa0000007
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11345,7 +11345,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B8
-    addr: 0x8
+    addr: 0xa0000008
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11360,7 +11360,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B9
-    addr: 0x9
+    addr: 0xa0000009
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11375,7 +11375,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B10
-    addr: 0xa
+    addr: 0xa000000a
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11390,7 +11390,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B11
-    addr: 0xb
+    addr: 0xa000000b
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11405,7 +11405,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B12
-    addr: 0xc
+    addr: 0xa000000c
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11420,7 +11420,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B13
-    addr: 0xd
+    addr: 0xa000000d
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11435,7 +11435,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B14
-    addr: 0xe
+    addr: 0xa000000e
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11450,7 +11450,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B15
-    addr: 0xf
+    addr: 0xa000000f
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11465,7 +11465,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B16
-    addr: 0x10
+    addr: 0xa0000010
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11480,7 +11480,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: B17
-    addr: 0x11
+    addr: 0xa0000011
     size_bits: 8
     description: Byte pin registers port 0; pins PIO0_0 to PIO0_17
     read_allowed: true
@@ -11495,7 +11495,7 @@ modules:
         as 0. Write: loads the pin''s output bit.'
   - !Register
     name: W0
-    addr: 0x1000
+    addr: 0xa0001000
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11510,7 +11510,7 @@ modules:
         the output bit.'
   - !Register
     name: W1
-    addr: 0x1004
+    addr: 0xa0001004
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11525,7 +11525,7 @@ modules:
         the output bit.'
   - !Register
     name: W2
-    addr: 0x1008
+    addr: 0xa0001008
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11540,7 +11540,7 @@ modules:
         the output bit.'
   - !Register
     name: W3
-    addr: 0x100c
+    addr: 0xa000100c
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11555,7 +11555,7 @@ modules:
         the output bit.'
   - !Register
     name: W4
-    addr: 0x1010
+    addr: 0xa0001010
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11570,7 +11570,7 @@ modules:
         the output bit.'
   - !Register
     name: W5
-    addr: 0x1014
+    addr: 0xa0001014
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11585,7 +11585,7 @@ modules:
         the output bit.'
   - !Register
     name: W6
-    addr: 0x1018
+    addr: 0xa0001018
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11600,7 +11600,7 @@ modules:
         the output bit.'
   - !Register
     name: W7
-    addr: 0x101c
+    addr: 0xa000101c
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11615,7 +11615,7 @@ modules:
         the output bit.'
   - !Register
     name: W8
-    addr: 0x1020
+    addr: 0xa0001020
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11630,7 +11630,7 @@ modules:
         the output bit.'
   - !Register
     name: W9
-    addr: 0x1024
+    addr: 0xa0001024
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11645,7 +11645,7 @@ modules:
         the output bit.'
   - !Register
     name: W10
-    addr: 0x1028
+    addr: 0xa0001028
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11660,7 +11660,7 @@ modules:
         the output bit.'
   - !Register
     name: W11
-    addr: 0x102c
+    addr: 0xa000102c
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11675,7 +11675,7 @@ modules:
         the output bit.'
   - !Register
     name: W12
-    addr: 0x1030
+    addr: 0xa0001030
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11690,7 +11690,7 @@ modules:
         the output bit.'
   - !Register
     name: W13
-    addr: 0x1034
+    addr: 0xa0001034
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11705,7 +11705,7 @@ modules:
         the output bit.'
   - !Register
     name: W14
-    addr: 0x1038
+    addr: 0xa0001038
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11720,7 +11720,7 @@ modules:
         the output bit.'
   - !Register
     name: W15
-    addr: 0x103c
+    addr: 0xa000103c
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11735,7 +11735,7 @@ modules:
         the output bit.'
   - !Register
     name: W16
-    addr: 0x1040
+    addr: 0xa0001040
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11750,7 +11750,7 @@ modules:
         the output bit.'
   - !Register
     name: W17
-    addr: 0x1044
+    addr: 0xa0001044
     description: Word pin registers port 0
     read_allowed: true
     write_allowed: true
@@ -11767,11 +11767,11 @@ modules:
   name: PIN_INT
   description: Pin interrupt and  pattern match engine
   base_addr: 0xa0004000
-  size: 0xfff
+  size: 0x34
   registers:
   - !Register
     name: ISEL
-    addr: 0x0
+    addr: 0xa0004000
     size_bits: 32
     description: Pin Interrupt Mode register
     read_allowed: true
@@ -11790,7 +11790,7 @@ modules:
       description: Reserved.
   - !Register
     name: IENR
-    addr: 0x4
+    addr: 0xa0004004
     size_bits: 32
     description: Pin interrupt level or rising edge interrupt enable register
     read_allowed: true
@@ -11810,7 +11810,7 @@ modules:
       description: Reserved.
   - !Register
     name: SIENR
-    addr: 0x8
+    addr: 0xa0004008
     size_bits: 32
     description: Pin interrupt level (rising edge) interrupt set register
     read_allowed: false
@@ -11830,7 +11830,7 @@ modules:
       description: Reserved.
   - !Register
     name: CIENR
-    addr: 0xc
+    addr: 0xa000400c
     size_bits: 32
     description: Pin interrupt level  or rising edge interrupt clear register
     read_allowed: false
@@ -11850,7 +11850,7 @@ modules:
       description: Reserved.
   - !Register
     name: IENF
-    addr: 0x10
+    addr: 0xa0004010
     size_bits: 32
     description: Pin interrupt active level or falling edge interrupt enable register
     read_allowed: true
@@ -11871,7 +11871,7 @@ modules:
       description: Reserved.
   - !Register
     name: SIENF
-    addr: 0x14
+    addr: 0xa0004014
     size_bits: 32
     description: Pin interrupt active level or falling edge interrupt set register
     read_allowed: false
@@ -11891,7 +11891,7 @@ modules:
       description: Reserved.
   - !Register
     name: CIENF
-    addr: 0x18
+    addr: 0xa0004018
     size_bits: 32
     description: Pin interrupt active level (falling edge) interrupt clear register
     read_allowed: false
@@ -11911,7 +11911,7 @@ modules:
       description: Reserved.
   - !Register
     name: RISE
-    addr: 0x1c
+    addr: 0xa000401c
     size_bits: 32
     description: Pin interrupt rising edge register
     read_allowed: true
@@ -11933,7 +11933,7 @@ modules:
       description: Reserved.
   - !Register
     name: FALL
-    addr: 0x20
+    addr: 0xa0004020
     size_bits: 32
     description: Pin interrupt falling edge register
     read_allowed: true
@@ -11955,7 +11955,7 @@ modules:
       description: Reserved.
   - !Register
     name: IST
-    addr: 0x24
+    addr: 0xa0004024
     size_bits: 32
     description: Pin interrupt status register
     read_allowed: true
@@ -11978,7 +11978,7 @@ modules:
       description: Reserved.
   - !Register
     name: PMCTRL
-    addr: 0x28
+    addr: 0xa0004028
     size_bits: 32
     description: GPIO pattern match interrupt control register
     read_allowed: true
@@ -12016,7 +12016,7 @@ modules:
         by the current state of the appropriate inputs.
   - !Register
     name: PMSRC
-    addr: 0x2c
+    addr: 0xa000402c
     size_bits: 32
     description: GPIO pattern match interrupt bit-slice source register
     read_allowed: true
@@ -12141,7 +12141,7 @@ modules:
         7: INPUT_7_SELECTS_PIN
   - !Register
     name: PMCFG
-    addr: 0x30
+    addr: 0xa0004030
     size_bits: 32
     description: GPIO pattern match interrupt bit slice configuration register
     read_allowed: true

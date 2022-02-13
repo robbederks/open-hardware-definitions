@@ -7,11 +7,11 @@ modules:
   name: DMAC
   description: DMA Controller
   base_addr: 0x40000000
-  size: 0x28
+  size: 0x134
   registers:
   - !Register
     name: INTSTATUS
-    addr: 0x0
+    addr: 0x40000000
     size_bits: 32
     description: DMAC Interrupt Status Register
     read_allowed: true
@@ -33,7 +33,7 @@ modules:
       write_allowed: false
   - !Register
     name: INTTCSTATUS
-    addr: 0x4
+    addr: 0x40000004
     size_bits: 32
     description: DMAC Interrupt Terminal Count Status Register
     read_allowed: true
@@ -55,7 +55,7 @@ modules:
       write_allowed: false
   - !Register
     name: INTTCCLEAR
-    addr: 0x8
+    addr: 0x40000008
     size_bits: 32
     description: DMAC Interrupt Terminal Count Clear Register
     read_allowed: false
@@ -77,7 +77,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTERRORSTATUS
-    addr: 0xc
+    addr: 0x4000000c
     size_bits: 32
     description: DMAC Interrupt Error Status Register
     read_allowed: true
@@ -99,7 +99,7 @@ modules:
       write_allowed: false
   - !Register
     name: INTERRCLR
-    addr: 0x10
+    addr: 0x40000010
     size_bits: 32
     description: DMAC Interrupt Error Clear Register
     read_allowed: false
@@ -121,7 +121,7 @@ modules:
       write_allowed: true
   - !Register
     name: RAWINTTCSTATUS
-    addr: 0x14
+    addr: 0x40000014
     size_bits: 32
     description: DMAC Raw Interrupt Terminal Count Status Register
     read_allowed: true
@@ -143,7 +143,7 @@ modules:
       write_allowed: false
   - !Register
     name: RAWINTERRORSTATUS
-    addr: 0x18
+    addr: 0x40000018
     size_bits: 32
     description: DMAC Raw Error Interrupt Status Register
     read_allowed: true
@@ -165,7 +165,7 @@ modules:
       write_allowed: false
   - !Register
     name: ENBLDCHNS
-    addr: 0x1c
+    addr: 0x4000001c
     size_bits: 32
     description: DMAC Enabled Channel Register
     read_allowed: true
@@ -187,7 +187,7 @@ modules:
       write_allowed: false
   - !Register
     name: SOFTBREQ
-    addr: 0x20
+    addr: 0x40000020
     size_bits: 32
     description: DMAC Software Burst Request Register
     read_allowed: true
@@ -307,7 +307,7 @@ modules:
       write_allowed: true
   - !Register
     name: SOFTSREQ
-    addr: 0x24
+    addr: 0x40000024
     size_bits: 32
     description: DMAC Software Single Request Register
     read_allowed: true
@@ -357,7 +357,7 @@ modules:
       write_allowed: true
   - !Register
     name: CONFIGURATION
-    addr: 0x30
+    addr: 0x40000030
     size_bits: 32
     description: DMAC Configuration Register
     read_allowed: true
@@ -379,7 +379,7 @@ modules:
       write_allowed: true
   - !Register
     name: C0SRCADDR
-    addr: 0x100
+    addr: 0x40000100
     size_bits: 32
     description: DMAC Channel0 Source Address Register
     read_allowed: true
@@ -394,7 +394,7 @@ modules:
       write_allowed: true
   - !Register
     name: C0DESTADDR
-    addr: 0x104
+    addr: 0x40000104
     size_bits: 32
     description: DMAC Channel0 Destination Address Register
     read_allowed: true
@@ -409,7 +409,7 @@ modules:
       write_allowed: true
   - !Register
     name: C0LLI
-    addr: 0x108
+    addr: 0x40000108
     size_bits: 32
     description: DMAC Channel0 Linked List Item Register
     read_allowed: true
@@ -424,7 +424,7 @@ modules:
       write_allowed: true
   - !Register
     name: C0CONTROL
-    addr: 0x10c
+    addr: 0x4000010c
     size_bits: 32
     description: DMAC Channel0 Control Register
     read_allowed: true
@@ -488,7 +488,7 @@ modules:
       write_allowed: true
   - !Register
     name: C0CONFIGURATION
-    addr: 0x110
+    addr: 0x40000110
     size_bits: 32
     description: DMAC Channel0 Configuration Register
     read_allowed: true
@@ -559,7 +559,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1SRCADDR
-    addr: 0x120
+    addr: 0x40000120
     size_bits: 32
     description: DMAC Channel1 Source Address Register
     read_allowed: true
@@ -574,7 +574,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1DESTADDR
-    addr: 0x124
+    addr: 0x40000124
     size_bits: 32
     description: DMAC Channel1 Destination Address Register
     read_allowed: true
@@ -589,7 +589,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1LLI
-    addr: 0x128
+    addr: 0x40000128
     size_bits: 32
     description: DMAC Channel1 Linked List Item Register
     read_allowed: true
@@ -604,7 +604,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1CONTROL
-    addr: 0x12c
+    addr: 0x4000012c
     size_bits: 32
     description: DMAC Channel1 Control Register
     read_allowed: true
@@ -668,7 +668,7 @@ modules:
       write_allowed: true
   - !Register
     name: C1CONFIGURATION
-    addr: 0x130
+    addr: 0x40000130
     size_bits: 32
     description: DMAC Channel1 Configuration Register
     read_allowed: true
@@ -741,11 +741,11 @@ modules:
   name: UDFS
   description: UDC2 AHB Bridge
   base_addr: 0x40008000
-  size: 0x24
+  size: 0x8c
   registers:
   - !Register
     name: INTSTS
-    addr: 0x0
+    addr: 0x40008000
     size_bits: 32
     description: Interrupt Status Register
     read_allowed: true
@@ -907,7 +907,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTENB
-    addr: 0x4
+    addr: 0x40008004
     size_bits: 32
     description: Interrupt Enable Register
     read_allowed: true
@@ -1013,7 +1013,7 @@ modules:
       write_allowed: true
   - !Register
     name: MWTOUT
-    addr: 0x8
+    addr: 0x40008008
     size_bits: 32
     description: Master Write Timeout Register
     read_allowed: true
@@ -1036,7 +1036,7 @@ modules:
       write_allowed: true
   - !Register
     name: C2STSET
-    addr: 0xc
+    addr: 0x4000800c
     size_bits: 32
     description: UDC2 setting
     read_allowed: true
@@ -1058,7 +1058,7 @@ modules:
       write_allowed: true
   - !Register
     name: MSTSET
-    addr: 0x10
+    addr: 0x40008010
     size_bits: 32
     description: DMAC setting
     read_allowed: true
@@ -1115,7 +1115,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMACRDREQ
-    addr: 0x14
+    addr: 0x40008014
     size_bits: 32
     description: DMAC Read request
     read_allowed: true
@@ -1144,7 +1144,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMACRDVL
-    addr: 0x18
+    addr: 0x40008018
     size_bits: 32
     description: DMAC Read Value
     read_allowed: true
@@ -1159,7 +1159,7 @@ modules:
       write_allowed: false
   - !Register
     name: UDC2RDREQ
-    addr: 0x1c
+    addr: 0x4000801c
     size_bits: 32
     description: UDC2 Read Request
     read_allowed: true
@@ -1188,7 +1188,7 @@ modules:
       write_allowed: true
   - !Register
     name: UDC2RDVL
-    addr: 0x20
+    addr: 0x40008020
     size_bits: 32
     description: UDC2 Read Value
     read_allowed: true
@@ -1203,7 +1203,7 @@ modules:
       write_allowed: false
   - !Register
     name: ARBTSET
-    addr: 0x3c
+    addr: 0x4000803c
     size_bits: 32
     description: Arbiter Setting
     read_allowed: true
@@ -1253,7 +1253,7 @@ modules:
       write_allowed: true
   - !Register
     name: MWSADR
-    addr: 0x40
+    addr: 0x40008040
     size_bits: 32
     description: Master Write Start Address
     read_allowed: true
@@ -1269,7 +1269,7 @@ modules:
       write_allowed: true
   - !Register
     name: MWEADR
-    addr: 0x44
+    addr: 0x40008044
     size_bits: 32
     description: Master Write End Address
     read_allowed: true
@@ -1285,7 +1285,7 @@ modules:
       write_allowed: true
   - !Register
     name: MWCADR
-    addr: 0x48
+    addr: 0x40008048
     size_bits: 32
     description: Master Write Current Address
     read_allowed: true
@@ -1301,7 +1301,7 @@ modules:
       write_allowed: false
   - !Register
     name: MWAHBADR
-    addr: 0x4c
+    addr: 0x4000804c
     size_bits: 32
     description: Master Write AHB Address
     read_allowed: true
@@ -1317,7 +1317,7 @@ modules:
       write_allowed: false
   - !Register
     name: MRSADR
-    addr: 0x50
+    addr: 0x40008050
     size_bits: 32
     description: Master Read Start Address
     read_allowed: true
@@ -1333,7 +1333,7 @@ modules:
       write_allowed: true
   - !Register
     name: MREADR
-    addr: 0x54
+    addr: 0x40008054
     size_bits: 32
     description: Master Read End Address
     read_allowed: true
@@ -1349,7 +1349,7 @@ modules:
       write_allowed: true
   - !Register
     name: MRCADR
-    addr: 0x58
+    addr: 0x40008058
     size_bits: 32
     description: Master Read Current Address
     read_allowed: true
@@ -1365,7 +1365,7 @@ modules:
       write_allowed: false
   - !Register
     name: MRAHBADR
-    addr: 0x5c
+    addr: 0x4000805c
     size_bits: 32
     description: Master Read AHB Address
     read_allowed: true
@@ -1381,7 +1381,7 @@ modules:
       write_allowed: false
   - !Register
     name: PWCTL
-    addr: 0x80
+    addr: 0x40008080
     size_bits: 32
     description: Power Detect Control
     read_allowed: true
@@ -1446,7 +1446,7 @@ modules:
       write_allowed: true
   - !Register
     name: MSTSTS
-    addr: 0x84
+    addr: 0x40008084
     size_bits: 32
     description: Master Status
     read_allowed: true
@@ -1490,7 +1490,7 @@ modules:
       write_allowed: false
   - !Register
     name: TOUTCNT
-    addr: 0x88
+    addr: 0x40008088
     size_bits: 32
     description: Timeout Count
     read_allowed: true
@@ -1508,11 +1508,11 @@ modules:
   name: UDFS2
   description: UDC2(USB -Spec2.0 Device contoller)
   base_addr: 0x40008200
-  size: 0x8
+  size: 0x138
   registers:
   - !Register
     name: ADR
-    addr: 0x0
+    addr: 0x40008200
     size_bits: 32
     description: UDC2 Address State
     read_allowed: true
@@ -1577,7 +1577,7 @@ modules:
       write_allowed: true
   - !Register
     name: FRM
-    addr: 0x4
+    addr: 0x40008204
     size_bits: 32
     description: UDC2 Frame
     read_allowed: true
@@ -1607,7 +1607,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMD
-    addr: 0xc
+    addr: 0x4000820c
     size_bits: 32
     description: UDC2 Command
     read_allowed: true
@@ -1643,7 +1643,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRQ
-    addr: 0x10
+    addr: 0x40008210
     size_bits: 32
     description: UDC2 bRequest-bmRequest Type
     read_allowed: true
@@ -1679,7 +1679,7 @@ modules:
       write_allowed: false
   - !Register
     name: WVL
-    addr: 0x14
+    addr: 0x40008214
     size_bits: 32
     description: UDC2 wValue
     read_allowed: true
@@ -1694,7 +1694,7 @@ modules:
       write_allowed: false
   - !Register
     name: WIDX
-    addr: 0x18
+    addr: 0x40008218
     size_bits: 32
     description: UDC2 wIndex
     read_allowed: true
@@ -1709,7 +1709,7 @@ modules:
       write_allowed: false
   - !Register
     name: WLGTH
-    addr: 0x1c
+    addr: 0x4000821c
     size_bits: 32
     description: UDC2 wLength
     read_allowed: true
@@ -1724,7 +1724,7 @@ modules:
       write_allowed: false
   - !Register
     name: INT
-    addr: 0x20
+    addr: 0x40008220
     size_bits: 32
     description: UDC2 INT
     read_allowed: true
@@ -1844,7 +1844,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTEP
-    addr: 0x24
+    addr: 0x40008224
     size_bits: 32
     description: UDC2 INT_EP
     read_allowed: true
@@ -1901,7 +1901,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTEPMSK
-    addr: 0x28
+    addr: 0x40008228
     size_bits: 32
     description: UDC2 INT_EP_MASK
     read_allowed: true
@@ -1965,7 +1965,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTRX0
-    addr: 0x2c
+    addr: 0x4000822c
     size_bits: 32
     description: UDC2 INT RX DATA0
     read_allowed: true
@@ -2029,7 +2029,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP0MSZ
-    addr: 0x30
+    addr: 0x40008230
     size_bits: 32
     description: UDC2 EP0 Max Packet Size
     read_allowed: true
@@ -2058,7 +2058,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP0STS
-    addr: 0x34
+    addr: 0x40008234
     size_bits: 32
     description: UDC2 EP0 Status
     read_allowed: true
@@ -2087,7 +2087,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP0DSZ
-    addr: 0x38
+    addr: 0x40008238
     size_bits: 32
     description: UDC2 EP0 Data Size
     read_allowed: true
@@ -2102,7 +2102,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP0FIFO
-    addr: 0x3c
+    addr: 0x4000823c
     size_bits: 32
     description: UDC2 EP0 FIFO
     read_allowed: true
@@ -2117,7 +2117,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP1MSZ
-    addr: 0x40
+    addr: 0x40008240
     size_bits: 32
     description: UDC2 EP1 Max Packet Size
     read_allowed: true
@@ -2146,7 +2146,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP1STS
-    addr: 0x44
+    addr: 0x40008244
     size_bits: 32
     description: UDC2 EP1 Status
     read_allowed: true
@@ -2210,7 +2210,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP1DSZ
-    addr: 0x48
+    addr: 0x40008248
     size_bits: 32
     description: UDC2 EP1 Data Size
     read_allowed: true
@@ -2225,7 +2225,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP1FIFO
-    addr: 0x4c
+    addr: 0x4000824c
     size_bits: 32
     description: UDC2 EP1 FIFO
     read_allowed: true
@@ -2240,7 +2240,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP2MSZ
-    addr: 0x50
+    addr: 0x40008250
     size_bits: 32
     description: UDC2 EP2 Max Packet Size
     read_allowed: true
@@ -2269,7 +2269,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP2STS
-    addr: 0x54
+    addr: 0x40008254
     size_bits: 32
     description: UDC2 EP2 Status
     read_allowed: true
@@ -2333,7 +2333,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP2DSZ
-    addr: 0x58
+    addr: 0x40008258
     size_bits: 32
     description: UDC2 EP2 Data Size
     read_allowed: true
@@ -2348,7 +2348,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP2FIFO
-    addr: 0x5c
+    addr: 0x4000825c
     size_bits: 32
     description: UDC2 EP2 FIFO
     read_allowed: true
@@ -2363,7 +2363,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP3MSZ
-    addr: 0x60
+    addr: 0x40008260
     size_bits: 32
     description: UDC2 EP3 Max Packet Size
     read_allowed: true
@@ -2392,7 +2392,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP3STS
-    addr: 0x64
+    addr: 0x40008264
     size_bits: 32
     description: UDC2 EP3 Status
     read_allowed: true
@@ -2456,7 +2456,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP3DSZ
-    addr: 0x68
+    addr: 0x40008268
     size_bits: 32
     description: UDC2 EP3 Data Size
     read_allowed: true
@@ -2471,7 +2471,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP3FIFO
-    addr: 0x6c
+    addr: 0x4000826c
     size_bits: 32
     description: UDC2 EP3 FIFO
     read_allowed: true
@@ -2486,7 +2486,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP4MSZ
-    addr: 0x70
+    addr: 0x40008270
     size_bits: 32
     description: UDC2 EP4 Max Packet Size
     read_allowed: true
@@ -2515,7 +2515,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP4STS
-    addr: 0x74
+    addr: 0x40008274
     size_bits: 32
     description: UDC2 EP4 Status
     read_allowed: true
@@ -2579,7 +2579,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP4DSZ
-    addr: 0x78
+    addr: 0x40008278
     size_bits: 32
     description: UDC2 EP4 Data Size
     read_allowed: true
@@ -2594,7 +2594,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP4FIFO
-    addr: 0x7c
+    addr: 0x4000827c
     size_bits: 32
     description: UDC2 EP4 FIFO
     read_allowed: true
@@ -2609,7 +2609,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP5MSZ
-    addr: 0x80
+    addr: 0x40008280
     size_bits: 32
     description: UDC2 EP5 Max Packet Size
     read_allowed: true
@@ -2638,7 +2638,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP5STS
-    addr: 0x84
+    addr: 0x40008284
     size_bits: 32
     description: UDC2 EP5 Status
     read_allowed: true
@@ -2702,7 +2702,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP5DSZ
-    addr: 0x88
+    addr: 0x40008288
     size_bits: 32
     description: UDC2 EP5 Data Size
     read_allowed: true
@@ -2717,7 +2717,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP5FIFO
-    addr: 0x8c
+    addr: 0x4000828c
     size_bits: 32
     description: UDC2 EP5 FIFO
     read_allowed: true
@@ -2732,7 +2732,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP6MSZ
-    addr: 0x90
+    addr: 0x40008290
     size_bits: 32
     description: UDC2 EP6 Max Packet Size
     read_allowed: true
@@ -2761,7 +2761,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP6STS
-    addr: 0x94
+    addr: 0x40008294
     size_bits: 32
     description: UDC2 EP6 Status
     read_allowed: true
@@ -2825,7 +2825,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP6DSZ
-    addr: 0x98
+    addr: 0x40008298
     size_bits: 32
     description: UDC2 EP6 Data Size
     read_allowed: true
@@ -2840,7 +2840,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP6FIFO
-    addr: 0x9c
+    addr: 0x4000829c
     size_bits: 32
     description: UDC2 EP6 FIFO
     read_allowed: true
@@ -2855,7 +2855,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP7MSZ
-    addr: 0xa0
+    addr: 0x400082a0
     size_bits: 32
     description: UDC2 EP7 Max Packet Size
     read_allowed: true
@@ -2884,7 +2884,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP7STS
-    addr: 0xa4
+    addr: 0x400082a4
     size_bits: 32
     description: UDC2 EP7 Status
     read_allowed: true
@@ -2948,7 +2948,7 @@ modules:
       write_allowed: true
   - !Register
     name: EP7DSZ
-    addr: 0xa8
+    addr: 0x400082a8
     size_bits: 32
     description: UDC2 EP7 Data Size
     read_allowed: true
@@ -2963,7 +2963,7 @@ modules:
       write_allowed: false
   - !Register
     name: EP7FIFO
-    addr: 0xac
+    addr: 0x400082ac
     size_bits: 32
     description: UDC2 EP7 FIFO
     read_allowed: true
@@ -2978,7 +2978,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTNAK
-    addr: 0x130
+    addr: 0x40008330
     size_bits: 32
     description: UDC2 INT NAK
     read_allowed: true
@@ -3035,7 +3035,7 @@ modules:
       write_allowed: true
   - !Register
     name: INTNAKMSK
-    addr: 0x134
+    addr: 0x40008334
     size_bits: 32
     description: UDC2 INT NAK MASK
     read_allowed: true
@@ -3094,11 +3094,11 @@ modules:
   name: AD
   description: Analog-to-Digital Converter (AD)
   base_addr: 0x40050000
-  size: 0x64
+  size: 0x78
   registers:
   - !Register
     name: CLK
-    addr: 0x0
+    addr: 0x40050000
     size_bits: 32
     description: AD Conversion Clock Setting Register
     read_allowed: true
@@ -3120,7 +3120,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD0
-    addr: 0x4
+    addr: 0x40050004
     size_bits: 32
     description: AD Mode Control Register 0
     read_allowed: false
@@ -3142,7 +3142,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD1
-    addr: 0x8
+    addr: 0x40050008
     size_bits: 32
     description: AD Mode Control Register 1
     read_allowed: true
@@ -3199,7 +3199,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD2
-    addr: 0xc
+    addr: 0x4005000c
     size_bits: 32
     description: AD Mode Control Register 2
     read_allowed: true
@@ -3221,7 +3221,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD3
-    addr: 0x10
+    addr: 0x40050010
     size_bits: 32
     description: AD Mode Control Register 3
     read_allowed: true
@@ -3250,7 +3250,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD4
-    addr: 0x14
+    addr: 0x40050014
     size_bits: 32
     description: AD Mode Control Register 4
     read_allowed: true
@@ -3272,7 +3272,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD5
-    addr: 0x18
+    addr: 0x40050018
     size_bits: 32
     description: AD Mode Control Register 5
     read_allowed: true
@@ -3308,7 +3308,7 @@ modules:
       write_allowed: false
   - !Register
     name: MOD6
-    addr: 0x1c
+    addr: 0x4005001c
     size_bits: 32
     description: AD Mode Control Register 6
     read_allowed: false
@@ -3323,7 +3323,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD7
-    addr: 0x20
+    addr: 0x40050020
     size_bits: 32
     description: AD Mode Control Register 7
     read_allowed: true
@@ -3345,7 +3345,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMPCR0
-    addr: 0x24
+    addr: 0x40050024
     size_bits: 32
     description: AD Monitoring Setting Register 0
     read_allowed: true
@@ -3381,7 +3381,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMPCR1
-    addr: 0x28
+    addr: 0x40050028
     size_bits: 32
     description: AD Monitoring Setting Register 1
     read_allowed: true
@@ -3417,7 +3417,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMP0
-    addr: 0x2c
+    addr: 0x4005002c
     size_bits: 32
     description: AD Conversion Result Comparison Register 0
     read_allowed: true
@@ -3432,7 +3432,7 @@ modules:
       write_allowed: true
   - !Register
     name: CMP1
-    addr: 0x30
+    addr: 0x40050030
     size_bits: 32
     description: AD Conversion Result Comparison Register 1
     read_allowed: true
@@ -3447,7 +3447,7 @@ modules:
       write_allowed: true
   - !Register
     name: REG00
-    addr: 0x34
+    addr: 0x40050034
     size_bits: 32
     description: AD Conversion Result Register 00
     read_allowed: true
@@ -3483,7 +3483,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG01
-    addr: 0x38
+    addr: 0x40050038
     size_bits: 32
     description: AD Conversion Result Register 01
     read_allowed: true
@@ -3519,7 +3519,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG02
-    addr: 0x3c
+    addr: 0x4005003c
     size_bits: 32
     description: AD Conversion Result Register 02
     read_allowed: true
@@ -3555,7 +3555,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG03
-    addr: 0x40
+    addr: 0x40050040
     size_bits: 32
     description: AD Conversion Result Register 03
     read_allowed: true
@@ -3591,7 +3591,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG04
-    addr: 0x44
+    addr: 0x40050044
     size_bits: 32
     description: AD Conversion Result Register 04
     read_allowed: true
@@ -3627,7 +3627,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG05
-    addr: 0x48
+    addr: 0x40050048
     size_bits: 32
     description: AD Conversion Result Register 05
     read_allowed: true
@@ -3663,7 +3663,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG06
-    addr: 0x4c
+    addr: 0x4005004c
     size_bits: 32
     description: AD Conversion Result Register 06
     read_allowed: true
@@ -3699,7 +3699,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG07
-    addr: 0x50
+    addr: 0x40050050
     size_bits: 32
     description: AD Conversion Result Register 07
     read_allowed: true
@@ -3735,7 +3735,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG08
-    addr: 0x54
+    addr: 0x40050054
     size_bits: 32
     description: AD Conversion Result Register 08
     read_allowed: true
@@ -3771,7 +3771,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG09
-    addr: 0x58
+    addr: 0x40050058
     size_bits: 32
     description: AD Conversion Result Register 09
     read_allowed: true
@@ -3807,7 +3807,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG10
-    addr: 0x5c
+    addr: 0x4005005c
     size_bits: 32
     description: AD Conversion Result Register 10
     read_allowed: true
@@ -3843,7 +3843,7 @@ modules:
       write_allowed: false
   - !Register
     name: REG11
-    addr: 0x60
+    addr: 0x40050060
     size_bits: 32
     description: AD Conversion Result Register 11
     read_allowed: true
@@ -3879,7 +3879,7 @@ modules:
       write_allowed: false
   - !Register
     name: REGSP
-    addr: 0x74
+    addr: 0x40050074
     size_bits: 32
     description: AD Conversion Result Register SP
     read_allowed: true
@@ -3910,11 +3910,11 @@ modules:
   name: PA
   description: General Purpose Input_Output Port (PA)
   base_addr: 0x400c0000
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0000
     size_bits: 32
     description: PA Data Register
     read_allowed: true
@@ -3978,7 +3978,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0004
     size_bits: 32
     description: PA Control Register
     read_allowed: true
@@ -4042,7 +4042,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0028
     size_bits: 32
     description: PA Open Drain Control Register
     read_allowed: true
@@ -4106,7 +4106,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c002c
     size_bits: 32
     description: PA Pull-Up Control Register
     read_allowed: true
@@ -4170,7 +4170,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0038
     size_bits: 32
     description: PA Input Enable Control Register
     read_allowed: true
@@ -4236,11 +4236,11 @@ modules:
   name: PB
   description: General Purpose Input_Output Port (PB)
   base_addr: 0x400c0100
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0100
     size_bits: 32
     description: PB Data Register
     read_allowed: true
@@ -4304,7 +4304,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0104
     size_bits: 32
     description: PB Control Register
     read_allowed: true
@@ -4368,7 +4368,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0128
     size_bits: 32
     description: PB Open Drain Control Register
     read_allowed: true
@@ -4432,7 +4432,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c012c
     size_bits: 32
     description: PB Pull-Up Control Register
     read_allowed: true
@@ -4496,7 +4496,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0138
     size_bits: 32
     description: PB Input Enable Control Register
     read_allowed: true
@@ -4562,11 +4562,11 @@ modules:
   name: PC
   description: General Purpose Input_Output Port (PC)
   base_addr: 0x400c0200
-  size: 0xc
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0200
     size_bits: 32
     description: PC Data Register
     read_allowed: true
@@ -4623,7 +4623,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0204
     size_bits: 32
     description: PC Control Register
     read_allowed: true
@@ -4680,7 +4680,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR1
-    addr: 0x8
+    addr: 0x400c0208
     size_bits: 32
     description: PC Function Register 1
     read_allowed: true
@@ -4709,7 +4709,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0210
     size_bits: 32
     description: PC Function Register 3
     read_allowed: true
@@ -4738,7 +4738,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR4
-    addr: 0x14
+    addr: 0x400c0214
     size_bits: 32
     description: PC Function Register 4
     read_allowed: true
@@ -4753,7 +4753,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0228
     size_bits: 32
     description: PC Open Drain Control Register
     read_allowed: true
@@ -4782,7 +4782,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c022c
     size_bits: 32
     description: PC Pull-Up Control Register
     read_allowed: true
@@ -4811,7 +4811,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0238
     size_bits: 32
     description: PC Input Enable Control Register
     read_allowed: true
@@ -4842,11 +4842,11 @@ modules:
   name: PD
   description: General Purpose Input_Output Port (PD)
   base_addr: 0x400c0300
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0300
     size_bits: 32
     description: PD Data Register
     read_allowed: true
@@ -4910,7 +4910,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0304
     size_bits: 32
     description: PD Control Register
     read_allowed: true
@@ -4974,7 +4974,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0310
     size_bits: 32
     description: PD Function Register 3
     read_allowed: true
@@ -5017,7 +5017,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0328
     size_bits: 32
     description: PD Open Drain Control Register
     read_allowed: true
@@ -5081,7 +5081,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c032c
     size_bits: 32
     description: PD Pull-Up Control Register
     read_allowed: true
@@ -5145,7 +5145,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0338
     size_bits: 32
     description: PD Input Enable Control Register
     read_allowed: true
@@ -5211,11 +5211,11 @@ modules:
   name: PE
   description: General Purpose Input_Output Port (PE)
   base_addr: 0x400c0400
-  size: 0xc
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0400
     size_bits: 32
     description: PE Data Register
     read_allowed: true
@@ -5279,7 +5279,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0404
     size_bits: 32
     description: PE Control Register
     read_allowed: true
@@ -5343,7 +5343,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR1
-    addr: 0x8
+    addr: 0x400c0408
     size_bits: 32
     description: PE Function Register 1
     read_allowed: true
@@ -5407,7 +5407,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0410
     size_bits: 32
     description: PE Function Register 3
     read_allowed: true
@@ -5429,7 +5429,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR4
-    addr: 0x14
+    addr: 0x400c0414
     size_bits: 32
     description: PE Function Register 4
     read_allowed: true
@@ -5444,7 +5444,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0428
     size_bits: 32
     description: PE Open Drain Control Register
     read_allowed: true
@@ -5508,7 +5508,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c042c
     size_bits: 32
     description: PE Pull-Up Control Register
     read_allowed: true
@@ -5572,7 +5572,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0438
     size_bits: 32
     description: PE Input Enable Control Register
     read_allowed: true
@@ -5638,11 +5638,11 @@ modules:
   name: PF
   description: General Purpose Input_Output Port (PF)
   base_addr: 0x400c0500
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0500
     size_bits: 32
     description: PF Data Register
     read_allowed: true
@@ -5706,7 +5706,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0504
     size_bits: 32
     description: PF Control Register
     read_allowed: true
@@ -5770,7 +5770,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR2
-    addr: 0xc
+    addr: 0x400c050c
     size_bits: 32
     description: PF Function Register 2
     read_allowed: true
@@ -5792,7 +5792,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0510
     size_bits: 32
     description: PF Function Register 3
     read_allowed: true
@@ -5821,7 +5821,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0528
     size_bits: 32
     description: PF Open Drain Control Register
     read_allowed: true
@@ -5885,7 +5885,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c052c
     size_bits: 32
     description: PF Pull-Up Control Register
     read_allowed: true
@@ -5950,7 +5950,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0538
     size_bits: 32
     description: PF Input Enable Control Register
     read_allowed: true
@@ -6009,11 +6009,11 @@ modules:
   name: PG
   description: General Purpose Input_Output Port (PG)
   base_addr: 0x400c0600
-  size: 0xc
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0600
     size_bits: 32
     description: PG Data Register
     read_allowed: true
@@ -6063,7 +6063,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0604
     size_bits: 32
     description: PG Control Register
     read_allowed: true
@@ -6113,7 +6113,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR1
-    addr: 0x8
+    addr: 0x400c0608
     size_bits: 32
     description: PG Function Register 2
     read_allowed: true
@@ -6156,7 +6156,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0610
     size_bits: 32
     description: PG Function Register 3
     read_allowed: true
@@ -6192,7 +6192,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR4
-    addr: 0x14
+    addr: 0x400c0614
     size_bits: 32
     description: PG Function Register 4
     read_allowed: true
@@ -6242,7 +6242,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0628
     size_bits: 32
     description: PG Open Drain Control Register
     read_allowed: true
@@ -6292,7 +6292,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c062c
     size_bits: 32
     description: PG Pull-Up Control Register
     read_allowed: true
@@ -6342,7 +6342,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0638
     size_bits: 32
     description: PG Input Enable Control Register
     read_allowed: true
@@ -6394,11 +6394,11 @@ modules:
   name: PH
   description: General Purpose Input_Output Port (PH)
   base_addr: 0x400c0700
-  size: 0xc
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0700
     size_bits: 32
     description: PH Data Register
     read_allowed: true
@@ -6441,7 +6441,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0704
     size_bits: 32
     description: PH Control Register
     read_allowed: true
@@ -6484,7 +6484,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR1
-    addr: 0x8
+    addr: 0x400c0708
     size_bits: 32
     description: PH Function Register 1
     read_allowed: true
@@ -6506,7 +6506,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0710
     size_bits: 32
     description: PH Function Register 3
     read_allowed: true
@@ -6535,7 +6535,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0728
     size_bits: 32
     description: PH Open Drain Control Register
     read_allowed: true
@@ -6578,7 +6578,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c072c
     size_bits: 32
     description: PH Pull-Up Control Register
     read_allowed: true
@@ -6621,7 +6621,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0738
     size_bits: 32
     description: PH Input Enable Control Register
     read_allowed: true
@@ -6666,11 +6666,11 @@ modules:
   name: PI
   description: General Purpose Input_Output Port (PI)
   base_addr: 0x400c0800
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0800
     size_bits: 32
     description: PI Data Register
     read_allowed: true
@@ -6734,7 +6734,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0804
     size_bits: 32
     description: PI Control Register
     read_allowed: true
@@ -6799,7 +6799,7 @@ modules:
       write_allowed: true
   - !Register
     name: OD
-    addr: 0x28
+    addr: 0x400c0828
     size_bits: 32
     description: PI Open Drain Control Register
     read_allowed: true
@@ -6828,7 +6828,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c082c
     size_bits: 32
     description: PI Pull-Up Control Register
     read_allowed: true
@@ -6893,7 +6893,7 @@ modules:
       write_allowed: true
   - !Register
     name: PDN
-    addr: 0x30
+    addr: 0x400c0830
     size_bits: 32
     description: PI Pull-Down Control Register
     read_allowed: true
@@ -6909,7 +6909,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0838
     size_bits: 32
     description: PI Input Enable Control Register
     read_allowed: true
@@ -6976,11 +6976,11 @@ modules:
   name: PJ
   description: General Purpose Input_Output Port (PJ)
   base_addr: 0x400c0900
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0900
     size_bits: 32
     description: PJ Data Register
     read_allowed: true
@@ -7044,7 +7044,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0904
     size_bits: 32
     description: PJ Control Register
     read_allowed: true
@@ -7108,7 +7108,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR2
-    addr: 0xc
+    addr: 0x400c090c
     size_bits: 32
     description: PJ Function Register 2
     read_allowed: true
@@ -7123,7 +7123,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0910
     size_bits: 32
     description: PJ Function Register 3
     read_allowed: true
@@ -7145,7 +7145,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c092c
     size_bits: 32
     description: PJ Pull-Up Control Register
     read_allowed: true
@@ -7209,7 +7209,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0938
     size_bits: 32
     description: PJ Input Enable Control Register
     read_allowed: true
@@ -7275,11 +7275,11 @@ modules:
   name: PK
   description: General Purpose Input_Output Port (PK)
   base_addr: 0x400c0a00
-  size: 0x8
+  size: 0x3c
   registers:
   - !Register
     name: DATA
-    addr: 0x0
+    addr: 0x400c0a00
     size_bits: 32
     description: PK Data Register
     read_allowed: true
@@ -7315,7 +7315,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400c0a04
     size_bits: 32
     description: PK Control Register
     read_allowed: true
@@ -7351,7 +7351,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR2
-    addr: 0xc
+    addr: 0x400c0a0c
     size_bits: 32
     description: PK Function Register 2
     read_allowed: true
@@ -7373,7 +7373,7 @@ modules:
       write_allowed: true
   - !Register
     name: FR3
-    addr: 0x10
+    addr: 0x400c0a10
     size_bits: 32
     description: PK Function Register 3
     read_allowed: true
@@ -7409,7 +7409,7 @@ modules:
       write_allowed: true
   - !Register
     name: PUP
-    addr: 0x2c
+    addr: 0x400c0a2c
     size_bits: 32
     description: PK Pull-Up Control Register
     read_allowed: true
@@ -7445,7 +7445,7 @@ modules:
       write_allowed: true
   - !Register
     name: IE
-    addr: 0x38
+    addr: 0x400c0a38
     size_bits: 32
     description: PK Input Enable Control Register
     read_allowed: true
@@ -7487,7 +7487,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4000
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -7509,7 +7509,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4004
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -7531,7 +7531,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4008
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -7588,7 +7588,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c400c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -7625,7 +7625,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4010
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -7669,7 +7669,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4014
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -7698,7 +7698,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4018
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -7727,7 +7727,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c401c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -7742,7 +7742,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4020
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -7757,7 +7757,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4024
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -7772,7 +7772,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4028
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -7787,7 +7787,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c402c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -7802,7 +7802,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4030
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -7837,7 +7837,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4100
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -7859,7 +7859,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4104
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -7881,7 +7881,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4108
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -7938,7 +7938,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c410c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -7975,7 +7975,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4110
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -8019,7 +8019,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4114
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -8048,7 +8048,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4118
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -8077,7 +8077,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c411c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -8092,7 +8092,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4120
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -8107,7 +8107,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4124
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -8122,7 +8122,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4128
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -8137,7 +8137,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c412c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -8152,7 +8152,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4130
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -8187,7 +8187,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4200
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -8209,7 +8209,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4204
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -8231,7 +8231,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4208
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -8288,7 +8288,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c420c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -8325,7 +8325,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4210
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -8369,7 +8369,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4214
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -8398,7 +8398,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4218
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -8427,7 +8427,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c421c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -8442,7 +8442,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4220
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -8457,7 +8457,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4224
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -8472,7 +8472,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4228
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -8487,7 +8487,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c422c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -8502,7 +8502,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4230
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -8537,7 +8537,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4300
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -8559,7 +8559,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4304
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -8581,7 +8581,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4308
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -8638,7 +8638,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c430c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -8675,7 +8675,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4310
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -8719,7 +8719,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4314
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -8748,7 +8748,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4318
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -8777,7 +8777,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c431c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -8792,7 +8792,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4320
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -8807,7 +8807,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4324
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -8822,7 +8822,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4328
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -8837,7 +8837,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c432c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -8852,7 +8852,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4330
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -8887,7 +8887,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4400
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -8909,7 +8909,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4404
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -8931,7 +8931,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4408
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -8988,7 +8988,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c440c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -9025,7 +9025,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4410
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -9069,7 +9069,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4414
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -9098,7 +9098,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4418
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -9127,7 +9127,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c441c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -9142,7 +9142,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4420
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -9157,7 +9157,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4424
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -9172,7 +9172,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4428
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -9187,7 +9187,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c442c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -9202,7 +9202,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4430
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -9237,7 +9237,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4500
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -9259,7 +9259,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4504
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -9281,7 +9281,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4508
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -9338,7 +9338,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c450c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -9375,7 +9375,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4510
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -9419,7 +9419,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4514
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -9448,7 +9448,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4518
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -9477,7 +9477,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c451c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -9492,7 +9492,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4520
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -9507,7 +9507,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4524
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -9522,7 +9522,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4528
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -9537,7 +9537,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c452c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -9552,7 +9552,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4530
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -9587,7 +9587,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4600
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -9609,7 +9609,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4604
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -9631,7 +9631,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4608
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -9688,7 +9688,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c460c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -9725,7 +9725,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4610
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -9769,7 +9769,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4614
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -9798,7 +9798,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4618
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -9827,7 +9827,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c461c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -9842,7 +9842,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4620
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -9857,7 +9857,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4624
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -9872,7 +9872,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4628
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -9887,7 +9887,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c462c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -9902,7 +9902,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4630
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -9937,7 +9937,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4700
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -9959,7 +9959,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4704
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -9981,7 +9981,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4708
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -10038,7 +10038,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c470c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -10075,7 +10075,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4710
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -10119,7 +10119,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4714
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -10148,7 +10148,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4718
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -10177,7 +10177,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c471c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -10192,7 +10192,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4720
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -10207,7 +10207,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4724
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -10222,7 +10222,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4728
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -10237,7 +10237,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c472c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -10252,7 +10252,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4730
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -10287,7 +10287,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4800
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -10309,7 +10309,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4804
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -10331,7 +10331,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4808
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -10388,7 +10388,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c480c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -10425,7 +10425,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4810
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -10469,7 +10469,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4814
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -10498,7 +10498,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4818
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -10527,7 +10527,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c481c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -10542,7 +10542,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4820
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -10557,7 +10557,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4824
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -10572,7 +10572,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4828
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -10587,7 +10587,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c482c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -10602,7 +10602,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4830
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -10637,7 +10637,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400c4900
     size_bits: 32
     description: TB Enable Register
     read_allowed: true
@@ -10659,7 +10659,7 @@ modules:
       write_allowed: true
   - !Register
     name: RUN
-    addr: 0x4
+    addr: 0x400c4904
     size_bits: 32
     description: TB RUN Register
     read_allowed: true
@@ -10681,7 +10681,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400c4908
     size_bits: 32
     description: TB Control Register
     read_allowed: true
@@ -10738,7 +10738,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD
-    addr: 0xc
+    addr: 0x400c490c
     size_bits: 32
     description: TB Mode Register
     read_allowed: true
@@ -10775,7 +10775,7 @@ modules:
       write_allowed: true
   - !Register
     name: FFCR
-    addr: 0x10
+    addr: 0x400c4910
     size_bits: 32
     description: TB Flip-Flop Control Register
     read_allowed: true
@@ -10819,7 +10819,7 @@ modules:
       write_allowed: true
   - !Register
     name: ST
-    addr: 0x14
+    addr: 0x400c4914
     size_bits: 32
     description: TB Status Register
     read_allowed: true
@@ -10848,7 +10848,7 @@ modules:
       write_allowed: false
   - !Register
     name: IM
-    addr: 0x18
+    addr: 0x400c4918
     size_bits: 32
     description: TB Interrupt Mask Register
     read_allowed: true
@@ -10877,7 +10877,7 @@ modules:
       write_allowed: true
   - !Register
     name: UC
-    addr: 0x1c
+    addr: 0x400c491c
     size_bits: 32
     description: TB Read Capture Register
     read_allowed: true
@@ -10892,7 +10892,7 @@ modules:
       write_allowed: false
   - !Register
     name: RG0
-    addr: 0x20
+    addr: 0x400c4920
     size_bits: 32
     description: TB RG0 Timer Register
     read_allowed: true
@@ -10907,7 +10907,7 @@ modules:
       write_allowed: true
   - !Register
     name: RG1
-    addr: 0x24
+    addr: 0x400c4924
     size_bits: 32
     description: TB RG1 Timer Register
     read_allowed: true
@@ -10922,7 +10922,7 @@ modules:
       write_allowed: true
   - !Register
     name: CP0
-    addr: 0x28
+    addr: 0x400c4928
     size_bits: 32
     description: TB CP0 Capture Register
     read_allowed: true
@@ -10937,7 +10937,7 @@ modules:
       write_allowed: false
   - !Register
     name: CP1
-    addr: 0x2c
+    addr: 0x400c492c
     size_bits: 32
     description: TB CP1 Capture Register
     read_allowed: true
@@ -10952,7 +10952,7 @@ modules:
       write_allowed: false
   - !Register
     name: DMA
-    addr: 0x30
+    addr: 0x400c4930
     size_bits: 32
     description: TB DMA Enable Register
     read_allowed: true
@@ -10987,7 +10987,7 @@ modules:
   registers:
   - !Register
     name: CR0
-    addr: 0x0
+    addr: 0x400e0000
     size_bits: 32
     description: SBI Control Register 0
     read_allowed: true
@@ -11002,7 +11002,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR1_A
-    addr: 0x4
+    addr: 0x400e0004
     size_bits: 32
     description: SBI Control Register 1 (I2C Mode)
     read_allowed: true
@@ -11039,7 +11039,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR1_B
-    addr: 0x4
+    addr: 0x400e0004
     size_bits: 32
     description: SBI Control Register 1 (SIO Mode)
     read_allowed: true
@@ -11076,7 +11076,7 @@ modules:
       write_allowed: true
   - !Register
     name: DBR
-    addr: 0x8
+    addr: 0x400e0008
     size_bits: 32
     description: SBI Data Buffer Register
     read_allowed: true
@@ -11091,7 +11091,7 @@ modules:
       write_allowed: true
   - !Register
     name: I2CAR
-    addr: 0xc
+    addr: 0x400e000c
     size_bits: 32
     description: SBI I2C Bus Address Register
     read_allowed: true
@@ -11113,7 +11113,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR2_A
-    addr: 0x10
+    addr: 0x400e0010
     size_bits: 32
     description: SBI Control Register 2 (I2C Mode)
     read_allowed: false
@@ -11164,7 +11164,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR2_B
-    addr: 0x10
+    addr: 0x400e0010
     size_bits: 32
     description: SBI Control Register 2 (SIO Mode)
     read_allowed: false
@@ -11180,7 +11180,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR_A
-    addr: 0x10
+    addr: 0x400e0010
     size_bits: 32
     description: SBI Status Register (I2C Mode)
     read_allowed: true
@@ -11245,7 +11245,7 @@ modules:
       write_allowed: false
   - !Register
     name: SR_B
-    addr: 0x10
+    addr: 0x400e0010
     size_bits: 32
     description: SBI Status Register (SIO Mode)
     read_allowed: true
@@ -11268,7 +11268,7 @@ modules:
       write_allowed: false
   - !Register
     name: BR0
-    addr: 0x14
+    addr: 0x400e0014
     size_bits: 32
     description: SBI Baud Rate Register 0
     read_allowed: true
@@ -11290,7 +11290,7 @@ modules:
   registers:
   - !Register
     name: CR0
-    addr: 0x0
+    addr: 0x400e0100
     size_bits: 32
     description: SBI Control Register 0
     read_allowed: true
@@ -11305,7 +11305,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR1_A
-    addr: 0x4
+    addr: 0x400e0104
     size_bits: 32
     description: SBI Control Register 1 (I2C Mode)
     read_allowed: true
@@ -11342,7 +11342,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR1_B
-    addr: 0x4
+    addr: 0x400e0104
     size_bits: 32
     description: SBI Control Register 1 (SIO Mode)
     read_allowed: true
@@ -11379,7 +11379,7 @@ modules:
       write_allowed: true
   - !Register
     name: DBR
-    addr: 0x8
+    addr: 0x400e0108
     size_bits: 32
     description: SBI Data Buffer Register
     read_allowed: true
@@ -11394,7 +11394,7 @@ modules:
       write_allowed: true
   - !Register
     name: I2CAR
-    addr: 0xc
+    addr: 0x400e010c
     size_bits: 32
     description: SBI I2C Bus Address Register
     read_allowed: true
@@ -11416,7 +11416,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR2_A
-    addr: 0x10
+    addr: 0x400e0110
     size_bits: 32
     description: SBI Control Register 2 (I2C Mode)
     read_allowed: false
@@ -11467,7 +11467,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR2_B
-    addr: 0x10
+    addr: 0x400e0110
     size_bits: 32
     description: SBI Control Register 2 (SIO Mode)
     read_allowed: false
@@ -11483,7 +11483,7 @@ modules:
       write_allowed: true
   - !Register
     name: SR_A
-    addr: 0x10
+    addr: 0x400e0110
     size_bits: 32
     description: SBI Status Register (I2C Mode)
     read_allowed: true
@@ -11548,7 +11548,7 @@ modules:
       write_allowed: false
   - !Register
     name: SR_B
-    addr: 0x10
+    addr: 0x400e0110
     size_bits: 32
     description: SBI Status Register (SIO Mode)
     read_allowed: true
@@ -11571,7 +11571,7 @@ modules:
       write_allowed: false
   - !Register
     name: BR0
-    addr: 0x14
+    addr: 0x400e0114
     size_bits: 32
     description: SBI Baud Rate Register 0
     read_allowed: true
@@ -11593,7 +11593,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400e1000
     size_bits: 32
     description: SC Enable Register
     read_allowed: true
@@ -11608,7 +11608,7 @@ modules:
       write_allowed: true
   - !Register
     name: BUF
-    addr: 0x4
+    addr: 0x400e1004
     size_bits: 32
     description: SC Buffer Register
     read_allowed: true
@@ -11623,7 +11623,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400e1008
     size_bits: 32
     description: SC Control Register
     read_allowed: true
@@ -11687,7 +11687,7 @@ modules:
       write_allowed: false
   - !Register
     name: MOD0
-    addr: 0xc
+    addr: 0x400e100c
     size_bits: 32
     description: SC Mode Control Register 0
     read_allowed: true
@@ -11737,7 +11737,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRCR
-    addr: 0x10
+    addr: 0x400e1010
     size_bits: 32
     description: SC Baud Rate Generator Control Register
     read_allowed: true
@@ -11766,7 +11766,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRADD
-    addr: 0x14
+    addr: 0x400e1014
     size_bits: 32
     description: SC Baud Rate Generator Control Register 2
     read_allowed: true
@@ -11781,7 +11781,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD1
-    addr: 0x18
+    addr: 0x400e1018
     size_bits: 32
     description: SC Mode Control Register 1
     read_allowed: true
@@ -11817,7 +11817,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD2
-    addr: 0x1c
+    addr: 0x400e101c
     size_bits: 32
     description: SC Mode Control Register 2
     read_allowed: true
@@ -11875,7 +11875,7 @@ modules:
       write_allowed: false
   - !Register
     name: RFC
-    addr: 0x20
+    addr: 0x400e1020
     size_bits: 32
     description: SC RX FIFO Configuration Register
     read_allowed: true
@@ -11904,7 +11904,7 @@ modules:
       write_allowed: true
   - !Register
     name: TFC
-    addr: 0x24
+    addr: 0x400e1024
     size_bits: 32
     description: SC TX FIFO Configuration Register
     read_allowed: true
@@ -11933,7 +11933,7 @@ modules:
       write_allowed: true
   - !Register
     name: RST
-    addr: 0x28
+    addr: 0x400e1028
     size_bits: 32
     description: SC RX FIFO Status Register
     read_allowed: true
@@ -11955,7 +11955,7 @@ modules:
       write_allowed: false
   - !Register
     name: TST
-    addr: 0x2c
+    addr: 0x400e102c
     size_bits: 32
     description: SC TX FIFO Status Register
     read_allowed: true
@@ -11977,7 +11977,7 @@ modules:
       write_allowed: false
   - !Register
     name: FCNF
-    addr: 0x30
+    addr: 0x400e1030
     size_bits: 32
     description: SC FIFO Configuration Register
     read_allowed: true
@@ -12020,7 +12020,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMA
-    addr: 0x34
+    addr: 0x400e1034
     size_bits: 32
     description: SC DMA Enable Register
     read_allowed: true
@@ -12048,7 +12048,7 @@ modules:
   registers:
   - !Register
     name: EN
-    addr: 0x0
+    addr: 0x400e1100
     size_bits: 32
     description: SC Enable Register
     read_allowed: true
@@ -12063,7 +12063,7 @@ modules:
       write_allowed: true
   - !Register
     name: BUF
-    addr: 0x4
+    addr: 0x400e1104
     size_bits: 32
     description: SC Buffer Register
     read_allowed: true
@@ -12078,7 +12078,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x8
+    addr: 0x400e1108
     size_bits: 32
     description: SC Control Register
     read_allowed: true
@@ -12142,7 +12142,7 @@ modules:
       write_allowed: false
   - !Register
     name: MOD0
-    addr: 0xc
+    addr: 0x400e110c
     size_bits: 32
     description: SC Mode Control Register 0
     read_allowed: true
@@ -12192,7 +12192,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRCR
-    addr: 0x10
+    addr: 0x400e1110
     size_bits: 32
     description: SC Baud Rate Generator Control Register
     read_allowed: true
@@ -12221,7 +12221,7 @@ modules:
       write_allowed: true
   - !Register
     name: BRADD
-    addr: 0x14
+    addr: 0x400e1114
     size_bits: 32
     description: SC Baud Rate Generator Control Register 2
     read_allowed: true
@@ -12236,7 +12236,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD1
-    addr: 0x18
+    addr: 0x400e1118
     size_bits: 32
     description: SC Mode Control Register 1
     read_allowed: true
@@ -12272,7 +12272,7 @@ modules:
       write_allowed: true
   - !Register
     name: MOD2
-    addr: 0x1c
+    addr: 0x400e111c
     size_bits: 32
     description: SC Mode Control Register 2
     read_allowed: true
@@ -12330,7 +12330,7 @@ modules:
       write_allowed: false
   - !Register
     name: RFC
-    addr: 0x20
+    addr: 0x400e1120
     size_bits: 32
     description: SC RX FIFO Configuration Register
     read_allowed: true
@@ -12359,7 +12359,7 @@ modules:
       write_allowed: true
   - !Register
     name: TFC
-    addr: 0x24
+    addr: 0x400e1124
     size_bits: 32
     description: SC TX FIFO Configuration Register
     read_allowed: true
@@ -12388,7 +12388,7 @@ modules:
       write_allowed: true
   - !Register
     name: RST
-    addr: 0x28
+    addr: 0x400e1128
     size_bits: 32
     description: SC RX FIFO Status Register
     read_allowed: true
@@ -12410,7 +12410,7 @@ modules:
       write_allowed: false
   - !Register
     name: TST
-    addr: 0x2c
+    addr: 0x400e112c
     size_bits: 32
     description: SC TX FIFO Status Register
     read_allowed: true
@@ -12432,7 +12432,7 @@ modules:
       write_allowed: false
   - !Register
     name: FCNF
-    addr: 0x30
+    addr: 0x400e1130
     size_bits: 32
     description: SC FIFO Configuration Register
     read_allowed: true
@@ -12475,7 +12475,7 @@ modules:
       write_allowed: true
   - !Register
     name: DMA
-    addr: 0x34
+    addr: 0x400e1134
     size_bits: 32
     description: SC DMA Enable Register
     read_allowed: true
@@ -12503,7 +12503,7 @@ modules:
   registers:
   - !Register
     name: MOD
-    addr: 0x0
+    addr: 0x400f2000
     size_bits: 32
     description: WD Mode Register
     read_allowed: true
@@ -12540,7 +12540,7 @@ modules:
       write_allowed: true
   - !Register
     name: CR
-    addr: 0x4
+    addr: 0x400f2004
     size_bits: 32
     description: WD Control Register
     read_allowed: false
@@ -12557,11 +12557,11 @@ modules:
   name: CG
   description: Clock Generator (CG)
   base_addr: 0x400f3000
-  size: 0x14
+  size: 0x6c
   registers:
   - !Register
     name: SYSCR
-    addr: 0x0
+    addr: 0x400f3000
     size_bits: 32
     description: System Control Register
     read_allowed: true
@@ -12605,7 +12605,7 @@ modules:
       write_allowed: true
   - !Register
     name: OSCCR
-    addr: 0x4
+    addr: 0x400f3004
     size_bits: 32
     description: Oscillation Control Register
     read_allowed: true
@@ -12677,7 +12677,7 @@ modules:
       write_allowed: true
   - !Register
     name: STBYCR
-    addr: 0x8
+    addr: 0x400f3008
     size_bits: 32
     description: Standby Control Register
     read_allowed: true
@@ -12700,7 +12700,7 @@ modules:
       write_allowed: true
   - !Register
     name: PLLSEL
-    addr: 0xc
+    addr: 0x400f300c
     size_bits: 32
     description: PLL Selection Register
     read_allowed: true
@@ -12722,7 +12722,7 @@ modules:
       write_allowed: true
   - !Register
     name: USBCTL
-    addr: 0x38
+    addr: 0x400f3038
     size_bits: 32
     description: USB Clock and Reset Control register
     read_allowed: true
@@ -12744,7 +12744,7 @@ modules:
       write_allowed: true
   - !Register
     name: PROTECT
-    addr: 0x3c
+    addr: 0x400f303c
     size_bits: 32
     description: Protect Register
     read_allowed: true
@@ -12760,7 +12760,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMCGA
-    addr: 0x40
+    addr: 0x400f3040
     size_bits: 32
     description: CG Interrupt Mode Control Register A
     read_allowed: true
@@ -12853,7 +12853,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMCGB
-    addr: 0x44
+    addr: 0x400f3044
     size_bits: 32
     description: CG Interrupt Mode Control Register B
     read_allowed: true
@@ -12946,7 +12946,7 @@ modules:
       write_allowed: true
   - !Register
     name: IMCGC
-    addr: 0x48
+    addr: 0x400f3048
     size_bits: 32
     description: CG Interrupt Mode Control Register C
     read_allowed: true
@@ -13039,7 +13039,7 @@ modules:
       write_allowed: true
   - !Register
     name: ICRCG
-    addr: 0x60
+    addr: 0x400f3060
     size_bits: 32
     description: CG Interrupt Request Clear Register
     read_allowed: false
@@ -13054,7 +13054,7 @@ modules:
       write_allowed: true
   - !Register
     name: RSTFLG
-    addr: 0x64
+    addr: 0x400f3064
     size_bits: 32
     description: Reset Flag Register
     read_allowed: true
@@ -13091,7 +13091,7 @@ modules:
       write_allowed: true
   - !Register
     name: NMIFLG
-    addr: 0x68
+    addr: 0x400f3068
     size_bits: 32
     description: NMI Flag Register
     read_allowed: true
@@ -13115,11 +13115,11 @@ modules:
   name: FC
   description: Flash Control (FC)
   base_addr: 0x41fff010
-  size: 0x4
+  size: 0x14
   registers:
   - !Register
     name: SECBIT
-    addr: 0x0
+    addr: 0x41fff010
     size_bits: 32
     description: FC Security Bit Register
     read_allowed: true
@@ -13135,7 +13135,7 @@ modules:
       write_allowed: true
   - !Register
     name: FLCS
-    addr: 0x10
+    addr: 0x41fff020
     size_bits: 32
     description: FC Flash Control Register
     read_allowed: true

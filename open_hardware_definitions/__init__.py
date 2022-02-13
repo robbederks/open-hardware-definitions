@@ -9,6 +9,7 @@ try:
 except ImportError:
   from yaml import FullLoader as Loader, Dumper # type: ignore
 
+import math
 from enum import Enum
 from typing import Any, List, Mapping, Optional, Union
 
@@ -126,6 +127,19 @@ class Module(CleanYAMLObject):
 
     self.registers = registers if registers else []
 
+  def get_size(self):
+    if hasattr(self, 'size'):
+      return self.size
+
+    # Calculate based on registers
+    if len(self.registers) > 0:
+      # TODO: replace this 1 by the actual Device bit width if we have it
+      max_addr = max(map(lambda r: r.addr + math.ceil(r.size_bits/8) if hasattr(r, 'size_bits') else 1, self.registers))
+      if max_addr is not None and max_addr > self.base_addr:
+        return HexInt(max_addr - self.base_addr)
+
+    return None
+
   def __str__(self):
     return f"Module '{self.name}': Base address: {hex(self.base_addr)}"
 
@@ -183,6 +197,7 @@ if __name__ == "__main__":
     ])
   ])
   p.modules.append(fr)
+  p.modules.append(Module("TestModule2", 0x3000, 0x100))
 
   p.regions.extend([
     Region('FLASH', 0x2000, 0x500, description="This is flash"),
@@ -190,4 +205,7 @@ if __name__ == "__main__":
 
   d = p.dump()
   print(d)
-  Device.load(d)
+  dev2 = Device.load(d)
+
+  for m in p.modules:
+    print(m.name, m.get_size())
