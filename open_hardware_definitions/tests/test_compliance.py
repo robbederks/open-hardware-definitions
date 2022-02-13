@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import glob
 import tqdm
 import math
@@ -63,4 +64,7 @@ def test_compliance():
       raise Exception("Not all definitions passed!")
 
 if __name__ == "__main__":
-  test_compliance()
+  if len(sys.argv) > 1:
+    _test(sys.argv[1])
+  else:
+    test_compliance()

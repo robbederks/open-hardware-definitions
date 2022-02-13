@@ -134,7 +134,7 @@ class Module(CleanYAMLObject):
     # Calculate based on registers
     if len(self.registers) > 0:
       # TODO: replace this 1 by the actual Device bit width if we have it
-      max_addr = max(map(lambda r: r.addr + math.ceil(r.size_bits/8) if hasattr(r, 'size_bits') else 1, self.registers))
+      max_addr = max(map(lambda r: r.addr + (math.ceil(r.size_bits/8) if hasattr(r, 'size_bits') else 1), self.registers))
       if max_addr is not None and max_addr > self.base_addr:
         return HexInt(max_addr - self.base_addr)
 
