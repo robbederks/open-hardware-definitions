@@ -2,6 +2,7 @@
 
 import glob
 import tqdm
+import math
 import multiprocessing
 from open_hardware_definitions import Device
 from open_hardware_definitions.common import DEFINITIONS_DIR
@@ -34,6 +35,19 @@ def _test(path):
           if max(m.base_addr, m2.base_addr) < min(m.base_addr + m.get_size(), m2.base_addr + m2.get_size()):
             print(hex(m.base_addr), hex(m.get_size()), hex(m2.base_addr), hex(m2.get_size()))
             raise Exception(f"Modules '{m.name}' and '{m2.name}' overlap!")
+
+    # Check if there are any registers which overlap
+    register_set = set()
+    default_width = math.ceil(dev.bit_width/8) if hasattr(dev, 'bit_width') else 1
+    if hasattr(dev, 'modules'):
+      for m in dev.modules:
+        if hasattr(m, 'registers'):
+          for r in m.registers:
+            width = math.ceil(r.size_bits/8) if hasattr(dev, 'size_bits') else default_width
+            for addr in range(r.addr, r.addr + width):
+              if addr in register_set:
+                raise Exception(f"Register {r.name} at {hex(addr)} already in set!")
+              register_set.add(addr)
 
 
     return (path, True)
