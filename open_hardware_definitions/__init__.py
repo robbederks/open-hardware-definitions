@@ -84,6 +84,26 @@ class Register(CleanYAMLObject):
     self.fields = fields if fields else []
 
 
+class Region(CleanYAMLObject):
+  yaml_loader = Loader
+  yaml_dumper = Dumper
+  yaml_tag = "!Region"
+
+  def __init__(self,
+               name: str,
+               base_addr: int,
+               size: int,
+               description: Optional[str] = None,
+               extras: Optional[Mapping[str, Any]] = None) -> None:
+    self.name = name
+    self.base_addr = HexInt(base_addr)
+    self.size = HexInt(size)
+    self.description = description
+    if extras:
+      for k in extras.keys():
+        setattr(self, k, extras[k])
+
+
 class Module(CleanYAMLObject):
   yaml_loader = Loader
   yaml_dumper = Dumper
@@ -120,6 +140,7 @@ class Device(CleanYAMLObject):
                architecture: Optional[str] = None,
                bit_width: Optional[int] = None,
                endianness: Optional[Union[Endianness, str]] = None,
+               regions: Optional[List[Region]] = None,
                modules: Optional[List[Module]] = None,
                extras: Optional[Mapping[str, Any]] = None) -> None:
     self.manufacturer = manufacturer
@@ -131,6 +152,7 @@ class Device(CleanYAMLObject):
       for k in extras.keys():
         setattr(self, k, extras[k])
 
+    self.regions = regions if regions else []
     self.modules = modules if modules else []
 
   @classmethod
@@ -160,8 +182,11 @@ if __name__ == "__main__":
       Field('FIELD_B2', 2, 2, enum_values={0: "enum0", 2: "enum2"}),
     ])
   ])
-
   p.modules.append(fr)
+
+  p.regions.extend([
+    Region('FLASH', 0x2000, 0x500, description="This is flash"),
+  ])
 
   d = p.dump()
   print(d)
