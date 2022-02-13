@@ -21,6 +21,8 @@ def convert(svd_dev_path):
     architecture="ARM Cortex-M",
   )
 
+  register_set = set()
+
   for per in svd_dev.peripherals:
     mod = Module(
       name=per.name,
@@ -50,17 +52,29 @@ def convert(svd_dev_path):
 
       size = reg.size if reg.size else svd_dev.width
 
+      if reg.name == "FRT_TCSA1":
+        print('FRT_TCSA1 SIZE', reg.size, size, reg.get_derived_from())
+
+      if reg.name == "FRT_TCSA0":
+        print('FRT_TCSA0 SIZE', reg.size, size)
+
       max_addr = max(max_addr, per.base_address + reg.address_offset + math.ceil(size/8))
-      mod.registers.append(Register(
-        name=reg.name,
-        addr=per.base_address + reg.address_offset,
-        size_bits=reg.size,
-        description=reg.description,
-        read_allowed=('read' in reg.access if reg.access else None),
-        write_allowed=('write' in reg.access if reg.access else None),
-        reset_value=reg.reset_value,
-        fields=fields
-      ))
+      addr = per.base_address + reg.address_offset
+
+      # This is needed to clean up multiple register definitions for a single address.
+      # Seems like SVDs are a big fan of this, I don't like it...
+      if addr not in register_set:
+        mod.registers.append(Register(
+          name=reg.name,
+          addr=addr,
+          size_bits=size,
+          description=reg.description,
+          read_allowed=('read' in reg.access if reg.access else None),
+          write_allowed=('write' in reg.access if reg.access else None),
+          reset_value=reg.reset_value,
+          fields=fields
+        ))
+        register_set.add(addr)
 
     mod.size = HexInt(max_addr - per.base_address)
     dev.modules.append(mod)

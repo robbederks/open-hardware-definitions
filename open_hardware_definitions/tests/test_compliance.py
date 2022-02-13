@@ -43,7 +43,7 @@ def _test(path):
       for m in dev.modules:
         if hasattr(m, 'registers'):
           for r in m.registers:
-            width = math.ceil(r.size_bits/8) if hasattr(dev, 'size_bits') else default_width
+            width = math.ceil(r.size_bits/8) if hasattr(r, 'size_bits') else default_width
             for addr in range(r.addr, r.addr + width):
               if addr in register_set:
                 raise Exception(f"Register {r.name} at {hex(addr)} already in set!")
