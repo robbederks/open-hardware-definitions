@@ -25,6 +25,7 @@ setuptools.setup(
       "Development Status :: 4 - Beta"
   ],
   install_requires=[
-    'pyyaml'
+    'pyyaml',
+    'tqdm',
   ]
 )

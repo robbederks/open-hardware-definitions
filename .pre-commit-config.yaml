@@ -22,4 +22,4 @@ repos:
     rev: v2.12.2
     hooks:
       - id: pylint
-        additional_dependencies: ['pyyaml']
+        additional_dependencies: ['pyyaml', 'tqdm']
