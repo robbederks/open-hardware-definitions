@@ -1446,7 +1446,7 @@ modules:
     name: eSCI_LTR
     addr: 0xc3fa0010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -1551,7 +1551,7 @@ modules:
     name: eSCI_LTR
     addr: 0xc3fa4010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -1654,7 +1654,7 @@ modules:
     name: eSCI_LTR
     addr: 0xc3fa8010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -1757,7 +1757,7 @@ modules:
     name: eSCI_LTR
     addr: 0xc3fac010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -6314,7 +6314,7 @@ modules:
     write_allowed: true
     description_page: 25.5.2.68/25-73
   - !Register
-    name: MBCCFR13
+    name: MBCCFR113
     addr: 0xc3fdc48a
     size_bits: 16
     description: Message buffer cycle counter filter register 113
@@ -6346,7 +6346,7 @@ modules:
     write_allowed: true
     description_page: 25.5.2.68/25-73
   - !Register
-    name: MBCCFR14
+    name: MBCCFR114
     addr: 0xc3fdc492
     size_bits: 16
     description: Message buffer cycle counter filter register 114
@@ -6730,7 +6730,7 @@ modules:
     write_allowed: true
     description_page: 25.5.2.68/25-73
   - !Register
-    name: MBCCFR26
+    name: MBCCFR126
     addr: 0xc3fdc4f2
     size_bits: 16
     description: Message buffer cycle counter filter register 126
@@ -6887,7 +6887,7 @@ modules:
     name: XBAR_SGPCR7
     addr: 0xfff04710
     size_bits: 32
-    description: " General-purpose control register, slave \nport 7"
+    description: "General-purpose control register, slave \nport 7"
     read_allowed: true
     write_allowed: true
     description_page: 15.2.1.2/15-6
@@ -7136,7 +7136,7 @@ modules:
     name: MPU_EAR3
     addr: 0xfff14028
     size_bits: 32
-    description: ' MPU error address register, MPU port 3'
+    description: MPU error address register, MPU port 3
     read_allowed: true
     write_allowed: false
     description_page: 17.3.2.2/17-6
@@ -7409,60 +7409,60 @@ modules:
   base_addr: 0xfff38000
   registers:
   - !Register
-    name: 'SWT_CR '
+    name: SWT_CR
     addr: 0xfff38000
     size_bits: 32
-    description: ' SWT control register'
+    description: SWT control register
     read_allowed: true
     write_allowed: true
     reset_value: 0xff00011b
     description_page: 19.3.2.1/19-2
   - !Register
-    name: 'SWT_IR '
+    name: SWT_IR
     addr: 0xfff38004
     size_bits: 32
-    description: ' SWT interrupt register'
+    description: SWT interrupt register
     read_allowed: true
     write_allowed: true
     description_page: 19.3.2.2/19-4
   - !Register
-    name: 'SWT_TO '
+    name: SWT_TO
     addr: 0xfff38008
     size_bits: 32
-    description: ' SWT time-out register'
+    description: SWT time-out register
     read_allowed: true
     write_allowed: true
     reset_value: 0x27fff
     description_page: 19.3.2.3/19-4
   - !Register
-    name: 'SWT_WN '
+    name: SWT_WN
     addr: 0xfff3800c
     size_bits: 32
-    description: ' SWT window register'
+    description: SWT window register
     read_allowed: true
     write_allowed: true
     description_page: 19.3.2.4/19-5
   - !Register
-    name: 'SWT_SR '
+    name: SWT_SR
     addr: 0xfff38010
     size_bits: 32
-    description: ' SWT service register'
+    description: SWT service register
     read_allowed: true
     write_allowed: true
     description_page: 19.3.2.5/19-6
   - !Register
-    name: 'SWT_CO '
+    name: SWT_CO
     addr: 0xfff38014
     size_bits: 32
-    description: ' SWT counter output register'
+    description: SWT counter output register
     read_allowed: true
     write_allowed: false
     description_page: 19.3.2.6/19-6
   - !Register
-    name: 'SWT_SK '
+    name: SWT_SK
     addr: 0xfff38018
     size_bits: 32
-    description: ' SWT service key register'
+    description: SWT service key register
     read_allowed: true
     write_allowed: true
     description_page: 19.3.2.7/19-7
@@ -7471,114 +7471,114 @@ modules:
   base_addr: 0xfff3c000
   registers:
   - !Register
-    name: 'STM_CR '
+    name: STM_CR
     addr: 0xfff3c000
     size_bits: 32
-    description: ' STM control register'
+    description: STM control register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.1/20-3
   - !Register
-    name: 'STM_CNT '
+    name: STM_CNT
     addr: 0xfff3c004
     size_bits: 32
-    description: ' STM counter value'
+    description: STM counter value
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.2/20-3
   - !Register
-    name: 'STM_CCR0 '
+    name: STM_CCR0
     addr: 0xfff3c010
     size_bits: 32
-    description: ' STM channel 0 control register'
+    description: STM channel 0 control register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.3/20-4
   - !Register
-    name: 'STM_CIR0 '
+    name: STM_CIR0
     addr: 0xfff3c014
     size_bits: 32
-    description: ' STM channel 0 interrupt register'
+    description: STM channel 0 interrupt register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.4/20-4
   - !Register
-    name: 'STM_CMP0 '
+    name: STM_CMP0
     addr: 0xfff3c018
     size_bits: 32
-    description: ' STM channel 0 compare register'
+    description: STM channel 0 compare register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.5/20-5
   - !Register
-    name: 'STM_CCR1 '
+    name: STM_CCR1
     addr: 0xfff3c020
     size_bits: 32
-    description: ' STM channel 1 control register'
+    description: STM channel 1 control register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.3/20-4
   - !Register
-    name: 'STM_CIR1 '
+    name: STM_CIR1
     addr: 0xfff3c024
     size_bits: 32
-    description: ' STM channel 1 interrupt register'
+    description: STM channel 1 interrupt register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.4/20-4
   - !Register
-    name: 'STM_CMP1 '
+    name: STM_CMP1
     addr: 0xfff3c028
     size_bits: 32
-    description: ' STM channel 1 compare register'
+    description: STM channel 1 compare register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.5/20-5
   - !Register
-    name: 'STM_CCR2 '
+    name: STM_CCR2
     addr: 0xfff3c030
     size_bits: 32
-    description: ' STM channel 2 control register'
+    description: STM channel 2 control register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.3/20-4
   - !Register
-    name: 'STM_CIR2 '
+    name: STM_CIR2
     addr: 0xfff3c034
     size_bits: 32
-    description: ' STM channel 2 interrupt register'
+    description: STM channel 2 interrupt register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.4/20-4
   - !Register
-    name: 'STM_CMP2 '
+    name: STM_CMP2
     addr: 0xfff3c038
     size_bits: 32
-    description: ' STM channel 2 compare register'
+    description: STM channel 2 compare register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.5/20-5
   - !Register
-    name: 'STM_CCR3 '
+    name: STM_CCR3
     addr: 0xfff3c040
     size_bits: 32
-    description: ' STM channel 3 control register'
+    description: STM channel 3 control register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.3/20-4
   - !Register
-    name: 'STM_CIR3 '
+    name: STM_CIR3
     addr: 0xfff3c044
     size_bits: 32
-    description: ' STM channel 3 interrupt register'
+    description: STM channel 3 interrupt register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.4/20-4
   - !Register
-    name: 'STM_CMP3 '
+    name: STM_CMP3
     addr: 0xfff3c048
     size_bits: 32
-    description: ' STM channel 3 compare register'
+    description: STM channel 3 compare register
     read_allowed: true
     write_allowed: true
     description_page: 20.3.2.5/20-5
@@ -9282,240 +9282,240 @@ modules:
   base_addr: 0xfff80000
   registers:
   - !Register
-    name: 'MCR '
+    name: MCR
     addr: 0xfff80000
     size_bits: 32
-    description: ' Main configuration register'
+    description: Main configuration register
     read_allowed: true
     write_allowed: true
     reset_value: 0x1
     description_page: 33.3.2.1/33-8
   - !Register
-    name: 'MSR '
+    name: MSR
     addr: 0xfff80004
     size_bits: 32
-    description: ' Main status register'
+    description: Main status register
     read_allowed: true
     write_allowed: true
     reset_value: 0x1
     description_page: 33.3.2.2/33-10
   - !Register
-    name: 'ISR '
+    name: ISR
     addr: 0xfff80010
     size_bits: 32
-    description: ' Interrupt status register'
+    description: Interrupt status register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.3/33-11
   - !Register
-    name: 'CEOCFR0 '
+    name: CEOCFR0
     addr: 0xfff80014
     size_bits: 32
-    description: ' Channel pending register 0'
+    description: Channel pending register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.4/33-12
   - !Register
-    name: 'CEOCFR1 '
+    name: CEOCFR1
     addr: 0xfff80018
     size_bits: 32
-    description: ' Channel pending register 1'
+    description: Channel pending register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.5/33-13
   - !Register
-    name: 'CEOCFR2 '
+    name: CEOCFR2
     addr: 0xfff8001c
     size_bits: 32
-    description: ' Channel pending register 2'
+    description: Channel pending register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.6/33-13
   - !Register
-    name: 'IMR '
+    name: IMR
     addr: 0xfff80020
     size_bits: 32
-    description: ' Interrupt mask register'
+    description: Interrupt mask register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.7/33-14
   - !Register
-    name: 'CIMR0 '
+    name: CIMR0
     addr: 0xfff80024
     size_bits: 32
-    description: ' Channel Interrupt mask register 0'
+    description: Channel Interrupt mask register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.8/33-15
   - !Register
-    name: 'CIMR1 '
+    name: CIMR1
     addr: 0xfff80028
     size_bits: 32
-    description: ' Channel Interrupt mask register 1'
+    description: Channel Interrupt mask register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.9/33-15
   - !Register
-    name: 'CIMR2 '
+    name: CIMR2
     addr: 0xfff8002c
     size_bits: 32
-    description: ' Channel Interrupt mask register 2'
+    description: Channel Interrupt mask register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.10/33-16
   - !Register
-    name: 'WTISR '
+    name: WTISR
     addr: 0xfff80030
     size_bits: 32
-    description: ' Watchdog interrupt threshold register'
+    description: Watchdog interrupt threshold register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.11/33-16
   - !Register
-    name: 'WTIMR '
+    name: WTIMR
     addr: 0xfff80034
     size_bits: 32
-    description: ' Watchdog interrupt threshold mask register'
+    description: Watchdog interrupt threshold mask register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.12/33-17
   - !Register
-    name: 'DMAE '
+    name: DMAE
     addr: 0xfff80040
     size_bits: 32
-    description: ' DMA enable register'
+    description: DMA enable register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.13/33-18
   - !Register
-    name: 'DMAR0 '
+    name: DMAR0
     addr: 0xfff80044
     size_bits: 32
-    description: ' DMA channel select register 0'
+    description: DMA channel select register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.14/33-18
   - !Register
-    name: 'DMAR1 '
+    name: DMAR1
     addr: 0xfff80048
     size_bits: 32
-    description: ' DMA channel select register 1'
+    description: DMA channel select register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.15/33-19
   - !Register
-    name: 'DMAR2 '
+    name: DMAR2
     addr: 0xfff8004c
     size_bits: 32
-    description: ' DMA channel select register 2'
+    description: DMA channel select register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.16/33-19
   - !Register
-    name: 'TRC0 '
+    name: TRC0
     addr: 0xfff80050
     size_bits: 32
-    description: ' Threshold control register 0'
+    description: Threshold control register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.17/33-20
   - !Register
-    name: 'TRC1 '
+    name: TRC1
     addr: 0xfff80054
     size_bits: 32
-    description: ' Threshold control register 1'
+    description: Threshold control register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.17/33-20
   - !Register
-    name: 'TRC2 '
+    name: TRC2
     addr: 0xfff80058
     size_bits: 32
-    description: ' Threshold control register 2'
+    description: Threshold control register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.17/33-20
   - !Register
-    name: 'TRC3 '
+    name: TRC3
     addr: 0xfff8005c
     size_bits: 32
-    description: ' Threshold control register 3'
+    description: Threshold control register 3
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.17/33-20
   - !Register
-    name: 'THRHLR0 '
+    name: THRHLR0
     addr: 0xfff80060
     size_bits: 32
-    description: ' Threshold register 0'
+    description: Threshold register 0
     read_allowed: true
     write_allowed: true
     reset_value: 0xfff0000
     description_page: 33.3.2.18/33-21
   - !Register
-    name: 'THRHLR1 '
+    name: THRHLR1
     addr: 0xfff80064
     size_bits: 32
-    description: ' Threshold register 1'
+    description: Threshold register 1
     read_allowed: true
     write_allowed: true
     reset_value: 0xfff0000
     description_page: 33.3.2.18/33-21
   - !Register
-    name: 'THRHLR2 '
+    name: THRHLR2
     addr: 0xfff80068
     size_bits: 32
-    description: ' Threshold register 2'
+    description: Threshold register 2
     read_allowed: true
     write_allowed: true
     reset_value: 0xfff0000
     description_page: 33.3.2.18/33-21
   - !Register
-    name: 'THRHLR3 '
+    name: THRHLR3
     addr: 0xfff8006c
     size_bits: 32
-    description: ' Threshold register 3'
+    description: Threshold register 3
     read_allowed: true
     write_allowed: true
     reset_value: 0xfff0000
     description_page: 33.3.2.18/33-21
   - !Register
-    name: 'PSCR '
+    name: PSCR
     addr: 0xfff80080
     size_bits: 32
-    description: ' Presampling control register'
+    description: Presampling control register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.19/33-22
   - !Register
-    name: 'PSR0 '
+    name: PSR0
     addr: 0xfff80084
     size_bits: 32
-    description: ' Presampling register 0'
+    description: Presampling register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.20/33-22
   - !Register
-    name: 'PSR1 '
+    name: PSR1
     addr: 0xfff80088
     size_bits: 32
-    description: ' Presampling register 1'
+    description: Presampling register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.21/33-23
   - !Register
-    name: 'PSR2 '
+    name: PSR2
     addr: 0xfff8008c
     size_bits: 32
-    description: ' Presampling register 2'
+    description: Presampling register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.22/33-23
   - !Register
-    name: 'CTR0 '
+    name: CTR0
     addr: 0xfff80094
     size_bits: 32
-    description: ' Conversion timing register 0'
+    description: Conversion timing register 0
     read_allowed: true
     write_allowed: true
     reset_value: 0x203
@@ -9524,857 +9524,857 @@ modules:
     name: CTR1
     addr: 0xfff80098
     size_bits: 32
-    description: ' Conversion timing register 1'
+    description: Conversion timing register 1
     read_allowed: true
     write_allowed: true
     reset_value: 0x203
     description_page: 33.3.2.24/33-24
   - !Register
-    name: 'CTR2 '
+    name: CTR2
     addr: 0xfff8009c
     size_bits: 32
-    description: ' Conversion timing register 2'
+    description: Conversion timing register 2
     read_allowed: true
     write_allowed: true
     reset_value: 0x203
     description_page: 33.3.2.25/33-25
   - !Register
-    name: 'NCMR0 '
+    name: NCMR0
     addr: 0xfff800a4
     size_bits: 32
-    description: ' Normal conversion mask register 0'
+    description: Normal conversion mask register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.26/33-33
   - !Register
-    name: 'NCMR1 '
+    name: NCMR1
     addr: 0xfff800a8
     size_bits: 32
-    description: ' Normal conversion mask register 1'
+    description: Normal conversion mask register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.27/33-34
   - !Register
-    name: 'NCMR2 '
+    name: NCMR2
     addr: 0xfff800ac
     size_bits: 32
-    description: ' Normal conversion mask register 2'
+    description: Normal conversion mask register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.28/33-34
   - !Register
-    name: 'JCMR0 '
+    name: JCMR0
     addr: 0xfff800b4
     size_bits: 32
-    description: ' Injected conversion mask register 0'
+    description: Injected conversion mask register 0
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.29/33-35
   - !Register
-    name: 'JCMR1 '
+    name: JCMR1
     addr: 0xfff800b8
     size_bits: 32
-    description: ' Injected conversion mask register 1'
+    description: Injected conversion mask register 1
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.30/33-35
   - !Register
-    name: 'JCMR2 '
+    name: JCMR2
     addr: 0xfff800bc
     size_bits: 32
-    description: ' Injected conversion mask register 2'
+    description: Injected conversion mask register 2
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.31/33-36
   - !Register
-    name: 'OFFWR '
+    name: OFFWR
     addr: 0xfff800c0
     size_bits: 32
-    description: ' Offset word register'
+    description: Offset word register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.32/33-36
   - !Register
-    name: 'DSD '
+    name: DSD
     addr: 0xfff800c4
     size_bits: 32
-    description: ' Decode signals delay register'
+    description: Decode signals delay register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.33/33-37
   - !Register
-    name: 'PDEDR '
+    name: PDEDR
     addr: 0xfff800c8
     size_bits: 32
-    description: ' Power down exit delay register'
+    description: Power down exit delay register
     read_allowed: true
     write_allowed: true
     description_page: 33.3.2.34/33-38
   - !Register
-    name: 'PRECDATAREG0 '
+    name: PRECDATAREG0
     addr: 0xfff80100
     size_bits: 32
-    description: ' Channel 0 data register'
+    description: Channel 0 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG1 '
+    name: PRECDATAREG1
     addr: 0xfff80104
     size_bits: 32
-    description: ' Channel 1 data register'
+    description: Channel 1 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG2 '
+    name: PRECDATAREG2
     addr: 0xfff80108
     size_bits: 32
-    description: ' Channel 2 data register'
+    description: Channel 2 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG3 '
+    name: PRECDATAREG3
     addr: 0xfff8010c
     size_bits: 32
-    description: ' Channel 3 data register'
+    description: Channel 3 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG4 '
+    name: PRECDATAREG4
     addr: 0xfff80110
     size_bits: 32
-    description: ' Channel 4 data register'
+    description: Channel 4 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG5 '
+    name: PRECDATAREG5
     addr: 0xfff80114
     size_bits: 32
-    description: ' Channel 5 data register'
+    description: Channel 5 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG6 '
+    name: PRECDATAREG6
     addr: 0xfff80118
     size_bits: 32
-    description: ' Channel 6 data register'
+    description: Channel 6 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG7 '
+    name: PRECDATAREG7
     addr: 0xfff8011c
     size_bits: 32
-    description: ' Channel 7 data register'
+    description: Channel 7 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG8 '
+    name: PRECDATAREG8
     addr: 0xfff80120
     size_bits: 32
-    description: ' Channel 8 data register'
+    description: Channel 8 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG9 '
+    name: PRECDATAREG9
     addr: 0xfff80124
     size_bits: 32
-    description: ' Channel 9 data register'
+    description: Channel 9 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG10 '
+    name: PRECDATAREG10
     addr: 0xfff80128
     size_bits: 32
-    description: ' Channel 10 data register'
+    description: Channel 10 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG11 '
+    name: PRECDATAREG11
     addr: 0xfff8012c
     size_bits: 32
-    description: ' Channel 11 data register'
+    description: Channel 11 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG12 '
+    name: PRECDATAREG12
     addr: 0xfff80130
     size_bits: 32
-    description: ' Channel 12 data register'
+    description: Channel 12 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG13 '
+    name: PRECDATAREG13
     addr: 0xfff80134
     size_bits: 32
-    description: ' Channel 13 data register'
+    description: Channel 13 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG14 '
+    name: PRECDATAREG14
     addr: 0xfff80138
     size_bits: 32
-    description: ' Channel 14 data register'
+    description: Channel 14 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG15 '
+    name: PRECDATAREG15
     addr: 0xfff8013c
     size_bits: 32
-    description: ' Channel 15 data register'
+    description: Channel 15 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG16 '
+    name: PRECDATAREG16
     addr: 0xfff80140
     size_bits: 32
-    description: ' Channel 16 data register'
+    description: Channel 16 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG17 '
+    name: PRECDATAREG17
     addr: 0xfff80144
     size_bits: 32
-    description: ' Channel 17 data register'
+    description: Channel 17 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG18 '
+    name: PRECDATAREG18
     addr: 0xfff80148
     size_bits: 32
-    description: ' Channel 18 data register'
+    description: Channel 18 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG19 '
+    name: PRECDATAREG19
     addr: 0xfff8014c
     size_bits: 32
-    description: ' Channel 19 data register'
+    description: Channel 19 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG20 '
+    name: PRECDATAREG20
     addr: 0xfff80150
     size_bits: 32
-    description: ' Channel 20 data register'
+    description: Channel 20 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG21 '
+    name: PRECDATAREG21
     addr: 0xfff80154
     size_bits: 32
-    description: ' Channel 21 data register'
+    description: Channel 21 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG22 '
+    name: PRECDATAREG22
     addr: 0xfff80158
     size_bits: 32
-    description: ' Channel 22 data register'
+    description: Channel 22 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG23 '
+    name: PRECDATAREG23
     addr: 0xfff8015c
     size_bits: 32
-    description: ' Channel 23 data register'
+    description: Channel 23 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG24 '
+    name: PRECDATAREG24
     addr: 0xfff80160
     size_bits: 32
-    description: ' Channel 24 data register'
+    description: Channel 24 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG25 '
+    name: PRECDATAREG25
     addr: 0xfff80164
     size_bits: 32
-    description: ' Channel 25 data register'
+    description: Channel 25 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG26 '
+    name: PRECDATAREG26
     addr: 0xfff80168
     size_bits: 32
-    description: ' Channel 26 data register'
+    description: Channel 26 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG27 '
+    name: PRECDATAREG27
     addr: 0xfff8016c
     size_bits: 32
-    description: ' Channel 27 data register'
+    description: Channel 27 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG28 '
+    name: PRECDATAREG28
     addr: 0xfff80170
     size_bits: 32
-    description: ' Channel 28 data register'
+    description: Channel 28 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG29 '
+    name: PRECDATAREG29
     addr: 0xfff80174
     size_bits: 32
-    description: ' Channel 29 data register'
+    description: Channel 29 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG30 '
+    name: PRECDATAREG30
     addr: 0xfff80178
     size_bits: 32
-    description: ' Channel 30 data register'
+    description: Channel 30 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'PRECDATAREG31 '
+    name: PRECDATAREG31
     addr: 0xfff8017c
     size_bits: 32
-    description: ' Channel 31 data register'
+    description: Channel 31 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.35/33-38
   - !Register
-    name: 'INTDATAREG0 '
+    name: INTDATAREG0
     addr: 0xfff80180
     size_bits: 32
-    description: ' Channel 32 data register'
+    description: Channel 32 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG1 '
+    name: INTDATAREG1
     addr: 0xfff80184
     size_bits: 32
-    description: ' Channel 33 data register'
+    description: Channel 33 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG2 '
+    name: INTDATAREG2
     addr: 0xfff80188
     size_bits: 32
-    description: ' Channel 34 data register'
+    description: Channel 34 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG3 '
+    name: INTDATAREG3
     addr: 0xfff8018c
     size_bits: 32
-    description: ' Channel 35 data register'
+    description: Channel 35 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG4 '
+    name: INTDATAREG4
     addr: 0xfff80190
     size_bits: 32
-    description: ' Channel 36 data register'
+    description: Channel 36 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG5 '
+    name: INTDATAREG5
     addr: 0xfff80194
     size_bits: 32
-    description: ' Channel 37 data register'
+    description: Channel 37 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG6 '
+    name: INTDATAREG6
     addr: 0xfff80198
     size_bits: 32
-    description: ' Channel 38 data register'
+    description: Channel 38 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG7 '
+    name: INTDATAREG7
     addr: 0xfff8019c
     size_bits: 32
-    description: ' Channel 39 data register'
+    description: Channel 39 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG8 '
+    name: INTDATAREG8
     addr: 0xfff801a0
     size_bits: 32
-    description: ' Channel 40 data register'
+    description: Channel 40 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG9 '
+    name: INTDATAREG9
     addr: 0xfff801a4
     size_bits: 32
-    description: ' Channel 41 data register'
+    description: Channel 41 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG10 '
+    name: INTDATAREG10
     addr: 0xfff801a8
     size_bits: 32
-    description: ' Channel 42 data register'
+    description: Channel 42 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG11 '
+    name: INTDATAREG11
     addr: 0xfff801ac
     size_bits: 32
-    description: ' Channel 43 data register'
+    description: Channel 43 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG12 '
+    name: INTDATAREG12
     addr: 0xfff801b0
     size_bits: 32
-    description: ' Channel 44 data register'
+    description: Channel 44 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG13 '
+    name: INTDATAREG13
     addr: 0xfff801b4
     size_bits: 32
-    description: ' Channel 45 data register)'
+    description: Channel 45 data register)
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG14 '
+    name: INTDATAREG14
     addr: 0xfff801b8
     size_bits: 32
-    description: ' Channel 46 data register'
+    description: Channel 46 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG15 '
+    name: INTDATAREG15
     addr: 0xfff801bc
     size_bits: 32
-    description: ' Channel 47 data register'
+    description: Channel 47 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG16 '
+    name: INTDATAREG16
     addr: 0xfff801c0
     size_bits: 32
-    description: ' Channel 48 data register'
+    description: Channel 48 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG17 '
+    name: INTDATAREG17
     addr: 0xfff801c4
     size_bits: 32
-    description: ' Channel 49 data register'
+    description: Channel 49 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG18 '
+    name: INTDATAREG18
     addr: 0xfff801c8
     size_bits: 32
-    description: ' Channel 50 data register'
+    description: Channel 50 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG19 '
+    name: INTDATAREG19
     addr: 0xfff801cc
     size_bits: 32
-    description: ' Channel 51 data register'
+    description: Channel 51 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG20 '
+    name: INTDATAREG20
     addr: 0xfff801d0
     size_bits: 32
-    description: ' Channel 52 data register'
+    description: Channel 52 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG21 '
+    name: INTDATAREG21
     addr: 0xfff801d4
     size_bits: 32
-    description: ' Channel 53 data register'
+    description: Channel 53 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG22 '
+    name: INTDATAREG22
     addr: 0xfff801d8
     size_bits: 32
-    description: ' Channel 54 data register'
+    description: Channel 54 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG23 '
+    name: INTDATAREG23
     addr: 0xfff801dc
     size_bits: 32
-    description: ' Channel 55 data register'
+    description: Channel 55 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG24 '
+    name: INTDATAREG24
     addr: 0xfff801e0
     size_bits: 32
-    description: ' Channel 56 data register'
+    description: Channel 56 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG25 '
+    name: INTDATAREG25
     addr: 0xfff801e4
     size_bits: 32
-    description: ' Channel 57 data register'
+    description: Channel 57 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG26 '
+    name: INTDATAREG26
     addr: 0xfff801e8
     size_bits: 32
-    description: ' Channel 58 data register'
+    description: Channel 58 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG27 '
+    name: INTDATAREG27
     addr: 0xfff801ec
     size_bits: 32
-    description: ' Channel 59 data register'
+    description: Channel 59 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG28 '
+    name: INTDATAREG28
     addr: 0xfff801f0
     size_bits: 32
-    description: ' Channel 60 data register'
+    description: Channel 60 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG29 '
+    name: INTDATAREG29
     addr: 0xfff801f4
     size_bits: 32
-    description: ' Channel 61 data register'
+    description: Channel 61 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG30 '
+    name: INTDATAREG30
     addr: 0xfff801f8
     size_bits: 32
-    description: ' Channel 62 data register'
+    description: Channel 62 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'INTDATAREG31 '
+    name: INTDATAREG31
     addr: 0xfff801fc
     size_bits: 32
-    description: ' Channel 63 data register'
+    description: Channel 63 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.36/33-39
   - !Register
-    name: 'EXTDATAREG0 '
+    name: EXTDATAREG0
     addr: 0xfff80200
     size_bits: 32
-    description: ' Channel 64 data register'
+    description: Channel 64 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG1 '
+    name: EXTDATAREG1
     addr: 0xfff80204
     size_bits: 32
-    description: ' Channel 65 data register'
+    description: Channel 65 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG2 '
+    name: EXTDATAREG2
     addr: 0xfff80208
     size_bits: 32
-    description: ' Channel 66 data register'
+    description: Channel 66 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG3 '
+    name: EXTDATAREG3
     addr: 0xfff8020c
     size_bits: 32
-    description: ' Channel 67 data register'
+    description: Channel 67 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG4 '
+    name: EXTDATAREG4
     addr: 0xfff80210
     size_bits: 32
-    description: ' Channel 68 data register'
+    description: Channel 68 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG5 '
+    name: EXTDATAREG5
     addr: 0xfff80214
     size_bits: 32
-    description: ' Channel 69 data register'
+    description: Channel 69 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG6 '
+    name: EXTDATAREG6
     addr: 0xfff80218
     size_bits: 32
-    description: ' Channel 70 data register'
+    description: Channel 70 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG7 '
+    name: EXTDATAREG7
     addr: 0xfff8021c
     size_bits: 32
-    description: ' Channel 71 data register'
+    description: Channel 71 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG8 '
+    name: EXTDATAREG8
     addr: 0xfff80220
     size_bits: 32
-    description: ' Channel 72 data register'
+    description: Channel 72 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG9 '
+    name: EXTDATAREG9
     addr: 0xfff80224
     size_bits: 32
-    description: ' Channel 73 data register'
+    description: Channel 73 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG10 '
+    name: EXTDATAREG10
     addr: 0xfff80228
     size_bits: 32
-    description: ' Channel 74 data register'
+    description: Channel 74 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG11 '
+    name: EXTDATAREG11
     addr: 0xfff8022c
     size_bits: 32
-    description: ' Channel 75 data register'
+    description: Channel 75 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG12 '
+    name: EXTDATAREG12
     addr: 0xfff80230
     size_bits: 32
-    description: ' Channel 76 data register'
+    description: Channel 76 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG13 '
+    name: EXTDATAREG13
     addr: 0xfff80234
     size_bits: 32
-    description: ' Channel 77 data register'
+    description: Channel 77 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG14 '
+    name: EXTDATAREG14
     addr: 0xfff80238
     size_bits: 32
-    description: ' Channel 78 data register'
+    description: Channel 78 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG15 '
+    name: EXTDATAREG15
     addr: 0xfff8023c
     size_bits: 32
-    description: ' Channel 79 data register'
+    description: Channel 79 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG16 '
+    name: EXTDATAREG16
     addr: 0xfff80240
     size_bits: 32
-    description: ' Channel 80 data register'
+    description: Channel 80 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG17 '
+    name: EXTDATAREG17
     addr: 0xfff80244
     size_bits: 32
-    description: ' Channel 81 data register'
+    description: Channel 81 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG18 '
+    name: EXTDATAREG18
     addr: 0xfff80248
     size_bits: 32
-    description: ' Channel 82 data register'
+    description: Channel 82 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG19 '
+    name: EXTDATAREG19
     addr: 0xfff8024c
     size_bits: 32
-    description: ' Channel 83 data register'
+    description: Channel 83 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG20 '
+    name: EXTDATAREG20
     addr: 0xfff80250
     size_bits: 32
-    description: ' Channel 84 data register'
+    description: Channel 84 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG21 '
+    name: EXTDATAREG21
     addr: 0xfff80258
     size_bits: 32
-    description: ' Channel 85 data register'
+    description: Channel 85 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG22 '
+    name: EXTDATAREG22
     addr: 0xfff8025c
     size_bits: 32
-    description: ' Channel 86 data register'
+    description: Channel 86 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG23 '
+    name: EXTDATAREG23
     addr: 0xfff80260
     size_bits: 32
-    description: ' Channel 87 data register'
+    description: Channel 87 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG24 '
+    name: EXTDATAREG24
     addr: 0xfff80264
     size_bits: 32
-    description: ' Channel 88 data register'
+    description: Channel 88 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG25 '
+    name: EXTDATAREG25
     addr: 0xfff80268
     size_bits: 32
-    description: ' Channel 89 data register'
+    description: Channel 89 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG26 '
+    name: EXTDATAREG26
     addr: 0xfff8026c
     size_bits: 32
-    description: ' Channel 90 data register'
+    description: Channel 90 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG27 '
+    name: EXTDATAREG27
     addr: 0xfff80270
     size_bits: 32
-    description: ' Channel 91 data register'
+    description: Channel 91 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG28 '
+    name: EXTDATAREG28
     addr: 0xfff80274
     size_bits: 32
-    description: ' Channel 92 data register'
+    description: Channel 92 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG29 '
+    name: EXTDATAREG29
     addr: 0xfff80278
     size_bits: 32
-    description: ' Channel 93 data register'
+    description: Channel 93 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG30 '
+    name: EXTDATAREG30
     addr: 0xfff8027c
     size_bits: 32
-    description: ' Channel 94 data register'
+    description: Channel 94 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
   - !Register
-    name: 'EXTDATAREG31 '
+    name: EXTDATAREG31
     addr: 0xfff80280
     size_bits: 32
-    description: ' Channel 95 data register'
+    description: Channel 95 data register
     read_allowed: true
     write_allowed: false
     description_page: 33.3.2.37/33-39
@@ -10940,7 +10940,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffa0010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11043,7 +11043,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffa4010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11146,7 +11146,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffa8010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11249,7 +11249,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffac010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11352,7 +11352,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffb0010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11455,7 +11455,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffb4010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11558,7 +11558,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffb8010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -11661,7 +11661,7 @@ modules:
     name: eSCI_LTR
     addr: 0xfffbc010
     size_bits: 16
-    description: ' eSCI LIN transmit register'
+    description: eSCI LIN transmit register
     read_allowed: true
     write_allowed: true
     description_page: 30.3.2.9/30-15
@@ -18463,362 +18463,362 @@ modules:
   base_addr: 0xfffd8000
   registers:
   - !Register
-    name: 'CTU_CSR '
+    name: CTU_CSR
     addr: 0xfffd8000
     size_bits: 32
-    description: ' Control status register'
+    description: Control status register
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.1/32-4
   - !Register
-    name: 'CTU_SVR1 '
+    name: CTU_SVR1
     addr: 0xfffd8004
     size_bits: 32
-    description: ' Start value register 1'
+    description: Start value register 1
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_SVR2 '
+    name: CTU_SVR2
     addr: 0xfffd8008
     size_bits: 32
-    description: ' Start value register 2'
+    description: Start value register 2
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_SVR3 '
+    name: CTU_SVR3
     addr: 0xfffd800c
     size_bits: 32
-    description: ' Start value register 3'
+    description: Start value register 3
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_SVR4 '
+    name: CTU_SVR4
     addr: 0xfffd8010
     size_bits: 32
-    description: ' Start value register 4'
+    description: Start value register 4
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_SVR5 '
+    name: CTU_SVR5
     addr: 0xfffd8014
     size_bits: 32
-    description: ' Start value register 5'
+    description: Start value register 5
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_SVR6 '
+    name: CTU_SVR6
     addr: 0xfffd8018
     size_bits: 32
-    description: ' Start value register 6'
+    description: Start value register 6
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_SVR7 '
+    name: CTU_SVR7
     addr: 0xfffd801c
     size_bits: 32
-    description: ' Start value register 7'
+    description: Start value register 7
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.2/32-5
   - !Register
-    name: 'CTU_CVR0 '
+    name: CTU_CVR0
     addr: 0xfffd8020
     size_bits: 32
-    description: ' current value register 0'
+    description: current value register 0
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.3/32-5
   - !Register
-    name: 'CTU_CVR1 '
+    name: CTU_CVR1
     addr: 0xfffd8024
     size_bits: 32
-    description: ' current value register 1'
+    description: current value register 1
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.3/32-5
   - !Register
-    name: 'CTU_CVR2 '
+    name: CTU_CVR2
     addr: 0xfffd8028
     size_bits: 32
-    description: ' current value register 2'
+    description: current value register 2
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.3/32-5
   - !Register
-    name: 'CTU_CVR3 '
+    name: CTU_CVR3
     addr: 0xfffd802c
     size_bits: 32
-    description: ' current value register 3'
+    description: current value register 3
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.3/32-5
   - !Register
-    name: 'CTU_EVTCFGR0 '
+    name: CTU_EVTCFGR0
     addr: 0xfffd8030
     size_bits: 32
-    description: ' Event configuration register 0'
+    description: Event configuration register 0
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR1 '
+    name: CTU_EVTCFGR1
     addr: 0xfffd8034
     size_bits: 32
-    description: ' Event configuration register 1'
+    description: Event configuration register 1
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR2 '
+    name: CTU_EVTCFGR2
     addr: 0xfffd8038
     size_bits: 32
-    description: ' Event configuration register 2'
+    description: Event configuration register 2
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR3 '
+    name: CTU_EVTCFGR3
     addr: 0xfffd803c
     size_bits: 32
-    description: ' Event configuration register 3'
+    description: Event configuration register 3
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR4 '
+    name: CTU_EVTCFGR4
     addr: 0xfffd8040
     size_bits: 32
-    description: ' Event configuration register 4'
+    description: Event configuration register 4
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR5 '
+    name: CTU_EVTCFGR5
     addr: 0xfffd8044
     size_bits: 32
-    description: ' Event configuration register 5'
+    description: Event configuration register 5
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR6 '
+    name: CTU_EVTCFGR6
     addr: 0xfffd8048
     size_bits: 32
-    description: ' Event configuration register 6'
+    description: Event configuration register 6
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR7 '
+    name: CTU_EVTCFGR7
     addr: 0xfffd804c
     size_bits: 32
-    description: ' Event configuration register 7'
+    description: Event configuration register 7
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR8 '
+    name: CTU_EVTCFGR8
     addr: 0xfffd8050
     size_bits: 32
-    description: ' Event configuration register 8'
+    description: Event configuration register 8
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR9 '
+    name: CTU_EVTCFGR9
     addr: 0xfffd8054
     size_bits: 32
-    description: ' Event configuration register 9'
+    description: Event configuration register 9
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR10 '
+    name: CTU_EVTCFGR10
     addr: 0xfffd8058
     size_bits: 32
-    description: ' Event configuration register 10'
+    description: Event configuration register 10
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR11 '
+    name: CTU_EVTCFGR11
     addr: 0xfffd805c
     size_bits: 32
-    description: ' Event configuration register 11'
+    description: Event configuration register 11
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR12 '
+    name: CTU_EVTCFGR12
     addr: 0xfffd8060
     size_bits: 32
-    description: ' Event configuration register 12'
+    description: Event configuration register 12
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR13 '
+    name: CTU_EVTCFGR13
     addr: 0xfffd8064
     size_bits: 32
-    description: ' Event configuration register 13'
+    description: Event configuration register 13
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR14 '
+    name: CTU_EVTCFGR14
     addr: 0xfffd8068
     size_bits: 32
-    description: ' Event configuration register 14'
+    description: Event configuration register 14
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR15 '
+    name: CTU_EVTCFGR15
     addr: 0xfffd806c
     size_bits: 32
-    description: ' Event configuration register 15'
+    description: Event configuration register 15
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR16 '
+    name: CTU_EVTCFGR16
     addr: 0xfffd8070
     size_bits: 32
-    description: ' Event configuration register 16'
+    description: Event configuration register 16
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR17 '
+    name: CTU_EVTCFGR17
     addr: 0xfffd8074
     size_bits: 32
-    description: ' Event configuration register 17'
+    description: Event configuration register 17
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR18 '
+    name: CTU_EVTCFGR18
     addr: 0xfffd8078
     size_bits: 32
-    description: ' Event configuration register 18'
+    description: Event configuration register 18
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR19 '
+    name: CTU_EVTCFGR19
     addr: 0xfffd807c
     size_bits: 32
-    description: ' Event configuration register 19'
+    description: Event configuration register 19
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR20 '
+    name: CTU_EVTCFGR20
     addr: 0xfffd8080
     size_bits: 32
-    description: ' Event configuration register 20'
+    description: Event configuration register 20
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR21 '
+    name: CTU_EVTCFGR21
     addr: 0xfffd8084
     size_bits: 32
-    description: ' Event configuration register 21'
+    description: Event configuration register 21
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR22 '
+    name: CTU_EVTCFGR22
     addr: 0xfffd8088
     size_bits: 32
-    description: ' Event configuration register 22'
+    description: Event configuration register 22
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR23 '
+    name: CTU_EVTCFGR23
     addr: 0xfffd808c
     size_bits: 32
-    description: ' Event configuration register 23'
+    description: Event configuration register 23
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR24 '
+    name: CTU_EVTCFGR24
     addr: 0xfffd8090
     size_bits: 32
-    description: ' Event configuration register 24'
+    description: Event configuration register 24
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR25 '
+    name: CTU_EVTCFGR25
     addr: 0xfffd8094
     size_bits: 32
-    description: ' Event configuration register 25'
+    description: Event configuration register 25
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR26 '
+    name: CTU_EVTCFGR26
     addr: 0xfffd8098
     size_bits: 32
-    description: ' Event configuration register 26'
+    description: Event configuration register 26
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR27 '
+    name: CTU_EVTCFGR27
     addr: 0xfffd809c
     size_bits: 32
-    description: ' Event configuration register 27'
+    description: Event configuration register 27
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR28 '
+    name: CTU_EVTCFGR28
     addr: 0xfffd80a0
     size_bits: 32
-    description: ' Event configuration register 28'
+    description: Event configuration register 28
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTCFGR29 '
+    name: CTU_EVTCFGR29
     addr: 0xfffd80a4
     size_bits: 32
-    description: ' Event configuration register 29'
+    description: Event configuration register 29
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTSELR30 '
+    name: CTU_EVTSELR30
     addr: 0xfffd80a8
     size_bits: 32
-    description: ' Event configuration register 30'
+    description: Event configuration register 30
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTSELR31 '
+    name: CTU_EVTSELR31
     addr: 0xfffd80ac
     size_bits: 32
-    description: ' Event configuration register 31'
+    description: Event configuration register 31
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
   - !Register
-    name: 'CTU_EVTSELR32 '
+    name: CTU_EVTSELR32
     addr: 0xfffd80b0
     size_bits: 32
-    description: ' Event configuration register 32'
+    description: Event configuration register 32
     read_allowed: true
     write_allowed: true
     description_page: 32.4.1.4/32-6
@@ -21025,7 +21025,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.12/7-22
   - !Register
-    name: 'SIU_PCR0 '
+    name: SIU_PCR0
     addr: 0xfffe8040
     size_bits: 16
     description: Pad configuration register 0 (PA0)
@@ -22362,7 +22362,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.14/7-26
   - !Register
-    name: 'SIU_GPDO64_67 '
+    name: SIU_GPDO64_67
     addr: 0xfffe8640
     size_bits: 32
     description: "GPIO pin data output register 64 \u2014 67"
@@ -22482,7 +22482,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.14/7-26
   - !Register
-    name: 'SIU_GPDO124_127 '
+    name: SIU_GPDO124_127
     addr: 0xfffe867c
     size_bits: 32
     description: "GPIO pin data output register 124 \u2014 127"
@@ -22506,7 +22506,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.14/7-26
   - !Register
-    name: 'SIU_GPDO136_139 '
+    name: SIU_GPDO136_139
     addr: 0xfffe8688
     size_bits: 32
     description: "GPIO pin data output register 136 \u2014 139"
@@ -22514,7 +22514,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.14/7-26
   - !Register
-    name: 'SIU_GPDO140_143 '
+    name: SIU_GPDO140_143
     addr: 0xfffe868c
     size_bits: 32
     description: "GPIO pin data output register 140 \u2014 143"
@@ -22522,7 +22522,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.14/7-26
   - !Register
-    name: 'SIU_GPDO144_147 '
+    name: SIU_GPDO144_147
     addr: 0xfffe8690
     size_bits: 32
     description: "GPIO pin data output register 144 \u2014 147"
@@ -22538,7 +22538,7 @@ modules:
     write_allowed: true
     description_page: 7.3.2.14/7-26
   - !Register
-    name: 'SIU_GPDO152_154 '
+    name: SIU_GPDO152_154
     addr: 0xfffe8698
     size_bits: 32
     description: "GPIO pin data output register 152 \u2014 154"
@@ -23560,7 +23560,7 @@ modules:
     reset_value: 0x1
     description_page: 11.3.2.12/11-23
   - !Register
-    name: UT0
+    name: UT1
     addr: 0xffff8040
     size_bits: 32
     description: UTest register 1
@@ -23568,7 +23568,7 @@ modules:
     write_allowed: true
     description_page: 11.3.2.13/11-25
   - !Register
-    name: UT0
+    name: UT2
     addr: 0xffff8044
     size_bits: 32
     description: UTest register 2
