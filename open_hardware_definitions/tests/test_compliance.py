@@ -50,6 +50,24 @@ def _test(path):
                 raise Exception(f"Register {r.name} at {hex(addr)} already in set!")
               register_set.add(addr)
 
+    # Check that there are no overlapping module names
+    names = []
+    if hasattr(dev, 'modules'):
+      for m in dev.modules:
+        if m.name in names:
+          raise Exception(f"Duplicate module name '{m.name}'")
+        names.append(m.name)
+
+    # Check that there are no overlapping register names in the same module
+    if hasattr(dev, 'modules'):
+      for m in dev.modules:
+        names = []
+        if hasattr(m, 'registers'):
+          for r in m.registers:
+            if r.name in names:
+              raise Exception(f"Duplicate register name '{r.name}' in module '{m.name}'")
+            names.append(r.name)
+
 
     return (path, True)
   except Exception as e:
