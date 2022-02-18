@@ -94,11 +94,19 @@ class Region(CleanYAMLObject):
                name: str,
                base_addr: int,
                size: int,
+               readable: Optional[bool] = None,
+               writable: Optional[bool] = None,
+               executable: Optional[bool] = None,
+               volatile: Optional[bool] = None,
                description: Optional[str] = None,
                extras: Optional[Mapping[str, Any]] = None) -> None:
     self.name = name
     self.base_addr = HexInt(base_addr)
     self.size = HexInt(size)
+    self.readable = readable
+    self.writable = writable
+    self.executable = executable
+    self.volatile = volatile
     self.description = description
     if extras:
       for k in extras.keys():
