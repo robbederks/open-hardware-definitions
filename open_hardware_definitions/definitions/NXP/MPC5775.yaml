@@ -1,0 +1,3012 @@
+!Device
+manufacturer: NXP
+part_number: MPC5775
+architecture: PowerPC
+bit_width: 32
+endianness: big
+regions:
+- !Region
+  name: UTest NVM Block
+  base_addr: 0x400000
+  size: 0x4000
+  readable: true
+  writable: false
+  executable: false
+  volatile: false
+- !Region
+  name: EEPROM
+  base_addr: 0x800000
+  size: -0x77e800
+  readable: true
+  writable: true
+  executable: false
+  volatile: false
+- !Region
+  name: Flash
+  base_addr: 0xf98000
+  size: 0x3e8000
+  readable: true
+  writable: true
+  executable: true
+  volatile: false
+- !Region
+  name: SRAM
+  base_addr: 0x40000000
+  size: 0x180000
+  readable: true
+  writable: true
+  executable: false
+  volatile: false
+- !Region
+  name: Local SRAM
+  base_addr: 0x50800000
+  size: 0x30000
+  readable: true
+  writable: true
+  executable: false
+  volatile: false
+modules:
+- !Module
+  name: PBRIDGE_0
+  description: Peripheral Bridge 0 (PBRIDGE_0)
+  base_addr: 0xfc000000
+  size: 0x3fff
+- !Module
+  name: XBAR_0
+  description: Crossbar 0 (XBAR_0)
+  base_addr: 0xfc004000
+  size: 0x3fff
+- !Module
+  name: XBAR_1
+  description: Crossbar 1 (XBAR_1)
+  base_addr: 0xfc008000
+  size: 0x3fff
+- !Module
+  name: PRAM_XBAR
+  description: Platform RAM Crossbar (PRAM_XBAR)
+  base_addr: 0xfc00c000
+  size: 0x3fff
+- !Module
+  name: SMPU_0
+  description: System Memory Protection Unit 0(SMPU_0)
+  base_addr: 0xfc010000
+  size: 0x3fff
+- !Module
+  name: SMPU_1
+  description: System Memory Protection Unit 1(SMPU_1)
+  base_addr: 0xfc014000
+  size: 0x3fff
+- !Module
+  name: XBIC_1
+  description: Crossbar Integrity Checker 1 (XBIC_1)
+  base_addr: 0xfc018000
+  size: 0x3fff
+- !Module
+  name: XBIC_0
+  description: Crossbar Integrity Checker 0 (XBIC_0)
+  base_addr: 0xfc01c000
+  size: 0x3fff
+- !Module
+  name: PRAM
+  description: Platform RAM Controller (PRAM)
+  base_addr: 0xfc020000
+  size: 0x3fff
+- !Module
+  name: XBIC_2
+  description: PRAM XBIC (XBIC_2)
+  base_addr: 0xfc024000
+  size: 0x3fff
+- !Module
+  name: PCM
+  description: Platform Configuration Module (PCM)
+  base_addr: 0xfc028000
+  size: 0x3fff
+- !Module
+  name: PFLASH
+  description: Platform Flash controller (PFLASH)
+  base_addr: 0xfc030000
+  size: 0x3fff
+- !Module
+  name: XBIC_3
+  description: DMA XBIC (XBIC_3)
+  base_addr: 0xfc034000
+  size: 0x3fff
+- !Module
+  name: XBIC_4
+  description: ETH FR XBIC (XBIC_4)
+  base_addr: 0xfc038000
+  size: 0x3fff
+- !Module
+  name: SEMA4
+  description: SEMA4
+  base_addr: 0xfc03c000
+  size: 0x3fff
+- !Module
+  name: INTC0
+  description: Interrupt Controller (INTC0)
+  base_addr: 0xfc040000
+  size: 0x3fff
+- !Module
+  name: XBIC_5
+  description: TCM_XBIC (XBIC_5)
+  base_addr: 0xfc044000
+  size: 0x3fff
+- !Module
+  name: SWT_0
+  description: Software Watchdog Timer 0 (SWT_0)
+  base_addr: 0xfc050000
+  size: 0x3fff
+- !Module
+  name: SWT_1
+  description: Software Watchdog Timer 1 (SWT_1)
+  base_addr: 0xfc054000
+  size: 0x3fff
+- !Module
+  name: SWT_2
+  description: Software Watchdog Timer 2 (SWT_2)
+  base_addr: 0xfc058000
+  size: 0x3fff
+- !Module
+  name: STM_0
+  description: System Timer Module 0 (STM_0)
+  base_addr: 0xfc068000
+  size: 0x3fff
+- !Module
+  name: STM_1
+  description: System Timer Module 1 (STM_1)
+  base_addr: 0xfc06c000
+  size: 0x3fff
+- !Module
+  name: STM_2
+  description: System Timer Module 2 (STM_2)
+  base_addr: 0xfc070000
+  size: 0x3fff
+- !Module
+  name: EIM
+  description: Error Injection Module (EIM)
+  base_addr: 0xfc07c000
+  size: 0x3fff
+- !Module
+  name: DMA_0
+  description: Direct Memory Access Controller 0(DMA_0)
+  base_addr: 0xfc0a0000
+  size: 0x3fff
+- !Module
+  name: ENET_0
+  description: Ethernet 0 (ENET_0)
+  base_addr: 0xfc0b0000
+  size: 0x3fff
+- !Module
+  name: DCL_IPS_0
+  description: DCL_IPS_0
+  base_addr: 0xffc00000
+  size: 0x3fff
+- !Module
+  name: FlexPWM_1
+  description: FlexPWM 1 (FlexPWM_1)
+  base_addr: 0xffc04000
+  size: 0x3fff
+- !Module
+  name: DCL_IPS_1
+  description: DCL_IPS_1
+  base_addr: 0xffc08000
+  size: 0x3fff
+- !Module
+  name: MCB
+  description: Multipurpose Control Block (MCB)
+  base_addr: 0xffc0c000
+  size: 0x3fff
+- !Module
+  name: CTU_1
+  description: CTU 1 (CTU_1)
+  base_addr: 0xffc14000
+  size: 0x3fff
+- !Module
+  name: DCL_IPS_2
+  description: DCL_IPS_2
+  base_addr: 0xffc18000
+  size: 0x3fff
+- !Module
+  name: ETIMER_1
+  description: ETIMER 1 (ETIMER_1)
+  base_addr: 0xffc24000
+  size: 0x3fff
+- !Module
+  name: Cross Timing Engine
+  description: RADAR_CTE (Cross Timing Engine)
+  base_addr: 0xffd0c000
+  size: 0x3fff
+- !Module
+  name: Signal Processing Toolbox
+  description: SPT (Signal Processing Toolbox)
+  base_addr: 0xffd10000
+  size: 0x3fff
+- !Module
+  name: ADC_1
+  description: SAR ADC 1 (ADC_1)
+  base_addr: 0xffe04000
+  size: 0x3fff
+- !Module
+  name: ADC_3
+  description: SAR ADC 3 (ADC_3)
+  base_addr: 0xffe0c000
+  size: 0x3fff
+- !Module
+  name: FLEXRAY_0
+  description: FlexRay Communication Controller 0(FLEXRAY_0)
+  base_addr: 0xffe50000
+  size: 0x3fff
+- !Module
+  name: IIC_0
+  description: IIC 0 (IIC_0)
+  base_addr: 0xffe68000
+  size: 0x3fff
+- !Module
+  name: SPI_0
+  description: Serial Peripheral Interface 0 (SPI_0)
+  base_addr: 0xffe70000
+  size: 0x3fff
+- !Module
+  name: SPI_1
+  description: Serial Peripheral Interface 1 (SPI_1)
+  base_addr: 0xffe74000
+  size: 0x3fff
+- !Module
+  name: LINFlex_3
+  description: LIN Controller 3 (LINFlex_3)
+  base_addr: 0xffe8c000
+  size: 0x3fff
+- !Module
+  name: LINFlex_1
+  description: LIN Controller 1 (LINFlex_1)
+  base_addr: 0xffe90000
+  size: 0x3fff
+- !Module
+  name: FLEXCAN_0
+  description: FlexCAN 0 (FLEXCAN_0)
+  base_addr: 0xffec0000
+  size: 0x3fff
+  registers:
+  - !Register
+    name: CAN_MCR
+    addr: 0xffec0000
+    size_bits: 32
+    description: Module Configuration Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xd890000f
+  - !Register
+    name: CAN_CTRL1
+    addr: 0xffec0004
+    size_bits: 32
+    description: Control 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_TIMER
+    addr: 0xffec0008
+    size_bits: 32
+    description: Free Running Timer
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXMGMASK
+    addr: 0xffec0010
+    size_bits: 32
+    description: Rx Mailboxes Global Mask Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX14MASK
+    addr: 0xffec0014
+    size_bits: 32
+    description: Rx 14 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX15MASK
+    addr: 0xffec0018
+    size_bits: 32
+    description: Rx 15 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_ECR
+    addr: 0xffec001c
+    size_bits: 32
+    description: Error Counter
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ESR1
+    addr: 0xffec0020
+    size_bits: 32
+    description: Error and Status 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK2
+    addr: 0xffec0024
+    size_bits: 32
+    description: Interrupt Masks 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK1
+    addr: 0xffec0028
+    size_bits: 32
+    description: Interrupt Masks 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG2
+    addr: 0xffec002c
+    size_bits: 32
+    description: Interrupt Flags 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG1
+    addr: 0xffec0030
+    size_bits: 32
+    description: Interrupt Flags 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CTRL2
+    addr: 0xffec0034
+    size_bits: 32
+    description: Control 2 register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800000
+  - !Register
+    name: CAN_ESR2
+    addr: 0xffec0038
+    size_bits: 32
+    description: Error and Status 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CRCR
+    addr: 0xffec0044
+    size_bits: 32
+    description: CRC Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXFGMASK
+    addr: 0xffec0048
+    size_bits: 32
+    description: Rx FIFO Global Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RXFIR
+    addr: 0xffec004c
+    size_bits: 32
+    description: Rx FIFO Information Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXIMR0
+    addr: 0xffec0880
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR1
+    addr: 0xffec0884
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR2
+    addr: 0xffec0888
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR3
+    addr: 0xffec088c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR4
+    addr: 0xffec0890
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR5
+    addr: 0xffec0894
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR6
+    addr: 0xffec0898
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR7
+    addr: 0xffec089c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR8
+    addr: 0xffec08a0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR9
+    addr: 0xffec08a4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR10
+    addr: 0xffec08a8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR11
+    addr: 0xffec08ac
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR12
+    addr: 0xffec08b0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR13
+    addr: 0xffec08b4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR14
+    addr: 0xffec08b8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR15
+    addr: 0xffec08bc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR16
+    addr: 0xffec08c0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR17
+    addr: 0xffec08c4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR18
+    addr: 0xffec08c8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR19
+    addr: 0xffec08cc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR20
+    addr: 0xffec08d0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR21
+    addr: 0xffec08d4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR22
+    addr: 0xffec08d8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR23
+    addr: 0xffec08dc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR24
+    addr: 0xffec08e0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR25
+    addr: 0xffec08e4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR26
+    addr: 0xffec08e8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR27
+    addr: 0xffec08ec
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR28
+    addr: 0xffec08f0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR29
+    addr: 0xffec08f4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR30
+    addr: 0xffec08f8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR31
+    addr: 0xffec08fc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR32
+    addr: 0xffec0900
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR33
+    addr: 0xffec0904
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR34
+    addr: 0xffec0908
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR35
+    addr: 0xffec090c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR36
+    addr: 0xffec0910
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR37
+    addr: 0xffec0914
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR38
+    addr: 0xffec0918
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR39
+    addr: 0xffec091c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR40
+    addr: 0xffec0920
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR41
+    addr: 0xffec0924
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR42
+    addr: 0xffec0928
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR43
+    addr: 0xffec092c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR44
+    addr: 0xffec0930
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR45
+    addr: 0xffec0934
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR46
+    addr: 0xffec0938
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR47
+    addr: 0xffec093c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR48
+    addr: 0xffec0940
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR49
+    addr: 0xffec0944
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR50
+    addr: 0xffec0948
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR51
+    addr: 0xffec094c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR52
+    addr: 0xffec0950
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR53
+    addr: 0xffec0954
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR54
+    addr: 0xffec0958
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR55
+    addr: 0xffec095c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR56
+    addr: 0xffec0960
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR57
+    addr: 0xffec0964
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR58
+    addr: 0xffec0968
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR59
+    addr: 0xffec096c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR60
+    addr: 0xffec0970
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR61
+    addr: 0xffec0974
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR62
+    addr: 0xffec0978
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR63
+    addr: 0xffec097c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_MECR
+    addr: 0xffec0ae0
+    size_bits: 32
+    description: Memory Error Control Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800c0080
+  - !Register
+    name: CAN_ERRIAR
+    addr: 0xffec0ae4
+    size_bits: 32
+    description: Error Injection Address Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIDPR
+    addr: 0xffec0ae8
+    size_bits: 32
+    description: Error Injection Data Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIPPR
+    addr: 0xffec0aec
+    size_bits: 32
+    description: Error Injection Parity Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RERRAR
+    addr: 0xffec0af0
+    size_bits: 32
+    description: Error Report Address Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRDR
+    addr: 0xffec0af4
+    size_bits: 32
+    description: Error Report Data Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRSYNR
+    addr: 0xffec0af8
+    size_bits: 32
+    description: Error Report Syndrome Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_ERRSR
+    addr: 0xffec0afc
+    size_bits: 32
+    description: Error Status Register
+    read_allowed: true
+    write_allowed: true
+- !Module
+  name: FLEXCAN_1
+  description: FlexCAN 1 (FLEXCAN_1)
+  base_addr: 0xffec4000
+  size: 0x3fff
+  registers:
+  - !Register
+    name: CAN_MCR
+    addr: 0xffec4000
+    size_bits: 32
+    description: Module Configuration Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xd890000f
+  - !Register
+    name: CAN_CTRL1
+    addr: 0xffec4004
+    size_bits: 32
+    description: Control 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_TIMER
+    addr: 0xffec4008
+    size_bits: 32
+    description: Free Running Timer
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXMGMASK
+    addr: 0xffec4010
+    size_bits: 32
+    description: Rx Mailboxes Global Mask Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX14MASK
+    addr: 0xffec4014
+    size_bits: 32
+    description: Rx 14 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX15MASK
+    addr: 0xffec4018
+    size_bits: 32
+    description: Rx 15 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_ECR
+    addr: 0xffec401c
+    size_bits: 32
+    description: Error Counter
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ESR1
+    addr: 0xffec4020
+    size_bits: 32
+    description: Error and Status 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK2
+    addr: 0xffec4024
+    size_bits: 32
+    description: Interrupt Masks 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK1
+    addr: 0xffec4028
+    size_bits: 32
+    description: Interrupt Masks 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG2
+    addr: 0xffec402c
+    size_bits: 32
+    description: Interrupt Flags 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG1
+    addr: 0xffec4030
+    size_bits: 32
+    description: Interrupt Flags 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CTRL2
+    addr: 0xffec4034
+    size_bits: 32
+    description: Control 2 register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800000
+  - !Register
+    name: CAN_ESR2
+    addr: 0xffec4038
+    size_bits: 32
+    description: Error and Status 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CRCR
+    addr: 0xffec4044
+    size_bits: 32
+    description: CRC Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXFGMASK
+    addr: 0xffec4048
+    size_bits: 32
+    description: Rx FIFO Global Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RXFIR
+    addr: 0xffec404c
+    size_bits: 32
+    description: Rx FIFO Information Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXIMR0
+    addr: 0xffec4880
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR1
+    addr: 0xffec4884
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR2
+    addr: 0xffec4888
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR3
+    addr: 0xffec488c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR4
+    addr: 0xffec4890
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR5
+    addr: 0xffec4894
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR6
+    addr: 0xffec4898
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR7
+    addr: 0xffec489c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR8
+    addr: 0xffec48a0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR9
+    addr: 0xffec48a4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR10
+    addr: 0xffec48a8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR11
+    addr: 0xffec48ac
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR12
+    addr: 0xffec48b0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR13
+    addr: 0xffec48b4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR14
+    addr: 0xffec48b8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR15
+    addr: 0xffec48bc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR16
+    addr: 0xffec48c0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR17
+    addr: 0xffec48c4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR18
+    addr: 0xffec48c8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR19
+    addr: 0xffec48cc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR20
+    addr: 0xffec48d0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR21
+    addr: 0xffec48d4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR22
+    addr: 0xffec48d8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR23
+    addr: 0xffec48dc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR24
+    addr: 0xffec48e0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR25
+    addr: 0xffec48e4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR26
+    addr: 0xffec48e8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR27
+    addr: 0xffec48ec
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR28
+    addr: 0xffec48f0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR29
+    addr: 0xffec48f4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR30
+    addr: 0xffec48f8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR31
+    addr: 0xffec48fc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR32
+    addr: 0xffec4900
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR33
+    addr: 0xffec4904
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR34
+    addr: 0xffec4908
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR35
+    addr: 0xffec490c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR36
+    addr: 0xffec4910
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR37
+    addr: 0xffec4914
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR38
+    addr: 0xffec4918
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR39
+    addr: 0xffec491c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR40
+    addr: 0xffec4920
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR41
+    addr: 0xffec4924
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR42
+    addr: 0xffec4928
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR43
+    addr: 0xffec492c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR44
+    addr: 0xffec4930
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR45
+    addr: 0xffec4934
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR46
+    addr: 0xffec4938
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR47
+    addr: 0xffec493c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR48
+    addr: 0xffec4940
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR49
+    addr: 0xffec4944
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR50
+    addr: 0xffec4948
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR51
+    addr: 0xffec494c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR52
+    addr: 0xffec4950
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR53
+    addr: 0xffec4954
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR54
+    addr: 0xffec4958
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR55
+    addr: 0xffec495c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR56
+    addr: 0xffec4960
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR57
+    addr: 0xffec4964
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR58
+    addr: 0xffec4968
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR59
+    addr: 0xffec496c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR60
+    addr: 0xffec4970
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR61
+    addr: 0xffec4974
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR62
+    addr: 0xffec4978
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR63
+    addr: 0xffec497c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_MECR
+    addr: 0xffec4ae0
+    size_bits: 32
+    description: Memory Error Control Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800c0080
+  - !Register
+    name: CAN_ERRIAR
+    addr: 0xffec4ae4
+    size_bits: 32
+    description: Error Injection Address Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIDPR
+    addr: 0xffec4ae8
+    size_bits: 32
+    description: Error Injection Data Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIPPR
+    addr: 0xffec4aec
+    size_bits: 32
+    description: Error Injection Parity Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RERRAR
+    addr: 0xffec4af0
+    size_bits: 32
+    description: Error Report Address Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRDR
+    addr: 0xffec4af4
+    size_bits: 32
+    description: Error Report Data Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRSYNR
+    addr: 0xffec4af8
+    size_bits: 32
+    description: Error Report Syndrome Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_ERRSR
+    addr: 0xffec4afc
+    size_bits: 32
+    description: Error Status Register
+    read_allowed: true
+    write_allowed: true
+- !Module
+  name: PDI
+  description: PDI
+  base_addr: 0xfff20000
+  size: 0x3fff
+- !Module
+  name: DTS
+  description: Development Trigger Semaphore (DTS)
+  base_addr: 0xfff38000
+  size: 0x3fff
+- !Module
+  name: STCU2
+  description: Self Test Control Unit (STCU2)
+  base_addr: 0xfff44000
+  size: 0x3fff
+- !Module
+  name: JTAGM
+  description: JTAGM
+  base_addr: 0xfff48000
+  size: 0x3fff
+- !Module
+  name: MEMU
+  description: Memory Error Management Unit(MEMU)
+  base_addr: 0xfff50000
+  size: 0x3fff
+- !Module
+  name: CRC_0
+  description: Cyclic Redundancy Check 0 (CRC_0)
+  base_addr: 0xfff64000
+  size: 0x3fff
+- !Module
+  name: DMAMUX_0
+  description: Direct Memory Access ControllerHardware Multiplexer (DMAMUX_0)
+  base_addr: 0xfff6c000
+  size: 0x3fff
+- !Module
+  name: PIT_1
+  description: Periodic Interrupt Timer 1 (PIT_1)
+  base_addr: 0xfff80000
+  size: 0x3fff
+- !Module
+  name: PIT_0
+  description: Periodic Interrupt Timer 0 (PIT_0)
+  base_addr: 0xfff84000
+  size: 0x3fff
+- !Module
+  name: WKPU
+  description: Wake-Up Unit (WKPU)
+  base_addr: 0xfff98000
+  size: 0x3fff
+- !Module
+  name: PCU / PMC1
+  description: PCU / PMC1
+  base_addr: 0xfffa0000
+  size: 0x3fff
+- !Module
+  name: RGM
+  description: Reset Generation Module (RGM)
+  base_addr: 0xfffa8000
+  size: 0x3fff
+- !Module
+  name: CGM
+  description: Clock Generation Module (CGM)
+  base_addr: 0xfffb0000
+  size: 0x3fff
+- !Module
+  name: ME
+  description: Mode Entry Module (ME)
+  base_addr: 0xfffb8000
+  size: 0x3fff
+- !Module
+  name: SIUL2
+  description: System Integration Unit Lite 2 (SIUL2)
+  base_addr: 0xfffc0000
+  size: 0x3fff
+- !Module
+  name: SIPI_0
+  description: Serial Interprocessor Interface 0(SIPI_0)
+  base_addr: 0xfffd0000
+  size: 0x3fff
+- !Module
+  name: LFAST_0
+  description: LFAST 0 (LFAST_0)
+  base_addr: 0xfffd8000
+  size: 0x3fff
+- !Module
+  name: Embedded Flash Memorymodule
+  description: C55FMC (Embedded Flash Memorymodule)
+  base_addr: 0xfffe0000
+  size: 0x3fff
+- !Module
+  name: SSCM
+  description: System Status and ConfigurationModule (SSCM)
+  base_addr: 0xffff8000
+  size: 0x3fff
+- !Module
+  name: BAM
+  description: Boot Assist Module (BAM)
+  base_addr: 0xffffc000
+  size: 0x3fff
+- !Module
+  name: PBRIDGE_1
+  description: Peripheral Bridge 1 (PBRIDGE_1)
+  base_addr: 0xf8000000
+  size: 0x3fff
+- !Module
+  name: FlexPWM_0
+  description: FlexPWM 0 (FlexPWM_0)
+  base_addr: 0xfbc00000
+  size: 0x3fff
+- !Module
+  name: CTU_0
+  description: CTU_0
+  base_addr: 0xfbc10000
+  size: 0x3fff
+- !Module
+  name: ETIMER_0
+  description: ETIMER 0 (ETIMER_0)
+  base_addr: 0xfbc20000
+  size: 0x3fff
+- !Module
+  name: ETIMER_2
+  description: ETIMER 2 (ETIMER_2)
+  base_addr: 0xfbc28000
+  size: 0x3fff
+- !Module
+  name: WGM_0
+  description: WGM_0
+  base_addr: 0xfbc44000
+  size: 0x3fff
+- !Module
+  name: ADC_0
+  description: SAR ADC 0 (ADC_0)
+  base_addr: 0xfbe00000
+  size: 0x3fff
+- !Module
+  name: ADC_2
+  description: SAR ADC 2 (ADC_2)
+  base_addr: 0xfbe08000
+  size: 0x3fff
+- !Module
+  name: IIC_1
+  description: IIC 1 (IIC_1)
+  base_addr: 0xfbe68000
+  size: 0x3fff
+- !Module
+  name: IIC_2
+  description: IIC 2 (IIC_2)
+  base_addr: 0xfbe6c000
+  size: 0x3fff
+- !Module
+  name: SPI_2
+  description: SPI 2 (SPI_2)
+  base_addr: 0xfbe70000
+  size: 0x3fff
+- !Module
+  name: SPI_3
+  description: SPI 3 (SPI_3)
+  base_addr: 0xfbe74000
+  size: 0x3fff
+- !Module
+  name: LINFlex_0
+  description: LIN Controller 0 (LINFlex_0)
+  base_addr: 0xfbe84000
+  size: 0x3fff
+- !Module
+  name: LINFlex_2
+  description: LIN Controller 2 (LINFlex_2)
+  base_addr: 0xfbe8c000
+  size: 0x3fff
+- !Module
+  name: FLEXCAN_2
+  description: FlexCAN 2 (FLEXCAN_2)
+  base_addr: 0xfbec0000
+  size: 0x3fff
+  registers:
+  - !Register
+    name: CAN_MCR
+    addr: 0xfbec0000
+    size_bits: 32
+    description: Module Configuration Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xd890000f
+  - !Register
+    name: CAN_CTRL1
+    addr: 0xfbec0004
+    size_bits: 32
+    description: Control 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_TIMER
+    addr: 0xfbec0008
+    size_bits: 32
+    description: Free Running Timer
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXMGMASK
+    addr: 0xfbec0010
+    size_bits: 32
+    description: Rx Mailboxes Global Mask Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX14MASK
+    addr: 0xfbec0014
+    size_bits: 32
+    description: Rx 14 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX15MASK
+    addr: 0xfbec0018
+    size_bits: 32
+    description: Rx 15 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_ECR
+    addr: 0xfbec001c
+    size_bits: 32
+    description: Error Counter
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ESR1
+    addr: 0xfbec0020
+    size_bits: 32
+    description: Error and Status 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK2
+    addr: 0xfbec0024
+    size_bits: 32
+    description: Interrupt Masks 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK1
+    addr: 0xfbec0028
+    size_bits: 32
+    description: Interrupt Masks 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG2
+    addr: 0xfbec002c
+    size_bits: 32
+    description: Interrupt Flags 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG1
+    addr: 0xfbec0030
+    size_bits: 32
+    description: Interrupt Flags 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CTRL2
+    addr: 0xfbec0034
+    size_bits: 32
+    description: Control 2 register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800000
+  - !Register
+    name: CAN_ESR2
+    addr: 0xfbec0038
+    size_bits: 32
+    description: Error and Status 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CRCR
+    addr: 0xfbec0044
+    size_bits: 32
+    description: CRC Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXFGMASK
+    addr: 0xfbec0048
+    size_bits: 32
+    description: Rx FIFO Global Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RXFIR
+    addr: 0xfbec004c
+    size_bits: 32
+    description: Rx FIFO Information Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXIMR0
+    addr: 0xfbec0880
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR1
+    addr: 0xfbec0884
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR2
+    addr: 0xfbec0888
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR3
+    addr: 0xfbec088c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR4
+    addr: 0xfbec0890
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR5
+    addr: 0xfbec0894
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR6
+    addr: 0xfbec0898
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR7
+    addr: 0xfbec089c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR8
+    addr: 0xfbec08a0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR9
+    addr: 0xfbec08a4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR10
+    addr: 0xfbec08a8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR11
+    addr: 0xfbec08ac
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR12
+    addr: 0xfbec08b0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR13
+    addr: 0xfbec08b4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR14
+    addr: 0xfbec08b8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR15
+    addr: 0xfbec08bc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR16
+    addr: 0xfbec08c0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR17
+    addr: 0xfbec08c4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR18
+    addr: 0xfbec08c8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR19
+    addr: 0xfbec08cc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR20
+    addr: 0xfbec08d0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR21
+    addr: 0xfbec08d4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR22
+    addr: 0xfbec08d8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR23
+    addr: 0xfbec08dc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR24
+    addr: 0xfbec08e0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR25
+    addr: 0xfbec08e4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR26
+    addr: 0xfbec08e8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR27
+    addr: 0xfbec08ec
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR28
+    addr: 0xfbec08f0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR29
+    addr: 0xfbec08f4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR30
+    addr: 0xfbec08f8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR31
+    addr: 0xfbec08fc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR32
+    addr: 0xfbec0900
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR33
+    addr: 0xfbec0904
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR34
+    addr: 0xfbec0908
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR35
+    addr: 0xfbec090c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR36
+    addr: 0xfbec0910
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR37
+    addr: 0xfbec0914
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR38
+    addr: 0xfbec0918
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR39
+    addr: 0xfbec091c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR40
+    addr: 0xfbec0920
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR41
+    addr: 0xfbec0924
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR42
+    addr: 0xfbec0928
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR43
+    addr: 0xfbec092c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR44
+    addr: 0xfbec0930
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR45
+    addr: 0xfbec0934
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR46
+    addr: 0xfbec0938
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR47
+    addr: 0xfbec093c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR48
+    addr: 0xfbec0940
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR49
+    addr: 0xfbec0944
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR50
+    addr: 0xfbec0948
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR51
+    addr: 0xfbec094c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR52
+    addr: 0xfbec0950
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR53
+    addr: 0xfbec0954
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR54
+    addr: 0xfbec0958
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR55
+    addr: 0xfbec095c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR56
+    addr: 0xfbec0960
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR57
+    addr: 0xfbec0964
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR58
+    addr: 0xfbec0968
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR59
+    addr: 0xfbec096c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR60
+    addr: 0xfbec0970
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR61
+    addr: 0xfbec0974
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR62
+    addr: 0xfbec0978
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR63
+    addr: 0xfbec097c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_MECR
+    addr: 0xfbec0ae0
+    size_bits: 32
+    description: Memory Error Control Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800c0080
+  - !Register
+    name: CAN_ERRIAR
+    addr: 0xfbec0ae4
+    size_bits: 32
+    description: Error Injection Address Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIDPR
+    addr: 0xfbec0ae8
+    size_bits: 32
+    description: Error Injection Data Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIPPR
+    addr: 0xfbec0aec
+    size_bits: 32
+    description: Error Injection Parity Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RERRAR
+    addr: 0xfbec0af0
+    size_bits: 32
+    description: Error Report Address Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRDR
+    addr: 0xfbec0af4
+    size_bits: 32
+    description: Error Report Data Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRSYNR
+    addr: 0xfbec0af8
+    size_bits: 32
+    description: Error Report Syndrome Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_ERRSR
+    addr: 0xfbec0afc
+    size_bits: 32
+    description: Error Status Register
+    read_allowed: true
+    write_allowed: true
+- !Module
+  name: FLEXCAN_3
+  description: FlexCAN 3 (FLEXCAN_3)
+  base_addr: 0xfbec4000
+  size: 0x3fff
+  registers:
+  - !Register
+    name: CAN_MCR
+    addr: 0xfbec4000
+    size_bits: 32
+    description: Module Configuration Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xd890000f
+  - !Register
+    name: CAN_CTRL1
+    addr: 0xfbec4004
+    size_bits: 32
+    description: Control 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_TIMER
+    addr: 0xfbec4008
+    size_bits: 32
+    description: Free Running Timer
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXMGMASK
+    addr: 0xfbec4010
+    size_bits: 32
+    description: Rx Mailboxes Global Mask Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX14MASK
+    addr: 0xfbec4014
+    size_bits: 32
+    description: Rx 14 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RX15MASK
+    addr: 0xfbec4018
+    size_bits: 32
+    description: Rx 15 Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_ECR
+    addr: 0xfbec401c
+    size_bits: 32
+    description: Error Counter
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ESR1
+    addr: 0xfbec4020
+    size_bits: 32
+    description: Error and Status 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK2
+    addr: 0xfbec4024
+    size_bits: 32
+    description: Interrupt Masks 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IMASK1
+    addr: 0xfbec4028
+    size_bits: 32
+    description: Interrupt Masks 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG2
+    addr: 0xfbec402c
+    size_bits: 32
+    description: Interrupt Flags 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_IFLAG1
+    addr: 0xfbec4030
+    size_bits: 32
+    description: Interrupt Flags 1 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CTRL2
+    addr: 0xfbec4034
+    size_bits: 32
+    description: Control 2 register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800000
+  - !Register
+    name: CAN_ESR2
+    addr: 0xfbec4038
+    size_bits: 32
+    description: Error and Status 2 register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_CRCR
+    addr: 0xfbec4044
+    size_bits: 32
+    description: CRC Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXFGMASK
+    addr: 0xfbec4048
+    size_bits: 32
+    description: Rx FIFO Global Mask register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0xffffffff
+  - !Register
+    name: CAN_RXFIR
+    addr: 0xfbec404c
+    size_bits: 32
+    description: Rx FIFO Information Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RXIMR0
+    addr: 0xfbec4880
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR1
+    addr: 0xfbec4884
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR2
+    addr: 0xfbec4888
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR3
+    addr: 0xfbec488c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR4
+    addr: 0xfbec4890
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR5
+    addr: 0xfbec4894
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR6
+    addr: 0xfbec4898
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR7
+    addr: 0xfbec489c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR8
+    addr: 0xfbec48a0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR9
+    addr: 0xfbec48a4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR10
+    addr: 0xfbec48a8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR11
+    addr: 0xfbec48ac
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR12
+    addr: 0xfbec48b0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR13
+    addr: 0xfbec48b4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR14
+    addr: 0xfbec48b8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR15
+    addr: 0xfbec48bc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR16
+    addr: 0xfbec48c0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR17
+    addr: 0xfbec48c4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR18
+    addr: 0xfbec48c8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR19
+    addr: 0xfbec48cc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR20
+    addr: 0xfbec48d0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR21
+    addr: 0xfbec48d4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR22
+    addr: 0xfbec48d8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR23
+    addr: 0xfbec48dc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR24
+    addr: 0xfbec48e0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR25
+    addr: 0xfbec48e4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR26
+    addr: 0xfbec48e8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR27
+    addr: 0xfbec48ec
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR28
+    addr: 0xfbec48f0
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR29
+    addr: 0xfbec48f4
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR30
+    addr: 0xfbec48f8
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR31
+    addr: 0xfbec48fc
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR32
+    addr: 0xfbec4900
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR33
+    addr: 0xfbec4904
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR34
+    addr: 0xfbec4908
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR35
+    addr: 0xfbec490c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR36
+    addr: 0xfbec4910
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR37
+    addr: 0xfbec4914
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR38
+    addr: 0xfbec4918
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR39
+    addr: 0xfbec491c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR40
+    addr: 0xfbec4920
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR41
+    addr: 0xfbec4924
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR42
+    addr: 0xfbec4928
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR43
+    addr: 0xfbec492c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR44
+    addr: 0xfbec4930
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR45
+    addr: 0xfbec4934
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR46
+    addr: 0xfbec4938
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR47
+    addr: 0xfbec493c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR48
+    addr: 0xfbec4940
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR49
+    addr: 0xfbec4944
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR50
+    addr: 0xfbec4948
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR51
+    addr: 0xfbec494c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR52
+    addr: 0xfbec4950
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR53
+    addr: 0xfbec4954
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR54
+    addr: 0xfbec4958
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR55
+    addr: 0xfbec495c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR56
+    addr: 0xfbec4960
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR57
+    addr: 0xfbec4964
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR58
+    addr: 0xfbec4968
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR59
+    addr: 0xfbec496c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR60
+    addr: 0xfbec4970
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR61
+    addr: 0xfbec4974
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR62
+    addr: 0xfbec4978
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RXIMR63
+    addr: 0xfbec497c
+    size_bits: 32
+    description: Rx Individual Mask Registers
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_MECR
+    addr: 0xfbec4ae0
+    size_bits: 32
+    description: Memory Error Control Register
+    read_allowed: true
+    write_allowed: true
+    reset_value: 0x800c0080
+  - !Register
+    name: CAN_ERRIAR
+    addr: 0xfbec4ae4
+    size_bits: 32
+    description: Error Injection Address Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIDPR
+    addr: 0xfbec4ae8
+    size_bits: 32
+    description: Error Injection Data Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_ERRIPPR
+    addr: 0xfbec4aec
+    size_bits: 32
+    description: Error Injection Parity Pattern Register
+    read_allowed: true
+    write_allowed: true
+  - !Register
+    name: CAN_RERRAR
+    addr: 0xfbec4af0
+    size_bits: 32
+    description: Error Report Address Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRDR
+    addr: 0xfbec4af4
+    size_bits: 32
+    description: Error Report Data Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_RERRSYNR
+    addr: 0xfbec4af8
+    size_bits: 32
+    description: Error Report Syndrome Register
+    read_allowed: true
+    write_allowed: false
+  - !Register
+    name: CAN_ERRSR
+    addr: 0xfbec4afc
+    size_bits: 32
+    description: Error Status Register
+    read_allowed: true
+    write_allowed: true
+- !Module
+  name: MCAN
+  description: MCAN
+  base_addr: 0xfbed0000
+  size: 0x3fff
+- !Module
+  name: MCAN buffer memory
+  description: MCAN buffer memory
+  base_addr: 0xfbed4000
+  size: 0x3fff
+- !Module
+  name: RADAR Analog Block
+  description: RADAR Analog Block
+  base_addr: 0xfbf0c000
+  size: 0x3fff
+- !Module
+  name: FCCU
+  description: FCCU
+  base_addr: 0xfbf58000
+  size: 0x3fff
+- !Module
+  name: CRC_1
+  description: CRC 1 (CRC_1)
+  base_addr: 0xfbf64000
+  size: 0x3fff
+- !Module
+  name: DMAMUX_1
+  description: DMAMUX_1
+  base_addr: 0xfbf6c000
+  size: 0x3fff
+- !Module
+  name: CGM-CMUs
+  description: CGM-CMUs (see below)
+  base_addr: 0xfbfb0000
+  size: 0x3fff

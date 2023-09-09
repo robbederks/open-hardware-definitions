@@ -54,11 +54,16 @@ def load_ohd(dev):
     for module in dev.modules:
       min_addr = module.base_addr
       max_addr = 0
-      for register in module.registers:
-        if min_addr == None:
-          min_addr = register.addr
-        min_addr = min(min_addr, register.addr)
-        max_addr = max(max_addr, register.addr + (math.ceil(dev.bit_width / 8)))
+
+      if hasattr(module, "registers"):
+        for register in module.registers:
+          if min_addr == None:
+            min_addr = register.addr
+          min_addr = min(min_addr, register.addr)
+          max_addr = max(max_addr, register.addr + (math.ceil(dev.bit_width / 8)))
+
+      if max_addr == 0 and hasattr(module, "size"):
+        max_addr = module.base_addr + module.size
 
       try:
         mod_block = program.memory.createUninitializedBlock(module.name, address_space.getAddress(min_addr), max_addr - min_addr, False)
@@ -67,7 +72,7 @@ def load_ohd(dev):
         mod_block.setExecute(False)
         mod_block.setVolatile(True)
         if hasattr(module, "description"):
-          mod_block.setDescription(module.description)
+          mod_block.setComment(module.description)
         print(f"Added a module region \"{module.name}\" from {hex(min_addr)} to {hex(max_addr)}")
       except Exception:
         print(f"Adding a module region \"{module.name}\" from {hex(min_addr)} to {hex(max_addr)} FAILED! Already existing?")
@@ -80,6 +85,9 @@ def load_ohd(dev):
         namespace_name = module.name.strip().replace(' ', '_')
         print(f"Creating '{namespace_name}' namespace")
         namespace = symbol_table.createNameSpace(None, namespace_name, ghidra.program.model.symbol.SourceType.IMPORTED)
+
+      if not hasattr(module, "registers"):
+        continue
 
       print(f"Adding registers for module '{module.name}'...")
       for register in module.registers:
